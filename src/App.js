@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ScatterPlotControl from "./components/ScatterPlotControl";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [tabIndex, setTabIndex] = useState(0);
+
+  const handleChangeTabIndex = (event, newIndex) => {
+    setTabIndex(newIndex);
+  };
+
+  let innerComponent;
+
+  switch (tabIndex) {
+    case (0): {
+      innerComponent = <ScatterPlotControl />
+      break;
+    }
+    default: {
+      innerComponent = null;
+      break;
+    }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Tabs
+          value={tabIndex}
+          onChange={handleChangeTabIndex}
         >
-          Learn React
-        </a>
+          <Tab label="IBD Similarities" />
+          <Tab label="GIS" />
+          <Tab label="About" />
+        </Tabs>
+        <div className="tabContent">
+          {innerComponent}
+        </div>
       </header>
     </div>
   );
-}
+};
 
 export default App;
