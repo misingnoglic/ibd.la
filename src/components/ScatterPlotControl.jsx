@@ -9,6 +9,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import Skeleton from "@mui/material/Skeleton";
 import "./ScatterPlotControl.css";
 
 const ScatterPlotControl = () => {
@@ -23,7 +24,7 @@ const ScatterPlotControl = () => {
     setSecondGroupLabel(event.target.value);
   };
 
-  let graph = null;
+  let graph;
   if (
     firstGroupLabel &&
     secondGroupLabel &&
@@ -53,6 +54,8 @@ const ScatterPlotControl = () => {
         negate={negate}
       />
     );
+  } else {
+    graph = <Skeleton variant="rectangular" animation={false} width={1000} height={500} />;
   }
   const options = fakeScatterDataOptions.map((option) => (
     <MenuItem value={option} key={option}>
@@ -61,7 +64,7 @@ const ScatterPlotControl = () => {
   ));
 
   return (
-    <>
+    <div>
       <div className="graph">{graph}</div>
       <div className="selectionForm">
         <div className="selectionBox">
@@ -94,7 +97,7 @@ const ScatterPlotControl = () => {
           </FormControl>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

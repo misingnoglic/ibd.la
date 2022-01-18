@@ -1,5 +1,5 @@
 .selectionForm {
-    display: flex;
+    display: inline-flex;
     padding-top: 24px;
 }
 
@@ -8,5 +8,7 @@
 }
 
 .graph {
-    
+    display: flex;
+    min-width: 1000px;
+    min-height: 500px;
 }

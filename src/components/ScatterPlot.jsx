@@ -3,6 +3,8 @@ import Plot from 'react-plotly.js';
 
 const ScatterPlot = (props) => {
     const layout = {
+        width: 1000,
+        height: 500,
         title: {
             text: `${props.firstGroupLabel} vs ${props.secondGroupLabel}`,
             font: {
@@ -52,7 +54,9 @@ const ScatterPlot = (props) => {
             width: 1
         }
     };
-    const config = {responsive: true}
+    const config = {
+        responsive: true,
+    }
     return (
         <Plot
             data={[graphData]}
