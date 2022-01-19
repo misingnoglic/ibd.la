@@ -4,6 +4,11 @@ import {
   fakeScatterData,
   fakeScatterDataOptions,
 } from "../data/fakeScatterData";
+import {
+  realData,
+  realDataOptions,
+} from "../data/realScatterData";
+
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -13,8 +18,8 @@ import Skeleton from "@mui/material/Skeleton";
 import "./ScatterPlotControl.css";
 
 const ScatterPlotControl = () => {
-  const [firstGroupLabel, setFirstGroupLabel] = useState("Group1");
-  const [secondGroupLabel, setSecondGroupLabel] = useState("Group2");
+  const [firstGroupLabel, setFirstGroupLabel] = useState("Ashkenazi Jew");
+  const [secondGroupLabel, setSecondGroupLabel] = useState("Persian Jew");
 
   const handleFirstGroupChange = (event) => {
     setFirstGroupLabel(event.target.value);
@@ -33,15 +38,15 @@ const ScatterPlotControl = () => {
     let graphData = null;
     let negate = 1;
     if (
-      fakeScatterData.hasOwnProperty(firstGroupLabel) &&
-      fakeScatterData[firstGroupLabel].hasOwnProperty(secondGroupLabel)
+      realData.hasOwnProperty(firstGroupLabel) &&
+      realData[firstGroupLabel].hasOwnProperty(secondGroupLabel)
     ) {
-      graphData = fakeScatterData[firstGroupLabel][secondGroupLabel];
+      graphData = realData[firstGroupLabel][secondGroupLabel];
     } else if (
-      fakeScatterData.hasOwnProperty(secondGroupLabel) &&
-      fakeScatterData[secondGroupLabel].hasOwnProperty(firstGroupLabel)
+      realData.hasOwnProperty(secondGroupLabel) &&
+      realData[secondGroupLabel].hasOwnProperty(firstGroupLabel)
     ) {
-      graphData = fakeScatterData[secondGroupLabel][firstGroupLabel];
+      graphData = realData[secondGroupLabel][firstGroupLabel];
       negate = -1;
     } else {
       return "Invalid Data";
@@ -57,7 +62,7 @@ const ScatterPlotControl = () => {
   } else {
     graph = <Skeleton variant="rectangular" animation={false} width={1000} height={500} />;
   }
-  const options = fakeScatterDataOptions.map((option) => (
+  const options = realDataOptions.map((option) => (
     <MenuItem value={option} key={option}>
       {option}
     </MenuItem>

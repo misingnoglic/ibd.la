@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import ScatterPlotControl from "./components/ScatterPlotControl";
+// import LeafletMap from "./components/LeafletMap";
+import DeckGlMap from "./components/DeckGlMap";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import "./App.css";
@@ -16,6 +18,10 @@ const App = () => {
   switch (tabIndex) {
     case (0): {
       innerComponent = <ScatterPlotControl />
+      break;
+    }
+    case (1): {
+      innerComponent = <DeckGlMap />
       break;
     }
     default: {

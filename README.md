@@ -78,4 +78,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - https://geojson.org/
 - https://visgl.github.io/react-map-gl
 - https://leafletjs.com/reference.html#geojson
+- OpenLayers 
 - https://github.com/visgl/deck.gl
