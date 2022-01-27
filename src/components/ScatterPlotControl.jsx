@@ -4,11 +4,7 @@ import {
   fakeScatterData,
   fakeScatterDataOptions,
 } from "../data/fakeScatterData";
-import {
-  realData,
-  realDataOptions,
-} from "../data/realScatterData";
-
+import { realData, realDataOptions } from "../data/realScatterData";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -18,8 +14,8 @@ import Skeleton from "@mui/material/Skeleton";
 import "./ScatterPlotControl.css";
 
 const ScatterPlotControl = () => {
-  const [firstGroupLabel, setFirstGroupLabel] = useState("Ashkenazi Jew");
-  const [secondGroupLabel, setSecondGroupLabel] = useState("Persian Jew");
+  const [firstGroupLabel, setFirstGroupLabel] = useState("group1");
+  const [secondGroupLabel, setSecondGroupLabel] = useState("group10");
 
   const handleFirstGroupChange = (event) => {
     setFirstGroupLabel(event.target.value);
@@ -60,7 +56,14 @@ const ScatterPlotControl = () => {
       />
     );
   } else {
-    graph = <Skeleton variant="rectangular" animation={false} width={1000} height={500} />;
+    graph = (
+      <Skeleton
+        variant="rectangular"
+        animation={false}
+        width={500}
+        height={500}
+      />
+    );
   }
   const options = realDataOptions.map((option) => (
     <MenuItem value={option} key={option}>
@@ -74,7 +77,7 @@ const ScatterPlotControl = () => {
       <div className="selectionForm">
         <div className="selectionBox">
           <FormControl>
-            <InputLabel id="group1-selection">Group 1</InputLabel>
+            <InputLabel id="group1-selection">Community 1</InputLabel>
             <Select
               labelId="group1-selection"
               value={firstGroupLabel}
@@ -87,7 +90,7 @@ const ScatterPlotControl = () => {
         </div>
         <div className="selectionBox">
           <FormControl>
-            <InputLabel id="group2-selection">Group 2</InputLabel>
+            <InputLabel id="group2-selection">Community 2</InputLabel>
             <Select
               labelId="group2-selection"
               value={secondGroupLabel}

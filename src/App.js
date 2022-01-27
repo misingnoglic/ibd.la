@@ -16,12 +16,12 @@ const App = () => {
   let innerComponent;
 
   switch (tabIndex) {
-    case (0): {
-      innerComponent = <ScatterPlotControl />
+    case 0: {
+      innerComponent = <ScatterPlotControl />;
       break;
     }
-    case (1): {
-      innerComponent = <DeckGlMap />
+    case 1: {
+      innerComponent = <DeckGlMap />;
       break;
     }
     default: {
@@ -33,17 +33,14 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Tabs
-          value={tabIndex}
-          onChange={handleChangeTabIndex}
-        >
-          <Tab label="IBD Similarities" />
+        <Tabs value={tabIndex} onChange={handleChangeTabIndex}>
+          <Tab label="PheCode" />
           <Tab label="GIS" />
+          <Tab label="IBD" />
           <Tab label="About" />
+          <Tab label="Contact" />
         </Tabs>
-        <div className="tabContent">
-          {innerComponent}
-        </div>
+        <div className="tabContent">{innerComponent}</div>
       </header>
     </div>
   );
