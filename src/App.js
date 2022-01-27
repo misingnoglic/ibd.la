@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import ScatterPlotControl from "./components/ScatterPlotControl";
-// import LeafletMap from "./components/LeafletMap";
 import DeckGlMap from "./components/DeckGlMap";
+import About from "./components/About";
+import Contact from "./components/Contact";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import "./App.css";
@@ -22,6 +23,14 @@ const App = () => {
     }
     case 1: {
       innerComponent = <DeckGlMap />;
+      break;
+    }
+    case 3: {
+      innerComponent = <About />;
+      break;
+    }
+    case 4: {
+      innerComponent = <Contact />;
       break;
     }
     default: {

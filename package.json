@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "d3-scale": "^4.0.2",
     "deck.gl": "^8.6.5",
+    "eslint": "^8.7.0",
     "leaflet": "^1.7.1",
     "leaflet-defaulticon-compatibility": "^0.1.1",
     "plotly.js": "^2.8.3",
