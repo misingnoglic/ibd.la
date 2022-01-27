@@ -16,7 +16,7 @@ const getTooltip = ({ object }) => {
         </div>
         <div>{object.properties.ZIPCODE}</div>
         <div>
-          <b>Coefficient</b>
+          <b>Log Odds Ratio</b>
         </div>
         <div>{object.properties.coeff}</div>
       </div>
@@ -32,7 +32,7 @@ const DeckGlMap = () => {
 
   const colorScale = scaleThreshold()
     .domain([
-      -0.6, -0.45, -0.3, -0.15, 0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2,
+      0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 2.9, 3.1, 3.3,
     ])
     .range([
       [65, 182, 196],
@@ -66,7 +66,10 @@ const DeckGlMap = () => {
       data: persianJewData,
       getFillColor: (f) => colorScale(f.properties.coeff),
       getLineColor: [255, 255, 255],
+      getLineWidth: 20,
       pickable: true,
+      opacity: 0.5,
+      stroked: true,
     }),
   ];
 
