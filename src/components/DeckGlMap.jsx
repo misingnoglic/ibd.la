@@ -4,6 +4,7 @@ import DeckGL from "@deck.gl/react";
 import { GeoJsonLayer } from "@deck.gl/layers";
 import { scaleThreshold } from "d3-scale";
 import ReactDOMServer from "react-dom/server";
+import persianJewData from "../data/mapData/persianJew";
 import "./DeckGlMap.css";
 
 const getTooltip = ({ object }) => {
@@ -11,15 +12,13 @@ const getTooltip = ({ object }) => {
     html: ReactDOMServer.renderToString(
       <div>
         <div>
-          <b>Average Property Value</b>
+          <b>Zip Code</b>
         </div>
+        <div>{object.properties.ZIPCODE}</div>
         <div>
-          {object.properties.valuePerSqm} / m<sup>2</sup>
+          <b>Coefficient</b>
         </div>
-        <div>
-          <b>Growth</b>
-        </div>
-        <div>{Math.round(object.properties.growth * 100)}%</div>
+        <div>{object.properties.coeff}</div>
       </div>
     ),
   };
@@ -30,8 +29,6 @@ const DeckGlMap = () => {
   // Source data GeoJSON
   const mapboxAccessToken =
     "pk.eyJ1IjoiYXJ5YWJvdWRhaWUiLCJhIjoiY2t5bDhrZWJhMDk4MzJ2bWZjNmlkc3RhdyJ9.LN9-CljDFkZX2GnbEk1LLA";
-  const dataUrl =
-    "https://raw.githubusercontent.com/visgl/deck.gl-data/master/examples/geojson/vancouver-blocks.json"; // eslint-disable-line
 
   const colorScale = scaleThreshold()
     .domain([
@@ -55,19 +52,19 @@ const DeckGlMap = () => {
     ]);
 
   const initialViewState = {
-    latitude: 49.254,
-    longitude: -123.13,
-    zoom: 11,
-    maxZoom: 16,
-    pitch: 45,
+    // UCLA center
+    longitude: -118.4452,
+    latitude: 34.0689,
+    zoom: 10,
+    pitch: 0,
     bearing: 0,
   };
 
   const layers = [
     new GeoJsonLayer({
       id: "geojson",
-      data: dataUrl,
-      getFillColor: (f) => colorScale(f.properties.growth),
+      data: persianJewData,
+      getFillColor: (f) => colorScale(f.properties.coeff),
       getLineColor: [255, 255, 255],
       pickable: true,
     }),
