@@ -80,3 +80,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - https://leafletjs.com/reference.html#geojson
 - OpenLayers 
 - https://github.com/visgl/deck.gl
+- https://github.com/visgl/deck.gl/blob/8.6-release/examples/website/geojson/app.js
