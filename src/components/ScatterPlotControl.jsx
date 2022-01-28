@@ -4,11 +4,9 @@ import {
   fakeScatterData,
   fakeScatterDataOptions,
 } from "../data/fakeScatterData";
-import {
-  realData,
-  realDataOptions,
-  realDataOptionsKey,
-} from "../data/realScatterData";
+import { realData, realDataOptions } from "../data/realScatterData";
+
+import groupNameMap from "../data/groupNameMap";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -53,8 +51,8 @@ const ScatterPlotControl = () => {
     }
     graph = (
       <ScatterPlot
-        firstGroupLabel={realDataOptionsKey[firstGroupLabel]}
-        secondGroupLabel={realDataOptionsKey[secondGroupLabel]}
+        firstGroupLabel={groupNameMap[firstGroupLabel]}
+        secondGroupLabel={groupNameMap[secondGroupLabel]}
         listOfComparisons={graphData}
         negate={negate}
       />
@@ -72,7 +70,7 @@ const ScatterPlotControl = () => {
 
   const options = realDataOptions.map((option) => (
     <MenuItem value={option} key={option}>
-      {realDataOptionsKey[option]}
+      {groupNameMap[option]}
     </MenuItem>
   ));
 

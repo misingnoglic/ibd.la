@@ -31,9 +31,7 @@ const DeckGlMap = () => {
     "pk.eyJ1IjoiYXJ5YWJvdWRhaWUiLCJhIjoiY2t5bDhrZWJhMDk4MzJ2bWZjNmlkc3RhdyJ9.LN9-CljDFkZX2GnbEk1LLA";
 
   const colorScale = scaleThreshold()
-    .domain([
-      0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 2.9, 3.1, 3.3,
-    ])
+    .domain([0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 2.9, 3.1, 3.3])
     .range([
       [65, 182, 196],
       [127, 205, 187],

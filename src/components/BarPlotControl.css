@@ -1,0 +1,14 @@
+.selectionForm {
+    display: inline-flex;
+    padding-top: 24px;
+}
+
+.selectionBox {
+    padding-right: 12px;
+}
+
+.graph {
+    display: flex;
+    min-width: 1000px;
+    min-height: 500px;
+}

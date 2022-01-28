@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ScatterPlotControl from "./components/ScatterPlotControl";
+import BarPlotControl from "./components/BarPlotControl";
 import DeckGlMap from "./components/DeckGlMap";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -23,6 +24,10 @@ const App = () => {
     }
     case 1: {
       innerComponent = <DeckGlMap />;
+      break;
+    }
+    case 2: {
+      innerComponent = <BarPlotControl />;
       break;
     }
     case 3: {
