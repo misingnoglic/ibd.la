@@ -14,7 +14,7 @@ const ScatterPlot = (props) => {
     },
     yaxis: {
       automargin: true,
-
+      dtick: 1,  
       title: {
         font: {
           size: 16,

@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 import ScatterPlot from "./ScatterPlot";
-import {
-  fakeScatterData,
-  fakeScatterDataOptions,
-} from "../data/fakeScatterData";
 import { realData, realDataOptions } from "../data/realScatterData";
 
 import groupNameMap from "../data/groupNameMap";
@@ -17,7 +13,7 @@ import "./ScatterPlotControl.css";
 
 const ScatterPlotControl = () => {
   const [firstGroupLabel, setFirstGroupLabel] = useState("group1");
-  const [secondGroupLabel, setSecondGroupLabel] = useState("group10");
+  const [secondGroupLabel, setSecondGroupLabel] = useState("group6");
 
   const handleFirstGroupChange = (event) => {
     setFirstGroupLabel(event.target.value);

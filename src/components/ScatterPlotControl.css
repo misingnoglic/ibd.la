@@ -10,5 +10,9 @@
 .graph {
     display: flex;
     min-width: 1000px;
-    min-height: 500px;
+    min-height: 500px; /* For the buttons at the bottom */
+}
+
+.js-plotly-plot {
+    width: 100%;
 }
