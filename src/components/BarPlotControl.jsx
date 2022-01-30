@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import BarPlot from "./BarPlot";
-import { fakeBarData } from "../data/fakeBarData";
+import { barData } from "../data/barData";
 import groupNameMap from "../data/groupNameMap";
 
 import InputLabel from "@mui/material/InputLabel";
@@ -11,7 +11,7 @@ import Skeleton from "@mui/material/Skeleton";
 import "./BarPlotControl.css";
 
 const BarPlotControl = () => {
-  const [primaryGroup, setPrimaryGroup] = useState("group1");
+  const [primaryGroup, setPrimaryGroup] = useState("group2");
 
   const handleChangeGroup = (event) => {
     setPrimaryGroup(event.target.value);
@@ -19,9 +19,9 @@ const BarPlotControl = () => {
 
   let graph;
   if (primaryGroup) {
-    const groups = Object.keys(fakeBarData[primaryGroup]);
-    const y = groups.map((group) => fakeBarData[primaryGroup][group].value);
-    const error = groups.map((group) => fakeBarData[primaryGroup][group].cint);
+    const groups = Object.keys(barData[primaryGroup]);
+    const y = groups.map((group) => barData[primaryGroup][group].value);
+    const error = groups.map((group) => barData[primaryGroup][group].cint);
     const x = groups.map((group) => groupNameMap[group]);
     graph = (
       <BarPlot
@@ -42,7 +42,7 @@ const BarPlotControl = () => {
     );
   }
 
-  const options = Object.keys(fakeBarData).map((option) => (
+  const options = Object.keys(barData).map((option) => (
     <MenuItem value={option} key={option}>
       {groupNameMap[option]}
     </MenuItem>

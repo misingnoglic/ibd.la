@@ -13,9 +13,10 @@ const BarPlot = (props) => {
       x: 0.05,
     },
     yaxis: {
+      type: "log",
       automargin: true,
       title: {
-        text: "IBD (cM)", 
+        text: "IBD (cM)",
         font: {
           size: 16,
           color: "#7f7f7f",
@@ -24,6 +25,7 @@ const BarPlot = (props) => {
     },
     xaxis: {
       title: {
+        automargin: true,
         // text: "Group",
         font: {
           size: 16,
