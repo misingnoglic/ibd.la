@@ -42,7 +42,7 @@ const BarPlotControl = () => {
     );
   }
 
-  const options = Object.keys(barData).map((option) => (
+  const options = Object.keys(barData).sort((a, b)=> groupNameMap[a] > groupNameMap[b] ? 1 : -1).map((option) => (
     <MenuItem value={option} key={option}>
       {groupNameMap[option]}
     </MenuItem>

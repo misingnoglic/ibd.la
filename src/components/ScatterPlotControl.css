@@ -7,10 +7,16 @@
     padding-right: 12px;
 }
 
-.graph {
+.scatterplotBox {
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.scatterGraph {
     display: flex;
     min-width: 1000px;
     min-height: 500px; /* For the buttons at the bottom */
+    height: 70vh;
 }
 
 .js-plotly-plot {

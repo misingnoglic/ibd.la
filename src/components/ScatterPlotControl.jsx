@@ -9,6 +9,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Skeleton from "@mui/material/Skeleton";
+import Typography from "@mui/material/Typography";
 import "./ScatterPlotControl.css";
 
 const ScatterPlotControl = () => {
@@ -64,15 +65,16 @@ const ScatterPlotControl = () => {
     );
   }
 
-  const options = realDataOptions.map((option) => (
+  const options = realDataOptions.sort((a, b)=> groupNameMap[a] > groupNameMap[b] ? 1 : -1).map((option) => (
     <MenuItem value={option} key={option}>
       {groupNameMap[option]}
     </MenuItem>
   ));
 
   return (
-    <div>
-      <div className="graph">{graph}</div>
+    <div className="scatterplotBox">
+      <Typography variant="h3">Phecode Distribution</Typography>
+      <div className="scatterGraph">{graph}</div>
       <div className="selectionForm">
         <div className="selectionBox">
           <FormControl>
@@ -97,9 +99,9 @@ const ScatterPlotControl = () => {
               onChange={handleSecondGroupChange}
             >
               {options}
-              <MenuItem value="All" key="All">
+              {/* <MenuItem value="All" key="All">
                 All
-              </MenuItem>
+              </MenuItem> */}
             </Select>
           </FormControl>
         </div>

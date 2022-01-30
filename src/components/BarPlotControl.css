@@ -11,6 +11,8 @@
     display: flex;
     min-width: 1000px;
     min-height: 500px;
+    height: 70vh;
+    margin-top: 8px;
 }
 
 .graph {
