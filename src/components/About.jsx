@@ -15,7 +15,7 @@ const About = () => {
       </Typography>
 
       <Typography variant="h6">
-        Q2: How is genetic ancestry different than race/ethnicity?{" "}
+        Q2: How is genetic ancestry different than race/ethnicity?
       </Typography>
       <Typography variant="body1" gutterBottom>
         body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos

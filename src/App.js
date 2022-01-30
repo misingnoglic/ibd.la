@@ -3,7 +3,9 @@ import ScatterPlotControl from "./components/ScatterPlotControl";
 import BarPlotControl from "./components/BarPlotControl";
 import DeckGlMap from "./components/DeckGlMap";
 import About from "./components/About";
+import Home from "./components/Home";
 import Contact from "./components/Contact";
+import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import "./App.css";
@@ -19,22 +21,26 @@ const App = () => {
 
   switch (tabIndex) {
     case 0: {
-      innerComponent = <ScatterPlotControl />;
+      innerComponent = <Home />;
       break;
     }
     case 1: {
-      innerComponent = <DeckGlMap />;
+      innerComponent = <ScatterPlotControl />;
       break;
     }
     case 2: {
-      innerComponent = <BarPlotControl />;
+      innerComponent = <DeckGlMap />;
       break;
     }
     case 3: {
-      innerComponent = <About />;
+      innerComponent = <BarPlotControl />;
       break;
     }
     case 4: {
+      innerComponent = <About />;
+      break;
+    }
+    case 5: {
       innerComponent = <Contact />;
       break;
     }
@@ -47,15 +53,25 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Tabs value={tabIndex} onChange={handleChangeTabIndex}>
-          <Tab label="PheCode" />
-          <Tab label="GIS" />
-          <Tab label="IBD" />
-          <Tab label="About" />
-          <Tab label="Contact" />
-        </Tabs>
+        <AppBar position="static">
+          <Tabs
+            value={tabIndex}
+            onChange={handleChangeTabIndex}
+            style={{ backgroundColor: "#C7CEEA", color: "white" }}
+          >
+            <Tab label="Home" />
+            <Tab label="PheCode" />
+            <Tab label="GIS" />
+            <Tab label="IBD" />
+            <Tab label="FAQ" />
+            <Tab label="Contact" />
+          </Tabs>
+        </AppBar>
         <div className="tabContent">{innerComponent}</div>
       </header>
+      <div class="footer">
+        <p> 2022</p>
+      </div>
     </div>
   );
 };
