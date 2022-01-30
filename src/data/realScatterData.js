@@ -9,45 +9,38 @@ const realData = {
         coeff: -1.16473352133793,
         cint: 0.5944952549074096,
       },
+      {
+        phenotype: "Essential hypertension",
+        pval: 0.0005368665775739,
+        coeff: -1.0319402224765697,
+        cint: 0.584277222472551,
+      },
     ],
     group14: [],
     group15: [],
     group16: [],
     group17: [],
     group18: [],
-    group19: [
-      {
-        phenotype: "Rheumatoid arthritis",
-        pval: 0.0007296577526288,
-        coeff: -2.3539760479770644,
-        cint: 1.365735520098391,
-      },
-      {
-        phenotype: "Type 2 diabetes with renal manifestations",
-        pval: 7.675537953189036e-5,
-        coeff: -2.120289666565896,
-        cint: 1.0509266800786323,
-      },
-      {
-        phenotype: "Other disorders of the kidney and ureters",
-        pval: 0.0007946030619719,
-        coeff: -1.896614402099146,
-        cint: 1.108096537083441,
-      },
-      {
-        phenotype:
-          "Iron deficiency anemias, unspecified or not due to blood loss",
-        pval: 0.0007693829220581,
-        coeff: -1.3542806884151868,
-        cint: 0.7891415369103822,
-      },
-    ],
+    group19: [],
   },
   group11: {
     group12: [],
     group13: [],
     group14: [],
-    group15: [],
+    group15: [
+      {
+        phenotype: "Essential hypertension",
+        pval: 0.0009627436632652,
+        coeff: 0.8993968037656546,
+        cint: 0.533984208252224,
+      },
+      {
+        phenotype: "Type 2 diabetes",
+        pval: 0.0005686074289796,
+        coeff: 0.9788050880009832,
+        cint: 0.5566836974982168,
+      },
+    ],
     group16: [
       {
         phenotype: "Impaired fasting glucose",
@@ -73,10 +66,22 @@ const realData = {
     group14: [],
     group15: [
       {
+        phenotype: "Anxiety disorder",
+        pval: 0.00198393189243,
+        coeff: -0.8494517077532879,
+        cint: 0.5383431773341345,
+      },
+      {
         phenotype: "Essential hypertension",
         pval: 8.205177695768061e-5,
         coeff: 1.2032644539903352,
         cint: 0.5988215527954917,
+      },
+      {
+        phenotype: "Allergies, other",
+        pval: 0.001146289298628,
+        coeff: 1.2792366013592396,
+        cint: 0.7710087911134907,
       },
       {
         phenotype: "Type 2 diabetes",
@@ -106,14 +111,34 @@ const realData = {
   group14: { group15: [], group16: [], group17: [], group18: [], group19: [] },
   group15: {
     group16: [],
-    group17: [],
-    group18: [],
+    group17: [
+      {
+        phenotype: "Type 2 diabetes",
+        pval: 0.0009933017765498,
+        coeff: -1.1511403483641145,
+        cint: 0.6852696839197829,
+      },
+      {
+        phenotype: "Anxiety disorder",
+        pval: 0.0004176756999245,
+        coeff: 1.3373337999878774,
+        cint: 0.7428114526853271,
+      },
+    ],
+    group18: [
+      {
+        phenotype: "Type 2 diabetes",
+        pval: 0.0002312397611891,
+        coeff: -1.4327619753705472,
+        cint: 0.7626337963094967,
+      },
+    ],
     group19: [
       {
-        phenotype: "Conjunctivitis, infectious",
-        pval: 0.0003922937587228,
-        coeff: -1.8951208448522712,
-        cint: 1.0477133722473129,
+        phenotype: "Type 2 diabetes with renal manifestations",
+        pval: 0.0009862982119345,
+        coeff: -1.4487455059767909,
+        cint: 0.8619122097547001,
       },
       {
         phenotype:
@@ -121,6 +146,18 @@ const realData = {
         pval: 0.0003322237943459,
         coeff: -1.446234103310281,
         cint: 0.7898404191512112,
+      },
+      {
+        phenotype: "Type 2 diabetes",
+        pval: 0.0019983410392019,
+        coeff: -1.0901424940785231,
+        cint: 0.6913621479776113,
+      },
+      {
+        phenotype: "Essential hypertension",
+        pval: 0.00183085602303,
+        coeff: -1.088276360363217,
+        cint: 0.6844421529054938,
       },
     ],
   },
@@ -197,6 +234,12 @@ const realData = {
         cint: 0.2661639337971843,
       },
       {
+        phenotype: "Coronary atherosclerosis",
+        pval: 0.0007528371525027,
+        coeff: -0.5525555284254827,
+        cint: 0.3214020653619466,
+      },
+      {
         phenotype: "Abdominal pain",
         pval: 0.000453573136022,
         coeff: -0.4787171215769981,
@@ -217,28 +260,10 @@ const realData = {
     ],
     group11: [
       {
-        phenotype: "Acute vascular insufficiency of intestine",
-        pval: 0.0004291387708459,
-        coeff: -2.7381165002407566,
-        cint: 1.5239626023671635,
-      },
-      {
-        phenotype: "Inflammatory disease of cervix, vagina, and vulva",
-        pval: 0.0005901303260605,
-        coeff: -2.7316759215299324,
-        cint: 1.5581531777814437,
-      },
-      {
         phenotype: "Malignant neoplasm of retroperitoneum and peritoneum",
         pval: 0.0001982937487167,
         coeff: -2.285271445615467,
         cint: 1.203663703469596,
-      },
-      {
-        phenotype: "Coagulation defects complicating pregnancy or postpartum",
-        pval: 0.0001098847466154,
-        coeff: -2.155514658127837,
-        cint: 1.092322267539798,
       },
       {
         phenotype:
@@ -331,34 +356,10 @@ const realData = {
     ],
     group12: [
       {
-        phenotype: "Non-proliferative glomerulonephritis",
-        pval: 2.771657402407703e-6,
-        coeff: -3.0961029354601246,
-        cint: 1.2946832140514504,
-      },
-      {
-        phenotype: "Ankylosis of joint",
-        pval: 0.0002265016364807,
-        coeff: -2.911843198079972,
-        cint: 1.547706072658201,
-      },
-      {
-        phenotype: "Benign neoplasm of kidney and other urinary organs",
-        pval: 0.0002553753069116,
-        coeff: -2.821761508734827,
-        cint: 1.512398411828947,
-      },
-      {
         phenotype: "Alzheimer's disease",
         pval: 5.026318770716709e-7,
         coeff: -2.8055428586587388,
         cint: 1.0942146724003168,
-      },
-      {
-        phenotype: "Coccidioidomycosis",
-        pval: 0.000460461860807,
-        coeff: -2.6607474953182217,
-        cint: 1.488816616836302,
       },
       {
         phenotype: "Circumscribed scleroderma",
@@ -429,12 +430,6 @@ const realData = {
     ],
     group13: [
       {
-        phenotype: "Obstetrical/birth trauma",
-        pval: 0.000330341186408,
-        coeff: -2.8906443181511845,
-        cint: 1.5780333247045482,
-      },
-      {
         phenotype: "Balanoposthitis",
         pval: 0.0001662458530639,
         coeff: -2.3657617673092277,
@@ -492,24 +487,6 @@ const realData = {
     ],
     group14: [],
     group15: [
-      {
-        phenotype: "Nonallopathic lesions NEC",
-        pval: 3.514895403999524e-5,
-        coeff: -2.7331839273609826,
-        cint: 1.294806711375092,
-      },
-      {
-        phenotype: "Inflammatory diseases of uterus, except cervix",
-        pval: 9.588014239158984e-5,
-        coeff: -2.4892379025364253,
-        cint: 1.2507259586612929,
-      },
-      {
-        phenotype: "Other acute and subacute forms of ischemic heart disease",
-        pval: 0.0001601746099346,
-        coeff: -2.0956672038497106,
-        cint: 1.0881364545575356,
-      },
       {
         phenotype: "Bronchopneumonia and lung abscess",
         pval: 2.287985411395428e-6,
@@ -599,18 +576,6 @@ const realData = {
     group16: [],
     group17: [
       {
-        phenotype: "Obstetrical/birth trauma",
-        pval: 3.937113615131226e-5,
-        coeff: -3.3546990850819767,
-        cint: 1.599335053733648,
-      },
-      {
-        phenotype: "Hypertrophy of female genital organs",
-        pval: 0.0001064219579438,
-        coeff: -3.002063418849586,
-        cint: 1.518253563806068,
-      },
-      {
         phenotype: "Anemia during pregnancy",
         pval: 9.224080457273504e-6,
         coeff: -2.5035544016356,
@@ -647,18 +612,6 @@ const realData = {
         pval: 4.496298866683685e-5,
         coeff: -3.127072127353749,
         cint: 1.502055044859521,
-      },
-      {
-        phenotype: "Wegener's granulomatosis",
-        pval: 7.960984680911254e-5,
-        coeff: -2.992917652268714,
-        cint: 1.4867328339199108,
-      },
-      {
-        phenotype: "Glossitis",
-        pval: 0.0001045186833552,
-        coeff: -2.928249249661348,
-        cint: 1.4792467310840332,
       },
       {
         phenotype: "Meningitis",
@@ -705,18 +658,6 @@ const realData = {
     ],
     group19: [
       {
-        phenotype: "Labyrinthitis",
-        pval: 0.0001074591350574,
-        coeff: -2.9411422478650024,
-        cint: 1.4883506600669314,
-      },
-      {
-        phenotype: "Type 2 diabetes with ketoacidosis",
-        pval: 0.0001272542644148,
-        coeff: -2.91593144092497,
-        cint: 1.4915315885657805,
-      },
-      {
         phenotype: "Hypertensive heart and/or renal disease",
         pval: 1.2198306828735765e-6,
         coeff: -2.5922925931622927,
@@ -733,6 +674,12 @@ const realData = {
         pval: 0.000106939114273,
         coeff: -2.352990090714689,
         cint: 1.190355974487117,
+      },
+      {
+        phenotype: "Cardiac arrest",
+        pval: 0.0016849141795309,
+        coeff: -2.3228863862838507,
+        cint: 1.449562107790511,
       },
       {
         phenotype: "Type 2 diabetes with renal manifestations",
@@ -845,6 +792,12 @@ const realData = {
         cint: 0.496177074161493,
       },
       {
+        phenotype: "Mastodynia",
+        pval: 0.0017004697341363,
+        coeff: -1.3845187259500853,
+        cint: 0.8647293009986821,
+      },
+      {
         phenotype: "Rheumatoid arthritis",
         pval: 0.0011172289914699,
         coeff: -1.3213798179646898,
@@ -881,55 +834,18 @@ const realData = {
         cint: 0.6424914340614993,
       },
       {
-        phenotype: "Abdominal pain",
-        pval: 0.0005877680860849,
-        coeff: -0.8046967809401224,
-        cint: 0.4588554978728849,
+        phenotype: "Chronic renal failure [CKD]",
+        pval: 0.0015440299457186,
+        coeff: -1.0954104527964992,
+        cint: 0.6780721192093968,
       },
     ],
     group2: [
-      {
-        phenotype: "Diabetic retinopathy",
-        pval: 1.1966578700578553e-7,
-        coeff: -2.949994170359563,
-        cint: 1.0921564502870105,
-      },
-      {
-        phenotype: "Disorders of urea cycle metabolism",
-        pval: 1.7170489717452174e-5,
-        coeff: -2.483073384616211,
-        cint: 1.1321076864717767,
-      },
-      {
-        phenotype: "Acquired acanthosis nigricans",
-        pval: 0.0010738246578023,
-        coeff: -2.08848861271039,
-        cint: 1.251626552041616,
-      },
-      {
-        phenotype: "Acute rheumatic heart disease",
-        pval: 0.0043709644918426,
-        coeff: -1.8732424877080776,
-        cint: 1.2882098174957246,
-      },
-      {
-        phenotype: "Intestinal helminthiases",
-        pval: 8.246459748072405e-6,
-        coeff: -1.80150155230588,
-        cint: 0.7919104804145571,
-      },
       {
         phenotype: "Renal dialysis",
         pval: 6.6769643062242275e-68,
         coeff: -1.7843657293369173,
         cint: 0.2008539653276002,
-      },
-      {
-        phenotype:
-          "Poisoning by water, mineral, and uric acid metabolism drugs",
-        pval: 0.0073263610167436,
-        coeff: -1.7612800735929623,
-        cint: 1.2872919158454803,
       },
       {
         phenotype: "Liver replaced by transplant",
@@ -1004,40 +920,16 @@ const realData = {
         cint: 0.1593101547221154,
       },
       {
-        phenotype: "Acute vascular insufficiency of intestine",
-        pval: 0.0009090004329301,
-        coeff: -1.3656100324981555,
-        cint: 0.8068509080017607,
-      },
-      {
-        phenotype: "Tuberculosis",
-        pval: 0.0075513384215855,
-        coeff: -1.3626401351336257,
-        cint: 0.9997106396394864,
-      },
-      {
         phenotype: "Respiratory insufficiency",
         pval: 1.1090376237641977e-6,
         coeff: -1.3611581699313602,
         cint: 0.5476684851718576,
       },
       {
-        phenotype: "Autoimmune hemolytic anemias",
-        pval: 0.0051550613726661,
-        coeff: -1.3399662722295655,
-        cint: 0.9389043646384692,
-      },
-      {
         phenotype: "Bacterial enteritis",
         pval: 2.318076947598633e-23,
         coeff: -1.2837017128526682,
         cint: 0.2526524368793723,
-      },
-      {
-        phenotype: "Atrophic gastritis",
-        pval: 0.0008214134173903,
-        coeff: -1.2717176758668347,
-        cint: 0.7450421185037892,
       },
       {
         phenotype: "Alcoholic liver damage",
@@ -1052,12 +944,6 @@ const realData = {
         cint: 0.089158804766827,
       },
       {
-        phenotype: "Corneal opacity",
-        pval: 0.0035116513031198,
-        coeff: -1.224710400088902,
-        cint: 0.8223346274149459,
-      },
-      {
         phenotype: "Disorders of magnesium metabolism",
         pval: 1.3045240168386522e-35,
         coeff: -1.2239857673800578,
@@ -1068,66 +954,6 @@ const realData = {
         pval: 9.682443963625513e-17,
         coeff: -1.1874134468498805,
         cint: 0.2801053150475963,
-      },
-      {
-        phenotype: "Hypertensive chronic kidney disease",
-        pval: 1.3419069010987776e-39,
-        coeff: -1.1827459992934997,
-        cint: 0.1760440638379614,
-      },
-      {
-        phenotype: "Traumatic amputation",
-        pval: 0.0044135517011688,
-        coeff: -1.1765171811245343,
-        cint: 0.8099557042760359,
-      },
-      {
-        phenotype: "Disorders resulting from impaired renal function",
-        pval: 1.4590197737742108e-37,
-        coeff: -1.159912257047606,
-        cint: 0.1774827560355765,
-      },
-      {
-        phenotype: "Encephalopathy, not elsewhere classified",
-        pval: 4.748509479470297e-11,
-        coeff: -1.1437630322244206,
-        cint: 0.3407608431325233,
-      },
-      {
-        phenotype: "Dental caries",
-        pval: 0.0010547698719257,
-        coeff: -1.14339405822937,
-        cint: 0.6841748147423599,
-      },
-      {
-        phenotype: "Chronic renal failure [CKD]",
-        pval: 1.2787488597784926e-70,
-        coeff: -1.1368543849882229,
-        cint: 0.1254136456463273,
-      },
-      {
-        phenotype: "Poisoning by hormones and synthetic substitutes",
-        pval: 1.3738986054084024e-27,
-        coeff: -1.1360569711312964,
-        cint: 0.2045782433760692,
-      },
-      {
-        phenotype: "Acidosis",
-        pval: 1.9566455345238874e-16,
-        coeff: -1.1038540081952355,
-        cint: 0.26305051960094,
-      },
-      {
-        phenotype: "Contracture of palmar fascia [Dupuytren's disease]",
-        pval: 1.6564495466901591e-6,
-        coeff: 1.1254389549722377,
-        cint: 0.4603733483480638,
-      },
-      {
-        phenotype: "Celiac disease",
-        pval: 2.7587893074490177e-6,
-        coeff: 1.1356002065010469,
-        cint: 0.4747722491913522,
       },
       {
         phenotype: "Psoriasis vulgaris",
@@ -1159,6 +985,12 @@ const realData = {
         pval: 3.814205015674327e-5,
         coeff: 1.4331453789561062,
         cint: 0.6820307879958897,
+      },
+      {
+        phenotype: "Anomalous atrioventricular excitation",
+        pval: 0.012744062484641,
+        coeff: 1.5189560536812348,
+        cint: 1.195217780711983,
       },
       {
         phenotype: "Actinic keratosis",
@@ -1193,28 +1025,10 @@ const realData = {
     ],
     group3: [
       {
-        phenotype: "Congenital coagulation defects",
-        pval: 1.8757699647332213e-5,
-        coeff: -3.216439985736959,
-        cint: 1.473201835046618,
-      },
-      {
         phenotype: "Alopecia Areata",
         pval: 8.213143566222039e-5,
         coeff: -1.3447514400893137,
         cint: 0.66927412596965,
-      },
-      {
-        phenotype: "Autoimmune hemolytic anemias",
-        pval: 0.0041242835332996,
-        coeff: -1.321402716674398,
-        cint: 0.9028779165372454,
-      },
-      {
-        phenotype: "Tics and stuttering",
-        pval: 0.001462861516706,
-        coeff: -1.2083850351607182,
-        cint: 0.7443202419438433,
       },
       {
         phenotype: "Urinary calculus",
@@ -1271,10 +1085,22 @@ const realData = {
         cint: 0.382943487480734,
       },
       {
+        phenotype: "Anxiety, phobic and dissociative disorders",
+        pval: 0.007753082986324,
+        coeff: -0.6026846981746579,
+        cint: 0.4436353778085926,
+      },
+      {
         phenotype: "Degenerative disease of the spinal cord",
         pval: 4.65263682144225e-5,
         coeff: -0.5981806299014547,
         cint: 0.2878905703939924,
+      },
+      {
+        phenotype: "Disturbances of sulphur-bearing amino-acid metabolism",
+        pval: 0.0078430283602306,
+        coeff: -0.5912024702483599,
+        cint: 0.4358190693316727,
       },
       {
         phenotype: "Ulcerative colitis (chronic)",
@@ -1318,121 +1144,6 @@ const realData = {
         pval: 4.190427374913453e-5,
         coeff: -0.5388822689085477,
         cint: 0.2578134415024091,
-      },
-      {
-        phenotype: "Spinal stenosis",
-        pval: 1.0782433439139309e-17,
-        coeff: -0.5090133709929641,
-        cint: 0.1164759610502554,
-      },
-      {
-        phenotype:
-          "Intestinal disaccharidase deficiencies and disaccharide malabsorption",
-        pval: 0.0002050907495991,
-        coeff: -0.5052361185869008,
-        cint: 0.2667209166167357,
-      },
-      {
-        phenotype: "Circadian rhythm sleep disorder",
-        pval: 0.0033585333163603,
-        coeff: -0.5022760546271525,
-        cint: 0.335659515419448,
-      },
-      {
-        phenotype: "Chronic dermatitis due to solar radiation",
-        pval: 0.0007121635508522,
-        coeff: -0.5015614826370378,
-        cint: 0.2904239597236686,
-      },
-      {
-        phenotype: "Other disorders of soft tissues",
-        pval: 3.373757004444952e-7,
-        coeff: -0.4930140817361891,
-        cint: 0.1894212991896012,
-      },
-      {
-        phenotype: "Other specified erythematous conditions",
-        pval: 0.0055717472082681,
-        coeff: -0.4755375451895829,
-        cint: 0.3362356332246242,
-      },
-      {
-        phenotype: "Paraproteinemia",
-        pval: 9.920538482821383e-5,
-        coeff: -0.4673989020091044,
-        cint: 0.2353445394585598,
-      },
-      {
-        phenotype: "Dysthymic disorder",
-        pval: 0.0047902514431366,
-        coeff: -0.4591734553131648,
-        cint: 0.3190442909549218,
-      },
-      {
-        phenotype: "Disorders of bilirubin excretion",
-        pval: 0.0022853985263757,
-        coeff: -0.4582800213902786,
-        cint: 0.2944576216482804,
-      },
-      {
-        phenotype: "Psoriasis",
-        pval: 2.566515193251696e-7,
-        coeff: -0.4561013986241895,
-        cint: 0.1734873461757518,
-      },
-      {
-        phenotype: "Hyperparathyroidism",
-        pval: 4.0786950388393285e-9,
-        coeff: -0.4523580593638829,
-        cint: 0.1507583833109422,
-      },
-      {
-        phenotype: "Cancer of urinary organs (incl. kidney and bladder)",
-        pval: 0.0052649242469517,
-        coeff: -0.4428439283424492,
-        cint: 0.3110558228823743,
-      },
-      {
-        phenotype: "Keratoderma, acquired",
-        pval: 0.0024363990189781,
-        coeff: -0.4423654795853596,
-        cint: 0.2860386253268012,
-      },
-      {
-        phenotype: "Psoriatic arthropathy",
-        pval: 0.0054795914033225,
-        coeff: -0.4330683258052079,
-        cint: 0.3056090991936155,
-      },
-      {
-        phenotype: "Parkinson's disease",
-        pval: 0.0042710169923249,
-        coeff: -0.432380331347309,
-        cint: 0.2965787981255585,
-      },
-      {
-        phenotype: "Mood disorders",
-        pval: 0.0017438015298221,
-        coeff: -0.4275196096577892,
-        cint: 0.2676457358131465,
-      },
-      {
-        phenotype: "Respiratory failure",
-        pval: 0.0018092830712888,
-        coeff: 0.4411625694048122,
-        cint: 0.2771466728869232,
-      },
-      {
-        phenotype: "Cardiac shunt/ heart septal defect",
-        pval: 0.0019830040864605,
-        coeff: 0.4462045916541937,
-        cint: 0.2827711248651403,
-      },
-      {
-        phenotype: "Postinflammatory pulmonary fibrosis",
-        pval: 0.0007815525333067,
-        coeff: 0.4583341159921261,
-        cint: 0.2674166059535603,
       },
       {
         phenotype: "Kidney replaced by transpant",
@@ -1503,28 +1214,10 @@ const realData = {
         cint: 1.1744995399382514,
       },
       {
-        phenotype: "Polymyositis",
-        pval: 1.2436576149956517e-6,
-        coeff: -2.4559213809187885,
-        cint: 0.9927741694626956,
-      },
-      {
         phenotype: "Renal dialysis",
         pval: 1.5473688055539367e-47,
         coeff: -1.9242642484630128,
         cint: 0.2604044850016735,
-      },
-      {
-        phenotype: "Alkalosis",
-        pval: 0.0014498180624977,
-        coeff: -1.726867654195471,
-        cint: 1.062820117439558,
-      },
-      {
-        phenotype: "Non-proliferative glomerulonephritis",
-        pval: 0.000489587758739,
-        coeff: -1.6768357908456155,
-        cint: 0.9426766115759012,
       },
       {
         phenotype: "Disorders of mineral metabolism",
@@ -1537,18 +1230,6 @@ const realData = {
         pval: 4.315482181773623e-5,
         coeff: -1.6316543706542108,
         cint: 0.7819211181834109,
-      },
-      {
-        phenotype: "Dysplasia of female genital organs",
-        pval: 0.0040139791620943,
-        coeff: -1.624262982863208,
-        cint: 1.1065100396717154,
-      },
-      {
-        phenotype: "Nephrotic syndrome without mention of glomerulonephritis",
-        pval: 8.7945502733765e-5,
-        coeff: -1.61899996555599,
-        cint: 0.8091449925993022,
       },
       {
         phenotype: "Schizophrenia",
@@ -1611,34 +1292,10 @@ const realData = {
         cint: 0.5687032461112795,
       },
       {
-        phenotype: "Primary angle-closure glaucoma",
-        pval: 0.003417825772848,
-        coeff: -1.454798235159458,
-        cint: 0.9740140621371064,
-      },
-      {
-        phenotype: "Traumatic amputation",
-        pval: 0.0064731583888073,
-        coeff: -1.431044203043972,
-        cint: 1.0301149360517836,
-      },
-      {
-        phenotype: "Optic atrophy",
-        pval: 0.0008526054737396,
-        coeff: -1.42582366388288,
-        cint: 0.8379181043641224,
-      },
-      {
         phenotype: "Type 2 diabetes with renal manifestations",
         pval: 1.6671420849542546e-39,
         coeff: -1.4195061912862244,
         cint: 0.2115477130766632,
-      },
-      {
-        phenotype: "Infantile cerebral palsy",
-        pval: 0.0016409071569572,
-        coeff: -1.4107037854144326,
-        cint: 0.8781633537438223,
       },
       {
         phenotype:
@@ -1646,12 +1303,6 @@ const realData = {
         pval: 2.6563086190924133e-16,
         coeff: -1.3996916903470162,
         cint: 0.3350451343597065,
-      },
-      {
-        phenotype: "Folate-deficiency anemia",
-        pval: 0.0029027035578888,
-        coeff: -1.3700631952333469,
-        cint: 0.9017469759329924,
       },
       {
         phenotype: "Pulmonary embolism and infarction, acute",
@@ -1678,18 +1329,6 @@ const realData = {
         cint: 0.2187834170552045,
       },
       {
-        phenotype: "Hypertrophy of female genital organs",
-        pval: 0.0050837277147731,
-        coeff: -1.3226645307821778,
-        cint: 0.9252929933140726,
-      },
-      {
-        phenotype: "Dental caries",
-        pval: 0.0034227377896045,
-        coeff: -1.3199762168473814,
-        cint: 0.8838831032440249,
-      },
-      {
         phenotype: "Type 1 diabetes with renal manifestations",
         pval: 5.263018395331693e-5,
         coeff: -1.3112635345972596,
@@ -1712,54 +1351,6 @@ const realData = {
         pval: 0.0002602034820067,
         coeff: -1.2858289123032165,
         cint: 0.6900812492414785,
-      },
-      {
-        phenotype: "Hyperosmolality and/or hypernatremia",
-        pval: 8.936976633306404e-5,
-        coeff: -1.2709056418130444,
-        cint: 0.6358018964371459,
-      },
-      {
-        phenotype: "Primary open angle glaucoma",
-        pval: 4.197668559741353e-9,
-        coeff: -1.2658064239651845,
-        cint: 0.4221998846412327,
-      },
-      {
-        phenotype: "Renal failure NOS",
-        pval: 3.644094319494332e-8,
-        coeff: -1.241453894452586,
-        cint: 0.4418156660191548,
-      },
-      {
-        phenotype: "Respiratory insufficiency",
-        pval: 0.0025510988645667,
-        coeff: -1.229241499724406,
-        cint: 0.7985079273567912,
-      },
-      {
-        phenotype: "Disorders of phosphorus metabolism",
-        pval: 8.485982034670511e-10,
-        coeff: -1.2192246501454878,
-        cint: 0.3894732460606656,
-      },
-      {
-        phenotype: "Cancer of stomach",
-        pval: 0.0004329552657047,
-        coeff: -1.2093730629464456,
-        cint: 0.6735539290080954,
-      },
-      {
-        phenotype: "Chronic renal failure [CKD]",
-        pval: 5.156892872330964e-40,
-        coeff: -1.1971110939102716,
-        cint: 0.1772129772179975,
-      },
-      {
-        phenotype: "Uveitis, noninfectious or NOS",
-        pval: 4.020171261228629e-6,
-        coeff: -1.1851921570045594,
-        cint: 0.5038534149806861,
       },
       {
         phenotype: "Rosacea",
@@ -1806,42 +1397,6 @@ const realData = {
         cint: 0.3784429955516781,
       },
       {
-        phenotype: "Cancer of nasopharynx",
-        pval: 5.911769564113792e-5,
-        coeff: -2.233329710849785,
-        cint: 1.089868827327821,
-      },
-      {
-        phenotype: "Alopecia Areata",
-        pval: 4.987137639183181e-6,
-        coeff: -1.9120749373203767,
-        cint: 0.8208825185397972,
-      },
-      {
-        phenotype: "Benign neoplasm of respiratory and intrathoracic organs",
-        pval: 3.61727331790236e-5,
-        coeff: -1.8303158518988292,
-        cint: 0.8684702714607884,
-      },
-      {
-        phenotype: "Cancer of intrathoracic organs",
-        pval: 0.0047560864643383,
-        coeff: -1.7252978535486667,
-        cint: 1.197801932465552,
-      },
-      {
-        phenotype: "Placenta previa and abruptio placenta",
-        pval: 0.0029219307021795,
-        coeff: -1.685156167931043,
-        cint: 1.1098890279187192,
-      },
-      {
-        phenotype: "Peripheral retinal degenerations",
-        pval: 0.0001363584445886,
-        coeff: -1.663567044051205,
-        cint: 0.8547322016652861,
-      },
-      {
         phenotype: "Hyperaldosteronism",
         pval: 0.0007181724485311,
         coeff: -1.5145240618466684,
@@ -1878,114 +1433,6 @@ const realData = {
         pval: 2.1154546768595157e-9,
         coeff: -1.2400444592040991,
         cint: 0.4058391459524904,
-      },
-      {
-        phenotype: "Other hemoglobinopathies",
-        pval: 6.614345028993504e-8,
-        coeff: -1.2065858725628642,
-        cint: 0.4378289662823451,
-      },
-      {
-        phenotype: "Anemia during pregnancy",
-        pval: 0.0001218828626217,
-        coeff: -1.190692100301914,
-        cint: 0.6073729041961833,
-      },
-      {
-        phenotype: "Type 2 diabetes",
-        pval: 5.61809873064389e-41,
-        coeff: -1.158970378345597,
-        cint: 0.1694489995809802,
-      },
-      {
-        phenotype: "Keloid scar",
-        pval: 2.5288380201133305e-5,
-        coeff: -1.0530674383704597,
-        cint: 0.4899978981795021,
-      },
-      {
-        phenotype: "Graves' disease",
-        pval: 2.690315486440891e-7,
-        coeff: -1.0515189038671893,
-        cint: 0.4006535998832083,
-      },
-      {
-        phenotype: "Arrhythmia (cardiac) NOS",
-        pval: 0.0007440181441214,
-        coeff: 1.0420513200042354,
-        cint: 0.6055411654599825,
-      },
-      {
-        phenotype: "Inguinal hernia",
-        pval: 4.655468731759681e-5,
-        coeff: 1.0563535950218084,
-        cint: 0.5084163623423293,
-      },
-      {
-        phenotype: "Attention deficit hyperactivity disorder",
-        pval: 0.0031929680062339,
-        coeff: 1.0690064427687145,
-        cint: 0.7105979559302142,
-      },
-      {
-        phenotype: "Anxiety disorder",
-        pval: 1.5875728433102653e-30,
-        coeff: 1.0919488356824054,
-        cint: 0.1863618889441677,
-      },
-      {
-        phenotype: "Migrain with aura",
-        pval: 6.326414010940023e-5,
-        coeff: 1.098441663606924,
-        cint: 0.5381871203625297,
-      },
-      {
-        phenotype: "Generalized anxiety disorder",
-        pval: 4.029010178776357e-6,
-        coeff: 1.1167551013754693,
-        cint: 0.474806213912557,
-      },
-      {
-        phenotype: "Major depressive disorder",
-        pval: 2.51167759687808e-10,
-        coeff: 1.1222016963715733,
-        cint: 0.3476735820371606,
-      },
-      {
-        phenotype: "Testicular hypofunction",
-        pval: 0.0004217360345913,
-        coeff: 1.1425786545921444,
-        cint: 0.6350972286892547,
-      },
-      {
-        phenotype: "Intestinal malabsorption (non-celiac)",
-        pval: 0.00149309791819,
-        coeff: 1.1482271844141312,
-        cint: 0.7085858201581903,
-      },
-      {
-        phenotype: "Diverticulosis",
-        pval: 6.320649579896874e-7,
-        coeff: 1.1491112747064576,
-        cint: 0.4521476555201864,
-      },
-      {
-        phenotype: "Emphysema",
-        pval: 0.0006988440683726,
-        coeff: 1.1583360726548442,
-        cint: 0.6696977580429766,
-      },
-      {
-        phenotype: "Irritable Bowel Syndrome",
-        pval: 1.1134591364107949e-7,
-        coeff: 1.165568942536903,
-        cint: 0.4304510852408035,
-      },
-      {
-        phenotype: "Deficiency of humoral immunity",
-        pval: 0.0037526864502182,
-        coeff: 1.2057332131288545,
-        cint: 0.8153904819271721,
       },
       {
         phenotype: "Acute sinusitis",
@@ -2025,6 +1472,12 @@ const realData = {
         cint: 0.7548642730168479,
       },
       {
+        phenotype: "Asphyxia and hypoxemia",
+        pval: 0.0064200961186602,
+        coeff: 1.3815708113999046,
+        cint: 0.9935104045049729,
+      },
+      {
         phenotype: "Regional enteritis",
         pval: 0.0012080757902886,
         coeff: 1.4716921786394668,
@@ -2041,6 +1494,12 @@ const realData = {
         pval: 0.0021871389974592,
         coeff: 1.5537539794552906,
         cint: 0.994037356174527,
+      },
+      {
+        phenotype: "Posttraumatic stress disorder",
+        pval: 0.0066075210656317,
+        coeff: 1.588042893439932,
+        cint: 1.1459877817441837,
       },
       {
         phenotype: "Ulcerative colitis",
@@ -2067,6 +1526,12 @@ const realData = {
         cint: 0.885213548666673,
       },
       {
+        phenotype: "Celiac disease",
+        pval: 0.0061494349206681,
+        coeff: 1.955398387537903,
+        cint: 1.3988770306932616,
+      },
+      {
         phenotype: "Abdominal hernia",
         pval: 0.0031497474457437,
         coeff: 2.101088002813004,
@@ -2091,6 +1556,12 @@ const realData = {
         cint: 1.1387529115988744,
       },
       {
+        phenotype: "Ulcerative colitis (chronic)",
+        pval: 0.0058811124075885,
+        coeff: 2.765619155055228,
+        cint: 1.9679920659748231,
+      },
+      {
         phenotype: "Other non-epithelial cancer of skin",
         pval: 6.603039987389589e-20,
         coeff: 2.7934473271019247,
@@ -2105,22 +1576,10 @@ const realData = {
     ],
     group6: [
       {
-        phenotype: "Tuberculosis",
-        pval: 0.000112062571319,
-        coeff: -2.409388133680601,
-        cint: 1.2224883977027154,
-      },
-      {
         phenotype: "Viral hepatitis B",
         pval: 2.448580168015111e-16,
         coeff: -2.3781108782345908,
         cint: 0.5685696829613289,
-      },
-      {
-        phenotype: "Corneal opacity",
-        pval: 0.0008242871022512,
-        coeff: -1.9279167455272097,
-        cint: 1.1298067178723776,
       },
       {
         phenotype: "Type 2 diabetes with renal manifestations",
@@ -2196,6 +1655,12 @@ const realData = {
         cint: 0.7522883481561407,
       },
       {
+        phenotype: "Other disorders of gallbladder",
+        pval: 0.0034897730959671,
+        coeff: -1.30417317182007,
+        cint: 0.8751061870064591,
+      },
+      {
         phenotype: "Keloid scar",
         pval: 6.96624200005662e-7,
         coeff: -1.2963120825850138,
@@ -2256,120 +1721,6 @@ const realData = {
         cint: 0.2604159465363747,
       },
       {
-        phenotype: "Chronic renal failure [CKD]",
-        pval: 9.87752438711588e-18,
-        coeff: -1.1463202535473829,
-        cint: 0.2620001693193523,
-      },
-      {
-        phenotype: "Disorders resulting from impaired renal function",
-        pval: 6.096479155231253e-9,
-        coeff: -1.1254825504131598,
-        cint: 0.3794068294971096,
-      },
-      {
-        phenotype: "Disorders of phosphorus metabolism",
-        pval: 0.0001078942625359,
-        coeff: -1.0809396439138834,
-        cint: 0.5471433143375317,
-      },
-      {
-        phenotype: "Hyperglyceridemia",
-        pval: 8.104233304784556e-9,
-        coeff: -1.040686422042601,
-        cint: 0.3537305412340759,
-      },
-      {
-        phenotype: "Hypertensive chronic kidney disease",
-        pval: 4.607120874265438e-7,
-        coeff: -1.0226773706342216,
-        cint: 0.3975434842946104,
-      },
-      {
-        phenotype: "Myopathy",
-        pval: 0.0009644897731312,
-        coeff: -1.0219256243662111,
-        cint: 0.6068247035420105,
-      },
-      {
-        phenotype: "Prurigo and Lichen",
-        pval: 0.0018185254488561,
-        coeff: -1.0104261559257302,
-        cint: 0.6350744200619831,
-      },
-      {
-        phenotype: "Precordial pain",
-        pval: 9.14181441049058e-5,
-        coeff: -0.9934950971325812,
-        cint: 0.4977150361050076,
-      },
-      {
-        phenotype: "Heart transplant/surgery",
-        pval: 0.0019344568310339,
-        coeff: -0.958421865372149,
-        cint: 0.6059363895170515,
-      },
-      {
-        phenotype: "Elevated sedimentation rate",
-        pval: 0.0012295031364937,
-        coeff: -0.928281307725662,
-        cint: 0.5629419439141765,
-      },
-      {
-        phenotype: "Impaired fasting glucose",
-        pval: 3.3006697593429396e-27,
-        coeff: -0.8869843967295894,
-        cint: 0.1609109231422254,
-      },
-      {
-        phenotype: "Poisoning by hormones and synthetic substitutes",
-        pval: 0.0001499480464148,
-        coeff: -0.8667134838410739,
-        cint: 0.4480763778883596,
-      },
-      {
-        phenotype: "Other chronic nonalcoholic liver disease",
-        pval: 4.3980878695427474e-7,
-        coeff: -0.8379741423064742,
-        cint: 0.3251717133601044,
-      },
-      {
-        phenotype: "Glaucoma",
-        pval: 4.124205860114427e-7,
-        coeff: -0.8100341289186316,
-        cint: 0.3135682049841871,
-      },
-      {
-        phenotype: "Abnormal results of function study of thyroid",
-        pval: 0.0007151923303812,
-        coeff: -0.7900776853261835,
-        cint: 0.457643796549215,
-      },
-      {
-        phenotype: "Iron deficiency anemia secondary to blood loss (chronic)",
-        pval: 4.0769809893764855e-5,
-        coeff: -0.7584085170393633,
-        cint: 0.3622780506672336,
-      },
-      {
-        phenotype: "Heart failure NOS",
-        pval: 3.288745540241302e-5,
-        coeff: -0.7339675025320666,
-        cint: 0.346430515205914,
-      },
-      {
-        phenotype: "Vitamin B-complex deficiencies",
-        pval: 0.0009161634894389,
-        coeff: 0.7624804139721508,
-        cint: 0.4507985903716209,
-      },
-      {
-        phenotype: "Lymphadenitis",
-        pval: 0.0013332741658637,
-        coeff: 0.9082933629911658,
-        cint: 0.5548076683572718,
-      },
-      {
         phenotype: "Herpes simplex",
         pval: 8.241884990515135e-7,
         coeff: 1.34184646947865,
@@ -2412,12 +1763,6 @@ const realData = {
         pval: 1.7577857263291814e-16,
         coeff: -1.9978019413332675,
         cint: 0.4753381403566388,
-      },
-      {
-        phenotype: "Paralytic strabismus",
-        pval: 0.0004907141628861,
-        coeff: -1.961930797944636,
-        cint: 1.1031446577988997,
       },
       {
         phenotype: "Chronic osteomyelitis",
@@ -2492,6 +1837,12 @@ const realData = {
         cint: 0.5785924967472839,
       },
       {
+        phenotype: "Renal dialysis",
+        pval: 0.0015301180943758,
+        coeff: -0.972223341920344,
+        cint: 0.6013180501694961,
+      },
+      {
         phenotype: "Impaired fasting glucose",
         pval: 1.3813934522487716e-21,
         coeff: -0.9681917313816258,
@@ -2559,12 +1910,6 @@ const realData = {
         cint: 0.207719299816487,
       },
       {
-        phenotype: "Hypercholesterolemia",
-        pval: 0.0009606131207349,
-        coeff: -0.38069160369753,
-        cint: 0.2259792783790705,
-      },
-      {
         phenotype: "Hypothyroidism NOS",
         pval: 1.114068718107571e-6,
         coeff: 0.7884825248174366,
@@ -2601,18 +1946,6 @@ const realData = {
         pval: 2.3110179612213724e-44,
         coeff: -3.427686741976231,
         cint: 0.4808295751018772,
-      },
-      {
-        phenotype: "Atrophic gastritis",
-        pval: 5.843980137481692e-5,
-        coeff: -2.387616179810218,
-        cint: 1.1643727706597788,
-      },
-      {
-        phenotype: "Congenital anomalies of breast",
-        pval: 0.000715285754533,
-        coeff: -2.3863243242421195,
-        cint: 1.3822667312377843,
       },
       {
         phenotype: "Cancer of stomach",
@@ -2726,131 +2059,16 @@ const realData = {
         cint: 0.4391188680271707,
       },
       {
+        phenotype: "Cerebral aneurysm",
+        pval: 0.0025396814171708,
+        coeff: -0.9708097656137096,
+        cint: 0.6303482231990128,
+      },
+      {
         phenotype: "Liver abscess and sequelae of chronic liver disease",
         pval: 0.0022653747789627,
         coeff: -0.8989149233144377,
         cint: 0.5770779955373749,
-      },
-      {
-        phenotype: "Hyperglyceridemia",
-        pval: 0.0002667715589731,
-        coeff: -0.8889970000112388,
-        cint: 0.4779469612460283,
-      },
-      {
-        phenotype: "Other chronic nonalcoholic liver disease",
-        pval: 5.2587679811654896e-5,
-        coeff: -0.8827775850286688,
-        cint: 0.4278659783402909,
-      },
-      {
-        phenotype: "Type 2 diabetes with neurological manifestations",
-        pval: 0.0010896577501691,
-        coeff: -0.8535471849195757,
-        cint: 0.5121776235925404,
-      },
-      {
-        phenotype: "Urticaria",
-        pval: 5.723086359317013e-5,
-        coeff: -0.8525869120222667,
-        cint: 0.4152737962113586,
-      },
-      {
-        phenotype: "Hepatitis NOS",
-        pval: 0.0002833871706482,
-        coeff: -0.8263828091372235,
-        cint: 0.4461891753507051,
-      },
-      {
-        phenotype: "Other disorders of stomach and duodenum",
-        pval: 0.0004016067048393,
-        coeff: -0.7896950618745501,
-        cint: 0.4373446246895583,
-      },
-      {
-        phenotype: "Other benign neoplasm of connective and other soft tissue",
-        pval: 0.0009987088301827,
-        coeff: -0.724055504247829,
-        cint: 0.4312276072540518,
-      },
-      {
-        phenotype: "Other hypertensive complications",
-        pval: 0.000263805444638,
-        coeff: -0.7051325820911946,
-        cint: 0.3787982364563645,
-      },
-      {
-        phenotype: "Uterine leiomyoma",
-        pval: 0.0012381150240788,
-        coeff: -0.7039669158415378,
-        cint: 0.4271736219034274,
-      },
-      {
-        phenotype:
-          "Disorders of menstruation and other abnormal bleeding from female genital tract",
-        pval: 0.0011943273180719,
-        coeff: -0.6569456086318306,
-        cint: 0.3973758572428101,
-      },
-      {
-        phenotype: "Glaucoma",
-        pval: 0.0006195455133149,
-        coeff: -0.6504598011454388,
-        cint: 0.3724543519936756,
-      },
-      {
-        phenotype: "Malignant neoplasm, other",
-        pval: 0.0004896176067745,
-        coeff: 0.6066514287020068,
-        cint: 0.3410463869942997,
-      },
-      {
-        phenotype: "Injury, NOS",
-        pval: 2.1681699826768717e-5,
-        coeff: 0.6361623703815089,
-        cint: 0.2935967611238447,
-      },
-      {
-        phenotype: "Arthropathy NOS",
-        pval: 1.3933235640942745e-5,
-        coeff: 0.6484168988732784,
-        cint: 0.2924971000701082,
-      },
-      {
-        phenotype: "Asthma",
-        pval: 6.632805173766703e-5,
-        coeff: 0.7181359285974886,
-        cint: 0.3528427691519283,
-      },
-      {
-        phenotype: "Migraine",
-        pval: 9.98773324067116e-5,
-        coeff: 0.7600536476284119,
-        cint: 0.3828630192548348,
-      },
-      {
-        phenotype: "Acute sinusitis",
-        pval: 0.0008434916906028,
-        coeff: 0.7710104602403443,
-        cint: 0.4526965778717661,
-      },
-      {
-        phenotype: "Osteoarthrosis, localized, primary",
-        pval: 0.0003950350557978,
-        coeff: 0.8123327824859453,
-        cint: 0.4493290588814879,
-      },
-      {
-        phenotype: "Disorder of skin and subcutaneous tissue NOS",
-        pval: 6.73723104750019e-5,
-        coeff: 0.8271873983908735,
-        cint: 0.4068012687110531,
-      },
-      {
-        phenotype: "Anxiety disorder",
-        pval: 3.1158340776302436e-10,
-        coeff: 0.8288047313789376,
-        cint: 0.2581364226368666,
       },
       {
         phenotype: "Vitamin B-complex deficiencies",
@@ -2883,6 +2101,12 @@ const realData = {
         cint: 0.6034724039816128,
       },
       {
+        phenotype: "Inguinal hernia",
+        pval: 0.0026320529528386,
+        coeff: 1.3712376236665111,
+        cint: 0.8935558484112787,
+      },
+      {
         phenotype: "Migrain with aura",
         pval: 0.0021449095365705,
         coeff: 1.786433201715033,
@@ -2902,18 +2126,6 @@ const realData = {
       },
     ],
     group9: [
-      {
-        phenotype: "Pemphigus and pemphigoid",
-        pval: 0.0006446356578029,
-        coeff: -2.3529162411056084,
-        cint: 1.351550652560547,
-      },
-      {
-        phenotype: "Cancer of intrathoracic organs",
-        pval: 0.0007584020890765,
-        coeff: -2.205514460702221,
-        cint: 1.283643384147819,
-      },
       {
         phenotype: "Heart transplant/surgery",
         pval: 6.595696258997759e-11,
@@ -2955,6 +2167,12 @@ const realData = {
         pval: 0.0001233964462535,
         coeff: -1.187055384676967,
         cint: 0.6059955957217003,
+      },
+      {
+        phenotype: "Pituitary hyperfunction",
+        pval: 0.0015348954423352,
+        coeff: -1.1867718623457593,
+        cint: 0.734225807989062,
       },
       {
         phenotype: "Other specified diseases of sebaceous glands",
@@ -3094,18 +2312,6 @@ const realData = {
   group2: {
     group10: [
       {
-        phenotype: "Nodular lymphoma",
-        pval: 0.0005608227548463,
-        coeff: -2.362767086134104,
-        cint: 1.3423452317301567,
-      },
-      {
-        phenotype: "Thyroiditis",
-        pval: 6.522869793810045e-5,
-        coeff: -2.287944604331405,
-        cint: 1.123023397527517,
-      },
-      {
         phenotype:
           "Other conditions or status of the mother complicating pregnancy, childbirth, or the puerperium",
         pval: 0.0001256801188519,
@@ -3119,10 +2325,28 @@ const realData = {
         cint: 0.512102578309733,
       },
       {
+        phenotype: "Miscarriage; stillbirth",
+        pval: 0.0007970799419458,
+        coeff: -1.2017552963129157,
+        cint: 0.7023055400433247,
+      },
+      {
+        phenotype: "Testicular hypofunction",
+        pval: 0.0009711217346792,
+        coeff: -1.0378912291654816,
+        cint: 0.6166644838141562,
+      },
+      {
         phenotype: "Nontoxic uninodular goiter",
         pval: 2.2195567674269916e-5,
         coeff: -0.9508745793784266,
         cint: 0.4393838321390089,
+      },
+      {
+        phenotype: "Acne",
+        pval: 0.0007709318276264,
+        coeff: -0.9221108520003648,
+        cint: 0.5374041752841221,
       },
       {
         phenotype: "Type 2 diabetes",
@@ -3161,6 +2385,12 @@ const realData = {
         cint: 0.6755712176789742,
       },
       {
+        phenotype: "Hyperpotassemia",
+        pval: 0.0007971561877945,
+        coeff: 1.5395238573753975,
+        cint: 0.8997045160262904,
+      },
+      {
         phenotype: "Other disorders of the kidney and ureters",
         pval: 5.954637340703848e-5,
         coeff: 1.5600085300392192,
@@ -3168,12 +2398,6 @@ const realData = {
       },
     ],
     group11: [
-      {
-        phenotype: "Coagulation defects complicating pregnancy or postpartum",
-        pval: 1.1470785080184902e-5,
-        coeff: -2.90584077122466,
-        cint: 1.298110233530413,
-      },
       {
         phenotype: "Other hemoglobinopathies",
         pval: 3.78551073187941e-7,
@@ -3232,6 +2456,12 @@ const realData = {
         cint: 0.623522006169027,
       },
       {
+        phenotype: "Mineral deficiency NEC",
+        pval: 0.0008677418938285,
+        coeff: -1.096986425007309,
+        cint: 0.6456171821032106,
+      },
+      {
         phenotype: "Acquired hypothyroidism",
         pval: 8.965676328038804e-5,
         coeff: -1.0566252910524505,
@@ -3248,6 +2478,12 @@ const realData = {
         pval: 4.283269893173652e-5,
         coeff: -0.6847770591228841,
         cint: 0.3280193918909295,
+      },
+      {
+        phenotype: "Hypercholesterolemia",
+        pval: 0.0008895913674608,
+        coeff: -0.6716544218675546,
+        cint: 0.3961178388031796,
       },
     ],
     group12: [],
@@ -3286,6 +2522,12 @@ const realData = {
         cint: 0.7510141894514302,
       },
       {
+        phenotype: "Regional enteritis",
+        pval: 0.0008131472201458,
+        coeff: -1.4657911643331547,
+        cint: 0.8580219180688486,
+      },
+      {
         phenotype: "Psoriasis",
         pval: 4.8676261231544696e-5,
         coeff: -1.2650131468661958,
@@ -3322,10 +2564,22 @@ const realData = {
         cint: 0.414532460511063,
       },
       {
+        phenotype: "Pruritus and related conditions",
+        pval: 0.0013138960646706,
+        coeff: -0.666331333835825,
+        cint: 0.4064783764765163,
+      },
+      {
         phenotype: "Type 2 diabetes",
         pval: 5.160460131138468e-7,
         coeff: 0.8219700665105849,
         cint: 0.3209067513905086,
+      },
+      {
+        phenotype: "Chronic renal failure [CKD]",
+        pval: 0.0009975190320952,
+        coeff: 0.8275080422373978,
+        cint: 0.4927908893987797,
       },
       {
         phenotype: "Essential hypertension",
@@ -3351,6 +2605,18 @@ const realData = {
         coeff: 1.4152146413032507,
         cint: 0.5866176361689962,
       },
+      {
+        phenotype: "Renal dialysis",
+        pval: 0.0011347297462364,
+        coeff: 1.9058260008005456,
+        cint: 1.1476442237699842,
+      },
+      {
+        phenotype: "Liver abscess and sequelae of chronic liver disease",
+        pval: 0.000982390960212,
+        coeff: 2.3547501312372803,
+        cint: 1.4004536427789331,
+      },
     ],
     group16: [
       {
@@ -3370,18 +2636,6 @@ const realData = {
     group18: [],
     group19: [
       {
-        phenotype: "Spondylosis and allied disorders",
-        pval: 1.1873590524818e-5,
-        coeff: -3.0094938287109847,
-        cint: 1.3467213314500204,
-      },
-      {
-        phenotype: "Obstructive chronic bronchitis",
-        pval: 3.888086814513466e-5,
-        coeff: -2.508823452737792,
-        cint: 1.1952275645565469,
-      },
-      {
         phenotype: "Hypertensive heart and/or renal disease",
         pval: 0.0001171702442911,
         coeff: -2.034316404187652,
@@ -3399,6 +2653,12 @@ const realData = {
         coeff: -1.3252258734588525,
         cint: 0.6809081465116211,
       },
+      {
+        phenotype: "Other abnormality of urination",
+        pval: 0.0003201574187782,
+        coeff: -1.261211760372393,
+        cint: 0.6869487864309285,
+      },
     ],
     group3: [
       {
@@ -3408,22 +2668,10 @@ const realData = {
         cint: 0.8124793536325758,
       },
       {
-        phenotype: "Tics and stuttering",
-        pval: 0.0042733995142342,
-        coeff: -2.2240400647617564,
-        cint: 1.5256105362097916,
-      },
-      {
         phenotype: "Chronic dermatitis due to solar radiation",
         pval: 1.815059347609853e-7,
         coeff: -1.8930175206610835,
         cint: 0.7111368170002024,
-      },
-      {
-        phenotype: "Lymphoid leukemia",
-        pval: 0.0028248212692253,
-        coeff: -1.8648785184596093,
-        cint: 1.2240016288484652,
       },
       {
         phenotype: "Regional enteritis",
@@ -3436,12 +2684,6 @@ const realData = {
         pval: 1.6214448564339469e-12,
         coeff: -1.7255407360792785,
         cint: 0.4787866194723693,
-      },
-      {
-        phenotype: "Congenital coagulation defects",
-        pval: 0.0082300525710993,
-        coeff: -1.7188327413819529,
-        cint: 1.2748804423398574,
       },
       {
         phenotype: "Diarrhea",
@@ -3486,12 +2728,6 @@ const realData = {
         cint: 0.2918009440171867,
       },
       {
-        phenotype: "Effects of heat, cold and air pressure",
-        pval: 0.0034288726941727,
-        coeff: -1.497195185101745,
-        cint: 1.0027433746725578,
-      },
-      {
         phenotype: "Spontaneous ecchymoses",
         pval: 0.0018114106047519,
         coeff: -1.3838636270535298,
@@ -3502,60 +2738,6 @@ const realData = {
         pval: 1.3782002344788965e-12,
         coeff: -1.3326715876003927,
         cint: 0.368600833868272,
-      },
-      {
-        phenotype: "Toxic effect of venom",
-        pval: 0.0019299607435744,
-        coeff: -1.254423193632331,
-        cint: 0.7928989967561859,
-      },
-      {
-        phenotype: "Ulcerative colitis",
-        pval: 4.769549892981346e-11,
-        coeff: -1.1890553078721031,
-        cint: 0.3542901626842971,
-      },
-      {
-        phenotype: "Immunity deficiency",
-        pval: 7.482085228594303e-47,
-        coeff: 1.1516370736449355,
-        cint: 0.1570259140837169,
-      },
-      {
-        phenotype: "Viral hepatitis C",
-        pval: 9.601474878937034e-12,
-        coeff: 1.176676367948056,
-        cint: 0.3385384021672037,
-      },
-      {
-        phenotype: "Disorders involving the immune mechanism",
-        pval: 1.8733274645469152e-39,
-        coeff: 1.1925155583298417,
-        cint: 0.1778387563441696,
-      },
-      {
-        phenotype: "Cholelithiasis with other cholecystitis",
-        pval: 0.0063724748451686,
-        coeff: 1.196907281543055,
-        cint: 0.8599406334048568,
-      },
-      {
-        phenotype: "Encephalopathy, not elsewhere classified",
-        pval: 1.4598217374545087e-6,
-        coeff: 1.2059560244672816,
-        cint: 0.4907199354318385,
-      },
-      {
-        phenotype: "Intestinal helminthiases",
-        pval: 0.0107822798141688,
-        coeff: 1.254860068782437,
-        cint: 0.9646244015019866,
-      },
-      {
-        phenotype: "Acidosis",
-        pval: 2.5964553403246244e-10,
-        coeff: 1.2550853429382005,
-        cint: 0.3891581580436132,
       },
       {
         phenotype: "Bacterial enteritis",
@@ -3574,18 +2756,6 @@ const realData = {
         pval: 7.108024356781138e-16,
         coeff: 1.3009806695718176,
         cint: 0.3160225749697475,
-      },
-      {
-        phenotype: "Hematemesis",
-        pval: 0.0040029799771014,
-        coeff: 1.3282931499913575,
-        cint: 0.9046118630543626,
-      },
-      {
-        phenotype: "Extrinsic allergic alveolitis",
-        pval: 0.0066286153180329,
-        coeff: 1.3321883648255497,
-        cint: 0.9617278482583864,
       },
       {
         phenotype: "Cancer of liver and intrahepatic bile duct",
@@ -3618,34 +2788,16 @@ const realData = {
         cint: 0.5208894284572425,
       },
       {
-        phenotype: "Cancer of mouth",
-        pval: 0.0036940736318171,
-        coeff: 1.9785575572302747,
-        cint: 1.3357478326765724,
-      },
-      {
         phenotype: "Portal hypertension",
         pval: 8.412422417123986e-23,
         coeff: 1.9853092738219096,
         cint: 0.3958672369736191,
       },
       {
-        phenotype: "Nephrotic syndrome without mention of glomerulonephritis",
-        pval: 0.0072123337667466,
-        coeff: 2.0388022553073157,
-        cint: 1.4872202305272548,
-      },
-      {
         phenotype: "Renal dialysis",
         pval: 5.206718199792196e-35,
         coeff: 2.06110404308695,
         cint: 0.3272424292223015,
-      },
-      {
-        phenotype: "Viral hepatitis B",
-        pval: 0.0011471459693153,
-        coeff: 2.075041945466072,
-        cint: 1.250730363905022,
       },
       {
         phenotype: "Esophageal bleeding (varices/hemorrhage)",
@@ -3678,22 +2830,10 @@ const realData = {
         cint: 0.4900445788852847,
       },
       {
-        phenotype: "Diabetic retinopathy",
-        pval: 0.0003024193109452,
-        coeff: 2.296603665755409,
-        cint: 1.24577578376916,
-      },
-      {
         phenotype: "Liver abscess and sequelae of chronic liver disease",
         pval: 2.545681422182653e-34,
         coeff: 2.724382434658636,
         cint: 0.4370975373877428,
-      },
-      {
-        phenotype: "Corneal opacity",
-        pval: 0.0082338726720263,
-        coeff: 2.8023327069280866,
-        cint: 2.0786499805953285,
       },
       {
         phenotype: "Alcoholic liver damage",
@@ -3716,52 +2856,16 @@ const realData = {
         cint: 0.7505919676105579,
       },
       {
-        phenotype: "Pulmonary embolism and infarction, acute",
-        pval: 0.0001064775468913,
-        coeff: -1.6657508815143354,
-        cint: 0.8424589485108553,
-      },
-      {
-        phenotype: "Atrioventricular [AV] block",
-        pval: 0.002324067110253,
-        coeff: -1.6392131520992137,
-        cint: 1.0549837271420492,
-      },
-      {
-        phenotype: "Hyperaldosteronism",
-        pval: 0.0008662053874718,
-        coeff: -1.5270183151441177,
-        cint: 0.8985737593827752,
-      },
-      {
-        phenotype: "Optic atrophy",
-        pval: 0.0045205687572025,
-        coeff: -1.5037175853286828,
-        cint: 1.0379957978722198,
-      },
-      {
         phenotype: "Other hemoglobinopathies",
         pval: 1.0727019331795992e-8,
         coeff: -1.4769492004086626,
         cint: 0.5061831498652822,
       },
       {
-        phenotype: "Schizophrenia",
-        pval: 0.0003982862433861,
-        coeff: -1.4016345570883684,
-        cint: 0.775765349993844,
-      },
-      {
         phenotype: "Keloid scar",
         pval: 4.485791456121199e-8,
         coeff: -1.3324771989874264,
         cint: 0.477391785924073,
-      },
-      {
-        phenotype: "Type 1 diabetes with renal manifestations",
-        pval: 0.0007829045444036,
-        coeff: -1.3001920722758782,
-        cint: 0.7587093846139816,
       },
       {
         phenotype: "Aseptic necrosis of bone",
@@ -3842,106 +2946,22 @@ const realData = {
         cint: 0.3103285910916991,
       },
       {
-        phenotype: "Emphysema",
-        pval: 0.0001350923507665,
-        coeff: -0.8232494538576214,
-        cint: 0.4227261195711127,
-      },
-      {
-        phenotype: "Hypertrophy of breast (Gynecomastia)",
-        pval: 0.0022763890886873,
-        coeff: -0.8204359009124818,
-        cint: 0.5269479405727604,
-      },
-      {
-        phenotype: "Hypertensive heart and/or renal disease",
-        pval: 0.0021372264093551,
-        coeff: -0.8110222858783295,
-        cint: 0.5176975583146805,
-      },
-      {
-        phenotype: "Primary open angle glaucoma",
-        pval: 0.0016685503341004,
-        coeff: -0.8047966186687622,
-        cint: 0.5017646767619132,
-      },
-      {
-        phenotype: "Pulmonary heart disease",
-        pval: 2.856842203342293e-7,
-        coeff: -0.7961901928847531,
-        cint: 0.3040345182208454,
-      },
-      {
-        phenotype: "Staphylococcus infections",
-        pval: 0.0030594082401484,
-        coeff: -0.7615784992430021,
-        cint: 0.503988906941067,
-      },
-      {
-        phenotype: "Premature beats",
-        pval: 9.07146966201539e-5,
-        coeff: -0.751847173482215,
-        cint: 0.3764763329775258,
-      },
-      {
-        phenotype: "Simple and unspecified goiter",
-        pval: 0.0001995603746264,
-        coeff: -0.7323145460283453,
-        cint: 0.3858804180779445,
-      },
-      {
-        phenotype: "Primary/intrinsic cardiomyopathies",
-        pval: 4.226855421974493e-8,
-        coeff: -0.6902732559530412,
-        cint: 0.2468318978879391,
-      },
-      {
-        phenotype: "Gout",
-        pval: 2.513122807091996e-6,
-        coeff: -0.6645749880152576,
-        cint: 0.2767210192232864,
-      },
-      {
-        phenotype: "Nephritis and nephropathy with pathological lesion",
-        pval: 0.0035961787504538,
-        coeff: -0.6607096817163272,
-        cint: 0.4447660180771184,
-      },
-      {
-        phenotype: "Symptoms and disorders of the joints",
-        pval: 0.0029688967380249,
-        coeff: -0.6534115252973965,
-        cint: 0.4310632359744525,
-      },
-      {
-        phenotype: "Excessive or frequent menstruation",
-        pval: 3.6190339372135866e-5,
-        coeff: -0.6510234732374836,
-        cint: 0.3089138101894451,
-      },
-      {
-        phenotype: "Thyrotoxicosis with or without goiter",
-        pval: 0.0005546125030039,
-        coeff: -0.6440620507569073,
-        cint: 0.3655888136857699,
-      },
-      {
-        phenotype: "Otitis externa",
-        pval: 0.0040342184451737,
-        coeff: 0.6916213272121949,
-        cint: 0.4714189965153724,
-      },
-      {
-        phenotype: "Malignant neoplasm of liver, primary",
-        pval: 0.0008188908593187,
-        coeff: 0.8273418688890908,
-        cint: 0.4845788106549392,
+        phenotype: "Suppurative and unspecified otitis media",
+        pval: 0.005578802162458,
+        coeff: 0.8294754895581938,
+        cint: 0.5865796971634185,
       },
       {
         phenotype: "Hepatitis NOS",
         pval: 5.60192080048267e-8,
         coeff: 0.9755419067082052,
         cint: 0.3520538872760861,
+      },
+      {
+        phenotype: "Actinic keratosis",
+        pval: 0.0062356093638662,
+        coeff: 0.9922171833320088,
+        cint: 0.7110125042460584,
       },
       {
         phenotype: "Other chronic nonalcoholic liver disease",
@@ -4010,139 +3030,6 @@ const realData = {
         pval: 1.285547890588838e-35,
         coeff: -3.3323270715124678,
         cint: 0.5243148009525016,
-      },
-      {
-        phenotype: "Psoriasis vulgaris",
-        pval: 0.0054303168986639,
-        coeff: -1.5790189115197946,
-        cint: 1.1131113107969253,
-      },
-      {
-        phenotype: "Other hemoglobinopathies",
-        pval: 1.87401648757778e-6,
-        coeff: -1.4083177185913445,
-        cint: 0.5790872907531615,
-      },
-      {
-        phenotype: "Alopecia Areata",
-        pval: 0.0041225822337604,
-        coeff: -1.36142247632062,
-        cint: 0.9301799876377288,
-      },
-      {
-        phenotype: "Keloid scar",
-        pval: 3.92843951395501e-5,
-        coeff: -1.3116285870071298,
-        cint: 0.6252345616474231,
-      },
-      {
-        phenotype: "Missed abortion/Hydatidiform mole",
-        pval: 0.0001978934273821,
-        coeff: -1.2325837170503495,
-        cint: 0.6491188999602331,
-      },
-      {
-        phenotype: "Benign neoplasm of unspecified sites",
-        pval: 6.496920189362665e-5,
-        coeff: -1.1662799947622828,
-        cint: 0.5723258838737959,
-      },
-      {
-        phenotype: "Other disorders of the kidney and ureters",
-        pval: 3.588369415429753e-11,
-        coeff: 1.1256341558094245,
-        cint: 0.3332557014425565,
-      },
-      {
-        phenotype: "Inguinal hernia",
-        pval: 4.453205370298914e-5,
-        coeff: 1.1260952764816832,
-        cint: 0.5406111044611305,
-      },
-      {
-        phenotype: "Acute renal failure",
-        pval: 6.9865445830337005e-12,
-        coeff: 1.1548127127780616,
-        cint: 0.3300400128799245,
-      },
-      {
-        phenotype: "Other non-epithelial cancer of skin",
-        pval: 0.0003596172852468,
-        coeff: 1.1770381141116848,
-        cint: 0.6465542508302689,
-      },
-      {
-        phenotype: "Peripheral vascular disease, unspecified",
-        pval: 3.360812788439598e-5,
-        coeff: 1.1822394133120238,
-        cint: 0.5586810966441057,
-      },
-      {
-        phenotype: "Anemia of chronic disease",
-        pval: 0.0017473783924736,
-        coeff: 1.1884564841436784,
-        cint: 0.7441681384151793,
-      },
-      {
-        phenotype: "Heart transplant/surgery",
-        pval: 0.0007785911106985,
-        coeff: 1.1935933507511018,
-        cint: 0.6961887399997879,
-      },
-      {
-        phenotype: "Altered mental status",
-        pval: 0.0068766049646543,
-        coeff: 1.194620967408889,
-        cint: 0.8663043301069083,
-      },
-      {
-        phenotype: "Pyelonephritis",
-        pval: 0.0021333951171733,
-        coeff: 1.2272959123761984,
-        cint: 0.7832796474153931,
-      },
-      {
-        phenotype: "Hyperpotassemia",
-        pval: 3.5172929788873862e-9,
-        coeff: 1.2288079024779324,
-        cint: 0.4078313449631776,
-      },
-      {
-        phenotype: "Acidosis",
-        pval: 0.0002090693410413,
-        coeff: 1.2536121061429926,
-        cint: 0.6626667892933475,
-      },
-      {
-        phenotype:
-          "Complications of cardiac/vascular device, implant, and graft",
-        pval: 0.0015051513900384,
-        coeff: 1.2704307669303805,
-        cint: 0.7845756003599063,
-      },
-      {
-        phenotype: "Septicemia",
-        pval: 1.2780743050664168e-5,
-        coeff: 1.3437007465011,
-        cint: 0.6035083109840924,
-      },
-      {
-        phenotype: "Respiratory failure",
-        pval: 0.0003026984622142,
-        coeff: 1.352615144800355,
-        cint: 0.7337647099533996,
-      },
-      {
-        phenotype: "Obstruction of bile duct",
-        pval: 0.0042518019457515,
-        coeff: 1.3606071262223014,
-        cint: 0.9328020889930042,
-      },
-      {
-        phenotype: "Disorders involving the immune mechanism",
-        pval: 3.857642065408652e-17,
-        coeff: 1.3766470316163608,
-        cint: 0.320557389534156,
       },
       {
         phenotype: "Immunity deficiency",
@@ -4295,6 +3182,18 @@ const realData = {
         cint: 1.4095972825059473,
       },
       {
+        phenotype: "Ulcerative colitis (chronic)",
+        pval: 0.0121102680830938,
+        coeff: 2.5503190185542257,
+        cint: 1.9923089345276457,
+      },
+      {
+        phenotype: "Chronic hepatitis",
+        pval: 0.0071825921327698,
+        coeff: 2.73057463600938,
+        cint: 1.990816488819362,
+      },
+      {
         phenotype: "Encephalopathy, not elsewhere classified",
         pval: 0.0056550878672534,
         coeff: 2.8041188631904985,
@@ -4308,12 +3207,6 @@ const realData = {
       },
     ],
     group6: [
-      {
-        phenotype: "Endometrial hyperplasia",
-        pval: 0.0001733517944755,
-        coeff: -2.010347235719954,
-        cint: 1.0493272488066725,
-      },
       {
         phenotype: "Viral hepatitis B",
         pval: 1.9641033123554073e-8,
@@ -4356,6 +3249,18 @@ const realData = {
         pval: 2.037660326077197e-5,
         coeff: -1.1161746538638966,
         cint: 0.5134484856909147,
+      },
+      {
+        phenotype: "Symptoms involving head and neck",
+        pval: 0.0032141679250589,
+        coeff: -1.013261981439629,
+        cint: 0.6740107918944545,
+      },
+      {
+        phenotype: "Benign neoplasm of unspecified sites",
+        pval: 0.0028687709205963,
+        coeff: -0.9900154777877838,
+        cint: 0.6508201964306023,
       },
       {
         phenotype: "Abnormal results of function study of thyroid",
@@ -4406,90 +3311,6 @@ const realData = {
         cint: 0.3741135933990119,
       },
       {
-        phenotype: "Allergies, other",
-        pval: 4.784846641315637e-5,
-        coeff: -0.5595339567513076,
-        cint: 0.2697232442070854,
-      },
-      {
-        phenotype: "Allergic rhinitis",
-        pval: 8.823170154143215e-6,
-        coeff: -0.5434262881899483,
-        cint: 0.2396613729266007,
-      },
-      {
-        phenotype: "Nontoxic uninodular goiter",
-        pval: 0.0019084515114034,
-        coeff: -0.5325116948267177,
-        cint: 0.3362316367989841,
-      },
-      {
-        phenotype: "Hypercholesterolemia",
-        pval: 2.1574159954290785e-6,
-        coeff: -0.500269647418579,
-        cint: 0.2069421251867759,
-      },
-      {
-        phenotype: "Mixed hyperlipidemia",
-        pval: 0.000145863357391,
-        coeff: -0.4297532479431905,
-        cint: 0.2217743591841329,
-      },
-      {
-        phenotype: "Sleep apnea",
-        pval: 0.0015310528583706,
-        coeff: -0.3680709847152144,
-        cint: 0.2276638670685785,
-      },
-      {
-        phenotype: "Type 2 diabetes",
-        pval: 0.0002429348166868,
-        coeff: -0.3539272276082926,
-        cint: 0.1890357311130069,
-      },
-      {
-        phenotype: "Hyperlipidemia",
-        pval: 0.0001263737302297,
-        coeff: -0.3420173231889382,
-        cint: 0.1748677613205632,
-      },
-      {
-        phenotype: "Other anemias",
-        pval: 0.0017208730738708,
-        coeff: 0.3218883132530953,
-        cint: 0.2012662098446843,
-      },
-      {
-        phenotype: "Abdominal pain",
-        pval: 0.0003234091748145,
-        coeff: 0.3622952201607475,
-        cint: 0.1974769581548296,
-      },
-      {
-        phenotype: "Anxiety disorder",
-        pval: 0.0001123563729403,
-        coeff: 0.4006711446304426,
-        cint: 0.2033283527373296,
-      },
-      {
-        phenotype: "Disorders involving the immune mechanism",
-        pval: 0.000743619461346,
-        coeff: 0.5080873098541284,
-        cint: 0.2952391246089479,
-      },
-      {
-        phenotype: "Urinary tract infection",
-        pval: 0.000394638127153,
-        coeff: 0.526881313466295,
-        cint: 0.2914142830001547,
-      },
-      {
-        phenotype: "Dysuria",
-        pval: 0.0001370875809859,
-        coeff: 0.6091963904909429,
-        cint: 0.313110094267771,
-      },
-      {
         phenotype: "Constipation",
         pval: 1.4110462232418074e-5,
         coeff: 0.6263919467176109,
@@ -4518,6 +3339,12 @@ const realData = {
         pval: 0.0003855691426162,
         coeff: 0.9909106341218268,
         cint: 0.5471198517212514,
+      },
+      {
+        phenotype: "Esophageal bleeding (varices/hemorrhage)",
+        pval: 0.0032335274664941,
+        coeff: 1.240994779423226,
+        cint: 0.8260169515146627,
       },
       {
         phenotype: "Septicemia",
@@ -4550,6 +3377,12 @@ const realData = {
         cint: 1.1540210130582065,
       },
       {
+        phenotype: "Other non-epithelial cancer of skin",
+        pval: 0.0021801760050415,
+        coeff: 2.2005022661410703,
+        cint: 1.40736602642433,
+      },
+      {
         phenotype: "Alcoholic liver damage",
         pval: 0.0005526611887413,
         coeff: 2.4671442755235127,
@@ -4562,6 +3395,12 @@ const realData = {
         pval: 2.529264058197917e-15,
         coeff: -0.8469521515442049,
         cint: 0.2098026510582353,
+      },
+      {
+        phenotype: "Other benign neoplasm of connective and other soft tissue",
+        pval: 0.0012280222333887,
+        coeff: -0.7783722097326107,
+        cint: 0.4719815819451713,
       },
       {
         phenotype: "Varicella infection",
@@ -4612,6 +3451,12 @@ const realData = {
         cint: 0.2319587314172246,
       },
       {
+        phenotype: "Other disorders of the kidney and ureters",
+        pval: 0.0012724983990737,
+        coeff: 0.6902582495486342,
+        cint: 0.4198742133047462,
+      },
+      {
         phenotype: "Anxiety disorder",
         pval: 2.040597147143017e-6,
         coeff: 0.7098651301337091,
@@ -4641,6 +3486,12 @@ const realData = {
         pval: 9.62416772871814e-8,
         coeff: 1.1611372166695448,
         cint: 0.4266822929103209,
+      },
+      {
+        phenotype: "Poisoning by hormones and synthetic substitutes",
+        pval: 0.0012610478615306,
+        coeff: 1.3676299618562475,
+        cint: 0.831241839135784,
       },
       {
         phenotype: "Kidney replaced by transpant",
@@ -4673,12 +3524,6 @@ const realData = {
         pval: 4.1594067292380495e-20,
         coeff: -2.915935352480002,
         cint: 0.622301879528683,
-      },
-      {
-        phenotype: "Unspecified disorder of lipoid metabolism",
-        pval: 5.998976379042437e-7,
-        coeff: -2.657299744345731,
-        cint: 1.0434684098770588,
       },
       {
         phenotype: "Cancer of stomach",
@@ -4778,6 +3623,12 @@ const realData = {
         cint: 0.4563827614459931,
       },
       {
+        phenotype: "Disorders resulting from impaired renal function",
+        pval: 0.0017094449621379,
+        coeff: 0.9920901857669764,
+        cint: 0.6199349617330066,
+      },
+      {
         phenotype: "Immunity deficiency",
         pval: 4.1247245415898776e-8,
         coeff: 1.0421793567576083,
@@ -4822,10 +3673,76 @@ const realData = {
         cint: 0.6712412907198064,
       },
       {
+        phenotype: "Allergy/adverse effect of penicillin",
+        pval: 0.0007623448097862,
+        coeff: -1.2413179843648852,
+        cint: 0.7227731072269632,
+      },
+      {
+        phenotype: "Other specified erythematous conditions",
+        pval: 0.000505381742152,
+        coeff: -1.135275654990727,
+        cint: 0.6397847296154431,
+      },
+      {
+        phenotype: "Cancer of bronchus; lung",
+        pval: 0.0007265245530023,
+        coeff: -1.0054911092910197,
+        cint: 0.5831640266577733,
+      },
+      {
+        phenotype: "Tobacco use disorder",
+        pval: 0.0003948218811564,
+        coeff: -0.8063486539303839,
+        cint: 0.4460011173713076,
+      },
+      {
+        phenotype: "Malignant neoplasm of female breast",
+        pval: 0.0003148217431615,
+        coeff: -0.7804485801763739,
+        cint: 0.4245742239212222,
+      },
+      {
+        phenotype: "Nontoxic uninodular goiter",
+        pval: 0.0003823057325621,
+        coeff: -0.7098729904405772,
+        cint: 0.3917013046402982,
+      },
+      {
+        phenotype: "Malignant neoplasm, other",
+        pval: 0.0003434587511607,
+        coeff: -0.5406401541079358,
+        cint: 0.2959789760952908,
+      },
+      {
         phenotype: "Type 2 diabetes",
         pval: 5.294000998128051e-7,
         coeff: 0.6438020871371627,
         cint: 0.2515939355150383,
+      },
+      {
+        phenotype: "Type 2 diabetes with renal manifestations",
+        pval: 0.0009839383631322,
+        coeff: 0.7918992597646064,
+        cint: 0.4710338626091093,
+      },
+      {
+        phenotype: "Kidney replaced by transpant",
+        pval: 0.0008466240957241,
+        coeff: 1.0896792930729533,
+        cint: 0.6399995567488662,
+      },
+      {
+        phenotype: "Hypertensive chronic kidney disease",
+        pval: 0.0008598047235619,
+        coeff: 1.0964046062132162,
+        cint: 0.6447795741256522,
+      },
+      {
+        phenotype: "Liver abscess and sequelae of chronic liver disease",
+        pval: 0.0006954232008276,
+        coeff: 1.1688012156053418,
+        cint: 0.6754802415179034,
       },
     ],
   },
@@ -4869,18 +3786,6 @@ const realData = {
       },
     ],
     group11: [
-      {
-        phenotype: "Heart transplant/surgery",
-        pval: 9.674968460746884e-6,
-        coeff: -2.4321503732300997,
-        cint: 1.07743895679925,
-      },
-      {
-        phenotype: "Malignant neoplasm of retroperitoneum and peritoneum",
-        pval: 0.0004522868330395,
-        coeff: -2.4206154779905544,
-        cint: 1.3526095979417088,
-      },
       {
         phenotype: "Other hemoglobinopathies",
         pval: 1.0494674349163197e-7,
@@ -4959,22 +3864,10 @@ const realData = {
     ],
     group12: [
       {
-        phenotype: "Circumscribed scleroderma",
-        pval: 0.0001447335534712,
-        coeff: -2.711178800965985,
-        cint: 1.3983954007415416,
-      },
-      {
         phenotype: "Alzheimer's disease",
         pval: 5.899836045627914e-6,
         coeff: -2.6779187848442216,
         cint: 1.15865016878708,
-      },
-      {
-        phenotype: "Malignant neoplasm of liver, primary",
-        pval: 9.874109396493548e-6,
-        coeff: -2.350350242591801,
-        cint: 1.0422383542238238,
       },
       {
         phenotype: "Liver replaced by transplant",
@@ -4983,34 +3876,16 @@ const realData = {
         cint: 0.9271755274907996,
       },
       {
-        phenotype: "Liver abscess and sequelae of chronic liver disease",
-        pval: 0.0001117268260042,
-        coeff: -2.000887279111688,
-        cint: 1.0150285035028457,
-      },
-      {
         phenotype: "Viral hepatitis C",
         pval: 3.351426476860615e-7,
         coeff: -1.9673479959079176,
         cint: 0.7556900670789091,
       },
       {
-        phenotype: "Esophageal bleeding (varices/hemorrhage)",
-        pval: 0.0005942339502164,
-        coeff: -1.9589357033818628,
-        cint: 1.11799165214674,
-      },
-      {
         phenotype: "Dementias",
         pval: 0.0005028283565083,
         coeff: -1.938325523219959,
         cint: 1.0919173675274687,
-      },
-      {
-        phenotype: "Chronic hepatitis",
-        pval: 0.0007327437447862,
-        coeff: -1.9250059687368732,
-        cint: 1.1172384877245285,
       },
       {
         phenotype: "Kidney replaced by transpant",
@@ -5088,6 +3963,12 @@ const realData = {
         cint: 0.3770987164049504,
       },
       {
+        phenotype: "Impaired fasting glucose",
+        pval: 0.000456645856499,
+        coeff: -0.6429609922979448,
+        cint: 0.3595402209431552,
+      },
+      {
         phenotype: "Anxiety disorder",
         pval: 2.0460940151957764e-5,
         coeff: 0.9567682364543536,
@@ -5096,12 +3977,6 @@ const realData = {
     ],
     group14: [],
     group15: [
-      {
-        phenotype: "Other acute and subacute forms of ischemic heart disease",
-        pval: 0.000362414749905,
-        coeff: -2.279761634749875,
-        cint: 1.253000384733014,
-      },
       {
         phenotype: "Bronchopneumonia and lung abscess",
         pval: 4.6319120656937886e-5,
@@ -5162,22 +4037,28 @@ const realData = {
     ],
     group18: [
       {
-        phenotype: "Balanoposthitis",
-        pval: 7.64061579638429e-5,
-        coeff: -3.312895161593118,
-        cint: 1.641591848785923,
-      },
-      {
         phenotype: "Type 2 diabetes",
         pval: 8.421553179462057e-7,
         coeff: -1.429315787067246,
         cint: 0.5687748985526873,
       },
       {
+        phenotype: "Disorders of lacrimal system",
+        pval: 0.0003154406211191,
+        coeff: -1.1824728626289056,
+        cint: 0.6433718194830365,
+      },
+      {
         phenotype: "Vitamin D deficiency",
         pval: 0.0001168244010195,
         coeff: -0.943791208803284,
         cint: 0.4801304808611633,
+      },
+      {
+        phenotype: "Other anemias",
+        pval: 0.0002814960914258,
+        coeff: -0.912912674615717,
+        cint: 0.4926747696622839,
       },
     ],
     group19: [
@@ -5200,10 +4081,10 @@ const realData = {
         cint: 1.0049159992992367,
       },
       {
-        phenotype: "Atherosclerosis",
-        pval: 0.0001754062701257,
-        coeff: -2.454277554183231,
-        cint: 1.2820504068739544,
+        phenotype: "Other diseases of the teeth and supporting structures",
+        pval: 0.0012361206476156,
+        coeff: -2.0544660833131365,
+        cint: 1.2464911165339867,
       },
       {
         phenotype: "Renal dialysis",
@@ -5218,10 +4099,34 @@ const realData = {
         cint: 0.6415046440996681,
       },
       {
+        phenotype: "Other venous embolism and thrombosis",
+        pval: 0.0008328537029348,
+        coeff: -1.8143768936716071,
+        cint: 1.0641824572777727,
+      },
+      {
         phenotype: "Viral hepatitis C",
         pval: 0.00028199176018,
         coeff: -1.7803763172312292,
         cint: 0.9609420103265656,
+      },
+      {
+        phenotype: "Type 2 diabetes with ophthalmic manifestations",
+        pval: 0.0013527896139273,
+        coeff: -1.5869335618830616,
+        cint: 0.9706022072342586,
+      },
+      {
+        phenotype: "Type 1 diabetes",
+        pval: 0.0013987456583329,
+        coeff: -1.545949706694233,
+        cint: 0.9483853910606752,
+      },
+      {
+        phenotype: "Blindness and low vision",
+        pval: 0.0007285304468481,
+        coeff: -1.5118171164052727,
+        cint: 0.8770193425057813,
       },
       {
         phenotype: "Peripheral angiopathy in diseases classified elsewhere",
@@ -5230,10 +4135,28 @@ const realData = {
         cint: 0.7286010050335092,
       },
       {
+        phenotype: "Internal derangement of knee",
+        pval: 0.0009504751001888,
+        coeff: -1.4604759834288603,
+        cint: 0.8661609752163848,
+      },
+      {
+        phenotype: "Atherosclerosis of aorta",
+        pval: 0.0010709185246398,
+        coeff: -1.427823439628675,
+        cint: 0.8554909079909814,
+      },
+      {
         phenotype: "Other hypertensive complications",
         pval: 6.736714473086123e-5,
         coeff: -1.2839028948295326,
         cint: 0.6314058236577029,
+      },
+      {
+        phenotype: "Type 2 diabetes with neurological manifestations",
+        pval: 0.0009450375708239,
+        coeff: -1.2231377711864504,
+        cint: 0.7250506425366547,
       },
       {
         phenotype: "Type 2 diabetes",
@@ -5242,11 +4165,23 @@ const realData = {
         cint: 0.5029964512018321,
       },
       {
+        phenotype: "Conjunctivitis, infectious",
+        pval: 0.0011810479817703,
+        coeff: -1.128755498922148,
+        cint: 0.6820952834583294,
+      },
+      {
         phenotype:
           "Iron deficiency anemias, unspecified or not due to blood loss",
         pval: 0.0001304176734139,
         coeff: -1.128678416789552,
         cint: 0.578243783091474,
+      },
+      {
+        phenotype: "Adjustment reaction",
+        pval: 0.0013154192076415,
+        coeff: -1.0743320708987398,
+        cint: 0.6554366711427524,
       },
     ],
     group4: [
@@ -5255,24 +4190,6 @@ const realData = {
         pval: 8.966059571172954e-7,
         coeff: -4.980902318475315,
         cint: 1.9870236585766945,
-      },
-      {
-        phenotype: "Nephrotic syndrome without mention of glomerulonephritis",
-        pval: 0.0002693283432919,
-        coeff: -2.8588233941398657,
-        cint: 1.5380098350833125,
-      },
-      {
-        phenotype: "Viral hepatitis B",
-        pval: 1.2870135575493464e-5,
-        coeff: -2.818706119070667,
-        cint: 1.266432985039062,
-      },
-      {
-        phenotype: "Secondary/extrinsic cardiomyopathies",
-        pval: 1.1896097579201988e-5,
-        coeff: -2.1478768716655186,
-        cint: 0.961246091176823,
       },
       {
         phenotype: "Renal dialysis",
@@ -5293,42 +4210,6 @@ const realData = {
         cint: 0.6769964840794231,
       },
       {
-        phenotype: "Polymyositis",
-        pval: 0.0019937329277672,
-        coeff: -1.8095764113300783,
-        cint: 1.1473685214991738,
-      },
-      {
-        phenotype: "Optic atrophy",
-        pval: 0.003934813538967,
-        coeff: -1.6923063335314,
-        cint: 1.1503528632714586,
-      },
-      {
-        phenotype: "Cutaneous lupus erythematosus",
-        pval: 0.0010776011478277,
-        coeff: -1.6881293343214754,
-        cint: 1.0119994365017888,
-      },
-      {
-        phenotype: "Peritonitis and retroperitoneal infections",
-        pval: 0.0011456617406787,
-        coeff: -1.6647878283015751,
-        cint: 1.0033363771369848,
-      },
-      {
-        phenotype: "Other disorders of circulatory system",
-        pval: 3.0497503583999597e-5,
-        coeff: -1.6549021977624885,
-        cint: 0.7778817889226575,
-      },
-      {
-        phenotype: "Hematemesis",
-        pval: 0.0024156067838219,
-        coeff: -1.5770146313322726,
-        cint: 1.0188463788455415,
-      },
-      {
         phenotype: "Hypertensive heart and/or renal disease",
         pval: 5.1723235261833486e-8,
         coeff: -1.5670466941849317,
@@ -5345,12 +4226,6 @@ const realData = {
         pval: 4.545977705293182e-6,
         coeff: -1.4913830183223673,
         cint: 0.6375651626218721,
-      },
-      {
-        phenotype: "Pulmonary embolism and infarction, acute",
-        pval: 0.0004609740985848,
-        coeff: -1.4565247059626916,
-        cint: 0.8150647761887126,
       },
       {
         phenotype: "Primary/intrinsic cardiomyopathies",
@@ -5407,82 +4282,16 @@ const realData = {
         cint: 0.4966363197627312,
       },
       {
-        phenotype: "Disorders of magnesium metabolism",
-        pval: 2.6464479733535472e-11,
-        coeff: -1.24945016574273,
-        cint: 0.3674228257555183,
-      },
-      {
-        phenotype: "Uterine leiomyoma",
-        pval: 2.5224878838565797e-18,
-        coeff: -1.2459421981026204,
-        cint: 0.2796906466783184,
-      },
-      {
-        phenotype: "Type 2 diabetes with renal manifestations",
-        pval: 3.8538507199775523e-22,
-        coeff: -1.2218918934229666,
-        cint: 0.2475331668686229,
-      },
-      {
-        phenotype: "Uveitis, noninfectious or NOS",
-        pval: 0.00010703092762,
-        coeff: -1.2162048259345024,
-        cint: 0.615299994401779,
-      },
-      {
-        phenotype: "Disorders resulting from impaired renal function",
-        pval: 9.434802007268912e-20,
-        coeff: -1.2103301420422046,
-        cint: 0.2608171466394893,
-      },
-      {
-        phenotype: "Hyperosmolality and/or hypernatremia",
-        pval: 0.0012456205490212,
-        coeff: -1.2030740713151915,
-        cint: 0.730427305743059,
-      },
-      {
-        phenotype: "Heart failure NOS",
-        pval: 1.811847162876556e-20,
-        coeff: -1.1941647067777494,
-        cint: 0.252404818450441,
-      },
-      {
-        phenotype: "Type 2 diabetes with ophthalmic manifestations",
-        pval: 2.9541182976319163e-9,
-        coeff: -1.1902743026104097,
-        cint: 0.3931318771154852,
-      },
-      {
-        phenotype: "Other specified diffuse diseases of connective tissue",
-        pval: 0.0011355347996981,
-        coeff: -1.1886569365385244,
-        cint: 0.7158259453389482,
-      },
-      {
-        phenotype: "Hypertensive chronic kidney disease",
-        pval: 6.80789359717575e-20,
-        coeff: -1.1832203870009452,
-        cint: 0.2539868666748386,
-      },
-      {
-        phenotype: "Regional enteritis",
-        pval: 2.279741851089089e-5,
-        coeff: 1.2058790072788288,
-        cint: 0.5580076017525082,
-      },
-      {
-        phenotype: "Psoriatic arthropathy",
-        pval: 0.0028811677023699,
-        coeff: 1.2246291789016537,
-        cint: 0.8054081919193072,
-      },
-      {
         phenotype: "Disorders of bilirubin excretion",
         pval: 0.0059267135120343,
         coeff: 1.2862448517588234,
         cint: 0.9161224053062834,
+      },
+      {
+        phenotype: "Diseases of lips",
+        pval: 0.0095423080332591,
+        coeff: 1.3760820975506565,
+        cint: 1.040541575544795,
       },
       {
         phenotype: "Pervasive developmental disorders",
@@ -5513,6 +4322,12 @@ const realData = {
         pval: 0.0036633118766267,
         coeff: 1.731369877041566,
         cint: 1.1678154881862457,
+      },
+      {
+        phenotype: "Lymphoid leukemia, chronic",
+        pval: 0.0110342215446753,
+        coeff: 1.8545573017136363,
+        cint: 1.4301411199163288,
       },
       {
         phenotype: "Deficiency of humoral immunity",
@@ -5578,161 +4393,28 @@ const realData = {
         cint: 0.3614638748125325,
       },
       {
-        phenotype: "Benign neoplasm of respiratory and intrathoracic organs",
-        pval: 0.005503433230507,
-        coeff: -1.423076570040295,
-        cint: 1.0047519565674703,
-      },
-      {
-        phenotype: "Other hemoglobinopathies",
-        pval: 1.26273859037681e-6,
-        coeff: -1.4027041530039803,
-        cint: 0.5673784664663888,
-      },
-      {
-        phenotype: "Peripheral retinal degenerations",
-        pval: 0.0058332238633693,
-        coeff: -1.3813032513988963,
-        cint: 0.981970618140309,
-      },
-      {
-        phenotype: "Hyperhidrosis",
-        pval: 0.0003984177094077,
-        coeff: 1.0887060908144592,
-        cint: 0.6025830517386004,
-      },
-      {
-        phenotype: "Heartburn",
-        pval: 0.0064594872432949,
-        coeff: 1.169308848521836,
-        cint: 0.8414929525711622,
-      },
-      {
-        phenotype: "Chronic venous insufficiency [CVI]",
-        pval: 0.0058862524761047,
-        coeff: 1.1697536642446495,
-        cint: 0.8324735918047744,
-      },
-      {
-        phenotype: "Chronic airway obstruction",
-        pval: 5.658272969479388e-5,
-        coeff: 1.1727030088081678,
-        cint: 0.5708141753228235,
-      },
-      {
-        phenotype: "Migrain with aura",
-        pval: 3.124151858970619e-5,
-        coeff: 1.1873102542710263,
-        cint: 0.5588282743414553,
-      },
-      {
-        phenotype:
-          "Fracture of vertebral column without mention of spinal cord injury",
-        pval: 0.0044340031407747,
-        coeff: 1.214405019779336,
-        cint: 0.8364715232100912,
-      },
-      {
-        phenotype: "Mood disorders",
-        pval: 0.0046868749400269,
-        coeff: 1.2158152790868115,
-        cint: 0.8426876968894328,
-      },
-      {
-        phenotype: "Other endocrine disorders",
-        pval: 0.0003812957033769,
-        coeff: 1.2389809718662428,
-        cint: 0.6835242231402258,
-      },
-      {
-        phenotype: "Testicular hypofunction",
-        pval: 0.0001794302289328,
-        coeff: 1.241509803084351,
-        cint: 0.6495170372543955,
-      },
-      {
-        phenotype: "Inguinal hernia",
-        pval: 1.48047350187576e-6,
-        coeff: 1.2798600423986972,
-        cint: 0.521095954292251,
-      },
-      {
-        phenotype: "Acute sinusitis",
-        pval: 1.5612167582979566e-11,
-        coeff: 1.290670318103325,
-        cint: 0.3752050798826484,
-      },
-      {
-        phenotype: "Other disorders of intestine",
-        pval: 0.0001012985569342,
-        coeff: 1.2938739878602648,
-        cint: 0.6523401484626798,
-      },
-      {
-        phenotype: "Hypotension NOS",
-        pval: 0.0007043922685523,
-        coeff: 1.3323045351969296,
-        cint: 0.7707715068128806,
-      },
-      {
-        phenotype: "Intestinal malabsorption (non-celiac)",
-        pval: 0.0002077757718869,
-        coeff: 1.3809004922345254,
-        cint: 0.7296428714502278,
-      },
-      {
-        phenotype: "Protein-calorie malnutrition",
-        pval: 0.0074602317545843,
-        coeff: 1.411514074334249,
-        cint: 1.0339915855539643,
-      },
-      {
-        phenotype: "Attention deficit hyperactivity disorder",
-        pval: 0.0001264223019911,
-        coeff: 1.4277436971760504,
-        cint: 0.7299995674599813,
-      },
-      {
-        phenotype: "Anxiety disorder",
-        pval: 6.884296063142238e-48,
-        coeff: 1.4478117392752703,
-        cint: 0.1951790759990848,
-      },
-      {
-        phenotype: "Generalized anxiety disorder",
-        pval: 3.153195862709264e-9,
-        coeff: 1.4726657383981403,
-        cint: 0.4872815345956496,
-      },
-      {
-        phenotype: "Major depressive disorder",
-        pval: 5.127571817809535e-16,
-        coeff: 1.4732799047195575,
-        cint: 0.3561199435359929,
-      },
-      {
-        phenotype: "Sacroiliitis NEC",
-        pval: 0.00047953908716,
-        coeff: 1.4782126042861217,
-        cint: 0.8296962539387118,
-      },
-      {
-        phenotype: "Deficiency of humoral immunity",
-        pval: 0.00044428766986,
-        coeff: 1.49551537872124,
-        cint: 0.8345462999538377,
-      },
-      {
         phenotype: "Orthostatic hypotension",
         pval: 0.0003933986113547,
         coeff: 1.5020272442813831,
         cint: 0.8305661237761666,
       },
       {
+        phenotype: "Obsessive-compulsive disorders",
+        pval: 0.0120887483441377,
+        coeff: 1.5083370126913112,
+        cint: 1.178017741219349,
+      },
+      {
         phenotype: "Disorders of bilirubin excretion",
         pval: 0.0037032968475266,
         coeff: 1.5101480020639677,
         cint: 1.0197932901115296,
+      },
+      {
+        phenotype: "Functional digestive disorders",
+        pval: 0.0116420456680395,
+        coeff: 1.517212947382013,
+        cint: 1.178717297027562,
       },
       {
         phenotype: "Irritable Bowel Syndrome",
@@ -5752,6 +4434,12 @@ const realData = {
         pval: 0.0025344730351263,
         coeff: 1.5684412398951109,
         cint: 1.0181814336410366,
+      },
+      {
+        phenotype: "Postlaminectomy syndrome",
+        pval: 0.0082853800481572,
+        coeff: 1.569179112228444,
+        cint: 1.164880978031622,
       },
       {
         phenotype: "Posttraumatic stress disorder",
@@ -5788,6 +4476,12 @@ const realData = {
         pval: 0.0007983379729628,
         coeff: 1.7324558330722375,
         cint: 1.012578586239886,
+      },
+      {
+        phenotype: "Other and unspecified disc disorder",
+        pval: 0.0100990891270819,
+        coeff: 1.863315815128576,
+        cint: 1.419688387009158,
       },
       {
         phenotype: "Umbilical hernia",
@@ -5858,18 +4552,6 @@ const realData = {
     ],
     group6: [
       {
-        phenotype: "Viral hepatitis B",
-        pval: 6.125360923709455e-10,
-        coeff: -3.9588338422910634,
-        cint: 1.2540742893447443,
-      },
-      {
-        phenotype: "Heart transplant/surgery",
-        pval: 3.110888075857968e-7,
-        coeff: -2.128466103415706,
-        cint: 0.8153295423278495,
-      },
-      {
         phenotype: "Renal dialysis",
         pval: 1.2796568068390404e-13,
         coeff: -1.8526874655560568,
@@ -5930,25 +4612,6 @@ const realData = {
         cint: 0.2041798244460897,
       },
       {
-        phenotype: "Endometrial hyperplasia",
-        pval: 0.004465821747475,
-        coeff: -1.456470013762249,
-        cint: 1.0040075488116185,
-      },
-      {
-        phenotype:
-          "Pulmonary collapse; interstitial and compensatory emphysema",
-        pval: 0.0030909575830306,
-        coeff: -1.441047903685999,
-        cint: 0.9546593374575236,
-      },
-      {
-        phenotype: "Duodenal ulcer",
-        pval: 0.002366715600118,
-        coeff: -1.418180910928842,
-        cint: 0.9143724423375312,
-      },
-      {
         phenotype: "Hypertensive heart and/or renal disease",
         pval: 0.0035420645791995,
         coeff: -1.4018016522235135,
@@ -5965,12 +4628,6 @@ const realData = {
         pval: 3.5519541619693935e-8,
         coeff: -1.376613277168818,
         cint: 0.4895162384023761,
-      },
-      {
-        phenotype: "Preeclampsia and eclampsia",
-        pval: 0.005161616370427,
-        coeff: -1.3761567719208463,
-        cint: 0.9644043341862124,
       },
       {
         phenotype: "Disorders of phosphorus metabolism",
@@ -5992,100 +4649,10 @@ const realData = {
         cint: 0.5819581840112578,
       },
       {
-        phenotype: "Hematuria",
-        pval: 0.0036639066441086,
-        coeff: -1.3423857558124397,
-        cint: 0.9054600668174162,
-      },
-      {
         phenotype: "Peripheral angiopathy in diseases classified elsewhere",
         pval: 1.254447367600471e-9,
         coeff: -1.255973399793105,
         cint: 0.4053370600052184,
-      },
-      {
-        phenotype: "Other hypertensive complications",
-        pval: 1.723118531291141e-16,
-        coeff: -1.235157800259978,
-        cint: 0.2937967784087167,
-      },
-      {
-        phenotype: "Chronic renal failure [CKD]",
-        pval: 3.31437690211224e-16,
-        coeff: -1.2272617750641008,
-        cint: 0.2947310923116513,
-      },
-      {
-        phenotype: "Nephritis and nephropathy with pathological lesion",
-        pval: 0.0003804845810701,
-        coeff: -1.2114369455356715,
-        cint: 0.668223295924792,
-      },
-      {
-        phenotype: "Renal failure NOS",
-        pval: 0.0024853973091627,
-        coeff: -1.20400499476435,
-        cint: 0.7800719955030395,
-      },
-      {
-        phenotype: "Heart failure NOS",
-        pval: 3.842333005559044e-9,
-        coeff: -1.1681750341627253,
-        cint: 0.3886678813457562,
-      },
-      {
-        phenotype: "Obstruction of bile duct",
-        pval: 0.0042911051490398,
-        coeff: -1.162341446180483,
-        cint: 0.7976903621354445,
-      },
-      {
-        phenotype: "Excessive vomiting in pregnancy",
-        pval: 0.0051092619301214,
-        coeff: -1.0133911292231168,
-        cint: 0.7093447717320565,
-      },
-      {
-        phenotype: "Keloid scar",
-        pval: 0.0006287758628685,
-        coeff: -1.0023029945307012,
-        cint: 0.5745955212430531,
-      },
-      {
-        phenotype: "Vitamin B-complex deficiencies",
-        pval: 4.334566667966685e-5,
-        coeff: 0.9606125837859376,
-        cint: 0.4604598320487062,
-      },
-      {
-        phenotype: "Anxiety disorder",
-        pval: 2.0463448005080575e-20,
-        coeff: 0.9607048362822812,
-        cint: 0.203344314294017,
-      },
-      {
-        phenotype: "Diaphragmatic hernia",
-        pval: 0.0046472399888459,
-        coeff: 0.980774906977945,
-        cint: 0.6791273221460805,
-      },
-      {
-        phenotype: "Inguinal hernia",
-        pval: 0.0034756391837204,
-        coeff: 1.0127218217718128,
-        cint: 0.6792470212265126,
-      },
-      {
-        phenotype: "Lymphadenitis",
-        pval: 0.0003101122352819,
-        coeff: 1.0447350239043265,
-        cint: 0.5677326371055604,
-      },
-      {
-        phenotype: "Hyperhidrosis",
-        pval: 0.0048994944465197,
-        coeff: 1.1026482473037311,
-        cint: 0.7681173724927791,
       },
       {
         phenotype: "Substance addiction and disorders",
@@ -6110,6 +4677,12 @@ const realData = {
         pval: 8.779379771077592e-7,
         coeff: 1.3632176489219618,
         cint: 0.5433704284200412,
+      },
+      {
+        phenotype: "Rosacea",
+        pval: 0.0075694820629222,
+        coeff: 1.3724439348085955,
+        cint: 1.0072069637607013,
       },
       {
         phenotype: "Chronic lymphocytic thyroiditis",
@@ -6168,16 +4741,22 @@ const realData = {
         cint: 0.5178809563919493,
       },
       {
-        phenotype: "Malignant neoplasm of liver, primary",
-        pval: 3.013235890599577e-5,
-        coeff: -1.7308778416873216,
-        cint: 0.8130587724927483,
-      },
-      {
         phenotype: "Type 2 diabetes with renal manifestations",
         pval: 5.432267689356927e-16,
         coeff: -1.50580947219216,
         cint: 0.3642982842726141,
+      },
+      {
+        phenotype: "Hypertensive heart and/or renal disease",
+        pval: 0.0018765996058557,
+        coeff: -1.3997166884040424,
+        cint: 0.8823764930836369,
+      },
+      {
+        phenotype: "Renal failure NOS",
+        pval: 0.002085650322908,
+        coeff: -1.2654024291321129,
+        cint: 0.8058281817355795,
       },
       {
         phenotype: "Peripheral angiopathy in diseases classified elsewhere",
@@ -6265,36 +4844,6 @@ const realData = {
         cint: 0.2049032137954071,
       },
       {
-        phenotype: "Other hypertensive complications",
-        pval: 0.001037165366332,
-        coeff: -0.6497462097806247,
-        cint: 0.3882267044129207,
-      },
-      {
-        phenotype: "Mixed hyperlipidemia",
-        pval: 5.5317090360527714e-5,
-        coeff: -0.50691848151115,
-        cint: 0.246417528162994,
-      },
-      {
-        phenotype: "GERD",
-        pval: 7.397482522721009e-5,
-        coeff: 0.4542070116189204,
-        cint: 0.2246281004747007,
-      },
-      {
-        phenotype: "Constipation",
-        pval: 0.0004891941758532,
-        coeff: 0.5673450383871557,
-        cint: 0.3189280098322135,
-      },
-      {
-        phenotype: "Organic or persistent insomnia",
-        pval: 7.81933207773063e-5,
-        coeff: 0.6277987152474881,
-        cint: 0.3115197605882177,
-      },
-      {
         phenotype: "Impacted cerumen",
         pval: 0.0010357071023557,
         coeff: 0.6651592737385924,
@@ -6305,6 +4854,12 @@ const realData = {
         pval: 0.0008436472431729,
         coeff: 0.7112290986777827,
         cint: 0.4176025327392422,
+      },
+      {
+        phenotype: "Acquired hypothyroidism",
+        pval: 0.0027178033263628,
+        coeff: 0.787178240244227,
+        cint: 0.5146277775609109,
       },
       {
         phenotype: "Insomnia",
@@ -6381,19 +4936,6 @@ const realData = {
         cint: 0.7574894494911204,
       },
       {
-        phenotype:
-          "Malignant neoplasm of gallbladder and extrahepatic bile ducts",
-        pval: 0.0007139571695896,
-        coeff: -2.130415690938912,
-        cint: 1.2338467625843137,
-      },
-      {
-        phenotype: "Atrophic gastritis",
-        pval: 0.0031884454015569,
-        coeff: -2.0073125477635743,
-        cint: 1.3341175847942717,
-      },
-      {
         phenotype: "Liver replaced by transplant",
         pval: 1.4609886365099954e-9,
         coeff: -1.883424448184376,
@@ -6417,18 +4959,6 @@ const realData = {
         pval: 1.2003712328496524e-14,
         coeff: -1.7451384720293914,
         cint: 0.4432877740698986,
-      },
-      {
-        phenotype: "Alcoholic liver damage",
-        pval: 0.0036958485914457,
-        coeff: -1.6409716685475044,
-        cint: 1.1078969774355865,
-      },
-      {
-        phenotype: "Unspecified disorder of lipoid metabolism",
-        pval: 0.0001813147009857,
-        coeff: -1.616928025173062,
-        cint: 0.8465161716959382,
       },
       {
         phenotype: "Cerebral aneurysm",
@@ -6461,18 +4991,6 @@ const realData = {
         cint: 0.7478244984951654,
       },
       {
-        phenotype: "Secondary malignant neoplasm of digestive systems",
-        pval: 0.0033593441133805,
-        coeff: -1.3355699570512083,
-        cint: 0.8925534407867801,
-      },
-      {
-        phenotype: "Anemia during pregnancy",
-        pval: 0.00270261580353,
-        coeff: -1.2914113135838512,
-        cint: 0.8437959887432755,
-      },
-      {
         phenotype: "Bacterial enteritis",
         pval: 1.66797734247279e-5,
         coeff: -1.289974012056895,
@@ -6489,108 +5007,6 @@ const realData = {
         pval: 4.35701045873738e-21,
         coeff: -1.208444569447414,
         cint: 0.2513367416392456,
-      },
-      {
-        phenotype: "Type 2 diabetes with renal manifestations",
-        pval: 1.4976656539155826e-6,
-        coeff: -1.112401695594484,
-        cint: 0.4531322870829428,
-      },
-      {
-        phenotype: "Cancer of bronchus; lung",
-        pval: 1.809553148023384e-5,
-        coeff: -1.027142872636544,
-        cint: 0.4695774001440156,
-      },
-      {
-        phenotype: "Peripheral angiopathy in diseases classified elsewhere",
-        pval: 9.824009406761036e-5,
-        coeff: -1.0260828276754912,
-        cint: 0.5163384071385078,
-      },
-      {
-        phenotype: "Infertility, female",
-        pval: 0.0026630280877948,
-        coeff: -1.008754443814684,
-        cint: 0.6581250794214548,
-      },
-      {
-        phenotype: "Aplastic anemia",
-        pval: 0.0003412984108646,
-        coeff: -0.9313272734406643,
-        cint: 0.509629976826111,
-      },
-      {
-        phenotype: "Disorder of skin and subcutaneous tissue NOS",
-        pval: 3.0904689014514125e-5,
-        coeff: 0.8803612659907359,
-        cint: 0.4141114662500083,
-      },
-      {
-        phenotype: "Migraine",
-        pval: 9.965627252023583e-6,
-        coeff: 0.8832410999694142,
-        cint: 0.3918408618161912,
-      },
-      {
-        phenotype: "Degeneration of intervertebral disc",
-        pval: 0.0001765535022494,
-        coeff: 0.9052203303554484,
-        cint: 0.4730694808516185,
-      },
-      {
-        phenotype: "Irritable Bowel Syndrome",
-        pval: 0.0003823303170502,
-        coeff: 0.9067840363356472,
-        cint: 0.5003573692652971,
-      },
-      {
-        phenotype: "Major depressive disorder",
-        pval: 7.241168949500325e-6,
-        coeff: 0.985512004187918,
-        cint: 0.4305314624244982,
-      },
-      {
-        phenotype: "Enthesopathy",
-        pval: 3.112971064323614e-6,
-        coeff: 1.0242193417931782,
-        cint: 0.4304820059475901,
-      },
-      {
-        phenotype: "Abnormality of gait",
-        pval: 0.0026005308144362,
-        coeff: 1.0463432396938956,
-        cint: 0.681012373965473,
-      },
-      {
-        phenotype: "Osteoarthrosis NOS",
-        pval: 0.0002897916141363,
-        coeff: 1.090366117712275,
-        cint: 0.5896594569857163,
-      },
-      {
-        phenotype: "Vitamin B-complex deficiencies",
-        pval: 0.0002478203985632,
-        coeff: 1.0956753858571435,
-        cint: 0.5860235176684391,
-      },
-      {
-        phenotype: "Insomnia",
-        pval: 3.290566920632086e-5,
-        coeff: 1.1147090192899158,
-        cint: 0.5261554474281156,
-      },
-      {
-        phenotype: "Nonrheumatic mitral valve disorders",
-        pval: 0.0014913114213388,
-        coeff: 1.1601182820715144,
-        cint: 0.7158456944187531,
-      },
-      {
-        phenotype: "Anxiety disorder",
-        pval: 6.18108066958397e-19,
-        coeff: 1.19841271107932,
-        cint: 0.2642498428267795,
       },
       {
         phenotype: "Sleep disorders",
@@ -6611,6 +5027,18 @@ const realData = {
         cint: 0.6094827151308686,
       },
       {
+        phenotype: "Dislocation",
+        pval: 0.0055676154313936,
+        coeff: 1.415028157900395,
+        cint: 1.0004287794993707,
+      },
+      {
+        phenotype: "Diaphragmatic hernia",
+        pval: 0.0050480410658514,
+        coeff: 1.4296313653977537,
+        cint: 0.9993130872022836,
+      },
+      {
         phenotype: "Generalized anxiety disorder",
         pval: 8.916602144079626e-5,
         coeff: 1.5185521658059424,
@@ -6627,6 +5055,12 @@ const realData = {
         pval: 2.938933150931663e-7,
         coeff: 1.5898343546435578,
         cint: 0.6077282344235264,
+      },
+      {
+        phenotype: "Joint effusions",
+        pval: 0.0051333530265862,
+        coeff: 1.6409957228564702,
+        cint: 1.1492734051759323,
       },
       {
         phenotype: "Substance addiction and disorders",
@@ -6673,18 +5107,6 @@ const realData = {
         cint: 0.7438031866353327,
       },
       {
-        phenotype: "Cancer within the respiratory system",
-        pval: 0.0006972039048519,
-        coeff: -2.231275835481063,
-        cint: 1.289778163442695,
-      },
-      {
-        phenotype: "Alcoholic liver damage",
-        pval: 0.0004566545522736,
-        coeff: -1.811135454645734,
-        cint: 1.01277836636801,
-      },
-      {
         phenotype: "Renal dialysis",
         pval: 8.373253267542844e-7,
         coeff: -1.4767156673788144,
@@ -6713,12 +5135,6 @@ const realData = {
         pval: 8.788363219008731e-6,
         coeff: -1.367775533538672,
         cint: 0.6030998055463561,
-      },
-      {
-        phenotype: "Secondary malignant neoplasm of digestive systems",
-        pval: 0.002230382603884,
-        coeff: -1.3623670142347284,
-        cint: 0.8732658590314211,
       },
       {
         phenotype: "Excessive vomiting in pregnancy",
@@ -6781,84 +5197,6 @@ const realData = {
         cint: 0.3362386076979797,
       },
       {
-        phenotype: "Chronic renal failure [CKD]",
-        pval: 0.0015211821047921,
-        coeff: -0.5990847305229381,
-        cint: 0.3703337142187415,
-      },
-      {
-        phenotype: "Type 2 diabetes",
-        pval: 0.0003221506563536,
-        coeff: -0.4676624172181376,
-        cint: 0.2548377437558304,
-      },
-      {
-        phenotype: "Coronary atherosclerosis",
-        pval: 0.0010897254633081,
-        coeff: -0.4430236909265668,
-        cint: 0.2658412417577088,
-      },
-      {
-        phenotype: "Pain in joint",
-        pval: 7.771918098594388e-5,
-        coeff: 0.4195249480551376,
-        cint: 0.2080956287136673,
-      },
-      {
-        phenotype: "Dizziness and giddiness (Light-headedness and vertigo)",
-        pval: 0.0021278663117748,
-        coeff: 0.5331475680961453,
-        cint: 0.3401773886380766,
-      },
-      {
-        phenotype: "Hypothyroidism NOS",
-        pval: 0.0002564672090538,
-        coeff: 0.5359703132135776,
-        cint: 0.2873535854187853,
-      },
-      {
-        phenotype: "Neuralgia, neuritis, and radiculitis NOS",
-        pval: 0.00108433588634,
-        coeff: 0.5384666005911439,
-        cint: 0.3229740161070182,
-      },
-      {
-        phenotype: "Injury, NOS",
-        pval: 0.0001838731063976,
-        coeff: 0.5405886729270887,
-        cint: 0.2832827191554124,
-      },
-      {
-        phenotype: "Cervicalgia",
-        pval: 0.0012283178211183,
-        coeff: 0.5422704064484132,
-        cint: 0.3288235197068044,
-      },
-      {
-        phenotype: "Myalgia and myositis unspecified",
-        pval: 0.0008317918466933,
-        coeff: 0.5666579565738941,
-        cint: 0.3323254164804144,
-      },
-      {
-        phenotype: "Enthesopathy",
-        pval: 0.0007544357728563,
-        coeff: 0.6477404578891355,
-        cint: 0.3768331631619954,
-      },
-      {
-        phenotype: "Obesity",
-        pval: 0.0004438510311231,
-        coeff: 0.6652770813314722,
-        cint: 0.3712186673182415,
-      },
-      {
-        phenotype: "Osteoarthrosis, localized, primary",
-        pval: 0.000688808891465,
-        coeff: 0.6709657504424693,
-        cint: 0.3874692248239819,
-      },
-      {
         phenotype: "Anxiety disorder",
         pval: 7.776608532063977e-9,
         coeff: 0.7048898506864337,
@@ -6881,6 +5219,12 @@ const realData = {
         pval: 0.0009058511589591,
         coeff: 0.7466024595380347,
         cint: 0.4409903731098857,
+      },
+      {
+        phenotype: "Symptoms involving digestive system",
+        pval: 0.0030144713853466,
+        coeff: 0.8252172474962032,
+        cint: 0.5452647367932175,
       },
       {
         phenotype: "Asthma",
@@ -6941,12 +5285,6 @@ const realData = {
   group4: {
     group10: [
       {
-        phenotype: "Miscarriage; stillbirth",
-        pval: 0.0004047789964472,
-        coeff: -1.6147512233211825,
-        cint: 0.894798010349279,
-      },
-      {
         phenotype: "Hyperglyceridemia",
         pval: 0.0007983314639959,
         coeff: -1.381314439660595,
@@ -6957,6 +5295,24 @@ const realData = {
         pval: 2.099375392573353e-6,
         coeff: -0.858531294942546,
         cint: 0.3547274329839284,
+      },
+      {
+        phenotype: "Type 2 diabetes",
+        pval: 0.0025405539099594,
+        coeff: 0.5295168859685222,
+        cint: 0.3438279555225558,
+      },
+      {
+        phenotype: "Injury, NOS",
+        pval: 0.0028035247481325,
+        coeff: 0.6064970178606228,
+        cint: 0.3977624787678337,
+      },
+      {
+        phenotype: "Other abnormal blood chemistry",
+        pval: 0.0012249976217933,
+        coeff: 0.6992145533332592,
+        cint: 0.4238903545572444,
       },
       {
         phenotype: "Other anemias",
@@ -6987,6 +5343,18 @@ const realData = {
         pval: 0.0005325480310354,
         coeff: 1.1459467709327695,
         cint: 0.6484198313700835,
+      },
+      {
+        phenotype: "Uterine leiomyoma",
+        pval: 0.0017609488897441,
+        coeff: 1.267419617068635,
+        cint: 0.7941887406367032,
+      },
+      {
+        phenotype: "Primary/intrinsic cardiomyopathies",
+        pval: 0.0013362686962187,
+        coeff: 1.3753666439638996,
+        cint: 0.8402763312769703,
       },
       {
         phenotype: "Essential hypertension",
@@ -7030,15 +5398,14 @@ const realData = {
         coeff: 1.854264385050164,
         cint: 0.7727698507124121,
       },
+      {
+        phenotype: "Renal dialysis",
+        pval: 0.0014068286900195,
+        coeff: 2.296798991320324,
+        cint: 1.409738805339002,
+      },
     ],
     group11: [
-      {
-        phenotype:
-          "Diabetes or abnormal glucose tolerance complicating pregnancy",
-        pval: 2.7259644072503097e-6,
-        coeff: -2.386176918744197,
-        cint: 0.9970929303696132,
-      },
       {
         phenotype:
           "Known or suspected fetal abnormality affecting management of mother",
@@ -7077,7 +5444,26 @@ const realData = {
         cint: 0.3943359897113846,
       },
     ],
-    group12: [],
+    group12: [
+      {
+        phenotype: "Hepatitis NOS",
+        pval: 0.0003036333409277,
+        coeff: -1.269477781705482,
+        cint: 0.6888168730493403,
+      },
+      {
+        phenotype: "Benign neoplasm of skin",
+        pval: 0.0004325150043522,
+        coeff: -1.0954775301400903,
+        cint: 0.6100736256804835,
+      },
+      {
+        phenotype: "Essential hypertension",
+        pval: 0.0001097752904375,
+        coeff: 0.7430754824135104,
+        cint: 0.3765350797947646,
+      },
+    ],
     group13: [
       {
         phenotype: "Hypothyroidism NOS",
@@ -7088,12 +5474,6 @@ const realData = {
     ],
     group14: [],
     group15: [
-      {
-        phenotype: "Psoriasis",
-        pval: 9.377680919423292e-5,
-        coeff: -1.5724171183279587,
-        cint: 0.7889809314576155,
-      },
       {
         phenotype: "Otitis externa",
         pval: 0.0005168012973161,
@@ -7155,6 +5535,12 @@ const realData = {
         cint: 0.4895150872910914,
       },
       {
+        phenotype: "Disorders involving the immune mechanism",
+        pval: 0.0027563398438532,
+        coeff: 0.967927420729428,
+        cint: 0.6337024212997829,
+      },
+      {
         phenotype: "Immunity deficiency",
         pval: 0.0002636696566584,
         coeff: 1.1269391087706937,
@@ -7204,12 +5590,6 @@ const realData = {
       },
     ],
     group16: [
-      {
-        phenotype: "Other non-epithelial cancer of skin",
-        pval: 9.210821034237142e-5,
-        coeff: -1.9180322122273368,
-        cint: 0.9613301352291116,
-      },
       {
         phenotype: "Hypothyroidism NOS",
         pval: 0.0001310071065615,
@@ -7264,6 +5644,12 @@ const realData = {
         cint: 0.8203140621471396,
       },
       {
+        phenotype: "Acute bronchitis and bronchiolitis",
+        pval: 0.0009006339701705,
+        coeff: -1.451060214848752,
+        cint: 0.8566710266145114,
+      },
+      {
         phenotype: "Conjunctivitis, infectious",
         pval: 0.0002849575173233,
         coeff: -1.3342934822770962,
@@ -7290,12 +5676,6 @@ const realData = {
         cint: 0.594261368592464,
       },
       {
-        phenotype: "Cholesterolosis of gallbladder",
-        pval: 0.0018544706080843,
-        coeff: -1.9659959396961308,
-        cint: 1.2379621568564827,
-      },
-      {
         phenotype:
           "Diabetes or abnormal glucose tolerance complicating pregnancy",
         pval: 0.0009508195390721,
@@ -7307,48 +5687,6 @@ const realData = {
         pval: 1.988138530283645e-5,
         coeff: -1.395770522651122,
         cint: 0.6412376198553584,
-      },
-      {
-        phenotype: "Cancer of connective tissue",
-        pval: 0.0059537034030839,
-        coeff: -1.3145230614056689,
-        cint: 0.9367701070867928,
-      },
-      {
-        phenotype: "Hypertensive heart and/or renal disease",
-        pval: 0.0081135992763257,
-        coeff: 1.2555141653096649,
-        cint: 0.92953474669376,
-      },
-      {
-        phenotype: "Hyperparathyroidism",
-        pval: 1.6986186159469346e-6,
-        coeff: 1.2762535383429634,
-        cint: 0.5226160612826095,
-      },
-      {
-        phenotype: "Heart failure NOS",
-        pval: 7.800418705308577e-8,
-        coeff: 1.282633361393034,
-        cint: 0.4679937651087102,
-      },
-      {
-        phenotype: "Pulmonary heart disease",
-        pval: 2.486667383390951e-5,
-        coeff: 1.3100742951381377,
-        cint: 0.6090357105836309,
-      },
-      {
-        phenotype: "Hypotension NOS",
-        pval: 0.0027033816846886,
-        coeff: 1.3244038581973858,
-        cint: 0.865377907058977,
-      },
-      {
-        phenotype: "Other disorders of the kidney and ureters",
-        pval: 1.0274531584478181e-12,
-        coeff: 1.3270685500024948,
-        cint: 0.3649624587022593,
       },
       {
         phenotype: "Anemia of chronic disease",
@@ -7423,6 +5761,12 @@ const realData = {
         cint: 0.8001861483730994,
       },
       {
+        phenotype: "Asphyxia and hypoxemia",
+        pval: 0.0099495188888926,
+        coeff: 1.460789397448497,
+        cint: 1.1107689865820682,
+      },
+      {
         phenotype: "Cancer of prostate",
         pval: 6.045018973908892e-8,
         coeff: 1.4618941840184534,
@@ -7453,40 +5797,16 @@ const realData = {
         cint: 0.5206563384871872,
       },
       {
-        phenotype: "Ulcerative colitis",
-        pval: 0.0070061451234803,
-        coeff: 1.5680803800101464,
-        cint: 1.139744768247443,
-      },
-      {
         phenotype: "Chronic bronchitis",
         pval: 0.0005917768907156,
         coeff: 1.5850009813731782,
         cint: 0.904286269234104,
       },
       {
-        phenotype: "Late effects of cerebrovascular disease",
-        pval: 0.001836007701536,
-        coeff: 1.618396002076578,
-        cint: 1.0181173490727833,
-      },
-      {
-        phenotype: "Hypertrophy of breast (Gynecomastia)",
-        pval: 0.0083562517807686,
-        coeff: 1.6845854879236852,
-        cint: 1.25192223600644,
-      },
-      {
-        phenotype: "Hereditary and idiopathic peripheral neuropathy",
-        pval: 0.0019706844963458,
-        coeff: 1.7433937737896903,
-        cint: 1.1041725350761098,
-      },
-      {
-        phenotype: "Posttraumatic stress disorder",
-        pval: 0.006548222334425,
-        coeff: 1.7503330219387738,
-        cint: 1.261716201579093,
+        phenotype: "Umbilical hernia",
+        pval: 0.0101695335150366,
+        coeff: 1.6327871028925849,
+        cint: 1.2452102832946388,
       },
       {
         phenotype: "Aseptic necrosis of bone",
@@ -7514,40 +5834,10 @@ const realData = {
         cint: 0.9771970236039828,
       },
       {
-        phenotype: "Systemic sclerosis",
-        pval: 0.0064153085395579,
-        coeff: 1.777850208112308,
-        cint: 1.2783659651989008,
-      },
-      {
         phenotype: "Epilepsy, recurrent seizures, convulsions",
         pval: 0.0001094916236579,
         coeff: 1.7907959095447643,
         cint: 0.9072934065942794,
-      },
-      {
-        phenotype: "Lung transplant",
-        pval: 0.0053787630174918,
-        coeff: 1.800613614836996,
-        cint: 1.2679101245761537,
-      },
-      {
-        phenotype: "Intestinal infection due to C. difficile",
-        pval: 0.0012783509325566,
-        coeff: 1.816314759646923,
-        cint: 1.1052893383086952,
-      },
-      {
-        phenotype: "Alcohol-related disorders",
-        pval: 0.004045409238906,
-        coeff: 1.832508087802191,
-        cint: 1.2494437847565327,
-      },
-      {
-        phenotype: "Sarcoidosis",
-        pval: 0.0078894687285625,
-        coeff: 2.023389135238367,
-        cint: 1.4927069399840565,
       },
       {
         phenotype: "Abdominal hernia",
@@ -7561,38 +5851,8 @@ const realData = {
         coeff: 2.3533998552046693,
         cint: 0.9373477226159062,
       },
-      {
-        phenotype: "Protein-calorie malnutrition",
-        pval: 4.93417161820628e-6,
-        coeff: 2.52603832355574,
-        cint: 1.0839345669795883,
-      },
-      {
-        phenotype: "Other disorders of circulatory system",
-        pval: 0.0081080819093668,
-        coeff: 2.7689255361817136,
-        cint: 2.0498286404845856,
-      },
-      {
-        phenotype: "Ulcerative colitis (chronic)",
-        pval: 0.0058569825992294,
-        coeff: 2.884054499379822,
-        cint: 2.051267886313891,
-      },
-      {
-        phenotype: "Chronic hepatitis",
-        pval: 0.0052596935010468,
-        coeff: 2.9153408067929902,
-        cint: 2.047514066897397,
-      },
     ],
     group6: [
-      {
-        phenotype: "Cholesterolosis of gallbladder",
-        pval: 0.0001448046461251,
-        coeff: -2.2952002010747306,
-        cint: 1.1838762530140556,
-      },
       {
         phenotype:
           "Diabetes or abnormal glucose tolerance complicating pregnancy",
@@ -7631,83 +5891,28 @@ const realData = {
         cint: 0.6800837078977269,
       },
       {
+        phenotype: "Thyroid cancer",
+        pval: 0.0050573764617787,
+        coeff: -0.9237584553255984,
+        cint: 0.6458448774767283,
+      },
+      {
         phenotype: "Gouty arthropathy",
         pval: 0.0017130830428175,
         coeff: -0.9126816296980031,
         cint: 0.5704277142903129,
       },
       {
-        phenotype: "Type 2 diabetes",
-        pval: 1.148928280415726e-6,
-        coeff: -0.5503499458961593,
-        cint: 0.2217539257563029,
-      },
-      {
-        phenotype: "Atopic/contact dermatitis due to other or unspecified",
-        pval: 0.0001680091340336,
-        coeff: -0.5336252221776303,
-        cint: 0.2779528739323662,
-      },
-      {
-        phenotype: "Impaired fasting glucose",
-        pval: 1.809781101189219e-5,
-        coeff: -0.4344514155407312,
-        cint: 0.1986188130609754,
-      },
-      {
-        phenotype: "Hyperlipidemia",
-        pval: 0.0006729716819465,
-        coeff: -0.3576796132897159,
-        cint: 0.2061661541048454,
-      },
-      {
-        phenotype: "Abdominal pain",
-        pval: 0.0014794612729557,
-        coeff: 0.3698114685564601,
-        cint: 0.2280244076182535,
-      },
-      {
-        phenotype: "Arthropathy NOS",
-        pval: 0.001075410465208,
-        coeff: 0.439282901088896,
-        cint: 0.2632948644220709,
-      },
-      {
-        phenotype: "Injury, NOS",
-        pval: 0.0002441338575304,
-        coeff: 0.5052275603415378,
-        cint: 0.2699392098674875,
-      },
-      {
-        phenotype: "Inflammatory and toxic neuropathy",
-        pval: 0.0005533356853984,
-        coeff: 0.5732042784469128,
-        cint: 0.3253092575151158,
-      },
-      {
-        phenotype:
-          "Iron deficiency anemias, unspecified or not due to blood loss",
-        pval: 0.0004487243190111,
-        coeff: 0.6261891123462728,
-        cint: 0.3496969188917169,
-      },
-      {
-        phenotype: "Constipation",
-        pval: 4.121304379006667e-5,
-        coeff: 0.6589772451499405,
-        cint: 0.3149735481985443,
-      },
-      {
-        phenotype: "Edema",
-        pval: 0.0004553780995949,
-        coeff: 0.6635920090825396,
-        cint: 0.3709986333295843,
-      },
-      {
         phenotype: "Circulatory disease NEC",
         pval: 0.0003762705270749,
         coeff: 0.6675299402855696,
         cint: 0.3679033637369931,
+      },
+      {
+        phenotype: "Disorders of calcium/phosphorus metabolism",
+        pval: 0.0029933218855043,
+        coeff: 0.6727652168927283,
+        cint: 0.4442074599501867,
       },
       {
         phenotype: "Symptoms concerning nutrition, metabolism, and development",
@@ -7720,6 +5925,12 @@ const realData = {
         pval: 0.0007227823181904,
         coeff: 0.7030101573022813,
         cint: 0.4075601623285863,
+      },
+      {
+        phenotype: "Hyperparathyroidism",
+        pval: 0.0037381351918752,
+        coeff: 0.752309066706217,
+        cint: 0.5085436139884897,
       },
       {
         phenotype: "Primary/intrinsic cardiomyopathies",
@@ -7800,6 +6011,12 @@ const realData = {
         cint: 0.7915749829414094,
       },
       {
+        phenotype: "Aseptic necrosis of bone",
+        pval: 0.0027061663756414,
+        coeff: 1.615922561549766,
+        cint: 1.0559693758534097,
+      },
+      {
         phenotype: "Epilepsy, recurrent seizures, convulsions",
         pval: 0.0021147744422941,
         coeff: 1.8732823149828493,
@@ -7811,6 +6028,12 @@ const realData = {
         coeff: 2.019284325065557,
         cint: 1.176935518912745,
       },
+      {
+        phenotype: "Paraproteinemia",
+        pval: 0.004569744269219,
+        coeff: 2.077513139787773,
+        cint: 1.435825616417725,
+      },
     ],
     group7: [
       {
@@ -7818,6 +6041,12 @@ const realData = {
         pval: 2.6694844491593976e-8,
         coeff: -2.0151429024728693,
         cint: 0.7101263463957901,
+      },
+      {
+        phenotype: "Other chronic nonalcoholic liver disease",
+        pval: 0.0015741912647786,
+        coeff: -0.9309112342906436,
+        cint: 0.5772718267764165,
       },
       {
         phenotype: "Benign neoplasm of skin",
@@ -7844,10 +6073,28 @@ const realData = {
         cint: 0.235331348425784,
       },
       {
+        phenotype: "Anxiety disorder",
+        pval: 0.0018448115355907,
+        coeff: 0.511166144496124,
+        cint: 0.3217154119837319,
+      },
+      {
         phenotype: "Arthropathy NOS",
         pval: 0.0004685030042627,
         coeff: 0.5275484747076442,
         cint: 0.2955782132905801,
+      },
+      {
+        phenotype: "Constipation",
+        pval: 0.0013214885222921,
+        coeff: 0.5863608805221744,
+        cint: 0.3578788272657358,
+      },
+      {
+        phenotype: "Acute renal failure",
+        pval: 0.0013866859556035,
+        coeff: 0.7103415691604309,
+        cint: 0.43542890193765,
       },
       {
         phenotype: "Impacted cerumen",
@@ -7880,6 +6127,12 @@ const realData = {
         cint: 0.4369636811810529,
       },
       {
+        phenotype: "Disorders resulting from impaired renal function",
+        pval: 0.0015303788249236,
+        coeff: 0.8520020331692848,
+        cint: 0.5269696641390784,
+      },
+      {
         phenotype: "Other disorders of the kidney and ureters",
         pval: 5.278598909007453e-5,
         coeff: 0.9108285602890084,
@@ -7898,6 +6151,12 @@ const realData = {
         coeff: 1.1887597064116455,
         cint: 0.5386571434367493,
       },
+      {
+        phenotype: "Kidney replaced by transpant",
+        pval: 0.0016226455481767,
+        coeff: 1.2791220107007546,
+        cint: 0.7954277028166298,
+      },
     ],
     group8: [
       {
@@ -7911,12 +6170,6 @@ const realData = {
         pval: 1.6124065866368275e-5,
         coeff: -1.6779106037004528,
         cint: 0.7625410241042714,
-      },
-      {
-        phenotype: "Infertility, female",
-        pval: 0.0030477250215624,
-        coeff: -1.6151041038116998,
-        cint: 1.0684006071882228,
       },
       {
         phenotype: "Miscarriage; stillbirth",
@@ -7950,151 +6203,6 @@ const realData = {
         cint: 0.6531089901700053,
       },
       {
-        phenotype: "Absent or infrequent menstruation",
-        pval: 0.0038070380014957,
-        coeff: -1.009116532434804,
-        cint: 0.6834904488894413,
-      },
-      {
-        phenotype: "Other abnormal blood chemistry",
-        pval: 0.0010453042120282,
-        coeff: 0.5489842571855112,
-        cint: 0.3282416412481697,
-      },
-      {
-        phenotype: "Essential hypertension",
-        pval: 1.301168771506618e-6,
-        coeff: 0.6298066502219292,
-        cint: 0.2550633623877422,
-      },
-      {
-        phenotype: "Neuralgia, neuritis, and radiculitis NOS",
-        pval: 0.0007420240056178,
-        coeff: 0.666092797220556,
-        cint: 0.3869850290281181,
-      },
-      {
-        phenotype: "Edema",
-        pval: 0.0024487278942494,
-        coeff: 0.679629080079722,
-        cint: 0.4396771159844482,
-      },
-      {
-        phenotype: "Injury, NOS",
-        pval: 5.57758036197854e-5,
-        coeff: 0.6858360005976839,
-        cint: 0.3335514604276984,
-      },
-      {
-        phenotype: "Noninflammatory disorders of vagina",
-        pval: 0.0028631960189629,
-        coeff: 0.7319546775269525,
-        cint: 0.4810790932344123,
-      },
-      {
-        phenotype: "Immunity deficiency",
-        pval: 0.0004055415350536,
-        coeff: 0.7391165292680894,
-        cint: 0.409631499863984,
-      },
-      {
-        phenotype: "Diseases of white blood cells",
-        pval: 0.0006895908887346,
-        coeff: 0.7578246640217847,
-        cint: 0.4376685716171143,
-      },
-      {
-        phenotype: "Disorders involving the immune mechanism",
-        pval: 0.0013239995014445,
-        coeff: 0.7608402103037116,
-        cint: 0.4644492389371594,
-      },
-      {
-        phenotype: "Pain in limb",
-        pval: 1.3090970418562493e-7,
-        coeff: 0.76107559173405,
-        cint: 0.282645487012075,
-      },
-      {
-        phenotype: "Enthesopathy",
-        pval: 0.0015417354268265,
-        coeff: 0.7657243820207228,
-        cint: 0.4739277726388737,
-      },
-      {
-        phenotype: "Arthropathy NOS",
-        pval: 3.83498890084261e-6,
-        coeff: 0.7789678976678717,
-        cint: 0.3304558278486708,
-      },
-      {
-        phenotype: "Circulatory disease NEC",
-        pval: 0.0005323517385991,
-        coeff: 0.7872928441231726,
-        cint: 0.4454671810081533,
-      },
-      {
-        phenotype: "Uterine leiomyoma",
-        pval: 0.0013298504972692,
-        coeff: 0.7885500003021775,
-        cint: 0.4815545675218391,
-      },
-      {
-        phenotype: "Abnormal function study of cardiovascular system",
-        pval: 0.0009646631518901,
-        coeff: 0.7917444476072601,
-        cint: 0.4701491182619811,
-      },
-      {
-        phenotype: "Osteoarthrosis, localized, primary",
-        pval: 0.0012445933111917,
-        coeff: 0.8130074546709938,
-        cint: 0.4935684778369814,
-      },
-      {
-        phenotype: "Inflammatory and toxic neuropathy",
-        pval: 0.0001240546606897,
-        coeff: 0.8149500103253431,
-        cint: 0.416176225373706,
-      },
-      {
-        phenotype: "Chronic renal failure [CKD]",
-        pval: 0.000156231073275,
-        coeff: 0.842028688327787,
-        cint: 0.4364897493633073,
-      },
-      {
-        phenotype:
-          "Iron deficiency anemias, unspecified or not due to blood loss",
-        pval: 0.0002599377396157,
-        coeff: 0.8441230774483446,
-        cint: 0.4529931332453047,
-      },
-      {
-        phenotype: "Other disorders of the kidney and ureters",
-        pval: 0.0001146319804024,
-        coeff: 0.8446698681345732,
-        cint: 0.4291886303358527,
-      },
-      {
-        phenotype: "Other anemias",
-        pval: 4.580303744370773e-11,
-        coeff: 0.8977061712684332,
-        cint: 0.2672354367866817,
-      },
-      {
-        phenotype: "Dermatophytosis of nail",
-        pval: 0.0022648037186761,
-        coeff: 0.9472443171802803,
-        cint: 0.608089033258322,
-      },
-      {
-        phenotype: "Vaginitis and vulvovaginitis",
-        pval: 0.0017465279072358,
-        coeff: 1.0108064062472388,
-        cint: 0.6329012187214782,
-      },
-      {
         phenotype: "Asthma",
         pval: 2.92520944137832e-7,
         coeff: 1.0199080435598105,
@@ -8105,6 +6213,12 @@ const realData = {
         pval: 3.5996921594721414e-5,
         coeff: 1.021841667244451,
         cint: 0.4847243109437692,
+      },
+      {
+        phenotype: "Excessive or frequent menstruation",
+        pval: 0.0051594817147192,
+        coeff: 1.024635651153035,
+        cint: 0.7180256368337248,
       },
       {
         phenotype: "Hypertensive chronic kidney disease",
@@ -8119,10 +6233,28 @@ const realData = {
         cint: 0.4193228435808058,
       },
       {
+        phenotype: "Other forms of chronic heart disease",
+        pval: 0.0082179586906343,
+        coeff: 1.091853399575924,
+        cint: 0.8096891881205317,
+      },
+      {
         phenotype: "Heart failure NOS",
         pval: 0.0003036171768199,
         coeff: 1.1053233402520828,
         cint: 0.5997446106435336,
+      },
+      {
+        phenotype: "Tachycardia NOS",
+        pval: 0.0065682117973194,
+        coeff: 1.1223572596580491,
+        cint: 0.8093440972844296,
+      },
+      {
+        phenotype: "Candidiasis",
+        pval: 0.0060834676187345,
+        coeff: 1.1398028866354322,
+        cint: 0.8143530617914282,
       },
       {
         phenotype: "Cancer of prostate",
@@ -8202,19 +6334,19 @@ const realData = {
         coeff: 2.341381856791084,
         cint: 1.4240833437818343,
       },
+      {
+        phenotype: "Aseptic necrosis of bone",
+        pval: 0.0052683797691881,
+        coeff: 2.8637981605844853,
+        cint: 2.011699500358277,
+      },
     ],
     group9: [
       {
-        phenotype: "Other specified erythematous conditions",
-        pval: 1.873590768281973e-5,
-        coeff: -1.969462936269774,
-        cint: 0.9020037671198212,
-      },
-      {
-        phenotype: "Other non-epithelial cancer of skin",
-        pval: 0.0011066092844243,
-        coeff: -1.4011202920668595,
-        cint: 0.8418804011966448,
+        phenotype: "Cancer of bronchus; lung",
+        pval: 0.0024059166678336,
+        coeff: -1.0912469400444544,
+        cint: 0.7047295424741102,
       },
       {
         phenotype: "Other chronic nonalcoholic liver disease",
@@ -8223,10 +6355,29 @@ const realData = {
         cint: 0.5133753561401373,
       },
       {
+        phenotype:
+          "Antineoplastic and immunosuppressive drugs causing adverse effects",
+        pval: 0.0029272513888207,
+        coeff: -0.7267523174470557,
+        cint: 0.4787483292247628,
+      },
+      {
         phenotype: "Coronary atherosclerosis",
         pval: 0.0006293604676474,
         coeff: -0.5027113594554073,
         cint: 0.2882133093834429,
+      },
+      {
+        phenotype: "Type 2 diabetes",
+        pval: 0.0042561576952338,
+        coeff: 0.3883395969024082,
+        cint: 0.2662672753760291,
+      },
+      {
+        phenotype: "Injury, NOS",
+        pval: 0.0040283051332884,
+        coeff: 0.4479137300213426,
+        cint: 0.305255253137368,
       },
       {
         phenotype: "Other anemias",
@@ -8235,10 +6386,22 @@ const realData = {
         cint: 0.2407138542258927,
       },
       {
+        phenotype: "Other disorders of the kidney and ureters",
+        pval: 0.0023399933924516,
+        coeff: 0.5818461446494971,
+        cint: 0.3747240451928467,
+      },
+      {
         phenotype: "Sleep apnea",
         pval: 0.0003564800206397,
         coeff: 0.5834822901649594,
         cint: 0.3203043117582125,
+      },
+      {
+        phenotype: "Circulatory disease NEC",
+        pval: 0.0041361893314015,
+        coeff: 0.5870530642397811,
+        cint: 0.4012446874001622,
       },
       {
         phenotype: "Obesity",
@@ -8257,6 +6420,12 @@ const realData = {
         pval: 0.0012068837970943,
         coeff: 0.6764216330216888,
         cint: 0.4095336357136099,
+      },
+      {
+        phenotype: "Abnormal function study of cardiovascular system",
+        pval: 0.00205385209913,
+        coeff: 0.6812239449376316,
+        cint: 0.4331701243107063,
       },
       {
         phenotype: "Osteoarthrosis, localized, primary",
@@ -8289,10 +6458,22 @@ const realData = {
         cint: 0.4204313377472026,
       },
       {
+        phenotype: "Cancer of prostate",
+        pval: 0.0027014626537509,
+        coeff: 0.8930419037242425,
+        cint: 0.5834798818193458,
+      },
+      {
         phenotype: "Type 2 diabetes with renal manifestations",
         pval: 0.0002493649006694,
         coeff: 0.9212453445428296,
         cint: 0.4929433300287672,
+      },
+      {
+        phenotype: "Hyperparathyroidism",
+        pval: 0.0027727267806159,
+        coeff: 0.9744528387448526,
+        cint: 0.6383603973608524,
       },
       {
         phenotype: "Disorders resulting from impaired renal function",
@@ -8305,6 +6486,12 @@ const realData = {
         pval: 0.0001148323464795,
         coeff: 1.0397923896166763,
         cint: 0.5283916220416612,
+      },
+      {
+        phenotype: "Kidney replaced by transpant",
+        pval: 0.0017101114515037,
+        coeff: 1.0699029803808076,
+        cint: 0.668582801383143,
       },
       {
         phenotype: "Disorders of calcium/phosphorus metabolism",
@@ -8341,46 +6528,10 @@ const realData = {
   group5: {
     group10: [
       {
-        phenotype: "Tobacco use disorder",
-        pval: 4.599221644166783e-6,
-        coeff: -2.563117214937169,
-        cint: 1.0963127069106884,
-      },
-      {
-        phenotype: "Myoneural disorders",
-        pval: 0.0010230345115332,
-        coeff: -2.185859441207576,
-        cint: 1.304523987755836,
-      },
-      {
-        phenotype: "Other disorders of intestine",
-        pval: 0.0001864960559947,
-        coeff: -1.7700362318213372,
-        cint: 0.9284297648390064,
-      },
-      {
-        phenotype: "Chronic bronchitis",
-        pval: 0.0016803751536966,
-        coeff: -1.768407351262443,
-        cint: 1.103270350083513,
-      },
-      {
-        phenotype: "Testicular hypofunction",
-        pval: 0.0005539456502967,
-        coeff: -1.5642760057561638,
-        cint: 0.8878462296266758,
-      },
-      {
         phenotype: "Irritable Bowel Syndrome",
         pval: 3.567972135628034e-5,
         coeff: -1.477272902060006,
         cint: 0.7004194953035463,
-      },
-      {
-        phenotype: "Mineral deficiency NEC",
-        pval: 0.0009886831410281,
-        coeff: -1.47361843319775,
-        cint: 0.8768907259151992,
       },
       {
         phenotype: "Inguinal hernia",
@@ -8405,6 +6556,12 @@ const realData = {
         pval: 0.0002734030210624,
         coeff: -1.105015617333072,
         cint: 0.5951154410411685,
+      },
+      {
+        phenotype: "Hyperparathyroidism",
+        pval: 0.003274142870095,
+        coeff: -1.0992394041304363,
+        cint: 0.7326248759536202,
       },
       {
         phenotype: "Noninfectious gastroenteritis",
@@ -8437,6 +6594,12 @@ const realData = {
         cint: 0.4754539616762118,
       },
       {
+        phenotype: "Adjustment reaction",
+        pval: 0.0035282242164191,
+        coeff: -0.8921381907687971,
+        cint: 0.5993296658340024,
+      },
+      {
         phenotype: "Viral infection",
         pval: 0.0005156964462311,
         coeff: -0.7325250862869828,
@@ -8455,10 +6618,34 @@ const realData = {
         cint: 0.371112178299487,
       },
       {
+        phenotype: "Coronary atherosclerosis",
+        pval: 0.0027182402733562,
+        coeff: -0.6160265567606638,
+        cint: 0.4027417713580785,
+      },
+      {
+        phenotype: "Constipation",
+        pval: 0.0029108568985589,
+        coeff: -0.6120431985136072,
+        cint: 0.4029503993852499,
+      },
+      {
+        phenotype: "Neuralgia, neuritis, and radiculitis NOS",
+        pval: 0.0042125741703022,
+        coeff: -0.6008551250749066,
+        cint: 0.4115098829920594,
+      },
+      {
         phenotype: "GERD",
         pval: 0.0002537510356775,
         coeff: -0.554769247548911,
         cint: 0.2972104273149145,
+      },
+      {
+        phenotype: "Impaired fasting glucose",
+        pval: 0.0028258784255241,
+        coeff: 0.4547687522004116,
+        cint: 0.2984961307799996,
       },
       {
         phenotype: "Essential hypertension",
@@ -8474,12 +6661,6 @@ const realData = {
       },
     ],
     group11: [
-      {
-        phenotype: "Mineral deficiency NEC",
-        pval: 3.096852122181663e-5,
-        coeff: -1.9480271979588188,
-        cint: 0.9164323218987308,
-      },
       {
         phenotype: "Chronic lymphocytic thyroiditis",
         pval: 0.0003743041577566,
@@ -8512,6 +6693,12 @@ const realData = {
         cint: 0.6738616559167188,
       },
       {
+        phenotype: "Tachycardia NOS",
+        pval: 0.0026669922993188,
+        coeff: -1.0978288428504923,
+        cint: 0.7163463415979279,
+      },
+      {
         phenotype: "Coronary atherosclerosis",
         pval: 9.38669242453542e-5,
         coeff: -1.0324125917012676,
@@ -8522,6 +6709,12 @@ const realData = {
         pval: 4.559485270861544e-5,
         coeff: -0.9829659160144454,
         cint: 0.4725327449923703,
+      },
+      {
+        phenotype: "Acne",
+        pval: 0.0019814577271551,
+        coeff: -0.9379420709613032,
+        cint: 0.5943530993562779,
       },
       {
         phenotype: "Anxiety disorder",
@@ -8544,118 +6737,10 @@ const realData = {
     ],
     group12: [
       {
-        phenotype: "Dementias",
-        pval: 6.85769838966637e-5,
-        coeff: -3.273354223666661,
-        cint: 1.6115003805615569,
-      },
-      {
-        phenotype: "Alzheimer's disease",
-        pval: 0.0001028542043246,
-        coeff: -3.182971904664173,
-        cint: 1.6063076024167318,
-      },
-      {
-        phenotype: "Substance addiction and disorders",
-        pval: 0.0005600483522428,
-        coeff: -2.529752310514388,
-        cint: 1.4370582018850726,
-      },
-      {
-        phenotype: "Mood disorders",
-        pval: 0.0001118462608418,
-        coeff: -2.4778961140840368,
-        cint: 1.2570948113327605,
-      },
-      {
-        phenotype: "Esophageal bleeding (varices/hemorrhage)",
-        pval: 0.0006557986655295,
-        coeff: -2.39707862284469,
-        cint: 1.3788104368709106,
-      },
-      {
-        phenotype: "Ventral hernia",
-        pval: 0.0005023867644407,
-        coeff: -2.3477138522611334,
-        cint: 1.3224487046965407,
-      },
-      {
-        phenotype: "Hypotension NOS",
-        pval: 0.000493240384928,
-        coeff: -2.283461070628364,
-        cint: 1.2844393625777006,
-      },
-      {
-        phenotype: "Prolapse of vaginal walls",
-        pval: 0.0018511805005223,
-        coeff: -2.013001364406932,
-        cint: 1.2673474705947214,
-      },
-      {
-        phenotype: "Hyperhidrosis",
-        pval: 0.0002751728537965,
-        coeff: -1.9639185951492253,
-        cint: 1.0581681246368708,
-      },
-      {
-        phenotype: "Viral hepatitis C",
-        pval: 0.0001013620328448,
-        coeff: -1.911390826429804,
-        cint: 0.963714995377344,
-      },
-      {
-        phenotype: "Arrhythmia (cardiac) NOS",
-        pval: 0.0010621815445008,
-        coeff: -1.8230621807424243,
-        cint: 1.0915283657300647,
-      },
-      {
-        phenotype: "Chronic airway obstruction",
-        pval: 0.001804186973454,
-        coeff: -1.805128541378639,
-        cint: 1.1337140086742754,
-      },
-      {
-        phenotype: "Pallor and flushing",
-        pval: 0.0013270010745431,
-        coeff: -1.8001380086804954,
-        cint: 1.0991036356404749,
-      },
-      {
-        phenotype: "Liver abscess and sequelae of chronic liver disease",
-        pval: 0.0025864398098779,
-        coeff: -1.7989237632715345,
-        cint: 1.1701884573964485,
-      },
-      {
-        phenotype: "Other disorders of intestine",
-        pval: 0.0034810252746032,
-        coeff: -1.751517769309299,
-        cint: 1.174961957111538,
-      },
-      {
-        phenotype: "Disorders of magnesium metabolism",
-        pval: 0.0021890119459103,
-        coeff: -1.613545565564683,
-        cint: 1.0323762260282727,
-      },
-      {
         phenotype: "Major depressive disorder",
         pval: 1.1261657860540512e-5,
         coeff: -1.523763684695976,
         cint: 0.6800822837805156,
-      },
-      {
-        phenotype: "Neurological disorders",
-        pval: 0.0016204048672691,
-        coeff: -1.5024953563985284,
-        cint: 0.9342138138287196,
-      },
-      {
-        phenotype: "Other diseases of respiratory system, NEC",
-        pval: 0.0014426559872212,
-        coeff: -1.4762621850271205,
-        cint: 0.9081734939207105,
       },
       {
         phenotype: "Pneumonia",
@@ -8762,6 +6847,18 @@ const realData = {
     ],
     group13: [
       {
+        phenotype: "Type 2 diabetes with neurological manifestations",
+        pval: 0.0017851195048575,
+        coeff: -1.4252173536068036,
+        cint: 0.8942139319828539,
+      },
+      {
+        phenotype: "Irritable Bowel Syndrome",
+        pval: 0.0007269674819656,
+        coeff: -1.374127993930815,
+        cint: 0.7970053015025229,
+      },
+      {
         phenotype: "Major depressive disorder",
         pval: 0.0001496130586085,
         coeff: -1.3069063058481727,
@@ -8775,10 +6872,34 @@ const realData = {
         cint: 0.5561717022060226,
       },
       {
+        phenotype: "Edema",
+        pval: 0.000999742028165,
+        coeff: -1.150756498351194,
+        cint: 0.6854196069731808,
+      },
+      {
         phenotype: "Dysuria",
         pval: 0.0001150178679173,
         coeff: -1.1228805279928045,
         cint: 0.5706729576101632,
+      },
+      {
+        phenotype: "Fever of unknown origin",
+        pval: 0.0014093467104255,
+        coeff: -1.050043022830546,
+        cint: 0.6446039988596615,
+      },
+      {
+        phenotype: "Urinary tract infection",
+        pval: 0.0014289116312789,
+        coeff: -0.978808223903677,
+        cint: 0.6016247806722397,
+      },
+      {
+        phenotype: "Allergies, other",
+        pval: 0.0010010262126705,
+        coeff: -0.8979173575288476,
+        cint: 0.5348809420998114,
       },
       {
         phenotype: "Other symptoms",
@@ -8792,52 +6913,15 @@ const realData = {
         coeff: -0.8823723015476149,
         cint: 0.4885677188318996,
       },
+      {
+        phenotype: "Vitamin D deficiency",
+        pval: 0.0027908095479372,
+        coeff: -0.6154143049102917,
+        cint: 0.4034232729143164,
+      },
     ],
     group14: [],
     group15: [
-      {
-        phenotype: "Ulcerative colitis (chronic)",
-        pval: 0.0001264107723278,
-        coeff: -4.141619579087415,
-        cint: 2.1175809217352866,
-      },
-      {
-        phenotype: "Ulcerative colitis",
-        pval: 2.4616942456336084e-6,
-        coeff: -2.86854213959805,
-        cint: 1.1933578386726609,
-      },
-      {
-        phenotype: "Bronchopneumonia and lung abscess",
-        pval: 0.0002784187240057,
-        coeff: -2.4534293576217943,
-        cint: 1.3230179678145817,
-      },
-      {
-        phenotype: "Regional enteritis",
-        pval: 0.0001263088817301,
-        coeff: -2.389915000987177,
-        cint: 1.2218835114700104,
-      },
-      {
-        phenotype: "Varicose veins of lower extremity, symptomtic",
-        pval: 0.0020706456621954,
-        coeff: -2.278011499145382,
-        cint: 1.4496603593398456,
-      },
-      {
-        phenotype: "Heartburn",
-        pval: 0.0005346140710556,
-        coeff: -1.913134828724723,
-        cint: 1.082849393985673,
-      },
-      {
-        phenotype:
-          "Fracture of vertebral column without mention of spinal cord injury",
-        pval: 0.0015902181431077,
-        coeff: -1.9112456947350007,
-        cint: 1.1862997122094785,
-      },
       {
         phenotype: "Generalized anxiety disorder",
         pval: 2.4223349564740857e-5,
@@ -8849,18 +6933,6 @@ const realData = {
         pval: 5.82988086046243e-11,
         coeff: -1.68699225178763,
         cint: 0.5049520554666385,
-      },
-      {
-        phenotype: "Other endocrine disorders",
-        pval: 0.0006709602417681,
-        coeff: -1.6829152038317483,
-        cint: 0.9697971697533948,
-      },
-      {
-        phenotype: "Testicular hypofunction",
-        pval: 0.0008717687471174,
-        coeff: -1.4882159938854862,
-        cint: 0.8762095102565337,
       },
       {
         phenotype: "Irritable Bowel Syndrome",
@@ -8879,6 +6951,18 @@ const realData = {
         pval: 1.2405586687721686e-14,
         coeff: -1.379539679566376,
         cint: 0.3506118210955515,
+      },
+      {
+        phenotype: "Otitis externa",
+        pval: 0.0023956972795464,
+        coeff: -1.2224437424271,
+        cint: 0.7891229563942841,
+      },
+      {
+        phenotype: "Hyperparathyroidism",
+        pval: 0.0038786722767057,
+        coeff: -1.1276556764927053,
+        cint: 0.7653283955294623,
       },
       {
         phenotype: "Constipation",
@@ -8903,6 +6987,18 @@ const realData = {
         pval: 0.000675818241853,
         coeff: -0.853678687808999,
         cint: 0.4922265796306695,
+      },
+      {
+        phenotype: "Other headache syndromes",
+        pval: 0.0037263685227877,
+        coeff: -0.6954441711369035,
+        cint: 0.4699440816216569,
+      },
+      {
+        phenotype: "Other symptoms",
+        pval: 0.0038081240307452,
+        coeff: -0.6328291697255972,
+        cint: 0.4286383860365255,
       },
       {
         phenotype: "Back pain",
@@ -8942,30 +7038,6 @@ const realData = {
       },
     ],
     group16: [
-      {
-        phenotype: "Hammer toe (acquired)",
-        pval: 0.0002400666131757,
-        coeff: -2.6228217891188503,
-        cint: 1.3997151185675565,
-      },
-      {
-        phenotype: "Disorders of bilirubin excretion",
-        pval: 0.0003411500653503,
-        coeff: -2.482926575361075,
-        cint: 1.358634858648088,
-      },
-      {
-        phenotype: "Valvular heart disease/ heart chambers",
-        pval: 0.0004851498640175,
-        coeff: -2.359426144954172,
-        cint: 1.3254867044984335,
-      },
-      {
-        phenotype: "Inguinal hernia",
-        pval: 0.0007574209327782,
-        coeff: -1.5290353289635603,
-        cint: 0.8898277955764922,
-      },
       {
         phenotype: "Irritable Bowel Syndrome",
         pval: 0.0006674642196524,
@@ -9011,31 +7083,19 @@ const realData = {
         coeff: -0.9639581505662213,
         cint: 0.4884558989064032,
       },
+      {
+        phenotype: "Vitamin D deficiency",
+        pval: 0.0006189896762972,
+        coeff: -0.8719547649338415,
+        cint: 0.4992471469852628,
+      },
     ],
     group19: [
-      {
-        phenotype: "Hyperhidrosis",
-        pval: 0.0003121538161718,
-        coeff: -2.438391239226485,
-        cint: 1.3257031867616575,
-      },
-      {
-        phenotype: "Rheumatoid arthritis",
-        pval: 6.995702680537158e-5,
-        coeff: -2.17065019092054,
-        cint: 1.0699029501747668,
-      },
       {
         phenotype: "Adjustment reaction",
         pval: 5.502118247173272e-7,
         coeff: -2.067906017999891,
         cint: 0.8093221779453073,
-      },
-      {
-        phenotype: "Pulmonary heart disease",
-        pval: 0.0011769659269862,
-        coeff: -1.9687937060478145,
-        cint: 1.1893600476339643,
       },
       {
         phenotype: "Major depressive disorder",
@@ -9069,10 +7129,40 @@ const realData = {
         cint: 0.7412715812505524,
       },
       {
+        phenotype: "Disorders resulting from impaired renal function",
+        pval: 0.0042560855713409,
+        coeff: -1.467857016197344,
+        cint: 1.0064427021119045,
+      },
+      {
+        phenotype: "Type 2 diabetes with neurological manifestations",
+        pval: 0.0039117458139747,
+        coeff: -1.435469794711021,
+        cint: 0.97514091202791,
+      },
+      {
         phenotype: "Anxiety disorder",
         pval: 1.0027368357102517e-5,
         coeff: -1.3235042852166723,
         cint: 0.5873366539800835,
+      },
+      {
+        phenotype: "Other abnormality of urination",
+        pval: 0.00264708632781,
+        coeff: -1.3161832514450906,
+        cint: 0.8581741217810017,
+      },
+      {
+        phenotype: "Conjunctivitis, infectious",
+        pval: 0.0020255975697069,
+        coeff: -1.2755385841001257,
+        cint: 0.8099943321987007,
+      },
+      {
+        phenotype: "Edema",
+        pval: 0.0031961881673293,
+        coeff: -1.2182860887735467,
+        cint: 0.809913824666995,
       },
       {
         phenotype: "Abdominal pain",
@@ -9085,6 +7175,12 @@ const realData = {
         pval: 0.0010949704124351,
         coeff: -1.149837583897968,
         cint: 0.690260068390399,
+      },
+      {
+        phenotype: "Constipation",
+        pval: 0.0023930541134106,
+        coeff: -1.063455749302583,
+        cint: 0.6864163467318345,
       },
       {
         phenotype: "Palpitations",
@@ -9105,19 +7201,25 @@ const realData = {
         cint: 0.5113246262610457,
       },
       {
+        phenotype: "Hypothyroidism NOS",
+        pval: 0.003164818844989,
+        coeff: -0.939421528775606,
+        cint: 0.6238804011518454,
+      },
+      {
         phenotype: "GERD",
         pval: 0.0006095742996428,
         coeff: -0.8802288601027732,
         cint: 0.5033722458676078,
       },
+      {
+        phenotype: "Other anemias",
+        pval: 0.0044258791413032,
+        coeff: -0.8236157263059212,
+        cint: 0.567182878714944,
+      },
     ],
     group6: [
-      {
-        phenotype: "Tobacco use disorder",
-        pval: 0.0006099881809223,
-        coeff: -1.79307250151959,
-        cint: 1.025450891745409,
-      },
       {
         phenotype: "Poisoning by hormones and synthetic substitutes",
         pval: 0.0003364579755077,
@@ -9165,6 +7267,18 @@ const realData = {
         pval: 0.0001137693141237,
         coeff: -1.077324322346913,
         cint: 0.5471416917229244,
+      },
+      {
+        phenotype: "Peripheral vascular disease, unspecified",
+        pval: 0.0040863903977115,
+        coeff: -1.0513290163727795,
+        cint: 0.717613865345057,
+      },
+      {
+        phenotype: "Gouty arthropathy",
+        pval: 0.0041577848720232,
+        coeff: -1.0181478768237089,
+        cint: 0.6962937318387499,
       },
       {
         phenotype: "Kidney replaced by transpant",
@@ -9239,6 +7353,12 @@ const realData = {
         cint: 0.2780805547355375,
       },
       {
+        phenotype: "Abnormal serum enzyme levels",
+        pval: 0.0040486876423672,
+        coeff: -0.6153812145089639,
+        cint: 0.4196176093993646,
+      },
+      {
         phenotype: "Type 2 diabetes",
         pval: 1.7770696173125675e-5,
         coeff: -0.5378979583828088,
@@ -9257,10 +7377,10 @@ const realData = {
         cint: 0.2198171359193821,
       },
       {
-        phenotype: "GERD",
-        pval: 0.0008131400745083,
-        coeff: -0.3835448109794365,
-        cint: 0.2245133024691692,
+        phenotype: "Cancer of bronchus; lung",
+        pval: 0.0043984149344952,
+        coeff: 1.3803813886615752,
+        cint: 0.9499381163107308,
       },
       {
         phenotype: "Viral hepatitis B",
@@ -9275,14 +7395,14 @@ const realData = {
         coeff: 1.458598016383298,
         cint: 0.7210132040191617,
       },
+      {
+        phenotype: "Graves' disease",
+        pval: 0.0048168575935908,
+        coeff: 1.542286513503761,
+        cint: 1.0722918438139588,
+      },
     ],
     group7: [
-      {
-        phenotype: "Tobacco use disorder",
-        pval: 0.0001858058323106,
-        coeff: -2.1026427095692077,
-        cint: 1.1026152528197797,
-      },
       {
         phenotype: "Type 2 diabetes with renal manifestations",
         pval: 1.821023073154629e-5,
@@ -9299,52 +7419,16 @@ const realData = {
     group8: [],
     group9: [
       {
-        phenotype: "Abdominal hernia",
-        pval: 0.0005429671167229,
-        coeff: -2.7686560055313985,
-        cint: 1.568972338946338,
-      },
-      {
         phenotype: "Tobacco use disorder",
         pval: 1.4672194114956006e-7,
         coeff: -2.6922713577383828,
         cint: 1.003829165339325,
       },
       {
-        phenotype: "Protein-calorie malnutrition",
-        pval: 0.0014616078056266,
-        coeff: -2.250850538764067,
-        cint: 1.386332035054063,
-      },
-      {
-        phenotype: "Regional enteritis",
-        pval: 7.649961758201095e-5,
-        coeff: -2.2051089704299605,
-        cint: 1.0927470412959437,
-      },
-      {
-        phenotype: "Heartburn",
-        pval: 0.0008326584847426,
-        coeff: -1.790419945241716,
-        cint: 1.05011059165291,
-      },
-      {
-        phenotype: "Poisoning by hormones and synthetic substitutes",
-        pval: 0.0002955040833173,
-        coeff: -1.619297915701443,
-        cint: 0.8769222673929691,
-      },
-      {
         phenotype: "Inguinal hernia",
         pval: 5.388104449112189e-5,
         coeff: -1.4790552152769003,
         cint: 0.7178821299521116,
-      },
-      {
-        phenotype: "Hyperhidrosis",
-        pval: 0.0012830997199198,
-        coeff: -1.4088344978020977,
-        cint: 0.8576067462488541,
       },
       {
         phenotype: "Irritable Bowel Syndrome",
@@ -9401,6 +7485,12 @@ const realData = {
         cint: 0.4275115217241569,
       },
       {
+        phenotype: "Constipation",
+        pval: 0.0030876486561922,
+        coeff: -0.5567995569285216,
+        cint: 0.3688250703916992,
+      },
+      {
         phenotype: "Other anemias",
         pval: 0.0002209029597113,
         coeff: -0.5507871778107383,
@@ -9425,6 +7515,12 @@ const realData = {
         cint: 0.3213670615349533,
       },
       {
+        phenotype: "Cataract",
+        pval: 0.0035910537474892,
+        coeff: 0.6549045038347281,
+        cint: 0.4407907359296332,
+      },
+      {
         phenotype: "Atopic/contact dermatitis due to other or unspecified",
         pval: 0.0016778248613521,
         coeff: 0.6817069563539825,
@@ -9443,6 +7539,12 @@ const realData = {
         cint: 0.2771218027268614,
       },
       {
+        phenotype: "Glaucoma",
+        pval: 0.0041614275849458,
+        coeff: 0.8730828004135873,
+        cint: 0.5971440013005913,
+      },
+      {
         phenotype: "Gout",
         pval: 0.0003931734344496,
         coeff: 1.2262980897928826,
@@ -9459,10 +7561,28 @@ const realData = {
   group6: {
     group10: [
       {
+        phenotype: "Alopecia",
+        pval: 0.0015176145181118,
+        coeff: -0.997848121036612,
+        cint: 0.6167029502133362,
+      },
+      {
         phenotype: "Hypothyroidism NOS",
         pval: 0.0005187649244616,
         coeff: -0.6892633548958897,
         cint: 0.3892192170450412,
+      },
+      {
+        phenotype: "Abdominal pain",
+        pval: 0.0014244942314498,
+        coeff: -0.5386322401599746,
+        cint: 0.3309775779668609,
+      },
+      {
+        phenotype: "Other abnormal blood chemistry",
+        pval: 0.0011161038712282,
+        coeff: 0.7546891004938513,
+        cint: 0.4538012914485864,
       },
       {
         phenotype: "Type 2 diabetes",
@@ -9481,6 +7601,18 @@ const realData = {
         pval: 0.0008709265273208,
         coeff: 1.3873334094326886,
         cint: 0.8167473268359253,
+      },
+      {
+        phenotype: "Heart failure NOS",
+        pval: 0.0025543180770745,
+        coeff: 1.3927037952260382,
+        cint: 0.9048066942754656,
+      },
+      {
+        phenotype: "Abnormal serum enzyme levels",
+        pval: 0.0018118224828899,
+        coeff: 1.497972430884252,
+        cint: 0.9411792680122246,
       },
       {
         phenotype: "Chronic renal failure [CKD]",
@@ -9509,34 +7641,22 @@ const realData = {
     ],
     group11: [
       {
-        phenotype: "Chronic lymphocytic thyroiditis",
-        pval: 4.344988420659266e-5,
-        coeff: -1.991901527178332,
-        cint: 0.9549277763704964,
-      },
-      {
-        phenotype: "Mineral deficiency NEC",
-        pval: 0.0005676286789984,
-        coeff: -1.4714926588560997,
-        cint: 0.836780833074704,
-      },
-      {
         phenotype: "Syncope and collapse",
         pval: 0.0002131582370673,
         coeff: -1.427072952570216,
         cint: 0.7553593042066327,
       },
       {
-        phenotype: "Lymphadenitis",
-        pval: 0.0007317831445634,
-        coeff: -1.420594063338499,
-        cint: 0.8243989017839894,
-      },
-      {
         phenotype: "Acquired hypothyroidism",
         pval: 0.0001052160559193,
         coeff: -1.325675026393741,
         cint: 0.669962949155475,
+      },
+      {
+        phenotype: "Vitamin B-complex deficiencies",
+        pval: 0.0025246372848373,
+        coeff: -1.1353897893907938,
+        cint: 0.7367710027398704,
       },
       {
         phenotype:
@@ -9550,6 +7670,12 @@ const realData = {
         pval: 5.685926986799271e-5,
         coeff: -1.0260901199833488,
         cint: 0.4995925448008722,
+      },
+      {
+        phenotype: "Pruritus and related conditions",
+        pval: 0.0021924709260245,
+        coeff: -0.9529554155432244,
+        cint: 0.6098125141386146,
       },
       {
         phenotype: "Hypothyroidism NOS",
@@ -9578,39 +7704,53 @@ const realData = {
     ],
     group12: [
       {
+        phenotype: "Impaired fasting glucose",
+        pval: 0.0007647336998976,
+        coeff: 0.6983198707476681,
+        cint: 0.4067098675879049,
+      },
+      {
+        phenotype: "Type 2 diabetes",
+        pval: 0.0003689873726675,
+        coeff: 0.8560611943371452,
+        cint: 0.4711305193237721,
+      },
+      {
         phenotype: "Essential hypertension",
         pval: 8.104635875897078e-8,
         coeff: 1.150623909541031,
         cint: 0.420367645891377,
       },
+      {
+        phenotype: "Gout",
+        pval: 0.000750276229348,
+        coeff: 1.5633291947533463,
+        cint: 0.9090801422713688,
+      },
     ],
-    group13: [],
+    group13: [
+      {
+        phenotype:
+          "Iron deficiency anemias, unspecified or not due to blood loss",
+        pval: 0.0004167010884552,
+        coeff: -1.0263831052374286,
+        cint: 0.5699964893909051,
+      },
+      {
+        phenotype: "Hypothyroidism NOS",
+        pval: 0.0005134950686676,
+        coeff: -0.890622705682695,
+        cint: 0.502527727269509,
+      },
+      {
+        phenotype: "Essential hypertension",
+        pval: 0.0003508253359238,
+        coeff: 0.8143450445177896,
+        cint: 0.4465135889767844,
+      },
+    ],
     group14: [],
     group15: [
-      {
-        phenotype: "Ulcerative colitis",
-        pval: 0.0005288509796208,
-        coeff: -2.0656910944977014,
-        cint: 1.168213906109001,
-      },
-      {
-        phenotype: "Other endocrine disorders",
-        pval: 0.0007084323280245,
-        coeff: -1.8995010923515567,
-        cint: 1.0994180771215931,
-      },
-      {
-        phenotype: "Otitis externa",
-        pval: 0.000383752261165,
-        coeff: -1.732659211977083,
-        cint: 0.9563327922029964,
-      },
-      {
-        phenotype: "Effects radiation NOS",
-        pval: 0.0008477319832586,
-        coeff: -1.3641872582749288,
-        cint: 0.8013131493540713,
-      },
       {
         phenotype: "Constipation",
         pval: 8.034591118694114e-7,
@@ -9678,6 +7818,12 @@ const realData = {
         cint: 0.6716391667795385,
       },
       {
+        phenotype: "Heart failure NOS",
+        pval: 0.0027713511072813,
+        coeff: 1.2014135894361764,
+        cint: 0.7870016807943239,
+      },
+      {
         phenotype: "Type 2 diabetes",
         pval: 1.2335446054158075e-10,
         coeff: 1.2981907383675662,
@@ -9733,16 +7879,10 @@ const realData = {
     group18: [],
     group19: [
       {
-        phenotype: "Internal derangement of knee",
-        pval: 0.0002599483959803,
-        coeff: -2.3620716987771666,
-        cint: 1.2675939939235743,
-      },
-      {
-        phenotype: "Bacterial enteritis",
-        pval: 0.0004124764731312,
-        coeff: -2.006056532117652,
-        cint: 1.113202769744566,
+        phenotype: "Other abnormality of urination",
+        pval: 0.000779642526488,
+        coeff: -1.4867090266576932,
+        cint: 0.8672509202861125,
       },
       {
         phenotype: "Spondylosis without myelopathy",
@@ -9758,10 +7898,22 @@ const realData = {
         cint: 0.6756659017553548,
       },
       {
+        phenotype: "Acute pharyngitis",
+        pval: 0.0011282744994582,
+        coeff: -1.129503956559927,
+        cint: 0.6798227267057193,
+      },
+      {
         phenotype: "Abdominal pain",
         pval: 0.0004325796406763,
         coeff: -0.9288900343204892,
         cint: 0.5173065429889674,
+      },
+      {
+        phenotype: "Essential hypertension",
+        pval: 0.0018317636965805,
+        coeff: 0.9225758628410444,
+        cint: 0.5802564925064068,
       },
     ],
     group7: [
@@ -9774,12 +7926,6 @@ const realData = {
     ],
     group8: [
       {
-        phenotype: "Cancer of bronchus; lung",
-        pval: 0.0005545687030721,
-        coeff: -1.7450183486578354,
-        cint: 0.990518306302838,
-      },
-      {
         phenotype:
           "Malignant neoplasm of other and ill-defined sites within the digestive organs and peritoneum",
         pval: 6.0004415435855737e-5,
@@ -9791,6 +7937,12 @@ const realData = {
         pval: 0.0003663468050721,
         coeff: -1.09771438570285,
         cint: 0.6038039899520409,
+      },
+      {
+        phenotype: "Memory loss",
+        pval: 0.0010289057647162,
+        coeff: -0.91986735564112,
+        cint: 0.549247912192949,
       },
       {
         phenotype: "Essential hypertension",
@@ -9831,6 +7983,18 @@ const realData = {
         cint: 0.362472827540547,
       },
       {
+        phenotype: "Dizziness and giddiness (Light-headedness and vertigo)",
+        pval: 0.0018972836428355,
+        coeff: 0.6406975607324155,
+        cint: 0.4043148457869744,
+      },
+      {
+        phenotype: "Allergic rhinitis",
+        pval: 0.0024546755253519,
+        coeff: 0.66339080268221,
+        cint: 0.4292758145983593,
+      },
+      {
         phenotype: "Impaired fasting glucose",
         pval: 1.3517640113193368e-7,
         coeff: 0.7466429534102373,
@@ -9867,6 +8031,12 @@ const realData = {
         cint: 0.3888861395594853,
       },
       {
+        phenotype: "Glaucoma",
+        pval: 0.0026817931612456,
+        coeff: 0.926690580584663,
+        cint: 0.6050158551780941,
+      },
+      {
         phenotype: "Type 2 diabetes",
         pval: 7.787890066574552e-11,
         coeff: 1.0807886894525631,
@@ -9883,12 +8053,6 @@ const realData = {
         pval: 1.7756947290965017e-5,
         coeff: 1.2401997004065803,
         cint: 0.566425974555151,
-      },
-      {
-        phenotype: "Gouty arthropathy",
-        pval: 0.0011482302430474,
-        coeff: 1.8017149250191928,
-        cint: 1.0860723543442836,
       },
       {
         phenotype: "Gout",
@@ -9945,17 +8109,17 @@ const realData = {
     ],
     group11: [
       {
-        phenotype: "Acne",
-        pval: 0.0002016345015896,
-        coeff: -1.9545017833657383,
-        cint: 1.0306146142255703,
-      },
-      {
         phenotype:
           "Iron deficiency anemias, unspecified or not due to blood loss",
         pval: 9.046830983900448e-5,
         coeff: -1.4814664467957896,
         cint: 0.7416980143779537,
+      },
+      {
+        phenotype: "Acquired hypothyroidism",
+        pval: 0.0007152130407688,
+        coeff: -1.4550306311877654,
+        cint: 0.8428124465152842,
       },
       {
         phenotype: "Hypothyroidism NOS",
@@ -9995,6 +8159,12 @@ const realData = {
         cint: 0.4117412041236032,
       },
       {
+        phenotype: "Hemorrhage of rectum and anus",
+        pval: 0.0026114962600669,
+        coeff: -1.0973587906392246,
+        cint: 0.714519013705393,
+      },
+      {
         phenotype: "Pruritus and related conditions",
         pval: 0.0008436737896899,
         coeff: -1.0647197238600707,
@@ -10007,6 +8177,12 @@ const realData = {
         cint: 0.4531296629095102,
       },
       {
+        phenotype: "Other headache syndromes",
+        pval: 0.0036632986533302,
+        coeff: -0.8262028247802722,
+        cint: 0.5572766933834679,
+      },
+      {
         phenotype: "Mixed hyperlipidemia",
         pval: 0.000709239894058,
         coeff: 0.7346314636269796,
@@ -10017,6 +8193,12 @@ const realData = {
         pval: 3.7122191974232313e-6,
         coeff: 0.8200106441743334,
         cint: 0.3473599021088456,
+      },
+      {
+        phenotype: "Type 2 diabetes with renal manifestations",
+        pval: 0.0022917314484138,
+        coeff: 0.952311767790718,
+        cint: 0.6120534747291742,
       },
       {
         phenotype: "Type 2 diabetes",
@@ -10038,6 +8220,12 @@ const realData = {
       },
     ],
     group16: [
+      {
+        phenotype: "Type 2 diabetes",
+        pval: 0.0005691166052004,
+        coeff: 0.8681680668025046,
+        cint: 0.4937948720277861,
+      },
       {
         phenotype: "Impaired fasting glucose",
         pval: 2.960222739127691e-7,
@@ -10074,14 +8262,32 @@ const realData = {
         coeff: -1.710791457107291,
         cint: 0.8528234854437482,
       },
+      {
+        phenotype: "Adjustment reaction",
+        pval: 0.001534177088303,
+        coeff: -1.4280462931728146,
+        cint: 0.8834582586751858,
+      },
+      {
+        phenotype: "Hypothyroidism NOS",
+        pval: 0.0011065778047552,
+        coeff: -1.142397563332534,
+        cint: 0.6864219629617754,
+      },
+      {
+        phenotype: "Anxiety disorder",
+        pval: 0.0008582437907064,
+        coeff: -1.112883577731588,
+        cint: 0.6543713549165899,
+      },
+      {
+        phenotype: "Abdominal pain",
+        pval: 0.0016392780599943,
+        coeff: -0.9294595031374098,
+        cint: 0.5785353618990805,
+      },
     ],
     group8: [
-      {
-        phenotype: "Cancer of bronchus; lung",
-        pval: 0.000161013802869,
-        coeff: -2.1305442838390367,
-        cint: 1.1066277004664786,
-      },
       {
         phenotype: "Viral hepatitis B",
         pval: 7.063549109162516e-5,
@@ -10093,6 +8299,19 @@ const realData = {
         pval: 0.0006538542134052,
         coeff: 0.4912688051507973,
         cint: 0.2825128495262452,
+      },
+      {
+        phenotype: "Enthesopathy",
+        pval: 0.0019079299645433,
+        coeff: 0.847313777260439,
+        cint: 0.5349859537682488,
+      },
+      {
+        phenotype:
+          "Elevated blood pressure reading without diagnosis of hypertension",
+        pval: 0.0015451787051665,
+        coeff: 0.8738798390131008,
+        cint: 0.5409789911621761,
       },
       {
         phenotype: "Mixed hyperlipidemia",
@@ -10115,10 +8334,10 @@ const realData = {
     ],
     group9: [
       {
-        phenotype: "Cancer of bronchus; lung",
-        pval: 0.0004938903060191,
-        coeff: -2.112969021498217,
-        cint: 1.1886583645129982,
+        phenotype: "Hypercholesterolemia",
+        pval: 0.0029943537223494,
+        coeff: 0.5391632037379037,
+        cint: 0.3560066096254895,
       },
       {
         phenotype: "Essential hypertension",
@@ -10145,10 +8364,22 @@ const realData = {
         cint: 0.3999390695649717,
       },
       {
+        phenotype: "Osteoarthrosis NOS",
+        pval: 0.0012978967555296,
+        coeff: 1.0691279410656835,
+        cint: 0.6514809498689464,
+      },
+      {
         phenotype: "Glaucoma",
         pval: 0.0001223429209069,
         coeff: 1.1685763308302035,
         cint: 0.5962350981042441,
+      },
+      {
+        phenotype: "Type 2 diabetes with neurological manifestations",
+        pval: 0.0013690838985317,
+        coeff: 1.192447462139597,
+        cint: 0.7301117768329323,
       },
       {
         phenotype: "Type 2 diabetes with renal manifestations",
@@ -10156,10 +8387,34 @@ const realData = {
         coeff: 1.2280877155675192,
         cint: 0.6046050315225985,
       },
+      {
+        phenotype: "Hyperglyceridemia",
+        pval: 0.0009267968383165,
+        coeff: 1.3016897471513074,
+        cint: 0.7703432941954846,
+      },
+      {
+        phenotype: "Other benign neoplasm of connective and other soft tissue",
+        pval: 0.0020366317472116,
+        coeff: 1.50947310532388,
+        cint: 0.9590497442215596,
+      },
     ],
   },
   group8: {
     group10: [
+      {
+        phenotype: "Nontoxic multinodular goiter",
+        pval: 0.0010225580893716,
+        coeff: -1.3141605748495042,
+        cint: 0.7842615307687102,
+      },
+      {
+        phenotype: "Acne",
+        pval: 0.0039404753088666,
+        coeff: -1.117081106332585,
+        cint: 0.7594602162629962,
+      },
       {
         phenotype: "Enthesopathy",
         pval: 0.000313986031918,
@@ -10167,10 +8422,28 @@ const realData = {
         cint: 0.5860371445216901,
       },
       {
+        phenotype: "Dysuria",
+        pval: 0.0014951034289042,
+        coeff: -0.9240783673213812,
+        cint: 0.5703306187438397,
+      },
+      {
+        phenotype: "Viral infection",
+        pval: 0.0014109899202752,
+        coeff: -0.8018544062317683,
+        cint: 0.4922970124507622,
+      },
+      {
         phenotype: "Anxiety disorder",
         pval: 0.0002405138670916,
         coeff: -0.7610089110589277,
         cint: 0.406178420773314,
+      },
+      {
+        phenotype: "Hypothyroidism NOS",
+        pval: 0.0021452300373617,
+        coeff: -0.6760448827658327,
+        cint: 0.4316947757461418,
       },
       {
         phenotype: "Type 2 diabetes",
@@ -10183,6 +8456,19 @@ const realData = {
         pval: 5.62105717867681e-6,
         coeff: 0.8858148731246767,
         cint: 0.3824014654301697,
+      },
+      {
+        phenotype:
+          "Malignant neoplasm of other and ill-defined sites within the digestive organs and peritoneum",
+        pval: 0.0008942856737431,
+        coeff: 1.6851052510179718,
+        cint: 0.9942542987309486,
+      },
+      {
+        phenotype: "Viral hepatitis B",
+        pval: 0.0017282032718162,
+        coeff: 3.2090299237791,
+        cint: 2.0072999155483946,
       },
     ],
     group11: [
@@ -10200,36 +8486,42 @@ const realData = {
         cint: 0.6542513093995184,
       },
       {
+        phenotype: "Acne",
+        pval: 0.0007633580289887,
+        coeff: -1.2882917270983398,
+        cint: 0.7502058190494982,
+      },
+      {
         phenotype: "Hypothyroidism NOS",
         pval: 0.000418801642195,
         coeff: -0.9512745020631536,
         cint: 0.5284845968356646,
       },
+      {
+        phenotype: "Vitamin D deficiency",
+        pval: 0.0010129031711806,
+        coeff: -0.6971537662773213,
+        cint: 0.4157074396237341,
+      },
     ],
     group12: [
-      {
-        phenotype: "Joint effusions",
-        pval: 0.0006789726666029,
-        coeff: -2.579350035222208,
-        cint: 1.4877969910667836,
-      },
-      {
-        phenotype: "Benign neoplasm of skin",
-        pval: 0.0001594355633388,
-        coeff: -1.693477213869782,
-        cint: 0.879038292534065,
-      },
-      {
-        phenotype: "Impacted cerumen",
-        pval: 0.0005741662143827,
-        coeff: -1.597062896389981,
-        cint: 0.9090041035352092,
-      },
       {
         phenotype: "Other symptoms",
         pval: 0.0001632303889475,
         coeff: -1.2451976359799275,
         cint: 0.6473542541021722,
+      },
+      {
+        phenotype: "Dysuria",
+        pval: 0.0014826714798386,
+        coeff: -1.1705776291200234,
+        cint: 0.721916623908156,
+      },
+      {
+        phenotype: "Enthesopathy",
+        pval: 0.002733441084531,
+        coeff: -1.1096293508930968,
+        cint: 0.725857742749894,
       },
       {
         phenotype: "Other anemias",
@@ -10244,10 +8536,29 @@ const realData = {
         cint: 0.4597886723510286,
       },
       {
+        phenotype:
+          "Acute upper respiratory infections of multiple or unspecified sites",
+        pval: 0.0015363800206505,
+        coeff: -0.8502360548334555,
+        cint: 0.5260662682013746,
+      },
+      {
+        phenotype: "Anxiety disorder",
+        pval: 0.0024593725139617,
+        coeff: -0.7695610124180265,
+        cint: 0.4980728381839048,
+      },
+      {
         phenotype: "Pain in joint",
         pval: 0.0003411357849783,
         coeff: -0.7520250337216584,
         cint: 0.4115000084141907,
+      },
+      {
+        phenotype: "Pain in limb",
+        pval: 0.0036911816049476,
+        coeff: -0.7022323372804551,
+        cint: 0.4740453895592935,
       },
     ],
     group13: [
@@ -10270,15 +8581,27 @@ const realData = {
         coeff: -1.1232081571154375,
         cint: 0.601143083115935,
       },
+      {
+        phenotype: "Allergies, other",
+        pval: 0.0010815265553719,
+        coeff: -1.0507484770656572,
+        cint: 0.6301007728417687,
+      },
+      {
+        phenotype: "Asthma",
+        pval: 0.0026321109937677,
+        coeff: -0.9206144192593916,
+        cint: 0.5999122378686619,
+      },
+      {
+        phenotype: "Hypothyroidism NOS",
+        pval: 0.001003173172851,
+        coeff: -0.9124214642963664,
+        cint: 0.5436205083435283,
+      },
     ],
     group14: [],
     group15: [
-      {
-        phenotype: "Fracture of hand or wrist",
-        pval: 0.0015445415800816,
-        coeff: -2.6824500086222782,
-        cint: 1.6605190476953515,
-      },
       {
         phenotype: "Impacted cerumen",
         pval: 2.843900970446016e-5,
@@ -10310,10 +8633,46 @@ const realData = {
         cint: 0.5798533399512262,
       },
       {
+        phenotype: "Hemorrhage of rectum and anus",
+        pval: 0.0047487647635341,
+        coeff: -1.0233380302803936,
+        cint: 0.7103364027679739,
+      },
+      {
         phenotype: "Other symptoms",
         pval: 0.0002057061619282,
         coeff: -1.0198142096097762,
         cint: 0.5384835441394389,
+      },
+      {
+        phenotype: "Insomnia",
+        pval: 0.0067769894216336,
+        coeff: -0.9862106483595798,
+        cint: 0.7138909782900995,
+      },
+      {
+        phenotype: "Enthesopathy",
+        pval: 0.0026122144936958,
+        coeff: -0.943353340994091,
+        cint: 0.6142590806338618,
+      },
+      {
+        phenotype: "Pruritus and related conditions",
+        pval: 0.0033758605566145,
+        coeff: -0.8998764789445903,
+        cint: 0.6016945773271176,
+      },
+      {
+        phenotype: "Major depressive disorder",
+        pval: 0.0045724296117926,
+        coeff: -0.8974871512556957,
+        cint: 0.6203187279776541,
+      },
+      {
+        phenotype: "Nontoxic uninodular goiter",
+        pval: 0.0041367127533217,
+        coeff: -0.8762651528639743,
+        cint: 0.5989265165207015,
       },
       {
         phenotype: "Constipation",
@@ -10322,10 +8681,22 @@ const realData = {
         cint: 0.4432583560060599,
       },
       {
+        phenotype: "Palpitations",
+        pval: 0.0027507405822184,
+        coeff: -0.7663465343813846,
+        cint: 0.5016233842112411,
+      },
+      {
         phenotype: "Back pain",
         pval: 5.832852684811434e-5,
         coeff: -0.7646713487539254,
         cint: 0.3728668897736582,
+      },
+      {
+        phenotype: "Injury, NOS",
+        pval: 0.006837301583194,
+        coeff: -0.628317104917629,
+        cint: 0.4553163734996406,
       },
       {
         phenotype: "Type 2 diabetes",
@@ -10340,20 +8711,34 @@ const realData = {
         cint: 0.3895630969766975,
       },
       {
+        phenotype:
+          "Malignant neoplasm of other and ill-defined sites within the digestive organs and peritoneum",
+        pval: 0.0066673044395945,
+        coeff: 1.2203934484774377,
+        cint: 0.8816474037677687,
+      },
+      {
         phenotype: "Viral hepatitis B",
         pval: 0.000467392003577,
         coeff: 2.6005546320082606,
         cint: 1.4567916173749866,
       },
     ],
-    group16: [],
+    group16: [
+      {
+        phenotype: "Impaired fasting glucose",
+        pval: 0.0001716112264576,
+        coeff: 0.8741452895947518,
+        cint: 0.4559648359100299,
+      },
+    ],
     group17: [],
     group18: [
       {
-        phenotype: "Impacted cerumen",
-        pval: 5.66872635715106e-5,
-        coeff: -1.955727898786328,
-        cint: 0.9520548639248836,
+        phenotype: "Osteoarthrosis, localized, primary",
+        pval: 0.0033548599251997,
+        coeff: -1.3685505586114195,
+        cint: 0.9144648709358604,
       },
       {
         phenotype: "Disorders of lacrimal system",
@@ -10367,44 +8752,52 @@ const realData = {
         coeff: -1.17663065965069,
         cint: 0.5693948113903917,
       },
+      {
+        phenotype:
+          "Iron deficiency anemias, unspecified or not due to blood loss",
+        pval: 0.004881866866222,
+        coeff: -1.1552573497587124,
+        cint: 0.8044342157857969,
+      },
+      {
+        phenotype: "Inflammatory and toxic neuropathy",
+        pval: 0.0043667917332177,
+        coeff: -1.145334056149624,
+        cint: 0.7875506501519083,
+      },
+      {
+        phenotype: "Hypothyroidism NOS",
+        pval: 0.0039811279002728,
+        coeff: -0.938368471579156,
+        cint: 0.6386770432354693,
+      },
+      {
+        phenotype:
+          "Acute upper respiratory infections of multiple or unspecified sites",
+        pval: 0.0043205386164766,
+        coeff: -0.8902504926876622,
+        cint: 0.6114249028177765,
+      },
+      {
+        phenotype: "Pain in limb",
+        pval: 0.0050819764722033,
+        coeff: -0.7988825794256834,
+        cint: 0.5588500396791564,
+      },
+      {
+        phenotype: "Vitamin D deficiency",
+        pval: 0.0036427310852991,
+        coeff: -0.7792614415539049,
+        cint: 0.5252961470455871,
+      },
     ],
     group19: [
-      {
-        phenotype: "Rheumatoid arthritis",
-        pval: 0.0001579587206714,
-        coeff: -2.797086653143438,
-        cint: 1.4510011259609898,
-      },
-      {
-        phenotype: "Wheezing",
-        pval: 0.0016122426131148,
-        coeff: -2.375048626917576,
-        cint: 1.476055194926433,
-      },
-      {
-        phenotype: "Voice disturbance",
-        pval: 0.0020202395552839,
-        coeff: -2.2580573513020874,
-        cint: 1.4335490969114215,
-      },
       {
         phenotype:
           "Iron deficiency anemias, unspecified or not due to blood loss",
         pval: 1.5782273516600854e-5,
         coeff: -1.8182774832472537,
         cint: 0.8254261112374646,
-      },
-      {
-        phenotype: "Synovitis and tenosynovitis",
-        pval: 0.0009695556591845,
-        coeff: -1.7037008169662915,
-        cint: 1.012117147951803,
-      },
-      {
-        phenotype: "Conjunctivitis, infectious",
-        pval: 0.0009978441154793,
-        coeff: -1.679835220993281,
-        cint: 1.0003897296783,
       },
       {
         phenotype: "Osteoarthrosis, localized, primary",
@@ -10431,6 +8824,18 @@ const realData = {
         cint: 0.8137997135499124,
       },
       {
+        phenotype: "Enthesopathy",
+        pval: 0.0061159470703738,
+        coeff: -1.2831538028748637,
+        cint: 0.917357571413568,
+      },
+      {
+        phenotype: "Other headache syndromes",
+        pval: 0.0035377248093901,
+        coeff: -1.2427950923819768,
+        cint: 0.8351376119372524,
+      },
+      {
         phenotype: "Hypothyroidism NOS",
         pval: 0.0004965338836188,
         coeff: -1.2316085380214778,
@@ -10455,6 +8860,12 @@ const realData = {
         cint: 0.6382203826923007,
       },
       {
+        phenotype: "Spondylosis without myelopathy",
+        pval: 0.005636146979212,
+        coeff: -1.1036692278646498,
+        cint: 0.781420278415925,
+      },
+      {
         phenotype: "Back pain",
         pval: 0.0001740607955029,
         coeff: -1.1012849681335966,
@@ -10477,6 +8888,12 @@ const realData = {
         pval: 0.001031238124119,
         coeff: -0.9557906819064614,
         cint: 0.5708085609592091,
+      },
+      {
+        phenotype: "Cough",
+        pval: 0.0073880321178439,
+        coeff: -0.8250130067287763,
+        cint: 0.603620593066429,
       },
     ],
     group9: [
@@ -10520,88 +8937,28 @@ const realData = {
         coeff: -0.8470593302651671,
         cint: 0.4210725691144154,
       },
+      {
+        phenotype: "Organic or persistent insomnia",
+        pval: 0.0009982658666433,
+        coeff: -0.810060991518233,
+        cint: 0.4824318223830651,
+      },
+      {
+        phenotype: "Essential hypertension",
+        pval: 0.0004372750879498,
+        coeff: 0.6858396292141142,
+        cint: 0.3822609435058022,
+      },
     ],
     group16: [],
     group17: [],
     group18: [],
     group19: [
       {
-        phenotype: "Internal derangement of knee",
-        pval: 0.0008489556621983,
-        coeff: -2.223303868850087,
-        cint: 1.3061086134081434,
-      },
-      {
-        phenotype: "Voice disturbance",
-        pval: 0.0008369736118736,
-        coeff: -2.096917671746355,
-        cint: 1.2304049340200862,
-      },
-      {
-        phenotype: "Blindness and low vision",
-        pval: 0.001064442015527,
-        coeff: -2.070916372147121,
-        cint: 1.2401545954099211,
-      },
-      {
-        phenotype: "Atherosclerosis of aorta",
-        pval: 0.0011143473794854,
-        coeff: -1.954424699619368,
-        cint: 1.1750519612389625,
-      },
-      {
-        phenotype: "Acute bronchitis and bronchiolitis",
-        pval: 0.0012473603538775,
-        coeff: -1.8093958565170567,
-        cint: 1.0986818283416624,
-      },
-      {
-        phenotype: "Conjunctivitis, infectious",
-        pval: 0.0001175033965911,
-        coeff: -1.788632987869164,
-        cint: 0.910258089285538,
-      },
-      {
-        phenotype: "Rheumatoid arthritis",
-        pval: 0.0014423832977783,
-        coeff: -1.7352369753653891,
-        cint: 1.0674724256026211,
-      },
-      {
         phenotype: "Type 2 diabetes with renal manifestations",
         pval: 3.8450774962997785e-5,
         coeff: -1.684834873853969,
         cint: 0.802171252528709,
-      },
-      {
-        phenotype: "Occlusion of cerebral arteries",
-        pval: 0.0009941887318502,
-        coeff: -1.6796048504819263,
-        cint: 0.9999389185714802,
-      },
-      {
-        phenotype: "Symptoms involving digestive system",
-        pval: 0.0007628518872507,
-        coeff: -1.5536334878457527,
-        cint: 0.9046720567957164,
-      },
-      {
-        phenotype: "Other abnormality of urination",
-        pval: 0.0007558314498402,
-        coeff: -1.5209043755760294,
-        cint: 0.8849437805572047,
-      },
-      {
-        phenotype: "Adjustment reaction",
-        pval: 0.0003050142397945,
-        coeff: -1.5102553857534833,
-        cint: 0.8197294604151333,
-      },
-      {
-        phenotype: "Type 2 diabetes with neurological manifestations",
-        pval: 0.0015019147212861,
-        coeff: -1.444958918185104,
-        cint: 0.8921827053195479,
       },
       {
         phenotype: "Spondylosis without myelopathy",

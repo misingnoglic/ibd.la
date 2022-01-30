@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div>
       <Typography variant="body1" gutterBottom>
-        Please contact Dr. Noah A. Zaitlen not me
+        Please contact christa@g.ucla.edu
       </Typography>
     </div>
   );

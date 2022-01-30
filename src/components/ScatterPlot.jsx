@@ -23,7 +23,7 @@ const ScatterPlot = (props) => {
       },
     },
     xaxis: {
-      range: [-4, 4],
+      // range: [-4, 4],
       title: {
         text: "Log Odds",
         font: {

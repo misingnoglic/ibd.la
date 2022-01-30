@@ -14,8 +14,8 @@ const BarPlot = (props) => {
     },
     yaxis: {
       automargin: true,
-
       title: {
+        text: "IBD (cM)", 
         font: {
           size: 16,
           color: "#7f7f7f",
@@ -23,9 +23,8 @@ const BarPlot = (props) => {
       },
     },
     xaxis: {
-      //   range: [-4, 4],
       title: {
-        text: "Group",
+        // text: "Group",
         font: {
           size: 16,
           color: "#7f7f7f",
@@ -45,14 +44,12 @@ const BarPlot = (props) => {
     },
     // mode: "markers",
     type: "bar",
-    // marker: {
-    //   color: "rgb(199, 206, 234)",
-    //   size: 8,
-    // },
-    // line: {
-    //   color: "rgb(199, 206, 234)",
-    //   width: 1,
-    // },
+    marker: {
+      color: "rgb(181, 234, 215)",
+    },
+    line: {
+      color: "rgb(181, 234, 215)",
+    },
   };
   const config = {
     responsive: true,

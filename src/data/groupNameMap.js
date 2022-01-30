@@ -2,7 +2,7 @@ const groupNameMap = {
     group1: "european",
     group2: "mexican and other hispanic/latino",
     group3: "ashkenazi jewish",
-    group4: "african american and afro-caribbean I",
+    group4: "african american and afro-caribbean",
     group5: "chinese",
     group6: "filipino",
     group7: "japanese",
@@ -15,7 +15,7 @@ const groupNameMap = {
     group14: "vietnamese",
     group15: "persian jewish",
     group16: "christian arab I",
-    group17: "gujrati I",
+    group17: "gujrati",
     group18: "sindhi muslim",
     group19: "christian arab II",
     all: "All"
