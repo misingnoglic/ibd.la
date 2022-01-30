@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ScatterPlotControl from "./components/ScatterPlotControl";
+import PhecodePage from "./components/PhecodePage";
 import BarPlotControl from "./components/BarPlotControl";
 import DeckGlMap from "./components/DeckGlMap";
 import About from "./components/About";
@@ -25,7 +25,7 @@ const App = () => {
       break;
     }
     case 1: {
-      innerComponent = <ScatterPlotControl />;
+      innerComponent = <PhecodePage />;
       break;
     }
     case 2: {

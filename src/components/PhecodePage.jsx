@@ -10,9 +10,9 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
-import "./ScatterPlotControl.css";
+import "./PhecodePage.css";
 
-const ScatterPlotControl = () => {
+const PhecodePage = () => {
   const [firstGroupLabel, setFirstGroupLabel] = useState("group1");
   const [secondGroupLabel, setSecondGroupLabel] = useState("group6");
 
@@ -65,11 +65,13 @@ const ScatterPlotControl = () => {
     );
   }
 
-  const options = realDataOptions.sort((a, b)=> groupNameMap[a] > groupNameMap[b] ? 1 : -1).map((option) => (
-    <MenuItem value={option} key={option}>
-      {groupNameMap[option]}
-    </MenuItem>
-  ));
+  const options = realDataOptions
+    .sort((a, b) => (groupNameMap[a] > groupNameMap[b] ? 1 : -1))
+    .map((option) => (
+      <MenuItem value={option} key={option}>
+        {groupNameMap[option]}
+      </MenuItem>
+    ));
 
   return (
     <div className="scatterplotBox">
@@ -110,4 +112,4 @@ const ScatterPlotControl = () => {
   );
 };
 
-export default ScatterPlotControl;
+export default PhecodePage;
