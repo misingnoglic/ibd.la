@@ -5,6 +5,7 @@ import { GeoJsonLayer } from "@deck.gl/layers";
 import { scaleThreshold } from "d3-scale";
 import ReactDOMServer from "react-dom/server";
 import persianJewData from "../data/mapData/persianJew";
+import { percentToHeatmapColor } from "../utils";
 import "./DeckGlMap.css";
 
 const getTooltip = ({ object }) => {

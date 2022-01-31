@@ -34,9 +34,11 @@ const ScatterPlot = (props) => {
     },
   };
 
+  const modifier = props.negate ? -1 : 1;
+
   const graphData = {
     y: props.listOfComparisons.map((c) => c.phenotype),
-    x: props.listOfComparisons.map((c) => c.coeff * props.negate),
+    x: props.listOfComparisons.map((c) => c.coeff * modifier),
     text: props.listOfComparisons.map((c) => `p=${c.pval}`),
     error_x: {
       type: "data",

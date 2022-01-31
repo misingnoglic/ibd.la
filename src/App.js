@@ -17,38 +17,33 @@ const App = () => {
     setTabIndex(newIndex);
   };
 
-  let innerComponent;
+  const getTabComponent = (tabIndex) => {
+    switch (tabIndex) {
+      case 0: {
+        return <Home />;
+      }
+      case 1: {
+        return <PhecodePage />;
+      }
+      case 2: {
+        return <DeckGlMap />;
+      }
+      case 3: {
+        return <BarPlotControl />;
+      }
+      case 4: {
+        return <About />;
+      }
+      case 5: {
+        return <Contact />;
+      }
+      default: {
+        return null;
+      }
+    }
+  };
 
-  switch (tabIndex) {
-    case 0: {
-      innerComponent = <Home />;
-      break;
-    }
-    case 1: {
-      innerComponent = <PhecodePage />;
-      break;
-    }
-    case 2: {
-      innerComponent = <DeckGlMap />;
-      break;
-    }
-    case 3: {
-      innerComponent = <BarPlotControl />;
-      break;
-    }
-    case 4: {
-      innerComponent = <About />;
-      break;
-    }
-    case 5: {
-      innerComponent = <Contact />;
-      break;
-    }
-    default: {
-      innerComponent = null;
-      break;
-    }
-  }
+  const innerComponent = getTabComponent(tabIndex);
 
   return (
     <div className="App">
@@ -70,7 +65,7 @@ const App = () => {
         <div className="tabContent">{innerComponent}</div>
       </header>
       <div class="footer">
-        <p> 2022</p>
+        <p>© 2022</p>
       </div>
     </div>
   );

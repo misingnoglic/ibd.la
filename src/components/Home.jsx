@@ -5,7 +5,6 @@ const Home = () => {
   return (
     <div>
       <Typography variant="h2">Home</Typography>
-
       <Typography variant="h6">
         Fine scale community dection in the UCLA ATLAS Intiative
       </Typography>

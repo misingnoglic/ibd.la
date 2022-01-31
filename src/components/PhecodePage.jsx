@@ -25,13 +25,13 @@ const PhecodePage = () => {
   };
 
   let graph;
+  let graphData;
+  let negate = false;
   if (
     firstGroupLabel &&
     secondGroupLabel &&
     firstGroupLabel !== secondGroupLabel
   ) {
-    let graphData = null;
-    let negate = 1;
     if (
       realData.hasOwnProperty(firstGroupLabel) &&
       realData[firstGroupLabel].hasOwnProperty(secondGroupLabel)
@@ -42,10 +42,10 @@ const PhecodePage = () => {
       realData[secondGroupLabel].hasOwnProperty(firstGroupLabel)
     ) {
       graphData = realData[secondGroupLabel][firstGroupLabel];
-      negate = -1;
-    } else {
-      return "Invalid Data";
+      negate = true;
     }
+  }
+  if (graphData) {
     graph = (
       <ScatterPlot
         firstGroupLabel={groupNameMap[firstGroupLabel]}
@@ -58,9 +58,8 @@ const PhecodePage = () => {
     graph = (
       <Skeleton
         variant="rectangular"
-        animation={false}
-        width={500}
-        height={500}
+        width={"100%"}
+        height={"100%"}
       />
     );
   }
