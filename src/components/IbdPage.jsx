@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import BarPlot from "./BarPlot";
+import IbdTable from "./IbdTable";
 import { barData } from "../data/barData";
 import groupNameMap from "../data/groupNameMap";
 
@@ -10,7 +11,7 @@ import Select from "@mui/material/Select";
 import Skeleton from "@mui/material/Skeleton";
 import "./BarPlotControl.css";
 
-const BarPlotControl = () => {
+const IbdPage = () => {
   const [primaryGroup, setPrimaryGroup] = useState("group2");
 
   const handleChangeGroup = (event) => {
@@ -53,6 +54,7 @@ const BarPlotControl = () => {
   return (
     <div>
       <div className="graph">{graph}</div>
+      <IbdTable data={barData[primaryGroup]} />
       <div className="selectionForm">
         <div className="selectionBox">
           <FormControl>
@@ -72,4 +74,4 @@ const BarPlotControl = () => {
   );
 };
 
-export default BarPlotControl;
+export default IbdPage;

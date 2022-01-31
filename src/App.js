@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PhecodePage from "./components/PhecodePage";
-import BarPlotControl from "./components/BarPlotControl";
+import IbdPage from "./components/IbdPage";
 import DeckGlMap from "./components/DeckGlMap";
 import About from "./components/About";
 import Home from "./components/Home";
@@ -29,7 +29,7 @@ const App = () => {
         return <DeckGlMap />;
       }
       case 3: {
-        return <BarPlotControl />;
+        return <IbdPage />;
       }
       case 4: {
         return <About />;
@@ -64,7 +64,7 @@ const App = () => {
         </AppBar>
         <div className="tabContent">{innerComponent}</div>
       </header>
-      <div class="footer">
+      <div className="footer">
         <p>© 2022</p>
       </div>
     </div>
