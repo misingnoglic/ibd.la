@@ -48,11 +48,11 @@ const ScatterPlot = (props) => {
     mode: "markers",
     type: "scatter",
     marker: {
-      color: "rgb(199, 206, 234)",
+      color: props.plotColor,
       size: 8,
     },
     line: {
-      color: "rgb(199, 206, 234)",
+      color: props.plotColor,
       width: 1,
     },
   };

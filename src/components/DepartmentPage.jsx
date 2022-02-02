@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ScatterPlot from "./ScatterPlot";
-import { realData, realDataOptions } from "../data/realScatterData";
+import { realData, realDataOptions } from "../data/deptScatterData";
 
 import groupNameMap from "../data/groupNameMap";
 
@@ -10,9 +10,9 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
-import "./PhecodePage.css";
+import "./DepartmentPage.css";
 
-const PhecodePage = () => {
+const DeptPage = () => {
   const [firstGroupLabel, setFirstGroupLabel] = useState("group1");
   const [secondGroupLabel, setSecondGroupLabel] = useState("group6");
 
@@ -51,7 +51,7 @@ const PhecodePage = () => {
         firstGroupLabel={groupNameMap[firstGroupLabel]}
         secondGroupLabel={groupNameMap[secondGroupLabel]}
         listOfComparisons={graphData}
-        plotColor="#C7CEEA"
+        plotColor="#B5EAD7"
         negate={negate}
       />
     );
@@ -75,7 +75,7 @@ const PhecodePage = () => {
 
   return (
     <div className="scatterplotBox">
-      <Typography variant="h3">Phecode Distribution</Typography>
+      <Typography variant="h3">Medical Specialities</Typography>
       <div className="scatterGraph">{graph}</div>
       <div className="selectionForm">
         <div className="selectionBox">
@@ -112,4 +112,4 @@ const PhecodePage = () => {
   );
 };
 
-export default PhecodePage;
+export default DeptPage;

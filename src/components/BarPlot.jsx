@@ -47,10 +47,10 @@ const BarPlot = (props) => {
     // mode: "markers",
     type: "bar",
     marker: {
-      color: "rgb(181, 234, 215)",
+      color: "#E2F0CB",
     },
     line: {
-      color: "rgb(181, 234, 215)",
+      color: "#E2F0CB",
     },
   };
   const config = {
