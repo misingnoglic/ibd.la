@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ScatterPlot from "./ScatterPlot";
 import { realData, realDataOptions } from "../data/realScatterData";
+import { erRealData, erRealDataOptions } from "../data/erRealScatterData";
 
 import groupNameMap from "../data/groupNameMap";
 
