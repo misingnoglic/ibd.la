@@ -13,12 +13,17 @@ import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
 import "./PhecodePage.css";
 
+const validSecondGroups = (data, primaryGroup) => {
+  const primary = Object.keys(data[primaryGroup] || {});
+  const secondary = Object.entries(data).map();
+};
+
 const PhecodePage = () => {
-  const [firstGroupLabel, setFirstGroupLabel] = useState("group1");
+  const [primaryGroupLabel, setPrimaryGroupLabel] = useState("group1");
   const [secondGroupLabel, setSecondGroupLabel] = useState("group6");
 
   const handleFirstGroupChange = (event) => {
-    setFirstGroupLabel(event.target.value);
+    setPrimaryGroupLabel(event.target.value);
   };
 
   const handleSecondGroupChange = (event) => {
@@ -29,27 +34,27 @@ const PhecodePage = () => {
   let graphData;
   let negate = false;
   if (
-    firstGroupLabel &&
+    primaryGroupLabel &&
     secondGroupLabel &&
-    firstGroupLabel !== secondGroupLabel
+    primaryGroupLabel !== secondGroupLabel
   ) {
     if (
-      realData.hasOwnProperty(firstGroupLabel) &&
-      realData[firstGroupLabel].hasOwnProperty(secondGroupLabel)
+      realData.hasOwnProperty(primaryGroupLabel) &&
+      realData[primaryGroupLabel].hasOwnProperty(secondGroupLabel)
     ) {
-      graphData = realData[firstGroupLabel][secondGroupLabel];
+      graphData = realData[primaryGroupLabel][secondGroupLabel];
     } else if (
       realData.hasOwnProperty(secondGroupLabel) &&
-      realData[secondGroupLabel].hasOwnProperty(firstGroupLabel)
+      realData[secondGroupLabel].hasOwnProperty(primaryGroupLabel)
     ) {
-      graphData = realData[secondGroupLabel][firstGroupLabel];
+      graphData = realData[secondGroupLabel][primaryGroupLabel];
       negate = true;
     }
   }
   if (graphData) {
     graph = (
       <ScatterPlot
-        firstGroupLabel={groupNameMap[firstGroupLabel]}
+        firstGroupLabel={groupNameMap[primaryGroupLabel]}
         secondGroupLabel={groupNameMap[secondGroupLabel]}
         listOfComparisons={graphData}
         plotColor="#C7CEEA"
@@ -57,13 +62,7 @@ const PhecodePage = () => {
       />
     );
   } else {
-    graph = (
-      <Skeleton
-        variant="rectangular"
-        width={"100%"}
-        height={"100%"}
-      />
-    );
+    graph = <Skeleton variant="rectangular" width={"100%"} height={"100%"} />;
   }
 
   const options = realDataOptions
@@ -73,7 +72,6 @@ const PhecodePage = () => {
         {groupNameMap[option]}
       </MenuItem>
     ));
-
   return (
     <div className="scatterplotBox">
       <Typography variant="h3">Phecode Distribution</Typography>
@@ -84,7 +82,7 @@ const PhecodePage = () => {
             <InputLabel id="group1-selection">Community 1</InputLabel>
             <Select
               labelId="group1-selection"
-              value={firstGroupLabel}
+              value={primaryGroupLabel}
               label="First Group"
               onChange={handleFirstGroupChange}
             >
@@ -101,7 +99,15 @@ const PhecodePage = () => {
               label="Second Group"
               onChange={handleSecondGroupChange}
             >
-              {options}
+              {/* Filter out any options that don't have data for the other group */}
+              {options.filter((option) => {
+                const group = option.props.value;
+                return (
+                  (realData[primaryGroupLabel].hasOwnProperty(group) && realData[primaryGroupLabel][group].length !== 0) ||
+                  (realData.hasOwnProperty(group) &&
+                    realData[group].hasOwnProperty(primaryGroupLabel) && realData[group][primaryGroupLabel].length !== 0)
+                );
+              })}
               {/* <MenuItem value="All" key="All">
                 All
               </MenuItem> */}
