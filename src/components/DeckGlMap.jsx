@@ -4,7 +4,6 @@ import DeckGL from "@deck.gl/react";
 import { GeoJsonLayer } from "@deck.gl/layers";
 import { scaleThreshold } from "d3-scale";
 import ReactDOMServer from "react-dom/server";
-import persianJewData from "../data/mapData/persianJew";
 import { percentToHeatmapColor } from "../utils";
 
 import InputLabel from "@mui/material/InputLabel";
@@ -27,7 +26,7 @@ const getTooltip = ({ object }) => {
         <div>
           <b>Log Odds Ratio</b>
         </div>
-        <div>{object.properties.coeff}</div>
+        <div>{object.properties.coefficient}</div>
       </div>
     ),
   };
@@ -75,7 +74,7 @@ const DeckGlMap = () => {
     new GeoJsonLayer({
       id: "geojson",
       data: `https://raw.githubusercontent.com/misingnoglic/atlas-app/main/src/data/geojson/${group}.json`,
-      getFillColor: (f) => colorScale(f.properties.coeff),
+      getFillColor: (f) => colorScale(f.properties.coefficient),
       getLineColor: [255, 255, 255],
       getLineWidth: 20,
       pickable: true,
