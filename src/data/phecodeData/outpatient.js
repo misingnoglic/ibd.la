@@ -1,4 +1,4 @@
-const realData = {
+const graphData = {
   group10: {
     group11: [],
     group12: [],
@@ -8995,6 +8995,6 @@ const generateOptions = (data) => {
   return options;
 };
 
-const realDataOptions = generateOptions(realData);
+const options = generateOptions(graphData);
 
-export { realData, realDataOptions };
+export { graphData as outpatientGraphData, options as outpatientOptions };
