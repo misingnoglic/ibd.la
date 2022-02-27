@@ -4,7 +4,6 @@ import DeckGL from "@deck.gl/react";
 import { GeoJsonLayer } from "@deck.gl/layers";
 import { scaleThreshold } from "d3-scale";
 import ReactDOMServer from "react-dom/server";
-import persianJewData from "../data/mapData/persianJew";
 import { percentToHeatmapColor } from "../utils";
 
 import InputLabel from "@mui/material/InputLabel";
