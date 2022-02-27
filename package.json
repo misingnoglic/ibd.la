@@ -13,7 +13,6 @@
     "@testing-library/user-event": "^13.5.0",
     "d3-scale": "^4.0.2",
     "deck.gl": "^8.6.5",
-    "eslint": "^8.7.0",
     "leaflet": "^1.7.1",
     "leaflet-defaulticon-compatibility": "^0.1.1",
     "plotly.js": "^2.8.3",
@@ -31,7 +30,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-
   "browserslist": {
     "production": [
       ">0.2%",
@@ -45,6 +43,12 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.2",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "2.5.1"
   }
 }

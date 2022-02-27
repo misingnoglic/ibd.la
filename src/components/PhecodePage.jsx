@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import ScatterPlot from "./ScatterPlot";
-import { realData, realDataOptions } from "../data/realScatterData";
-import { erRealData, erRealDataOptions } from "../data/erRealScatterData";
+import {
+  outpatientGraphData,
+  outpatientOptions,
+} from "../data/phecodeData/outpatient";
+import { erGraphData, erOptions } from "../data/phecodeData/er";
 
 import groupNameMap from "../data/groupNameMap";
 
@@ -14,59 +17,78 @@ import Typography from "@mui/material/Typography";
 import "./PhecodePage.css";
 
 const PhecodePage = () => {
-  const [firstGroupLabel, setFirstGroupLabel] = useState("group1");
+  const [primaryGroupLabel, setPrimaryGroupLabel] = useState("group1");
   const [secondGroupLabel, setSecondGroupLabel] = useState("group6");
+  // For now outpatient or emergencyRoom
+  const [dataCategory, setDataCategory] = useState("Outpatient");
 
   const handleFirstGroupChange = (event) => {
-    setFirstGroupLabel(event.target.value);
+    setSecondGroupLabel(null);
+    setPrimaryGroupLabel(event.target.value);
   };
 
   const handleSecondGroupChange = (event) => {
     setSecondGroupLabel(event.target.value);
   };
 
+  const handleDataCategoryChange = (event) => {
+    setPrimaryGroupLabel(null);
+    setSecondGroupLabel(null);
+    setDataCategory(event.target.value);
+  };
+
   let graph;
   let graphData;
   let negate = false;
+  let fullData;
+  let fullDataOptions;
+  switch (dataCategory) {
+    case "Outpatient":
+      fullData = outpatientGraphData;
+      fullDataOptions = outpatientOptions;
+      break;
+    case "Emergency Room":
+      fullData = erGraphData;
+      fullDataOptions = erOptions;
+      break;
+  }
+  const graphColorOptions = {
+    Outpatient: "#C7CEEA",
+    "Emergency Room": "#FFB7B2",
+  };
   if (
-    firstGroupLabel &&
+    primaryGroupLabel &&
     secondGroupLabel &&
-    firstGroupLabel !== secondGroupLabel
+    primaryGroupLabel !== secondGroupLabel
   ) {
     if (
-      realData.hasOwnProperty(firstGroupLabel) &&
-      realData[firstGroupLabel].hasOwnProperty(secondGroupLabel)
+      fullData.hasOwnProperty(primaryGroupLabel) &&
+      fullData[primaryGroupLabel].hasOwnProperty(secondGroupLabel)
     ) {
-      graphData = realData[firstGroupLabel][secondGroupLabel];
+      graphData = fullData[primaryGroupLabel][secondGroupLabel];
     } else if (
-      realData.hasOwnProperty(secondGroupLabel) &&
-      realData[secondGroupLabel].hasOwnProperty(firstGroupLabel)
+      fullData.hasOwnProperty(secondGroupLabel) &&
+      fullData[secondGroupLabel].hasOwnProperty(primaryGroupLabel)
     ) {
-      graphData = realData[secondGroupLabel][firstGroupLabel];
+      graphData = fullData[secondGroupLabel][primaryGroupLabel];
       negate = true;
     }
   }
   if (graphData) {
     graph = (
       <ScatterPlot
-        firstGroupLabel={groupNameMap[firstGroupLabel]}
+        firstGroupLabel={groupNameMap[primaryGroupLabel]}
         secondGroupLabel={groupNameMap[secondGroupLabel]}
         listOfComparisons={graphData}
-        plotColor="#C7CEEA"
+        plotColor={graphColorOptions[dataCategory]}
         negate={negate}
       />
     );
   } else {
-    graph = (
-      <Skeleton
-        variant="rectangular"
-        width={"100%"}
-        height={"100%"}
-      />
-    );
+    graph = <Skeleton variant="rectangular" width={"100%"} height={"100%"} />;
   }
 
-  const options = realDataOptions
+  const groupOptions = fullDataOptions
     .sort((a, b) => (groupNameMap[a] > groupNameMap[b] ? 1 : -1))
     .map((option) => (
       <MenuItem value={option} key={option}>
@@ -74,37 +96,71 @@ const PhecodePage = () => {
       </MenuItem>
     ));
 
+  let filteredGroupOptions = [];
+  if (!!primaryGroupLabel && fullData.hasOwnProperty(primaryGroupLabel)) {
+    // Filter out any options that don't have data for the other group
+    filteredGroupOptions = groupOptions.filter((option) => {
+      const group = option.props.value;
+      return (
+        (fullData[primaryGroupLabel].hasOwnProperty(group) &&
+          fullData[primaryGroupLabel][group].length !== 0) ||
+        (fullData.hasOwnProperty(group) &&
+          fullData[group].hasOwnProperty(primaryGroupLabel) &&
+          fullData[group][primaryGroupLabel].length !== 0)
+      );
+    });
+  }
+
+  const dataCategoryOptions = ["Emergency Room", "Outpatient"].map((option) => (
+    <MenuItem value={option} key={option}>
+      {option}
+    </MenuItem>
+  ));
   return (
     <div className="scatterplotBox">
       <Typography variant="h3">Phecode Distribution</Typography>
       <div className="scatterGraph">{graph}</div>
       <div className="selectionForm">
         <div className="selectionBox">
-          <FormControl>
+          <FormControl style={{ minWidth: 150 }}>
             <InputLabel id="group1-selection">Community 1</InputLabel>
             <Select
               labelId="group1-selection"
-              value={firstGroupLabel}
+              value={primaryGroupLabel}
               label="First Group"
               onChange={handleFirstGroupChange}
             >
-              {options}
+              {groupOptions}
             </Select>
           </FormControl>
         </div>
         <div className="selectionBox">
-          <FormControl>
+          <FormControl style={{ minWidth: 150 }}>
             <InputLabel id="group2-selection">Community 2</InputLabel>
             <Select
+              disabled={!primaryGroupLabel}
               labelId="group2-selection"
               value={secondGroupLabel}
               label="Second Group"
               onChange={handleSecondGroupChange}
             >
-              {options}
+              {filteredGroupOptions}
               {/* <MenuItem value="All" key="All">
                 All
               </MenuItem> */}
+            </Select>
+          </FormControl>
+        </div>
+        <div className="selectionBox">
+          <FormControl style={{ minWidth: 150 }}>
+            <InputLabel id="dataCategory-selection">Data Category</InputLabel>
+            <Select
+              labelId="dataCategory-selection"
+              value={dataCategory}
+              label="Data Category"
+              onChange={handleDataCategoryChange}
+            >
+              {dataCategoryOptions}
             </Select>
           </FormControl>
         </div>
