@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StaticMap } from "react-map-gl";
 import DeckGL from "@deck.gl/react";
 import { GeoJsonLayer } from "@deck.gl/layers";
@@ -6,6 +6,14 @@ import { scaleThreshold } from "d3-scale";
 import ReactDOMServer from "react-dom/server";
 import persianJewData from "../data/mapData/persianJew";
 import { percentToHeatmapColor } from "../utils";
+
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+
+import groupNameMap from "../data/groupNameMap";
+
 import "./DeckGlMap.css";
 
 const getTooltip = ({ object }) => {
@@ -27,7 +35,12 @@ const getTooltip = ({ object }) => {
 };
 
 const DeckGlMap = () => {
-  // Source data GeoJSON
+  const [group, setGroup] = useState("group1");
+
+  const handleGroupChange = (event) => {
+    setGroup(event.target.value);
+  };
+
   const mapboxAccessToken =
     "pk.eyJ1IjoiYXJ5YWJvdWRhaWUiLCJhIjoiY2t5bDhrZWJhMDk4MzJ2bWZjNmlkc3RhdyJ9.LN9-CljDFkZX2GnbEk1LLA";
 
@@ -61,7 +74,7 @@ const DeckGlMap = () => {
   const layers = [
     new GeoJsonLayer({
       id: "geojson",
-      data: persianJewData,
+      data: `https://raw.githubusercontent.com/misingnoglic/atlas-app/main/src/data/geojson/${group}.json`,
       getFillColor: (f) => colorScale(f.properties.coeff),
       getLineColor: [255, 255, 255],
       getLineWidth: 20,
@@ -71,16 +84,44 @@ const DeckGlMap = () => {
     }),
   ];
 
+  const groupOptions = [];
+  for (let i = 0; i <= 19; i++) {
+    const groupKey = `group${i}`;
+    const groupName = groupNameMap[groupKey];
+    groupOptions.push(
+      <MenuItem value={groupKey} key={groupKey}>
+        {groupName}
+      </MenuItem>
+    );
+  }
+
   return (
-    <div className="deckGlContainer">
-      <DeckGL
-        layers={layers}
-        initialViewState={initialViewState}
-        controller={true}
-        getTooltip={getTooltip}
-      >
-        <StaticMap reuseMaps mapboxApiAccessToken={mapboxAccessToken} />
-      </DeckGL>
+    <div className="mapPageContainer">
+      <div className="deckGlContainer">
+        <DeckGL
+          layers={layers}
+          initialViewState={initialViewState}
+          controller={true}
+          getTooltip={getTooltip}
+        >
+          <StaticMap reuseMaps mapboxApiAccessToken={mapboxAccessToken} />
+        </DeckGL>
+      </div>
+      <div className="selectionForm2">
+        <div className="selectionBox2">
+          <FormControl style={{ minWidth: 150 }}>
+            <InputLabel id="dataCategory-selection">Group</InputLabel>
+            <Select
+              labelId="dataCategory-selection"
+              value={group}
+              label="Data Category"
+              onChange={handleGroupChange}
+            >
+              {groupOptions}
+            </Select>
+          </FormControl>
+        </div>
+      </div>
     </div>
   );
 };
