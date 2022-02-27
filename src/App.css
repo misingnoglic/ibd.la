@@ -32,20 +32,20 @@
 
 /* unvisited link */
 a:link {
-  color: red;
+  color: #50525E;
 }
 
 /* visited link */
 a:visited {
-  color: green;
+  color: #C7CEEA;
 }
 
 /* mouse over link */
 a:hover {
-  color: hotpink;
+  color: #B5EAD7;
 }
 
 /* selected link */
 a:active {
-  color: blue;
+  color: #B5EAD7;
 }
