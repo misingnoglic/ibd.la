@@ -4,7 +4,6 @@ import DeckGL from "@deck.gl/react";
 import { GeoJsonLayer } from "@deck.gl/layers";
 import { scaleThreshold } from "d3-scale";
 import ReactDOMServer from "react-dom/server";
-import { percentToHeatmapColor } from "../utils";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -12,6 +11,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 import groupNameMap from "../data/groupNameMap";
+import { heatmapColorScheme } from "../data/heatmapColorScheme";
 
 import "./DeckGlMap.css";
 
@@ -26,7 +26,7 @@ const getTooltip = ({ object }) => {
         <div>
           <b>Log Odds Ratio</b>
         </div>
-        <div>{object.properties.coefficient}</div>
+        <div>{object.properties.coefficient.toFixed(2)}</div>
       </div>
     ),
   };
@@ -43,29 +43,21 @@ const DeckGlMap = () => {
   const mapboxAccessToken =
     "pk.eyJ1IjoiYXJ5YWJvdWRhaWUiLCJhIjoiY2t5bDhrZWJhMDk4MzJ2bWZjNmlkc3RhdyJ9.LN9-CljDFkZX2GnbEk1LLA";
 
+  const maxLogOdds = 2;
+  const numColors = heatmapColorScheme.length;
+  const domain = []
+  for (let i = 1; i<=numColors; i++){
+    domain.push( maxLogOdds * (i/numColors) );
+  }
   const colorScale = scaleThreshold()
-    .domain([0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 2.9, 3.1, 3.3])
-    .range([
-      [65, 182, 196],
-      [127, 205, 187],
-      [199, 233, 180],
-      [237, 248, 177],
-      [255, 255, 204],
-      [255, 237, 160],
-      [254, 217, 118],
-      [254, 178, 76],
-      [253, 141, 60],
-      [252, 78, 42],
-      [227, 26, 28],
-      [189, 0, 38],
-      [128, 0, 38],
-    ]);
+    .domain(domain)
+    .range(heatmapColorScheme.map((color) => color.rgb));
 
   const initialViewState = {
     // UCLA center
     longitude: -118.4452,
     latitude: 34.0689,
-    zoom: 10,
+    zoom: 9,
     pitch: 0,
     bearing: 0,
   };
