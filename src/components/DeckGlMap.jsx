@@ -43,7 +43,7 @@ const DeckGlMap = () => {
   const mapboxAccessToken =
     "pk.eyJ1IjoiYXJ5YWJvdWRhaWUiLCJhIjoiY2t5bDhrZWJhMDk4MzJ2bWZjNmlkc3RhdyJ9.LN9-CljDFkZX2GnbEk1LLA";
 
-  const maxLogOdds = 2;
+  const maxLogOdds = 5;
   const numColors = heatmapColorScheme.length;
   const domain = []
   for (let i = 1; i<=numColors; i++){
