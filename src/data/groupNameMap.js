@@ -1,7 +1,7 @@
 const groupNameMap = {
-    group1: "European Non-Jewish",
+    group1: "White American Non-Jewish",
     group2: "Mexican/Other Latino",
-    group3: "European Jewish",
+    group3: "White American Jewish",
     group4: "Black American",
     group5: "Chinese",
     group6: "Filipino",
@@ -18,7 +18,7 @@ const groupNameMap = {
     group17: "Gujrati",
     group18: "Sindhi Muslim",
     group19: "Christian Arab II",
-    all: "All"
+    group20: "All"
   };
   
   export default groupNameMap;
