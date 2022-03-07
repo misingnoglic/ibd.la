@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/atlas-app/static/css/main.0c1b626f.css",
+    "main.js": "/atlas-app/static/js/main.45f77c4e.js",
+    "static/js/787.ebf8b4f7.chunk.js": "/atlas-app/static/js/787.ebf8b4f7.chunk.js",
+    "static/media/sharingGraph.png": "/atlas-app/static/media/sharingGraph.fa154b025895381da8f3.png",
+    "index.html": "/atlas-app/index.html",
+    "main.0c1b626f.css.map": "/atlas-app/static/css/main.0c1b626f.css.map",
+    "main.45f77c4e.js.map": "/atlas-app/static/js/main.45f77c4e.js.map",
+    "787.ebf8b4f7.chunk.js.map": "/atlas-app/static/js/787.ebf8b4f7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c1b626f.css",
+    "static/js/main.45f77c4e.js"
+  ]
+}
