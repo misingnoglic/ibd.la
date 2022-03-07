@@ -1,7 +1,7 @@
 {
   "name": "atlas-app",
   "version": "0.1.0",
-  "homepage": "https://misingnoglic.github.io/atlas-app",
+  "homepage": "https://aryaboudaie.com/atlas-app/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
