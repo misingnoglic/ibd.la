@@ -28,13 +28,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      ">1%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "not ie 11",
+      "not chrome < 51",
+      "not safari < 10"
     ],
     "development": [
       "last 1 chrome version",
@@ -43,12 +48,14 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
     "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.2",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^3.2.3",
     "prettier": "2.5.1"
   }
 }

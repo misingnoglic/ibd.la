@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { StaticMap } from "react-map-gl";
-import DeckGL from "@deck.gl/react";
-import { GeoJsonLayer } from "@deck.gl/layers";
-import { scaleThreshold } from "d3-scale";
 import ReactDOMServer from "react-dom/server";
+import { StaticMap } from "!react-map-gl";
+import DeckGL from "!@deck.gl/react";
+import { GeoJsonLayer } from "!@deck.gl/layers";
+import { scaleThreshold } from "d3-scale";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -41,7 +41,7 @@ const DeckGlMap = () => {
   };
 
   const mapboxAccessToken =
-    "pk.eyJ1IjoiYXJ5YWJvdWRhaWUiLCJhIjoiY2t5bDhrZWJhMDk4MzJ2bWZjNmlkc3RhdyJ9.LN9-CljDFkZX2GnbEk1LLA";
+    "pk.eyJ1IjoiYXJ5YWJvdWRhaWUiLCJhIjoiY2t5bDh3aHdwMnlhMTJwcGlkbjVwZ3FibSJ9.lMqR_2V0CGBKbRVRZ7E65w";
 
   const maxLogOdds = 2;
   const numColors = heatmapColorScheme.length;
