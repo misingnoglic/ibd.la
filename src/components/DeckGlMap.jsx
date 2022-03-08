@@ -41,7 +41,7 @@ const DeckGlMap = () => {
   };
 
   const mapboxAccessToken =
-    "pk.eyJ1IjoiYXJ5YWJvdWRhaWUiLCJhIjoiY2t5bDhrZWJhMDk4MzJ2bWZjNmlkc3RhdyJ9.LN9-CljDFkZX2GnbEk1LLA";
+    "pk.eyJ1IjoiYXJ5YWJvdWRhaWUiLCJhIjoiY2t5bDh3aHdwMnlhMTJwcGlkbjVwZ3FibSJ9.lMqR_2V0CGBKbRVRZ7E65w";
 
   const maxLogOdds = 2;
   const numColors = heatmapColorScheme.length;
