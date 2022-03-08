@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { StaticMap } from "react-map-gl";
-import DeckGL from "@deck.gl/react";
-import { GeoJsonLayer } from "@deck.gl/layers";
-import { scaleThreshold } from "d3-scale";
 import ReactDOMServer from "react-dom/server";
+import { StaticMap } from "!react-map-gl";
+import DeckGL from "!@deck.gl/react";
+import { GeoJsonLayer } from "!@deck.gl/layers";
+import { scaleThreshold } from "d3-scale";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
