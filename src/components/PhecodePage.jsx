@@ -88,7 +88,7 @@ const PhecodePage = () => {
     graph = <Skeleton variant="rectangular" width={"100%"} height={"100%"} />;
   }
 
-  const groupOptions = fullDataOptions
+  let groupOptions = fullDataOptions
     .sort((a, b) => (groupNameMap[a] > groupNameMap[b] ? 1 : -1))
     .map((option) => (
       <MenuItem value={option} key={option}>
@@ -110,6 +110,11 @@ const PhecodePage = () => {
       );
     });
   }
+
+  // remove the "all" group from the primary options.
+  groupOptions = groupOptions.filter(
+    (option) => option.props.value !== "group20"
+  );
 
   const dataCategoryOptions = ["Emergency Room", "Outpatient"].map((option) => (
     <MenuItem value={option} key={option}>
@@ -145,9 +150,6 @@ const PhecodePage = () => {
               onChange={handleSecondGroupChange}
             >
               {filteredGroupOptions}
-              {/* <MenuItem value="All" key="All">
-                All
-              </MenuItem> */}
             </Select>
           </FormControl>
         </div>
