@@ -28,6 +28,20 @@ const realData = {
         cint: 0.7884874731209286,
       },
     ],
+    group20: [
+      {
+        phenotype: "Primary Care",
+        pval: 1.3025349018668426e-5,
+        coeff: -0.7995835602630708,
+        cint: 0.3594656975547949,
+      },
+      {
+        phenotype: "Internal Medicine",
+        pval: 0.0021099892149877,
+        coeff: 0.3713644266611942,
+        cint: 0.2367568218746878,
+      },
+    ],
   },
   group11: {
     group12: [],
@@ -37,6 +51,7 @@ const realData = {
     group17: [],
     group18: [],
     group19: [],
+    group20: [],
   },
   group12: {
     group13: [],
@@ -65,6 +80,20 @@ const realData = {
     ],
     group18: [],
     group19: [],
+    group20: [
+      {
+        phenotype: "Pain Management",
+        pval: 0.000380129867405,
+        coeff: 0.8238271483422743,
+        cint: 0.4543880619293718,
+      },
+      {
+        phenotype: "Geriatic Medicine",
+        pval: 0.0008462316359302,
+        coeff: 1.2568294615883733,
+        cint: 0.7381430880887706,
+      },
+    ],
   },
   group13: {
     group15: [],
@@ -79,6 +108,14 @@ const realData = {
     group17: [],
     group18: [],
     group19: [],
+    group20: [
+      {
+        phenotype: "Internal Medicine",
+        pval: 0.0002690133830804,
+        coeff: 0.6037754662663317,
+        cint: 0.3247965151502556,
+      },
+    ],
   },
   group15: {
     group16: [
@@ -97,6 +134,50 @@ const realData = {
         pval: 0.0001268381061776,
         coeff: -1.4924448640080938,
         cint: 0.7632417832269991,
+      },
+    ],
+    group20: [
+      {
+        phenotype: "Urgent Care",
+        pval: 0.0087969697977172,
+        coeff: -1.0828682060692747,
+        cint: 0.8101176023081174,
+      },
+      {
+        phenotype: "Primary Care",
+        pval: 1.0684749626931284e-5,
+        coeff: -0.7858858081861023,
+        cint: 0.3498448954242831,
+      },
+      {
+        phenotype: " Endocrinology",
+        pval: 0.0098701551858428,
+        coeff: 0.3496132044176067,
+        cint: 0.2655572004724673,
+      },
+      {
+        phenotype: "Urology",
+        pval: 0.0063148795704664,
+        coeff: 0.4266249023785392,
+        cint: 0.306180721168508,
+      },
+      {
+        phenotype: "Neurology",
+        pval: 0.0001332425034305,
+        coeff: 0.5017516550728448,
+        cint: 0.2574124566303538,
+      },
+      {
+        phenotype: "East/West Medicine",
+        pval: 0.0037657749183337,
+        coeff: 0.5929709877665806,
+        cint: 0.401154374998633,
+      },
+      {
+        phenotype: "Geriatic Medicine",
+        pval: 0.0005460113504887,
+        coeff: 0.772393848549549,
+        cint: 0.437899332672389,
       },
     ],
   },
@@ -124,9 +205,30 @@ const realData = {
         cint: 0.7091516201604604,
       },
     ],
+    group20: [],
   },
-  group17: { group18: [], group19: [] },
-  group18: { group19: [] },
+  group17: { group18: [], group19: [], group20: [] },
+  group18: {
+    group19: [],
+    group20: [
+      {
+        phenotype: "Internal Medicine",
+        pval: 0.0004285854439935,
+        coeff: 0.8327209884964606,
+        cint: 0.4634252725884256,
+      },
+    ],
+  },
+  group19: {
+    group20: [
+      {
+        phenotype: "Nephrology",
+        pval: 3.1199814587329966e-5,
+        coeff: 1.1605133208078795,
+        cint: 0.5461758535657509,
+      },
+    ],
+  },
   group1: {
     group10: [
       {
@@ -385,6 +487,146 @@ const realData = {
         pval: 2.761227286280258e-23,
         coeff: 0.3960901976576804,
         cint: 0.0780932298422136,
+      },
+    ],
+    group20: [
+      {
+        phenotype: "Transplant, Kidney",
+        pval: 7.365271258123601e-33,
+        coeff: -0.7820153376178419,
+        cint: 0.1283738986091426,
+      },
+      {
+        phenotype: "Occupational Health",
+        pval: 0.0097771553411881,
+        coeff: -0.7252604010312859,
+        cint: 0.5501925013750996,
+      },
+      {
+        phenotype: "Renal Transplantation",
+        pval: 0.0156789710190055,
+        coeff: -0.5231199593265,
+        cint: 0.4243242324584731,
+      },
+      {
+        phenotype: "Nephrology",
+        pval: 3.159270837335937e-22,
+        coeff: -0.4255462759306031,
+        cint: 0.0860274001541426,
+      },
+      {
+        phenotype: "Sports Medicine",
+        pval: 0.008755626713498,
+        coeff: -0.4237375126058653,
+        cint: 0.3168131557913181,
+      },
+      {
+        phenotype: "Geriatic Medicine",
+        pval: 8.90615596952501e-9,
+        coeff: -0.3445968273389858,
+        cint: 0.1174533665750546,
+      },
+      {
+        phenotype: "Dermatology",
+        pval: 0.0039510420144762,
+        coeff: -0.3413060901941874,
+        cint: 0.2321087321111653,
+      },
+      {
+        phenotype: "Clinical Nutrition",
+        pval: 3.633892719165356e-6,
+        coeff: -0.3044844169127418,
+        cint: 0.1288578582442893,
+      },
+      {
+        phenotype: "Podiatry",
+        pval: 4.6149248454385926e-8,
+        coeff: -0.265356632761801,
+        cint: 0.0951578762983257,
+      },
+      {
+        phenotype: "Internal Medicine",
+        pval: 1.7042360518657085e-33,
+        coeff: -0.2609825612663186,
+        cint: 0.0424119959491407,
+      },
+      {
+        phenotype: "Pediatrics",
+        pval: 1.4574135084981697e-5,
+        coeff: -0.2344856065034972,
+        cint: 0.1060162260819209,
+      },
+      {
+        phenotype: " Endocrinology",
+        pval: 1.6721756934796113e-12,
+        coeff: -0.1919569044446289,
+        cint: 0.0532946675104511,
+      },
+      {
+        phenotype: "East/West Medicine",
+        pval: 0.0002147082483249,
+        coeff: -0.1766902491185585,
+        cint: 0.0935697772226608,
+      },
+      {
+        phenotype: "Family Medicine",
+        pval: 5.274485889198516e-10,
+        coeff: -0.1511638102862252,
+        cint: 0.0477039661003023,
+      },
+      {
+        phenotype: "Infectious Disease",
+        pval: 0.003025489208812,
+        coeff: -0.1224867877039315,
+        cint: 0.0809641358470382,
+      },
+      {
+        phenotype: "Obstetrics & Gynecology",
+        pval: 0.0001029762500554,
+        coeff: -0.1184656345627732,
+        cint: 0.0597888945229554,
+      },
+      {
+        phenotype: "Interventional Radiology",
+        pval: 0.0270270714927499,
+        coeff: -0.1129158576010745,
+        cint: 0.1000897073477628,
+      },
+      {
+        phenotype: "Cardiovascular Disease",
+        pval: 3.3001119121139784e-6,
+        coeff: -0.1112238429567622,
+        cint: 0.0468685044992413,
+      },
+      {
+        phenotype: "Neurology",
+        pval: 0.0001515288162477,
+        coeff: -0.1042415855671264,
+        cint: 0.0539282122180459,
+      },
+      {
+        phenotype: "Rheumatology",
+        pval: 0.0028604755864014,
+        coeff: -0.0933386463443271,
+        cint: 0.0613410792097484,
+      },
+      {
+        phenotype: "Surgery",
+        pval: 0.0001011441122553,
+        coeff: -0.0893118451113316,
+        cint: 0.0450245936979647,
+      },
+      {
+        phenotype: "Gastroenterology",
+        pval: 0.0185412214061089,
+        coeff: 0.0547641366852585,
+        cint: 0.0455849939900253,
+      },
+      {
+        phenotype: "Primary Care",
+        pval: 6.34157104293829e-30,
+        coeff: 0.2846422889862476,
+        cint: 0.0490940107550386,
       },
     ],
     group3: [
@@ -1049,6 +1291,122 @@ const realData = {
         cint: 0.4374203120509405,
       },
     ],
+    group20: [
+      {
+        phenotype: "Dermatology",
+        pval: 0.0273995335210187,
+        coeff: -0.4300251537326913,
+        cint: 0.3821027038981662,
+      },
+      {
+        phenotype: "Allergy and Immunology",
+        pval: 2.6341170398112894e-7,
+        coeff: -0.3680833736354096,
+        cint: 0.1401405315350101,
+      },
+      {
+        phenotype: "Primary Care",
+        pval: 2.3560976168715344e-15,
+        coeff: -0.297510161226277,
+        cint: 0.0736156131514564,
+      },
+      {
+        phenotype: "Internal Medicine",
+        pval: 2.284640774013505e-15,
+        coeff: -0.2456660414554318,
+        cint: 0.0607579938547508,
+      },
+      {
+        phenotype: "East/West Medicine",
+        pval: 0.0015041014360043,
+        coeff: -0.2322965878275497,
+        cint: 0.1434494569294209,
+      },
+      {
+        phenotype: "Orthopaedic Surgery",
+        pval: 2.772464209155207e-7,
+        coeff: -0.1956655649905945,
+        cint: 0.0746351976635258,
+      },
+      {
+        phenotype: "Obstetrics & Gynecology",
+        pval: 0.0008535293515012,
+        coeff: -0.1383730138669098,
+        cint: 0.0813254312007489,
+      },
+      {
+        phenotype: "Gastroenterology",
+        pval: 6.439848608888258e-5,
+        coeff: -0.135674658125916,
+        cint: 0.0665444831284313,
+      },
+      {
+        phenotype: "Family Medicine",
+        pval: 0.000318007605235,
+        coeff: -0.1257285812885794,
+        cint: 0.068447712761629,
+      },
+      {
+        phenotype: "Cardiovascular Disease",
+        pval: 8.629787310789495e-5,
+        coeff: 0.1344395194762437,
+        cint: 0.0671123519464036,
+      },
+      {
+        phenotype: "Interventional Radiology",
+        pval: 0.0006292253522658,
+        coeff: 0.24125761764582,
+        cint: 0.1383148932337346,
+      },
+      {
+        phenotype: "Surgery",
+        pval: 7.592132597251255e-19,
+        coeff: 0.2821131829332801,
+        cint: 0.0623664464121666,
+      },
+      {
+        phenotype: "Nephrology",
+        pval: 8.041590670903621e-10,
+        coeff: 0.3530612888374682,
+        cint: 0.112626244264396,
+      },
+      {
+        phenotype: "Pediatrics",
+        pval: 4.883942855044141e-9,
+        coeff: 0.3692371501978588,
+        cint: 0.1236851393263658,
+      },
+      {
+        phenotype: "Infectious Disease",
+        pval: 1.0461133433879888e-14,
+        coeff: 0.4142865019305263,
+        cint: 0.1049957095512343,
+      },
+      {
+        phenotype: "Palliative Care",
+        pval: 0.023666980968778,
+        coeff: 0.5739642950312194,
+        cint: 0.4972167908777041,
+      },
+      {
+        phenotype: "Occupational Health",
+        pval: 0.0017947503137645,
+        coeff: 0.7992965340069186,
+        cint: 0.5017512651883833,
+      },
+      {
+        phenotype: "Transplant, Kidney",
+        pval: 9.87994982245594e-69,
+        coeff: 1.136706538004702,
+        cint: 0.1271550821919531,
+      },
+      {
+        phenotype: "Renal Transplantation",
+        pval: 5.400209102421211e-10,
+        coeff: 1.2919335425930014,
+        cint: 0.4079489364377968,
+      },
+    ],
     group3: [
       {
         phenotype: "Sports Medicine",
@@ -1560,6 +1918,146 @@ const realData = {
         cint: 0.6518059622499162,
       },
     ],
+    group20: [
+      {
+        phenotype: "Renal Transplantation",
+        pval: 0.0052431869827062,
+        coeff: -1.995878358519409,
+        cint: 1.4012426347434723,
+      },
+      {
+        phenotype: "Transplant, Kidney",
+        pval: 3.318762489798294e-11,
+        coeff: -0.7257133929172914,
+        cint: 0.2144812538428023,
+      },
+      {
+        phenotype: "Cardiovascular Disease",
+        pval: 0.0093536759129793,
+        coeff: -0.0876799117768825,
+        cint: 0.0661252088732426,
+      },
+      {
+        phenotype: " Endocrinology",
+        pval: 0.000592346197718,
+        coeff: 0.1284149868961293,
+        cint: 0.0732698081127498,
+      },
+      {
+        phenotype: "Obstetrics & Gynecology",
+        pval: 0.0012551162794092,
+        coeff: 0.1463642562187382,
+        cint: 0.0889225868270653,
+      },
+      {
+        phenotype: "Neurological Surgery ",
+        pval: 0.0059529931805776,
+        coeff: 0.152434382945003,
+        cint: 0.108627948835704,
+      },
+      {
+        phenotype: "Primary Care",
+        pval: 3.695338548335672e-6,
+        coeff: 0.1619711797552644,
+        cint: 0.0685976627682738,
+      },
+      {
+        phenotype: "Urology",
+        pval: 0.0002719871330722,
+        coeff: 0.1652028918379692,
+        cint: 0.0889387314355867,
+      },
+      {
+        phenotype: "Pediatrics",
+        pval: 0.023616442106019,
+        coeff: 0.1724971189708878,
+        cint: 0.1493775890199024,
+      },
+      {
+        phenotype: "Rheumatology",
+        pval: 8.357776885241696e-6,
+        coeff: 0.1903222210431753,
+        cint: 0.0837165089379303,
+      },
+      {
+        phenotype: "Allergy and Immunology",
+        pval: 0.0016813176463187,
+        coeff: 0.1992305854413919,
+        cint: 0.1243020656807778,
+      },
+      {
+        phenotype: "Family Medicine",
+        pval: 1.1340841059375202e-9,
+        coeff: 0.204624924224461,
+        cint: 0.065862703149564,
+      },
+      {
+        phenotype: "Podiatry",
+        pval: 0.0004265436562897,
+        coeff: 0.2181896320475987,
+        cint: 0.1213831060290284,
+      },
+      {
+        phenotype: "Gastroenterology",
+        pval: 6.989411028743655e-14,
+        coeff: 0.2409752651119474,
+        cint: 0.063074047585638,
+      },
+      {
+        phenotype: "Orthopaedic Surgery",
+        pval: 3.1786169865283135e-19,
+        coeff: 0.3060887635539197,
+        cint: 0.0669382094364739,
+      },
+      {
+        phenotype: "Internal Medicine",
+        pval: 2.5598046797264822e-27,
+        coeff: 0.3319974560172244,
+        cint: 0.0600991626865937,
+      },
+      {
+        phenotype: "Geriatic Medicine",
+        pval: 4.247866860040927e-7,
+        coeff: 0.3520561448706775,
+        cint: 0.1364344553013912,
+      },
+      {
+        phenotype: "Neurology",
+        pval: 1.7286794570207324e-22,
+        coeff: 0.3536705428637248,
+        cint: 0.0710475106416195,
+      },
+      {
+        phenotype: "Pain Management",
+        pval: 9.213122231481076e-12,
+        coeff: 0.3657776688814554,
+        cint: 0.1051453035891545,
+      },
+      {
+        phenotype: "East/West Medicine",
+        pval: 3.5613569562058e-12,
+        coeff: 0.4147563453876337,
+        cint: 0.116904921490564,
+      },
+      {
+        phenotype: "Clinical Nutrition",
+        pval: 2.072818857854648e-9,
+        coeff: 0.4842217340786375,
+        cint: 0.1583874999517387,
+      },
+      {
+        phenotype: "Dermatology",
+        pval: 5.028078592740918e-10,
+        coeff: 0.802687527414824,
+        cint: 0.2530044278303238,
+      },
+      {
+        phenotype: "Sports Medicine",
+        pval: 1.642696964943342e-11,
+        coeff: 1.1030331766728052,
+        cint: 0.3210099392347346,
+      },
+    ],
     group4: [
       {
         phenotype: "Transplant, Kidney",
@@ -2043,6 +2541,80 @@ const realData = {
     group17: [],
     group18: [],
     group19: [],
+    group20: [
+      {
+        phenotype: "Primary Care",
+        pval: 3.934279244649191e-5,
+        coeff: -0.2651692970584937,
+        cint: 0.1264129483952671,
+      },
+      {
+        phenotype: "Internal Medicine",
+        pval: 0.001234603267842,
+        coeff: 0.1668765386418662,
+        cint: 0.1012367729910003,
+      },
+      {
+        phenotype: "Family Medicine",
+        pval: 1.7690524028698078e-5,
+        coeff: 0.2383247875133539,
+        cint: 0.1088269761780706,
+      },
+      {
+        phenotype: "Cardiovascular Disease",
+        pval: 8.654156973968404e-7,
+        coeff: 0.2715967378008257,
+        cint: 0.1081949548307692,
+      },
+      {
+        phenotype: "Infectious Disease",
+        pval: 0.0007240826112963,
+        coeff: 0.3050388935622881,
+        cint: 0.1768678104099522,
+      },
+      {
+        phenotype: "Geriatic Medicine",
+        pval: 0.0038889109344059,
+        coeff: 0.3652640530515825,
+        cint: 0.2479721977895784,
+      },
+      {
+        phenotype: "Interventional Radiology",
+        pval: 5.287419019928789e-5,
+        coeff: 0.4226254755048801,
+        cint: 0.2049032818257476,
+      },
+      {
+        phenotype: "Podiatry",
+        pval: 3.854759051602045e-6,
+        coeff: 0.4355227217840717,
+        cint: 0.1848012808447503,
+      },
+      {
+        phenotype: "Cardiac Electro",
+        pval: 0.0002462297824078,
+        coeff: 0.4357740941903176,
+        cint: 0.2329696251162647,
+      },
+      {
+        phenotype: "Clinical Nutrition",
+        pval: 8.558047650573197e-5,
+        coeff: 0.4550551506717564,
+        cint: 0.2270478697039343,
+      },
+      {
+        phenotype: "Nephrology",
+        pval: 7.564557245983262e-18,
+        coeff: 0.6911663285458411,
+        cint: 0.1574086726543193,
+      },
+      {
+        phenotype: "Transplant, Kidney",
+        pval: 1.0107696066279204e-20,
+        coeff: 0.9451159923062222,
+        cint: 0.1984371868385622,
+      },
+    ],
     group5: [
       {
         phenotype: "Internal Medicine",
@@ -2461,6 +3033,74 @@ const realData = {
         cint: 0.7906249598861246,
       },
     ],
+    group20: [
+      {
+        phenotype: "Pain Management",
+        pval: 2.3266784833903866e-7,
+        coeff: -0.9518649207631404,
+        cint: 0.3607754368128455,
+      },
+      {
+        phenotype: "Pediatrics",
+        pval: 5.5489742474179154e-5,
+        coeff: -0.7103661899519417,
+        cint: 0.3453779722063631,
+      },
+      {
+        phenotype: "Primary Care",
+        pval: 1.9294448652530722e-12,
+        coeff: -0.5763919575475565,
+        cint: 0.1604814339800663,
+      },
+      {
+        phenotype: "Rheumatology",
+        pval: 3.2116243751146394e-6,
+        coeff: -0.4820531847769101,
+        cint: 0.2028875873499716,
+      },
+      {
+        phenotype: "Infectious Disease",
+        pval: 0.0032657002491649,
+        coeff: -0.3818406409103808,
+        cint: 0.2544212802276518,
+      },
+      {
+        phenotype: "Gastroenterology",
+        pval: 2.72011691388506e-7,
+        coeff: -0.3551844929516806,
+        cint: 0.1353881541272876,
+      },
+      {
+        phenotype: "Orthopaedic Surgery",
+        pval: 5.603327606316031e-5,
+        coeff: -0.3130585448288865,
+        cint: 0.1522947127649448,
+      },
+      {
+        phenotype: "Surgery",
+        pval: 2.6669734610381052e-5,
+        coeff: 0.258814077400484,
+        cint: 0.1207723727350708,
+      },
+      {
+        phenotype: "Obstetrics & Gynecology",
+        pval: 0.0002575086942343,
+        coeff: 0.2912646024072887,
+        cint: 0.1562021913111936,
+      },
+      {
+        phenotype: "Interventional Radiology",
+        pval: 0.0101107753933151,
+        coeff: 0.3236630034227506,
+        cint: 0.2466421037674475,
+      },
+      {
+        phenotype: "Internal Medicine",
+        pval: 5.7656612010614886e-12,
+        coeff: 0.4062235815721666,
+        cint: 0.1156348952267476,
+      },
+    ],
     group6: [
       {
         phenotype: "Transplant, Kidney",
@@ -2706,6 +3346,50 @@ const realData = {
         cint: 0.5181163779058104,
       },
     ],
+    group20: [
+      {
+        phenotype: "Pain Management",
+        pval: 0.006429778771507,
+        coeff: -0.5213387087771397,
+        cint: 0.3749717321729504,
+      },
+      {
+        phenotype: "Orthopaedic Surgery",
+        pval: 1.6456233580612317e-5,
+        coeff: -0.4415065012884549,
+        cint: 0.2008564528772782,
+      },
+      {
+        phenotype: "Hematology & Oncology",
+        pval: 0.0008407606909956,
+        coeff: -0.3272439808862519,
+        cint: 0.1920885186697833,
+      },
+      {
+        phenotype: "Cardiovascular Disease",
+        pval: 0.0003186331736467,
+        coeff: 0.2945777396103412,
+        cint: 0.1603934021128345,
+      },
+      {
+        phenotype: "Internal Medicine",
+        pval: 3.4245624199592643e-9,
+        coeff: 0.443326498330413,
+        cint: 0.1470268410169926,
+      },
+      {
+        phenotype: "Nephrology",
+        pval: 1.613799055714758e-5,
+        coeff: 0.5537428959180595,
+        cint: 0.2516643941638394,
+      },
+      {
+        phenotype: "Transplant, Kidney",
+        pval: 6.596597170935003e-8,
+        coeff: 0.7960745886976079,
+        cint: 0.2888426176380421,
+      },
+    ],
     group7: [],
     group8: [
       {
@@ -2790,6 +3474,14 @@ const realData = {
     group17: [],
     group18: [],
     group19: [],
+    group20: [
+      {
+        phenotype: "Internal Medicine",
+        pval: 5.3281728654597464e-8,
+        coeff: 0.5293026399150906,
+        cint: 0.190701259041457,
+      },
+    ],
     group8: [
       {
         phenotype: "Family Medicine",
@@ -2939,6 +3631,50 @@ const realData = {
         cint: 0.5862769669256229,
       },
     ],
+    group20: [
+      {
+        phenotype: "Orthopaedic Surgery",
+        pval: 4.229989408125971e-6,
+        coeff: -0.5935686481674851,
+        cint: 0.2529209752104615,
+      },
+      {
+        phenotype: "Rheumatology",
+        pval: 0.0004824507402029,
+        coeff: -0.5686072261363195,
+        cint: 0.3192976987904643,
+      },
+      {
+        phenotype: "Primary Care",
+        pval: 0.0001436174164299,
+        coeff: -0.4616075273443916,
+        cint: 0.2379718301499975,
+      },
+      {
+        phenotype: "Gastroenterology",
+        pval: 0.001332438174805,
+        coeff: -0.3367612010176714,
+        cint: 0.2056903679479331,
+      },
+      {
+        phenotype: "Hematology & Oncology",
+        pval: 0.0009986020095128,
+        coeff: 0.3258656246348677,
+        cint: 0.1940748573840878,
+      },
+      {
+        phenotype: "Interventional Radiology",
+        pval: 0.0101884475639877,
+        coeff: 0.4588688233994078,
+        cint: 0.3500342096014912,
+      },
+      {
+        phenotype: "Occupational Health",
+        pval: 0.0020506611669933,
+        coeff: 1.6159224630501352,
+        cint: 1.0273629795953685,
+      },
+    ],
     group9: [
       {
         phenotype: "Rheumatology",
@@ -3071,23 +3807,66 @@ const realData = {
         cint: 0.5505217614242668,
       },
     ],
+    group20: [
+      {
+        phenotype: "Orthopaedic Surgery",
+        pval: 0.0005670584963485,
+        coeff: -0.4261622774589143,
+        cint: 0.2423228763774009,
+      },
+      {
+        phenotype: "Family Medicine",
+        pval: 0.0012128457105696,
+        coeff: -0.3774420917325413,
+        cint: 0.2286183768149431,
+      },
+      {
+        phenotype: "Hematology & Oncology",
+        pval: 0.0028274634114688,
+        coeff: 0.30898964270029,
+        cint: 0.2028228830268733,
+      },
+      {
+        phenotype: "Surgery",
+        pval: 0.0007415039013118,
+        coeff: 0.3224676431445416,
+        cint: 0.187335774891143,
+      },
+      {
+        phenotype: " Endocrinology",
+        pval: 0.001788057189222,
+        coeff: 0.3358524220123771,
+        cint: 0.210754128580443,
+      },
+      {
+        phenotype: "Cardiovascular Disease",
+        pval: 0.0002382901605907,
+        coeff: 0.3652875120576891,
+        cint: 0.1948414879081153,
+      },
+      {
+        phenotype: "Pediatrics",
+        pval: 6.009879939319822e-6,
+        coeff: 0.7891851262920473,
+        cint: 0.3417499473678702,
+      },
+    ],
   },
 };
 
 const generateOptions = (data) => {
-    const keys = Object.keys(data);
-    let options = [];
-    options = options.concat(keys);
-    keys.forEach((k) => {
-      options = options.concat(Object.keys(data[k]));
-    });
-    options = [...new Set(options)];
-    options = options.sort();
-    options = options.filter((item) => item !== "All");
-    return options;
-  };
-  
-  const realDataOptions = generateOptions(realData);
-  
-  export { realData, realDataOptions };
-  
+  const keys = Object.keys(data);
+  let options = [];
+  options = options.concat(keys);
+  keys.forEach((k) => {
+    options = options.concat(Object.keys(data[k]));
+  });
+  options = [...new Set(options)];
+  options = options.sort();
+  options = options.filter((item) => item !== "All");
+  return options;
+};
+
+const realDataOptions = generateOptions(realData);
+
+export { realData, realDataOptions };
