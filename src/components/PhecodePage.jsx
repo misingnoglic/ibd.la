@@ -6,7 +6,7 @@ import {
 } from "../data/phecodeData/outpatient";
 import { erGraphData, erOptions } from "../data/phecodeData/er";
 
-import groupNameMap from "../data/groupNameMap";
+import {groupNameMap, groupSizeMap} from "../data/groupInfo";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -77,8 +77,8 @@ const PhecodePage = () => {
   if (graphData) {
     graph = (
       <ScatterPlot
-        firstGroupLabel={groupNameMap[primaryGroupLabel]}
-        secondGroupLabel={groupNameMap[secondGroupLabel]}
+        firstGroupLabel={`${groupNameMap[primaryGroupLabel]} (n=${groupSizeMap[primaryGroupLabel]})`}
+        secondGroupLabel={`${groupNameMap[secondGroupLabel]} (n=${groupSizeMap[secondGroupLabel]})`}
         listOfComparisons={graphData}
         plotColor={graphColorOptions[dataCategory]}
         negate={negate}
@@ -123,7 +123,7 @@ const PhecodePage = () => {
   ));
   return (
     <div className="scatterplotBox">
-      <Typography variant="h3">Phecode Distribution</Typography>
+      <Typography variant="h3">Community PheCode Assocations</Typography>
       <div className="scatterGraph">{graph}</div>
       <div className="selectionForm">
         <div className="selectionBox">

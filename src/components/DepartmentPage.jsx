@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ScatterPlot from "./ScatterPlot";
 import { realData, realDataOptions } from "../data/deptScatterData";
 
-import groupNameMap from "../data/groupNameMap";
+import {groupNameMap} from "../data/groupInfo";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -75,7 +75,7 @@ const DeptPage = () => {
 
   return (
     <div className="scatterplotBox">
-      <Typography variant="h3">Medical Specialities</Typography>
+      <Typography variant="h3">Community Speciality Associations</Typography>
       <div className="scatterGraph">{graph}</div>
       <div className="selectionForm">
         <div className="selectionBox">

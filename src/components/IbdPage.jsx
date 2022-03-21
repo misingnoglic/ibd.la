@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import BarPlot from "./BarPlot";
 import IbdTable from "./IbdTable";
 import { barData } from "../data/barData";
-import groupNameMap from "../data/groupNameMap";
+import {groupNameMap} from "../data/groupInfo";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";

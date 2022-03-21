@@ -7,7 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
-import groupNameMap from "../data/groupNameMap";
+import {groupNameMap} from "../data/groupInfo";
 
 const IbdTable = (props) => {
   return (

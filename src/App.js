@@ -59,10 +59,10 @@ const App = () => {
             style={{ backgroundColor: "#C7CEEA", color: "white" }}
           >
             <Tab label="Home" />
-            <Tab label="PheCode" />
+            <Tab label="PheCodes" />
             <Tab label="Specialties" />
-            <Tab label="GIS" />
-            <Tab label="IBD" />
+            <Tab label="Offices" />
+            <Tab label="Genetics" />
             <Tab label="FAQ" />
             <Tab label="Contact" />
           </Tabs>

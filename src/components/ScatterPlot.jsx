@@ -7,7 +7,7 @@ const ScatterPlot = (props) => {
     title: {
       text: `${props.firstGroupLabel} vs ${props.secondGroupLabel}`,
       font: {
-        size: 24,
+        size: 18,
       },
       xref: "paper",
       x: 0.05,

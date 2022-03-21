@@ -8,7 +8,7 @@ import "./HomePage.css";
 const Home = () => {
   return (
     <div>
-      <div className="titleText"><Typography variant="h4">Fine-scale population detection in the UCLA Health System </Typography></div>
+      <div className="titleText"><Typography variant="h4">Fine-scale population health monitoring in Los Angeles </Typography></div>
       <Typography variant="h6">
       </Typography>
       <img width="1000" height="650" src={sharingGraph}></img>

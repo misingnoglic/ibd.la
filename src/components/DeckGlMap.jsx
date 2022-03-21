@@ -10,7 +10,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-import groupNameMap from "../data/groupNameMap";
+import {groupNameMap} from "../data/groupInfo";
 import { heatmapColorScheme } from "../data/heatmapColorScheme";
 
 import "./DeckGlMap.css";
