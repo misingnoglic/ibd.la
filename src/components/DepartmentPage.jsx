@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ScatterPlot from "./ScatterPlot";
 import { realData, realDataOptions } from "../data/deptScatterData";
 
-import {groupNameMap} from "../data/groupInfo";
+import { groupNameMap } from "../data/groupInfo";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -56,13 +56,7 @@ const DeptPage = () => {
       />
     );
   } else {
-    graph = (
-      <Skeleton
-        variant="rectangular"
-        width={"100%"}
-        height={"100%"}
-      />
-    );
+    graph = <Skeleton variant="rectangular" width={"100%"} height={"100%"} />;
   }
 
   const options = realDataOptions

@@ -6,7 +6,7 @@ import {
 } from "../data/phecodeData/outpatient";
 import { erGraphData, erOptions } from "../data/phecodeData/er";
 
-import {groupNameMap, groupSizeMap} from "../data/groupInfo";
+import { groupNameMap, groupSizeMap } from "../data/groupInfo";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -14,6 +14,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 import "./PhecodePage.css";
 
 const PhecodePage = () => {
@@ -123,7 +124,9 @@ const PhecodePage = () => {
   ));
   return (
     <div className="scatterplotBox">
-      <Typography variant="h3">Community PheCode Assocations</Typography>
+      <div className="titleText">
+        <Typography variant="h3">Community PheCode Assocations</Typography>
+      </div>
       <div className="scatterGraph">{graph}</div>
       <div className="selectionForm">
         <div className="selectionBox">
@@ -166,6 +169,25 @@ const PhecodePage = () => {
             </Select>
           </FormControl>
         </div>
+      </div>
+      <div className="bodyText">
+        {" "}
+        <Typography variant="body1" gutterBottom>
+          {" "}
+          This plot is the result of a statistical test for the association
+          between being assigned a{" "}
+          <Link href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175508">
+            PheCode{" "}
+          </Link>
+          and being a part of group1, relative to group2. Note that this plot
+          only tests for the relationship between being recieving a PheCode and
+          does not demonstrate that belonging to a group is causal for the
+          disease, as there are many factors that could influence an individual
+          receiving a diagnosis in a hospital setting. For further discussion of
+          this, see the FAQ page. We restrict to PheCodes that are FDR
+          significant at 10% and are displaying the 40 PheCodes with largest
+          absolute log odds ratio for this plot.
+        </Typography>
       </div>
     </div>
   );

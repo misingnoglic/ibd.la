@@ -22,3 +22,20 @@
 .js-plotly-plot {
     width: 100%;
 }
+
+.titleText {
+    padding-top: 20px ;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.bodyText {
+    padding-top: 30px ;
+    padding-bottom: 30px;
+    padding-right: 200px;
+    padding-left: 200px;
+    text-align: center;
+    width: 80%
+}

@@ -38,11 +38,11 @@ const ScatterPlot = (props) => {
 
   const graphData = {
     y: props.listOfComparisons.map((c) => c.phenotype),
-    x: props.listOfComparisons.map((c) => (c.coeff.toFixed(2)) * modifier),
-    text: props.listOfComparisons.map((c) => `p=${(c.pval).toExponential(2)}`),
+    x: props.listOfComparisons.map((c) => c.coeff.toFixed(2) * modifier),
+    text: props.listOfComparisons.map((c) => `p=${c.pval.toExponential(2)}`),
     error_x: {
       type: "data",
-      array: props.listOfComparisons.map((c) => (c.cint).toFixed(2)),
+      array: props.listOfComparisons.map((c) => c.cint.toFixed(2)),
       visible: true,
     },
     mode: "markers",

@@ -10,7 +10,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-import {groupNameMap} from "../data/groupInfo";
+import { groupNameMap } from "../data/groupInfo";
 import { heatmapColorScheme } from "../data/heatmapColorScheme";
 
 import "./DeckGlMap.css";
@@ -45,9 +45,9 @@ const DeckGlMap = () => {
 
   const maxLogOdds = 2;
   const numColors = heatmapColorScheme.length;
-  const domain = []
-  for (let i = 1; i<=numColors; i++){
-    domain.push( maxLogOdds * (i/numColors) );
+  const domain = [];
+  for (let i = 1; i <= numColors; i++) {
+    domain.push(maxLogOdds * (i / numColors));
   }
   const colorScale = scaleThreshold()
     .domain(domain)
