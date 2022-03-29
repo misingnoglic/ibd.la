@@ -61,7 +61,7 @@ const App = () => {
             <Tab label="Home" />
             <Tab label="PheCodes" />
             <Tab label="Specialties" />
-            <Tab label="Offices" />
+            <Tab label="Zipcodes" />
             <Tab label="Genetics" />
             <Tab label="FAQ" />
             <Tab label="Contact" />

@@ -127,6 +127,10 @@ const PhecodePage = () => {
       <div className="titleText">
         <Typography variant="h3">Community PheCode Assocations</Typography>
       </div>
+      <div className="subTitleText">
+        <Typography variant="h4">{groupNameMap[primaryGroupLabel]} (n={groupSizeMap[primaryGroupLabel]})
+      vs {groupNameMap[secondGroupLabel]} (n={groupSizeMap[secondGroupLabel]})</Typography>
+      </div>
       <div className="scatterGraph">{graph}</div>
       <div className="selectionForm">
         <div className="selectionBox">
@@ -180,11 +184,10 @@ const PhecodePage = () => {
             PheCode{" "}
           </Link>
           and being a part of group1, relative to group2. Note that this plot
-          only tests for the relationship between being recieving a PheCode and
           does not demonstrate that belonging to a group is causal for the
           disease, as there are many factors that could influence an individual
           receiving a diagnosis in a hospital setting. For further discussion of
-          this, see the FAQ page. We restrict to PheCodes that are FDR
+          this, see the FAQ page. We show PheCodes that are FDR
           significant at 10% and are displaying the 40 PheCodes with largest
           absolute log odds ratio for this plot.
         </Typography>

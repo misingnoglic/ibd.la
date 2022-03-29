@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ScatterPlot from "./ScatterPlot";
 import { realData, realDataOptions } from "../data/deptScatterData";
 
-import { groupNameMap } from "../data/groupInfo";
+import { groupNameMap, groupSizeMap } from "../data/groupInfo";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -69,7 +69,10 @@ const DeptPage = () => {
 
   return (
     <div className="scatterplotBox">
-      <Typography variant="h3">Community Speciality Associations</Typography>
+      <div className="specialtyTitleText"><Typography variant="h3">Community Speciality Associations</Typography></div> 
+      <div className="specialtySubtitleText"><Typography variant="h4">{groupNameMap[firstGroupLabel]} (n={groupSizeMap[firstGroupLabel]})
+      vs {groupNameMap[secondGroupLabel]} (n={groupSizeMap[secondGroupLabel]}) </Typography></div> 
+
       <div className="scatterGraph">{graph}</div>
       <div className="selectionForm">
         <div className="selectionBox">
@@ -100,9 +103,28 @@ const DeptPage = () => {
               </MenuItem> */}
             </Select>
           </FormControl>
+        
         </div>
+      
       </div>
+      <div className="specialityBodyText">
+
+      <Typography variant="body1" gutterBottom>
+          {" "}
+          This plot is the result of a statistical test for the association
+          between visiting an office associated with a particular specialty 
+          and being a part of group1, relative to group2. Note that this plot
+          does not demonstrate that belonging to a group is causal for visiting 
+          a particular specialty. For further discussion of
+          this, see the FAQ page. We show only pecialities that are FDR
+          significant at 10% and the 40 specialities with largest
+          absolute log odds ratio for this plot.
+        </Typography>
+      </div>
+     
     </div>
+    
+    
   );
 };
 

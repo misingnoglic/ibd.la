@@ -9,6 +9,8 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import Typography from "@mui/material/Typography";
+
 
 import { groupNameMap } from "../data/groupInfo";
 import { heatmapColorScheme } from "../data/heatmapColorScheme";
@@ -87,8 +89,11 @@ const DeckGlMap = () => {
   }
 
   return (
+  
     <div className="mapPageContainer">
+      <div className="mapTitleText"><Typography variant="h3">Office Visits by Zipcode</Typography></div>
       <div className="deckGlContainer">
+        
         <DeckGL
           layers={layers}
           initialViewState={initialViewState}

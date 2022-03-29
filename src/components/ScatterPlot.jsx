@@ -5,7 +5,7 @@ const ScatterPlot = (props) => {
   const layout = {
     autosize: true,
     title: {
-      text: `${props.firstGroupLabel} vs ${props.secondGroupLabel}`,
+      // text: `${props.firstGroupLabel} vs ${props.secondGroupLabel}`,
       font: {
         size: 18,
       },

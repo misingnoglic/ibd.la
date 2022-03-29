@@ -1,6 +1,6 @@
 const groupNameMap = {
     group1: "White Non-Jewish",
-    group2: "Latino",
+    group2: "Mexican",
     group3: "White Jewish",
     group4: "Black/African American",
     group5: "Chinese",
