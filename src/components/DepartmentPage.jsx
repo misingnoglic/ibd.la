@@ -69,10 +69,13 @@ const DeptPage = () => {
 
   return (
     <div className="scatterplotBox">
-      <div className="specialtyTitleText"><Typography variant="h3">Community Speciality Associations</Typography></div> 
-      <div className="specialtySubtitleText"><Typography variant="h4">{groupNameMap[firstGroupLabel]} (n={groupSizeMap[firstGroupLabel]})
+      <div className="specialtyTitleText"><Typography variant="h2">Medical Specialities</Typography></div> 
+      <div className="specialtySubtitleText"><Typography variant="h5">{groupNameMap[firstGroupLabel]} (n={groupSizeMap[firstGroupLabel]})
       vs {groupNameMap[secondGroupLabel]} (n={groupSizeMap[secondGroupLabel]}) </Typography></div> 
-
+      <div className="bodyText">
+        <Typography variant="body1" gutterBottom>
+          Logistic regression test: Ever been to specialty  ~ Community Status + Age + Sex + BMI 
+      </Typography> </div> 
       <div className="scatterGraph">{graph}</div>
       <div className="selectionForm">
         <div className="selectionBox">
@@ -111,14 +114,16 @@ const DeptPage = () => {
 
       <Typography variant="body1" gutterBottom>
           {" "}
-          This plot is the result of a statistical test for the association
+          <p>This plot is the result of a statistical test for the association
           between visiting an office associated with a particular specialty 
-          and being a part of group1, relative to group2. Note that this plot
+          and being a part of group1, relative to group2. <b>Note</b> that this plot
           does not demonstrate that belonging to a group is causal for visiting 
           a particular specialty. For further discussion of
-          this, see the FAQ page. We show only pecialities that are FDR
+          this, see the FAQ page.</p> 
+          
+          <p>We show only specialities that are FDR
           significant at 10% and the 40 specialities with largest
-          absolute log odds ratio for this plot.
+          absolute log odds ratio for this plot.</p>
         </Typography>
       </div>
      

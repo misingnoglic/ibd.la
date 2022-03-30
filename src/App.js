@@ -64,7 +64,7 @@ const App = () => {
             <Tab label="Zipcodes" />
             <Tab label="Genetics" />
             <Tab label="FAQ" />
-            <Tab label="Contact" />
+            <Tab label="About" />
           </Tabs>
         </AppBar>
         <div className="tabContent">{innerComponent}</div>

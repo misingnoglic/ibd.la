@@ -125,12 +125,17 @@ const PhecodePage = () => {
   return (
     <div className="scatterplotBox">
       <div className="titleText">
-        <Typography variant="h3">Community PheCode Assocations</Typography>
+        <Typography variant="h2">PheCode Diagnoses</Typography>
       </div>
       <div className="subTitleText">
-        <Typography variant="h4">{groupNameMap[primaryGroupLabel]} (n={groupSizeMap[primaryGroupLabel]})
+        <Typography variant="h5">{groupNameMap[primaryGroupLabel]} (n={groupSizeMap[primaryGroupLabel]})
       vs {groupNameMap[secondGroupLabel]} (n={groupSizeMap[secondGroupLabel]})</Typography>
       </div>
+      <div className="bodyText">
+        <Typography variant="body1" gutterBottom>
+          Logistic regression test: PheCode ~ Community Status + Age + Sex + BMI 
+      </Typography> </div> 
+
       <div className="scatterGraph">{graph}</div>
       <div className="selectionForm">
         <div className="selectionBox">
@@ -174,22 +179,25 @@ const PhecodePage = () => {
           </FormControl>
         </div>
       </div>
-      <div className="bodyText">
+      <div className="bodyText2">
         {" "}
         <Typography variant="body1" gutterBottom>
           {" "}
-          This plot is the result of a statistical test for the association
+          <p>This plot is the result of a statistical test for the association
           between being assigned a{" "}
           <Link href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175508">
             PheCode{" "}
           </Link>
-          and being a part of group1, relative to group2. Note that this plot
+          and being a part of group1, relative to group2. Results are displayed for PheCodes that are FDR
+          significant at 10%. We test PheCodes with more than 30 individuals who recieved that code. 
+          For groups with more than 40 PheCodes that meet this criteria, we display the 40 PheCodes with largest
+          absolute log odds ratio for this plot. </p>
+          
+          <p><b>Note</b> that this plot
           does not demonstrate that belonging to a group is causal for the
           disease, as there are many factors that could influence an individual
           receiving a diagnosis in a hospital setting. For further discussion of
-          this, see the FAQ page. We show PheCodes that are FDR
-          significant at 10% and are displaying the 40 PheCodes with largest
-          absolute log odds ratio for this plot.
+          this, see the FAQ page.</p>
         </Typography>
       </div>
     </div>

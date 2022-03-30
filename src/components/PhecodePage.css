@@ -40,10 +40,18 @@
 }
 
 .bodyText {
+    padding-top: 10px ;
+    padding-bottom: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.bodyText2 {
     padding-top: 30px ;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
     padding-right: 200px;
     padding-left: 200px;
-    text-align: center;
-    width: 80%
+    width: 80%;
+    text-align: justify
 }
