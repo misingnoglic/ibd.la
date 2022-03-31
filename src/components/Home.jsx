@@ -13,6 +13,9 @@ const Home = () => {
         <Typography variant="h2">
           Fine-scale population health in Los Angeles{" "}
         </Typography>
+        <Typography variant="h4">
+          *Not peer reviewed* 
+        </Typography>
       </div>
       <Typography variant="h6"></Typography>
       <div className={css.homePageContent}>
