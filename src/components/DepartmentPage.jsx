@@ -10,7 +10,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
-import "./DepartmentPage.css";
+import css from "./DepartmentPage.module.css";
 
 const DeptPage = () => {
   const [firstGroupLabel, setFirstGroupLabel] = useState("group1");
@@ -68,17 +68,17 @@ const DeptPage = () => {
     ));
 
   return (
-    <div className="scatterplotBox">
-      <div className="specialtyTitleText"><Typography variant="h2">Medical Specialities</Typography></div> 
-      <div className="specialtySubtitleText"><Typography variant="h5">{groupNameMap[firstGroupLabel]} (n={groupSizeMap[firstGroupLabel]})
+    <div className={css.scatterplotBox}>
+      <div className={css.specialtyTitleText}><Typography variant="h2">Medical Specialities</Typography></div> 
+      <div className={css.specialtySubtitleText}><Typography variant="h5">{groupNameMap[firstGroupLabel]} (n={groupSizeMap[firstGroupLabel]})
       vs {groupNameMap[secondGroupLabel]} (n={groupSizeMap[secondGroupLabel]}) </Typography></div> 
-      <div className="bodyText">
+      <div className={css.bodyText}>
         <Typography variant="body1" gutterBottom>
           Logistic regression test: Ever been to specialty  ~ Community Status + Age + Sex + BMI 
       </Typography> </div> 
-      <div className="scatterGraph">{graph}</div>
-      <div className="selectionForm">
-        <div className="selectionBox">
+      <div className={css.scatterGraph}>{graph}</div>
+      <div className={css.selectionForm}>
+        <div className={css.selectionBox}>
           <FormControl>
             <InputLabel id="group1-selection">Community 1</InputLabel>
             <Select
@@ -91,7 +91,7 @@ const DeptPage = () => {
             </Select>
           </FormControl>
         </div>
-        <div className="selectionBox">
+        <div className={css.selectionBox}>
           <FormControl>
             <InputLabel id="group2-selection">Community 2</InputLabel>
             <Select
@@ -110,7 +110,7 @@ const DeptPage = () => {
         </div>
       
       </div>
-      <div className="specialityBodyText">
+      <div className={css.specialityBodyText}>
 
       <Typography variant="body1" gutterBottom>
           {" "}

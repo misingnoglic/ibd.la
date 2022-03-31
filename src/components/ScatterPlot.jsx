@@ -4,14 +4,9 @@ import Plot from "react-plotly.js";
 const ScatterPlot = (props) => {
   const layout = {
     autosize: true,
-    title: {
-      // text: `${props.firstGroupLabel} vs ${props.secondGroupLabel}`,
-      font: {
-        size: 18,
-      },
-      xref: "paper",
-      x: 0.05,
-    },
+    margin: {
+      t: 20,
+  },
     yaxis: {
       automargin: true,
       dtick: 1,
@@ -23,7 +18,6 @@ const ScatterPlot = (props) => {
       },
     },
     xaxis: {
-      // range: [-4, 4],
       title: {
         text: "Log Odds",
         font: {

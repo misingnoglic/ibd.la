@@ -1,16 +1,15 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
-import "./AboutPage.css";
+import css from "./About.module.css";
 
 const About = () => {
   return (
-    <div className="titleText">
+    <div className={css.titleText}>
       <Typography variant="h2">FAQ</Typography>
 
-      <div className="faqText">
-        <div className="titleText">
-          {" "}
-          <Typography variant="h4">Background </Typography>{" "}
+      <div className={css.faqText}>
+        <div className={css.titleText}>
+          <Typography variant="h4">Background</Typography>
         </div>
         <Typography variant="body1" gutterBottom>
           <p>
@@ -38,7 +37,7 @@ const About = () => {
           </p>
         </Typography>
 
-        <div className="titleText">
+        <div className={css.titleText}>
           {" "}
           <Typography variant="h4">Table of Contents </Typography>{" "}
         </div>
@@ -82,7 +81,7 @@ const About = () => {
           </p>
         </Typography>
 
-        <div className="titleText">
+        <div className={css.titleText}>
           <a name="section1">
             {" "}
             <Typography variant="h6">
@@ -104,7 +103,7 @@ const About = () => {
           </p>
         </Typography>
 
-        <div className="titleText">
+        <div className={css.titleText}>
           {" "}
           <a name="section2">
             <Typography variant="h6">
@@ -129,7 +128,7 @@ const About = () => {
           </p>
         </Typography>
 
-        <div className="titleText">
+        <div className={css.titleText}>
           {" "}
           <a name="section3">
             {" "}
@@ -201,7 +200,7 @@ const About = () => {
           </p>
         </Typography>
 
-        <div className="titleText">
+        <div className={css.titleText}>
           {" "}
           <a name="section4">
             <Typography variant="h6">
@@ -256,7 +255,7 @@ const About = () => {
           </p>
         </Typography>
 
-        <div className="titleText">
+        <div className={css.titleText}>
           <a name="section5">
             {" "}
             <Typography variant="h6">
@@ -288,7 +287,7 @@ const About = () => {
           </p>
         </Typography>
 
-        <div className="titleText">
+        <div className={css.titleText}>
           <a name="section6">
             {" "}
             <Typography variant="h6">
@@ -310,7 +309,7 @@ const About = () => {
           </p>
         </Typography>
 
-        <div className="titleText">
+        <div className={css.titleText}>
           <a name="section7">
             {" "}
             <Typography variant="h6">What is a PheCode? </Typography>
@@ -338,7 +337,7 @@ const About = () => {
           </p>
         </Typography>
 
-        <div className="titleText">
+        <div className={css.titleText}>
           {" "}
           <a name="section8">
             <Typography variant="h6">
@@ -386,7 +385,7 @@ const About = () => {
           </p>
         </Typography>
 
-        <div className="titleText">
+        <div className={css.titleText}>
           {" "}
           <a name="section9">
             <Typography variant="h6">

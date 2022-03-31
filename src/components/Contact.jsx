@@ -1,10 +1,10 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
-import "./Contact.css";
+import css from "./Contact.module.css";
 
 const Contact = () => {
   return (
-    <div className="titleText">
+    <div className={css.titleText}>
       <Typography variant="body1" gutterBottom>
         Please contact christa@g.ucla.edu
       </Typography>

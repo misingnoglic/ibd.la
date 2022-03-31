@@ -15,7 +15,7 @@ import Select from "@mui/material/Select";
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import "./PhecodePage.css";
+import css from "./PhecodePage.module.css";
 
 const PhecodePage = () => {
   const [primaryGroupLabel, setPrimaryGroupLabel] = useState("group1");
@@ -123,22 +123,26 @@ const PhecodePage = () => {
     </MenuItem>
   ));
   return (
-    <div className="scatterplotBox">
-      <div className="titleText">
+    <div className={css.scatterplotBox}>
+      <div className={css.titleText}>
         <Typography variant="h2">PheCode Diagnoses</Typography>
       </div>
-      <div className="subTitleText">
-        <Typography variant="h5">{groupNameMap[primaryGroupLabel]} (n={groupSizeMap[primaryGroupLabel]})
-      vs {groupNameMap[secondGroupLabel]} (n={groupSizeMap[secondGroupLabel]})</Typography>
+      <div className={css.subTitleText}>
+        <Typography variant="h5">
+          {groupNameMap[primaryGroupLabel]} (n={groupSizeMap[primaryGroupLabel]}
+          ) vs {groupNameMap[secondGroupLabel]} (n=
+          {groupSizeMap[secondGroupLabel]})
+        </Typography>
       </div>
-      <div className="bodyText">
+      <div className={css.bodyText}>
         <Typography variant="body1" gutterBottom>
-          Logistic regression test: PheCode ~ Community Status + Age + Sex + BMI 
-      </Typography> </div> 
+          Logistic regression test: PheCode ~ Community Status + Age + Sex + BMI
+        </Typography>
+      </div>
 
-      <div className="scatterGraph">{graph}</div>
-      <div className="selectionForm">
-        <div className="selectionBox">
+      <div className={css.scatterGraph}>{graph}</div>
+      <div className={css.selectionForm}>
+        <div className={css.selectionBox}>
           <FormControl style={{ minWidth: 150 }}>
             <InputLabel id="group1-selection">Community 1</InputLabel>
             <Select
@@ -151,7 +155,7 @@ const PhecodePage = () => {
             </Select>
           </FormControl>
         </div>
-        <div className="selectionBox">
+        <div className={css.selectionBox}>
           <FormControl style={{ minWidth: 150 }}>
             <InputLabel id="group2-selection">Community 2</InputLabel>
             <Select
@@ -165,7 +169,7 @@ const PhecodePage = () => {
             </Select>
           </FormControl>
         </div>
-        <div className="selectionBox">
+        <div className={css.selectionBox}>
           <FormControl style={{ minWidth: 150 }}>
             <InputLabel id="dataCategory-selection">Data Category</InputLabel>
             <Select
@@ -179,25 +183,28 @@ const PhecodePage = () => {
           </FormControl>
         </div>
       </div>
-      <div className="bodyText2">
-        {" "}
+      <div className={css.bodyText2}>
         <Typography variant="body1" gutterBottom>
-          {" "}
-          <p>This plot is the result of a statistical test for the association
-          between being assigned a{" "}
-          <Link href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175508">
-            PheCode{" "}
-          </Link>
-          and being a part of group1, relative to group2. Results are displayed for PheCodes that are FDR
-          significant at 10%. We test PheCodes with more than 30 individuals who recieved that code. 
-          For groups with more than 40 PheCodes that meet this criteria, we display the 40 PheCodes with largest
-          absolute log odds ratio for this plot. </p>
-          
-          <p><b>Note</b> that this plot
-          does not demonstrate that belonging to a group is causal for the
-          disease, as there are many factors that could influence an individual
-          receiving a diagnosis in a hospital setting. For further discussion of
-          this, see the FAQ page.</p>
+          <p>
+            This plot is the result of a statistical test for the association
+            between being assigned a{" "}
+            <Link href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175508">
+              PheCode{" "}
+            </Link>
+            and being a part of group1, relative to group2. Results are
+            displayed for PheCodes that are FDR significant at 10%. We test
+            PheCodes with more than 30 individuals who recieved that code. For
+            groups with more than 40 PheCodes that meet this criteria, we
+            display the 40 PheCodes with largest absolute log odds ratio for
+            this plot.{" "}
+          </p>
+
+          <p>
+            <b>Note</b> that this plot does not demonstrate that belonging to a
+            group is causal for the disease, as there are many factors that
+            could influence an individual receiving a diagnosis in a hospital
+            setting. For further discussion of this, see the FAQ page.
+          </p>
         </Typography>
       </div>
     </div>

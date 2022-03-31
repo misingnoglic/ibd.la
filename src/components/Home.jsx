@@ -4,22 +4,22 @@ import Link from "@mui/material/Link";
 
 import louvain_graph from "../data/images/louvain_graph2.png";
 
-import "./Home.css";
+import css from "./Home.module.css";
 
 const Home = () => {
   return (
     <div>
-      <div className="titleText">
+      <div className={css.titleText}>
         <Typography variant="h2">
           Fine-scale population health in Los Angeles{" "}
         </Typography>
       </div>
       <Typography variant="h6"></Typography>
-      <div className="homePageContent">
-        <div className="graphImage">
+      <div className={css.homePageContent}>
+        <div className={css.graphImage}>
           <img height="100%" width="100%" src={louvain_graph}></img>
         </div>
-        <div className="homeBodyText">
+        <div className={css.homeBodyText}>
           <Typography variant="body1" gutterBottom>
             <p>
               This browser explores population health in Los Angeles within the

@@ -9,7 +9,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Skeleton from "@mui/material/Skeleton";
-import "./BarPlotControl.css";
+import css from "./IbdPage.module.css";
 
 const IbdPage = () => {
   const [primaryGroup, setPrimaryGroup] = useState("group2");
@@ -53,10 +53,9 @@ const IbdPage = () => {
 
   return (
     <div>
-      <div className="graph">{graph}</div>
-      <IbdTable data={barData[primaryGroup]} />
-      <div className="selectionForm">
-        <div className="selectionBox">
+      <div className={css.graph}>{graph}</div>
+      <div className={css.selectionForm}>
+        <div className={css.selectionBox}>
           <FormControl>
             <InputLabel id="community-selection">Community</InputLabel>
             <Select
@@ -70,6 +69,7 @@ const IbdPage = () => {
           </FormControl>
         </div>
       </div>
+      <IbdTable data={barData[primaryGroup]} />
     </div>
   );
 };

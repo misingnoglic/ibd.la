@@ -15,7 +15,7 @@ import Typography from "@mui/material/Typography";
 import { groupNameMap } from "../data/groupInfo";
 import { heatmapColorScheme } from "../data/heatmapColorScheme";
 
-import "./DeckGlMap.css";
+import css from "./DeckGlMap.module.css";
 
 const getTooltip = ({ object }) => {
   const response = object && {
@@ -90,9 +90,9 @@ const DeckGlMap = () => {
 
   return (
   
-    <div className="mapPageContainer">
-      <div className="mapTitleText"><Typography variant="h3">Office Visits by Zipcode</Typography></div>
-      <div className="deckGlContainer">
+    <div className={css.mapPageContainer}>
+      <div className={css.mapTitleText}><Typography variant="h3">Office Visits by Zipcode</Typography></div>
+      <div className={css.deckGlContainer}>
         
         <DeckGL
           layers={layers}
@@ -103,8 +103,8 @@ const DeckGlMap = () => {
           <StaticMap reuseMaps mapboxApiAccessToken={mapboxAccessToken} />
         </DeckGL>
       </div>
-      <div className="selectionForm2">
-        <div className="selectionBox2">
+      <div className={css.selectionForm2}>
+        <div className={css.selectionBox2}>
           <FormControl style={{ minWidth: 150 }}>
             <InputLabel id="dataCategory-selection">Group</InputLabel>
             <Select
