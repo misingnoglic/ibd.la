@@ -8,14 +8,19 @@
 
 }
 
+.homePageContent {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.graphImage {
+    width: 35%;
+    height: 75vh;
+}
 
 .homeBodyText {
-    padding-top: 10px ;
-    padding-bottom: 10px;
-    padding-right: 150px;
-    padding-left: 150px;
     text-align: justify;
-    width: 80%;
+    width: 50%;
 
 }
 
