@@ -5,6 +5,7 @@ import { barData } from "../data/barData";
 import { groupNameMap } from "../data/groupInfo";
 
 import InputLabel from "@mui/material/InputLabel";
+import Typography from "@mui/material/Typography";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
@@ -53,6 +54,11 @@ const IbdPage = () => {
 
   return (
     <div>
+          <div className={css.IBDTitleText}>
+        <Typography variant="h2">
+          IBD Sharing
+        </Typography>
+      </div> 
       <div className={css.graph}>{graph}</div>
       <div className={css.selectionForm}>
         <div className={css.selectionBox}>

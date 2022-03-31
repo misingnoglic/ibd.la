@@ -91,7 +91,7 @@ const DeckGlMap = () => {
   return (
   
     <div className={css.mapPageContainer}>
-      <div className={css.mapTitleText}><Typography variant="h3">Office Visits by Zipcode</Typography></div>
+      <div className={css.mapTitleText}><Typography variant="h2">Office Visits by Zipcode</Typography></div>
       <div className={css.deckGlContainer}>
         
         <DeckGL
@@ -115,7 +115,8 @@ const DeckGlMap = () => {
             >
               {groupOptions}
             </Select>
-          </FormControl>
+          </FormControl> 
+          
         </div>
       </div>
     </div>

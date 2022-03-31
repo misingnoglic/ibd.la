@@ -13,9 +13,7 @@ const Home = () => {
         <Typography variant="h2">
           Fine-scale population health in Los Angeles{" "}
         </Typography>
-        <Typography variant="h4">
-          *Not peer reviewed* 
-        </Typography>
+        <Typography variant="h4">*Not peer reviewed*</Typography>
       </div>
       <Typography variant="h6"></Typography>
       <div className={css.homePageContent}>
@@ -59,18 +57,30 @@ const Home = () => {
             </p>
 
             <p>
-              <b>Note</b> that the results presented here are not evidence of
-              genetic causes for disease. Health is a complex phenomenon that is
-              strongly influenced by environmental and sociocultural factors.
-              The explicit goal of this research is to advance the study of
-              health disparities, especially for groups understudied in
-              biomedical research. Please see our FAQ page for a full discussion
-              of what these results do or do not mean.
+              <b>
+                Note: the results presented here are not evidence of genetic
+                cause for population-disease associations.
+              </b>
+              Health is a complex phenomenon that is strongly influenced by
+              environmental and sociocultural factors. The explicit goal of this
+              research is to advance the study of health disparities, especially
+              for groups understudied in biomedical research. Please see our FAQ
+              page for a full discussion of what these results do or do not
+              mean.
             </p>
 
             <p>
-              Website developed by Christa Caggiano, Arya Boudaie, and Noah
-              Zaitlen.
+              Website developed by: {" "}
+              <Link href="http://www.christa.science/about/">
+                Christa Caggiano, 
+              </Link>
+              <Link href="https://aryaboudaie.com/">{" "}
+               Arya Boudaie,
+              </Link>
+              and {" "}
+              <Link href="https://bioscience.ucla.edu/people/noah-zaitlen/">{" "}
+              Noah Zaitlen. 
+              </Link>
             </p>
           </Typography>
         </div>
