@@ -15,6 +15,7 @@ import Select from "@mui/material/Select";
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
+import Divider from '@mui/material/Divider';
 import css from "./PhecodePage.module.css";
 
 const PhecodePage = () => {
@@ -124,20 +125,14 @@ const PhecodePage = () => {
   ));
   return (
     <div className={css.scatterplotBox}>
-      <div className={css.titleText}>
-        <Typography variant="h2">PheCode Diagnoses</Typography>
-      </div>
-      <div className={css.subTitleText}>
+      <div>
+        <Typography variant="h2">Phecode Diagnoses</Typography>
         <Typography variant="h5">
           {groupNameMap[primaryGroupLabel]} (n={groupSizeMap[primaryGroupLabel]}
           ) vs {groupNameMap[secondGroupLabel]} (n=
           {groupSizeMap[secondGroupLabel]})
         </Typography>
-      </div>
-      <div className={css.bodyText}>
-        <Typography variant="body1" gutterBottom>
-          Logistic regression test: PheCode ~ Community Status + Age + Sex + BMI
-        </Typography>
+       
       </div>
 
       <div className={css.scatterGraph}>{graph}</div>
@@ -185,24 +180,31 @@ const PhecodePage = () => {
       </div>
       <div className={css.bodyText2}>
         <Typography variant="body1" gutterBottom>
+        <Divider textAlign="left">Model</Divider>
+          <br></br>
+          Logistic regression test: Phecode ~ Community Status + Age + Sex + BMI
+          <br></br>
+          <br></br>
+        <Divider textAlign="left">About</Divider>
+          <br></br>
           <p>
             This plot is the result of a statistical test for the association
             between being assigned a{" "}
             <Link href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175508">
-              PheCode{" "}
+              phecode{" "}
             </Link>
-            and being a part of group1, relative to group2. Results are
-            displayed for PheCodes that are FDR significant at 10%. We test
-            PheCodes with more than 30 individuals who recieved that code. For
-            groups with more than 40 PheCodes that meet this criteria, we
-            display the 40 PheCodes with largest absolute log odds ratio for
+            and being a part of community 1, relative to community 2. Results are
+            displayed for phecodes that are FDR significant at 5%. We test
+            phecodes with more than 30 individuals who recieved that phecodes. For
+            IBD community with more than 40 phecodes that meet this criteria, we
+            display the 40 phecodes with largest absolute log odds ratio for
             this plot.{" "}
           </p>
 
           <p>
             <b>Note</b> that this plot does not demonstrate that belonging to a
-            group is causal for the disease, as there are many factors that
-            could influence an individual receiving a diagnosis in a hospital
+            IBD community is causal for the disease, as there are many factors that
+            could influence an individual receiving a diagnosis in a medical
             setting. For further discussion of this, see the FAQ page.
           </p>
         </Typography>

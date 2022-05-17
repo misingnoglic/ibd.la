@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PhecodePage from "./components/PhecodePage";
 import DeptPage from "./components/DepartmentPage";
+import TimePage from "./components/TimePage";
 import IbdPage from "./components/IbdPage";
 import DeckGlMap from "./components/DeckGlMap";
 import About from "./components/About";
@@ -36,9 +37,12 @@ const App = () => {
         return <IbdPage />;
       }
       case 5: {
-        return <About />;
+        return <TimePage />;
       }
       case 6: {
+        return <About />;
+      }
+      case 7: {
         return <Contact />;
       }
       default: {
@@ -61,8 +65,9 @@ const App = () => {
             <Tab label="Home" />
             <Tab label="PheCodes" />
             <Tab label="Specialties" />
-            <Tab label="Zipcodes" />
+            <Tab label="Zip Codes" />
             <Tab label="Genetics" />
+            <Tab label="Time" />
             <Tab label="FAQ" />
             <Tab label="About" />
           </Tabs>

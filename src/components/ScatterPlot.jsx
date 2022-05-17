@@ -6,11 +6,13 @@ const ScatterPlot = (props) => {
     autosize: true,
     margin: {
       t: 20,
+      b: 400,
   },
     yaxis: {
       automargin: true,
       dtick: 1,
       title: {
+        text: "Log Odds Ratio",
         font: {
           size: 16,
           color: "#7f7f7f",
@@ -19,7 +21,6 @@ const ScatterPlot = (props) => {
     },
     xaxis: {
       title: {
-        text: "Log Odds",
         font: {
           size: 16,
           color: "#7f7f7f",
@@ -31,10 +32,10 @@ const ScatterPlot = (props) => {
   const modifier = props.negate ? -1 : 1;
 
   const graphData = {
-    y: props.listOfComparisons.map((c) => c.phenotype),
-    x: props.listOfComparisons.map((c) => c.coeff.toFixed(2) * modifier),
+    x: props.listOfComparisons.map((c) => c.phenotype),
+    y: props.listOfComparisons.map((c) => c.coeff.toFixed(2) * modifier),
     text: props.listOfComparisons.map((c) => `p=${c.pval.toExponential(2)}`),
-    error_x: {
+    error_y: {
       type: "data",
       array: props.listOfComparisons.map((c) => c.cint.toFixed(2)),
       visible: true,

@@ -2,7 +2,7 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
-import louvain_graph from "../data/images/louvain_graph2.png";
+import louvain_graph from "../data/images/louvain_graph.jpg";
 
 import css from "./Home.module.css";
 
@@ -18,7 +18,7 @@ const Home = () => {
       <Typography variant="h6"></Typography>
       <div className={css.homePageContent}>
         <div className={css.graphImage}>
-          <img height="100%" width="100%" src={louvain_graph}></img>
+          <img height="90%" width="90%" src={louvain_graph}></img>
         </div>
         <div className={css.homeBodyText}>
           <Typography variant="body1" gutterBottom>
@@ -26,7 +26,7 @@ const Home = () => {
               This browser explores population health in Los Angeles within the
               UCLA health system. The data is apart of the{" "}
               <Link href="https://www.uclahealth.org/precision-health/atlas">
-                UCLA ATLAS Community Health Initiative .
+                UCLA ATLAS Community Health Initiative.
               </Link>{" "}
               Here, we explore several aspects of health that may be of interest
               to researchers and community members.{" "}
@@ -59,7 +59,7 @@ const Home = () => {
             <p>
               <b>
                 Note: the results presented here are not evidence of genetic
-                cause for population-disease associations.
+                cause for population-disease associations.{" "}
               </b>
               Health is a complex phenomenon that is strongly influenced by
               environmental and sociocultural factors. The explicit goal of this

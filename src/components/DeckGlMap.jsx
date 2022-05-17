@@ -91,7 +91,7 @@ const DeckGlMap = () => {
   return (
   
     <div className={css.mapPageContainer}>
-      <div className={css.mapTitleText}><Typography variant="h2">Office Visits by Zipcode</Typography></div>
+      <div className={css.mapTitleText}><Typography variant="h2">Office Visits by Zip Code</Typography></div>
       <div className={css.deckGlContainer}>
         
         <DeckGL
