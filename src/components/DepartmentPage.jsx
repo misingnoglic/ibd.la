@@ -4,6 +4,7 @@ import { realData, realDataOptions } from "../data/deptScatterData";
 
 import { groupNameMap, groupSizeMap } from "../data/groupInfo";
 
+import Divider from "@mui/material/Divider";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -69,13 +70,11 @@ const DeptPage = () => {
 
   return (
     <div className={css.scatterplotBox}>
-      <div className={css.specialtyTitleText}><Typography variant="h2">Medical Specialities</Typography></div> 
-      <div className={css.specialtySubtitleText}><Typography variant="h5">{groupNameMap[firstGroupLabel]} (n={groupSizeMap[firstGroupLabel]})
-      vs {groupNameMap[secondGroupLabel]} (n={groupSizeMap[secondGroupLabel]}) </Typography></div> 
-      <div className={css.bodyText}>
-        <Typography variant="body1" gutterBottom>
-          Logistic regression test: Ever been to specialty  ~ Community Status + Age + Sex + BMI 
-      </Typography> </div> 
+      <Typography variant="h2">Medical Specialities</Typography>
+      <Typography variant="h5">
+        {groupNameMap[firstGroupLabel]} (n={groupSizeMap[firstGroupLabel]}) vs{" "}
+        {groupNameMap[secondGroupLabel]} (n={groupSizeMap[secondGroupLabel]}){" "}
+      </Typography>
       <div className={css.scatterGraph}>{graph}</div>
       <div className={css.selectionForm}>
         <div className={css.selectionBox}>
@@ -106,30 +105,32 @@ const DeptPage = () => {
               </MenuItem> */}
             </Select>
           </FormControl>
-        
         </div>
-      
       </div>
-      <div className={css.specialityBodyText}>
+      <div className={css.bodyText}>
+        <Typography variant="body1" gutterBottom>
+          <Divider textAlign="left">Model</Divider>
+          <p>
+            Logistic regression test: Ever been to specialty ~ Community Status
+            + Age + Sex + BMI
+          </p>
+          <Divider textAlign="left">About</Divider>
+          <p>
+            This plot is the result of a statistical test for the association
+            between visiting an office associated with a particular specialty
+            and being a part of group1, relative to group2. <b>Note</b> that
+            this plot does not demonstrate that belonging to a group is causal
+            for visiting a particular specialty. For further discussion of this,
+            see the FAQ page.
+          </p>
 
-      <Typography variant="body1" gutterBottom>
-          {" "}
-          <p>This plot is the result of a statistical test for the association
-          between visiting an office associated with a particular specialty 
-          and being a part of group1, relative to group2. <b>Note</b> that this plot
-          does not demonstrate that belonging to a group is causal for visiting 
-          a particular specialty. For further discussion of
-          this, see the FAQ page.</p> 
-          
-          <p>We show only specialities that are FDR
-          significant at 10% and the 40 specialities with largest
-          absolute log odds ratio for this plot.</p>
+          <p>
+            We show only specialities that are FDR significant at 10% and the 40
+            specialities with largest absolute log odds ratio for this plot.
+          </p>
         </Typography>
       </div>
-     
     </div>
-    
-    
   );
 };
 

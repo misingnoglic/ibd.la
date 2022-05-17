@@ -181,12 +181,8 @@ const PhecodePage = () => {
       <div className={css.bodyText2}>
         <Typography variant="body1" gutterBottom>
         <Divider textAlign="left">Model</Divider>
-          <br></br>
           Logistic regression test: Phecode ~ Community Status + Age + Sex + BMI
-          <br></br>
-          <br></br>
         <Divider textAlign="left">About</Divider>
-          <br></br>
           <p>
             This plot is the result of a statistical test for the association
             between being assigned a{" "}
@@ -200,7 +196,6 @@ const PhecodePage = () => {
             display the 40 phecodes with largest absolute log odds ratio for
             this plot.{" "}
           </p>
-
           <p>
             <b>Note</b> that this plot does not demonstrate that belonging to a
             IBD community is causal for the disease, as there are many factors that

@@ -1,39 +1,34 @@
 .selectionForm {
-    display: inline-flex;
-    padding-top: 24px;
-}
-
-.selectionBox {
-    padding-right: 12px;
+    display: flex;
+    gap: 16px;
 }
 
 .scatterplotBox {
     margin-top: 8px;
     margin-bottom: 4px;
+    max-width: 650px;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
 }
 
 .scatterGraph {
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
     display: flex;
-    min-width: 1000px;
-    min-height: 500px; /* For the buttons at the bottom */
-    height: 70vh;
+    width: 100%;
+    min-height: 900px; /* For the buttons at the bottom */
 }
 
 .specialityBodyText {
-    padding-top: 30px ;
-    padding-bottom: 30px;
-    padding-right: 200px;
-    padding-left: 200px;
     text-align: justify;
-    width: 80%;
-
 }
 
 .specialtyTitleText {
-    padding-top: 20px ;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
     text-align: center;
 }
 .specialtySubtitleText {
