@@ -54,6 +54,8 @@ const DeptPage = () => {
         listOfComparisons={graphData}
         plotColor="#B5EAD7"
         negate={negate}
+        width={650}
+        height={500}
       />
     );
   } else {
@@ -109,12 +111,16 @@ const DeptPage = () => {
       </div>
       <div className={css.bodyText}>
         <Typography variant="body1" gutterBottom>
-          <Divider textAlign="left">Model</Divider>
+          <div className={css.sectionHeader}>
+            <Divider textAlign="left">Model</Divider>
+          </div>
           <p>
             Logistic regression test: Ever been to specialty ~ Community Status
             + Age + Sex + BMI
           </p>
-          <Divider textAlign="left">About</Divider>
+          <div className={css.sectionHeader}>
+            <Divider textAlign="left">About</Divider>
+          </div>
           <p>
             This plot is the result of a statistical test for the association
             between visiting an office associated with a particular specialty

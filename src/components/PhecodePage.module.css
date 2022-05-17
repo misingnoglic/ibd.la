@@ -5,7 +5,7 @@
 .scatterplotBox {
     margin-top: 8px;
     margin-bottom: 4px;
-    max-width: 650px;
+    max-width: 900px;
     padding: 0 80px;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,8 @@
     border-radius: 3px;
     display: flex;
     width: 100%;
-    min-height: 900px; /* For the buttons at the bottom */
+    min-height: 520px; /* For the buttons at the bottom */
+    
 }
 
 .titleText {
@@ -49,4 +50,9 @@
 
 .center {
     text-align: center;
+}
+
+.sectionHeader {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }

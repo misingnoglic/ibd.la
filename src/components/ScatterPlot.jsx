@@ -3,10 +3,12 @@ import Plot from "react-plotly.js";
 
 const ScatterPlot = (props) => {
   const layout = {
-    autosize: true,
+    autosize: false,
+    width: props.width,
+    height: props.height,  
     margin: {
       t: 20,
-      b: 400,
+      b: 20,
   },
     yaxis: {
       automargin: true,
@@ -32,10 +34,10 @@ const ScatterPlot = (props) => {
   const modifier = props.negate ? -1 : 1;
 
   const graphData = {
-    x: props.listOfComparisons.map((c) => c.phenotype),
-    y: props.listOfComparisons.map((c) => c.coeff.toFixed(2) * modifier),
+    y: props.listOfComparisons.map((c) => c.phenotype),
+    x: props.listOfComparisons.map((c) => c.coeff.toFixed(2) * modifier),
     text: props.listOfComparisons.map((c) => `p=${c.pval.toExponential(2)}`),
-    error_y: {
+    error_x: {
       type: "data",
       array: props.listOfComparisons.map((c) => c.cint.toFixed(2)),
       visible: true,

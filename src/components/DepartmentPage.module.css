@@ -21,7 +21,7 @@
     border-radius: 3px;
     display: flex;
     width: 100%;
-    min-height: 900px; /* For the buttons at the bottom */
+    min-height: 500px; /* For the buttons at the bottom */
 }
 
 .specialityBodyText {
