@@ -22,8 +22,8 @@ const IbdPage = () => {
   let graph;
   if (primaryGroup) {
     const groups = Object.keys(barData[primaryGroup]);
-    const y = groups.map((group) => barData[primaryGroup][group].value);
-    const error = groups.map((group) => barData[primaryGroup][group].cint);
+    const y = groups.map((group) => barData[primaryGroup][group].zero);
+    const error = groups.map((group) => barData[primaryGroup][group].zero_se);
     const x = groups.map((group) => groupNameMap[group]);
     graph = (
       <BarPlot
@@ -53,12 +53,15 @@ const IbdPage = () => {
     ));
 
   return (
-    <div>
-          <div className={css.IBDTitleText}>
-        <Typography variant="h2">
-          IBD Sharing
+    <div className={css.barplotBox}>
+      <div>
+        <Typography variant="h2">Phecode Diagnoses</Typography>
+      </div>
+      <div>
+        <Typography variant="h5">
+        {groupNameMap[primaryGroup]}
         </Typography>
-      </div> 
+      </div>
       <div className={css.graph}>{graph}</div>
       <div className={css.selectionForm}>
         <div className={css.selectionBox}>

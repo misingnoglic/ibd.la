@@ -1,58 +1,52 @@
-.selectionForm {
-    display: inline-flex;
-}
 
 .scatterplotBox {
-    margin-top: 8px;
-    margin-bottom: 4px;
-    max-width: 900px;
-    padding: 0 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-    width: 100%;
-    background-color: #fff;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  max-width: 900px;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
 }
 
 .scatterGraph {
-    border: 1px solid #e1e1e1;
-    border-radius: 3px;
-    display: flex;
-    width: 100%;
-    min-height: 520px; /* For the buttons at the bottom */
-    
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+  display: flex;
+  width: 100%;
+  min-height: 520px; /* For the buttons at the bottom */
 }
 
 .titleText {
-    text-align: center;
-
+  text-align: center;
 }
 
 .subTitleText {
-    text-align: center;
+  text-align: center;
 }
 
 .bodyText {
-    text-align: center;
-    font-weight: bold;
-
+  text-align: center;
+  font-weight: bold;
 }
 
 .bodyText2 {
-    text-align: justify
+  text-align: justify;
 }
 
 .selectionForm {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .sectionHeader {
-    margin-top: 25px;
-    margin-bottom: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }

@@ -16,12 +16,12 @@ const IbdTable = (props) => {
         <TableHead>
           <TableRow>
             <TableCell>Group Name</TableCell>
-            <TableCell align="right">Median (cM)</TableCell>
-            <TableCell align="right">Standard Error</TableCell>
+            <TableCell align="right">Mean (cM)</TableCell>
+            <TableCell align="right">Mean Detected (cM)</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {Object.entries(props.data).map(([groupName, { value, cint }]) => (
+          {Object.entries(props.data).map(([groupName, { no_zero,  zero }]) => (
             <TableRow
               key={groupName}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -29,8 +29,8 @@ const IbdTable = (props) => {
               <TableCell component="th" scope="row">
                 {groupNameMap[groupName]}
               </TableCell>
-              <TableCell align="right">{value.toFixed(4)}</TableCell>
-              <TableCell align="right">{cint.toFixed(4)}</TableCell>
+              <TableCell align="right">{no_zero.toFixed(4)}</TableCell>
+              <TableCell align="right">{zero.toFixed(4)}</TableCell>
             </TableRow>
           ))}
         </TableBody>

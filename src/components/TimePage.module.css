@@ -10,12 +10,22 @@
 .scatterplotBox {
     margin-top: 8px;
     margin-bottom: 4px;
+    max-width: 900px;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+
 }
 
 .scatterGraph {
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
     display: flex;
-    min-width: 1000px;
-    min-height: 500px; /* For the buttons at the bottom */
+    width: 100%;
     height: 70vh;
 }
 

@@ -20,7 +20,7 @@ import css from "./PhecodePage.module.css";
 
 const PhecodePage = () => {
   const [primaryGroupLabel, setPrimaryGroupLabel] = useState("group1");
-  const [secondGroupLabel, setSecondGroupLabel] = useState("group6");
+  const [secondGroupLabel, setSecondGroupLabel] = useState("group20");
   // For now outpatient or emergencyRoom
   const [dataCategory, setDataCategory] = useState("Outpatient");
 
@@ -129,13 +129,14 @@ const PhecodePage = () => {
     <div className={css.scatterplotBox}>
       <div>
         <Typography variant="h2">Phecode Diagnoses</Typography>
+      </div>
+      <div>
         <Typography variant="h5">
           {groupNameMap[primaryGroupLabel]} (n={groupSizeMap[primaryGroupLabel]}
           ) vs {groupNameMap[secondGroupLabel]} (n=
           {groupSizeMap[secondGroupLabel]})
         </Typography>
       </div>
-
       <div className={css.scatterGraph}>{graph}</div>
       <div className={css.selectionForm}>
         <div className={css.selectionBox}>

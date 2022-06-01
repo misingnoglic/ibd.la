@@ -11,6 +11,8 @@ import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import css from "./TimePage.module.css";
+import Divider from "@mui/material/Divider";
+
 
 const PhecodePage = () => {
   const [groupLabel, setGroupLabel] = useState("group1");
@@ -18,7 +20,10 @@ const PhecodePage = () => {
 
 
   const handleGroupChange = (event) => {
-    setDisease(null);
+    const newGroupLabel = event.target.value;
+    if (!lineData[newGroupLabel][disease]){
+      setDisease(Object.keys(lineData[newGroupLabel])[0])
+    }
     setGroupLabel(event.target.value);
   };
 
@@ -46,7 +51,7 @@ const PhecodePage = () => {
   return (
     <div className={css.scatterplotBox}>
       <div className={css.titleText}>
-        <Typography variant="h2">Diagnosis Proportion over Time</Typography>
+        <Typography variant="h2">Diagnosis Proportion Over Time</Typography>
       </div>
       <div className={css.subTitleText}>
         <Typography variant="h5">
@@ -106,17 +111,20 @@ const PhecodePage = () => {
         </div> */}
       </div>
       <div className={css.bodyText2}>
+        
         <Typography variant="body1" gutterBottom>
+        <div className={css.sectionHeader}>
+            <Divider textAlign="left">About</Divider>
+          </div>
           <p>
-            This plot is the proportion of the selected group that received a PheCode in a given year. 
+            This plot is the proportion of the selected IBD Community that received a phecode in a given year. For each year, the total 
+            number of unique individuals with a diagnosis in that year is divided by the total community size for that year. Phecodes 
+            with at least 30 diagnoses per IBD community are shown. 
           </p>
         </Typography>
       </div>
     </div>
   );
-
-  // return <LinePlot />;
-
 };
 
 export default PhecodePage;

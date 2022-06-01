@@ -3,9 +3,8 @@ import Plot from "react-plotly.js";
 
 const BarPlot = (props) => {
   const layout = {
-    autosize: true,
+    // autosize: true,
     title: {
-      text: props.graphLabel,
       font: {
         size: 24,
       },

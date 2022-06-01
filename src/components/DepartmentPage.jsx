@@ -5,6 +5,7 @@ import { realData, realDataOptions } from "../data/deptScatterData";
 import { groupNameMap, groupSizeMap } from "../data/groupInfo";
 
 import Divider from "@mui/material/Divider";
+import Link from "@mui/material/Link";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -15,7 +16,7 @@ import css from "./DepartmentPage.module.css";
 
 const DeptPage = () => {
   const [firstGroupLabel, setFirstGroupLabel] = useState("group1");
-  const [secondGroupLabel, setSecondGroupLabel] = useState("group6");
+  const [secondGroupLabel, setSecondGroupLabel] = useState("group20");
 
   const handleFirstGroupChange = (event) => {
     setFirstGroupLabel(event.target.value);
@@ -109,30 +110,26 @@ const DeptPage = () => {
           </FormControl>
         </div>
       </div>
-      <div className={css.bodyText}>
+      <div className={css.bodyText2}>
         <Typography variant="body1" gutterBottom>
           <div className={css.sectionHeader}>
             <Divider textAlign="left">Model</Divider>
           </div>
-          <p>
-            Logistic regression test: Ever been to specialty ~ Community Status
-            + Age + Sex + BMI
-          </p>
+          Logistic regression test: Specialty ~ Community Status + Age + Sex + BMI
           <div className={css.sectionHeader}>
             <Divider textAlign="left">About</Divider>
           </div>
           <p>
             This plot is the result of a statistical test for the association
-            between visiting an office associated with a particular specialty
-            and being a part of group1, relative to group2. <b>Note</b> that
-            this plot does not demonstrate that belonging to a group is causal
-            for visiting a particular specialty. For further discussion of this,
-            see the FAQ page.
+            between visitng a physician with a particular specialty
+            and being a part of community 1, relative to community 2. Results
+            are displayed for specialities that are FDR significant at 5%. We test
+            specialities with more than 30 individuals who recieved visited a practitioner
+            with that specialty.
           </p>
-
           <p>
-            We show only specialities that are FDR significant at 10% and the 40
-            specialities with largest absolute log odds ratio for this plot.
+            <b>Note</b> that this plot does not demonstrate that belonging to an
+            IBD community is causal for seeing a medical provider with a particular specialty.
           </p>
         </Typography>
       </div>
