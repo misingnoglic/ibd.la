@@ -16,8 +16,8 @@ const IbdTable = (props) => {
         <TableHead>
           <TableRow>
             <TableCell>Group Name</TableCell>
-            <TableCell align="right">Mean (cM)</TableCell>
-            <TableCell align="right">Mean Detected (cM)</TableCell>
+            <TableCell align="right">Mean IBD of all iLASH detected segments (cM)</TableCell>
+            <TableCell align="right">Mean IBD of all possible pairs (cM)</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

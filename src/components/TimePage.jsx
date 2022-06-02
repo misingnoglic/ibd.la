@@ -83,7 +83,7 @@ const PhecodePage = () => {
         </div>
         <div className={css.selectionBox}>
           <FormControl style={{ minWidth: 150 }}>
-            <InputLabel id="disease-selection">Community</InputLabel>
+            <InputLabel id="disease-selection">Phecode</InputLabel>
             <Select
               labelId="group-selection"
               value={disease}

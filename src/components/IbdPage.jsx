@@ -13,7 +13,7 @@ import Skeleton from "@mui/material/Skeleton";
 import css from "./IbdPage.module.css";
 
 const IbdPage = () => {
-  const [primaryGroup, setPrimaryGroup] = useState("group5");
+  const [primaryGroup, setPrimaryGroup] = useState("group3");
 
   const handleChangeGroup = (event) => {
     setPrimaryGroup(event.target.value);

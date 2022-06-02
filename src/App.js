@@ -42,9 +42,7 @@ const App = () => {
       case 6: {
         return <About />;
       }
-      case 7: {
-        return <Contact />;
-      }
+      
       default: {
         return null;
       }
@@ -69,7 +67,6 @@ const App = () => {
             <Tab label="Genetics" />
             <Tab label="Time" />
             <Tab label="FAQ" />
-            <Tab label="About" />
           </Tabs>
         </AppBar>
         <div className="tabContent">{innerComponent}</div>

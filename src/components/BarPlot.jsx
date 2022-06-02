@@ -3,7 +3,7 @@ import Plot from "react-plotly.js";
 
 const BarPlot = (props) => {
   const layout = {
-    // autosize: true,
+    autosize: true,
     title: {
       font: {
         size: 24,
@@ -11,23 +11,23 @@ const BarPlot = (props) => {
       xref: "paper",
       x: 0.05,
     },
-    yaxis: {
+    xaxis: {
       type: "log",
       automargin: true,
       title: {
-        text: "IBD (cM)",
+        text: "log IBD (cM)",
         font: {
           size: 16,
           color: "#7f7f7f",
         },
       },
     },
-    xaxis: {
+    yaxis: {
       title: {
-        automargin: true,
+        // automargin: true,
         // text: "Group",
         font: {
-          size: 16,
+          size: 10,
           color: "#7f7f7f",
         },
       },
@@ -35,16 +35,17 @@ const BarPlot = (props) => {
   };
 
   const graphData = {
-    y: props.y,
-    x: props.x,
+    y: props.x,
+    x: props.y,
     // text: props.listOfComparisons.map((c) => `p=${c.pval}`),
-    error_y: {
+    error_x: {
       type: "data",
       array: props.error,
       visible: true,
     },
     // mode: "markers",
     type: "bar",
+    orientation: "h", 
     marker: {
       color: "#E2F0CB",
     },
