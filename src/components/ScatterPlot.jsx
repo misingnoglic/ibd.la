@@ -7,26 +7,27 @@ const ScatterPlot = (props) => {
     width: props.width,
     height: props.height,  
     margin: {
-      t: 20,
       b: 20,
+      t: 20,
   },
     yaxis: {
       automargin: true,
       dtick: 1,
       title: {
-        text: "Log Odds Ratio",
         font: {
-          size: 16,
           color: "#7f7f7f",
+          size: 16,
         },
       },
     },
     xaxis: {
+      automargin: true,
       title: {
         font: {
-          size: 16,
           color: "#7f7f7f",
+          size: 16,
         },
+        text: "Log Odds Ratio",
       },
     },
   };

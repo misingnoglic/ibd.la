@@ -23,8 +23,8 @@ const BarPlot = (props) => {
       },
     },
     yaxis: {
+      automargin: true,
       title: {
-        // automargin: true,
         // text: "Group",
         font: {
           size: 10,
