@@ -10,7 +10,11 @@ import Contact from "./components/Contact";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import ReactGA from "react-ga";
+
 import "./App.css";
+
+ReactGA.initialize("G-XSD3FL1WE4");
 
 const App = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -18,6 +22,10 @@ const App = () => {
   const handleChangeTabIndex = (event, newIndex) => {
     setTabIndex(newIndex);
   };
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   const getTabComponent = (tabIndex) => {
     switch (tabIndex) {
@@ -42,7 +50,7 @@ const App = () => {
       case 6: {
         return <About />;
       }
-      
+
       default: {
         return null;
       }
