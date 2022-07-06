@@ -11,21 +11,13 @@ import AppBar from "@mui/material/AppBar";
 import Link from "@mui/material/Link";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import ReactGA from "react-ga";
 
 import "./App.css";
-
-ReactGA.initialize("G-XSD3FL1WE4");
 
 const App = () => {
   const [tabIndex, setTabIndex] = useState(0);
 
   const handleChangeTabIndex = (event, newIndex) => {
-    ReactGA.event({
-      category: "navigation",
-      action: "Switched tab",
-      value: tabIndex,
-    });
     setTabIndex(newIndex);
   };
 
