@@ -20,12 +20,13 @@ const App = () => {
   const [tabIndex, setTabIndex] = useState(0);
 
   const handleChangeTabIndex = (event, newIndex) => {
+    ReactGA.event({
+      category: 'navigation',
+      action: 'Switched tab',
+      value: tabIndex
+    });
     setTabIndex(newIndex);
   };
-
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
 
   const getTabComponent = (tabIndex) => {
     switch (tabIndex) {

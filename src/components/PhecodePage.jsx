@@ -214,4 +214,5 @@ const PhecodePage = () => {
   );
 };
 
+PhecodePage.displayName = 'PhecodePage';
 export default PhecodePage;
