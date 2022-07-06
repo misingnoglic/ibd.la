@@ -8,6 +8,7 @@ import About from "./components/About";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import AppBar from "@mui/material/AppBar";
+import Link from "@mui/material/Link";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import ReactGA from "react-ga";
@@ -21,9 +22,9 @@ const App = () => {
 
   const handleChangeTabIndex = (event, newIndex) => {
     ReactGA.event({
-      category: 'navigation',
-      action: 'Switched tab',
-      value: tabIndex
+      category: "navigation",
+      action: "Switched tab",
+      value: tabIndex,
     });
     setTabIndex(newIndex);
   };
@@ -81,7 +82,12 @@ const App = () => {
         <div className="tabContent">{innerComponent}</div>
       </header>
       <div className="footer">
-        <p>© 2022</p>
+        <p>
+          © 2022 -{" "}
+          <Link href="https://github.com/misingnoglic/atlas-app">
+            Contribute on GitHub
+          </Link>
+        </p>
       </div>
     </div>
   );
