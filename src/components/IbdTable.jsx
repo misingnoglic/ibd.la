@@ -15,7 +15,7 @@ const IbdTable = (props) => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Group Name</TableCell>
+            <TableCell>Cluster Name</TableCell>
             <TableCell align="right">Mean IBD of iLASH reported (cM)</TableCell>
             <TableCell align="right">Mean IBD of all possible pairs (cM)</TableCell>
             <TableCell align="right">Proportion of pairs sharing IBD</TableCell>

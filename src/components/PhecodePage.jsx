@@ -185,7 +185,7 @@ const PhecodePage = () => {
           <div className={css.sectionHeader}>
             <Divider textAlign="left">Model</Divider>
           </div>
-          Logistic regression test: Phecode ~ Community Status + Age + Sex + BMI
+          Logistic regression test: Phecode ~ Cluster Status + Age + Sex + BMI
           <div className={css.sectionHeader}>
             <Divider textAlign="left">About</Divider>
           </div>
@@ -195,16 +195,16 @@ const PhecodePage = () => {
             <Link href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175508">
               phecode{" "}
             </Link>
-            and being a part of community 1, relative to community 2. Results
+            and being a part of cluster 1, relative to cluster 2. Results
             are displayed for phecodes that are FDR significant at 5%. We test
             phecodes with more than 30 individuals who recieved that phecodes.
-            For IBD community with more than 40 phecodes that meet this
+            For IBD cluster with more than 40 phecodes that meet this
             criteria, we display the 40 phecodes with largest absolute log odds
             ratio for this plot.{" "}
           </p>
           <p>
             <b>Note</b> that this plot does not demonstrate that belonging to a
-            IBD community is causal for the disease, as there are many factors
+            IBD cluster is causal for the disease, as there are many factors
             that could influence an individual receiving a diagnosis in a
             medical setting. For further discussion of this, see the FAQ page.
           </p>

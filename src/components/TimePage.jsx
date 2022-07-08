@@ -117,9 +117,9 @@ const PhecodePage = () => {
             <Divider textAlign="left">About</Divider>
           </div>
           <p>
-            This plot is the proportion of the selected IBD Community that received a phecode in a given year. For each year, the total 
-            number of unique individuals with a diagnosis in that year is divided by the total community size for that year. Phecodes 
-            with at least 30 diagnoses per IBD community are shown. 
+            This plot is the proportion of the selected IBD cluster that received a phecode in a given year. For each year, the total 
+            number of unique individuals with a diagnosis in that year is divided by the total cluster size for that year. Phecodes 
+            with at least 30 diagnoses per IBD cluster are shown. 
           </p>
         </Typography>
       </div>

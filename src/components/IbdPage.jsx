@@ -65,7 +65,7 @@ const IbdPage = () => {
       <div className={css.selectionForm}>
         <div className={css.selectionBox}>
           <FormControl>
-            <InputLabel id="community-selection">Community</InputLabel>
+            <InputLabel id="community-selection">Cluster</InputLabel>
             <Select
               labelId="community-selection"
               value={primaryGroup}

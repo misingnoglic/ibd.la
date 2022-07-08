@@ -82,7 +82,7 @@ const DeptPage = () => {
       <div className={css.selectionForm}>
         <div className={css.selectionBox}>
           <FormControl>
-            <InputLabel id="group1-selection">Community 1</InputLabel>
+            <InputLabel id="group1-selection">Cluster 1</InputLabel>
             <Select
               labelId="group1-selection"
               value={firstGroupLabel}
@@ -95,7 +95,7 @@ const DeptPage = () => {
         </div>
         <div className={css.selectionBox}>
           <FormControl>
-            <InputLabel id="group2-selection">Community 2</InputLabel>
+            <InputLabel id="group2-selection">Cluster 2</InputLabel>
             <Select
               labelId="group2-selection"
               value={secondGroupLabel}
@@ -115,21 +115,21 @@ const DeptPage = () => {
           <div className={css.sectionHeader}>
             <Divider textAlign="left">Model</Divider>
           </div>
-          Logistic regression test: Specialty ~ Community Status + Age + Sex + BMI
+          Logistic regression test: Specialty ~ Cluster Status + Age + Sex + BMI
           <div className={css.sectionHeader}>
             <Divider textAlign="left">About</Divider>
           </div>
           <p>
             This plot is the result of a statistical test for the association
             between visitng a physician with a particular specialty
-            and being a part of community 1, relative to community 2. Results
+            and being a part of cluster 1, relative to cluster 2. Results
             are displayed for specialities that are FDR significant at 5%. We test
             specialities with more than 30 individuals who recieved visited a practitioner
             with that specialty.
           </p>
           <p>
             <b>Note</b> that this plot does not demonstrate that belonging to an
-            IBD community is causal for seeing a medical provider with a particular specialty.
+            IBD cluster is causal for seeing a medical provider with a particular specialty.
           </p>
         </Typography>
       </div>

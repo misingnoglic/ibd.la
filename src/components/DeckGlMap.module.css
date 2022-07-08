@@ -1,5 +1,8 @@
 .mapPageContainer {
     width: 80%;
+    background-color: #fff;
+    padding: 0 80px;
+
 }
 
 .deckGlContainer {
@@ -26,3 +29,12 @@
     text-align: center;
     
 }
+
+.bodyText {
+    padding-top: 30px ;
+    padding-bottom: 0px;
+    padding-right: 200px;
+    padding-left: 200px;
+    width: 80%;
+    text-align: justify
+  }
