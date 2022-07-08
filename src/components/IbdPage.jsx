@@ -86,7 +86,7 @@ const IbdPage = () => {
             We calculated two types of IBD summary metrics. First, we calculated
             the average amount of total IBD shared between an individual of one
             cluster and an individual in a second cluster. We refer to this as
-            the <b>"mean IBD of all iLASH detected segments,"</b> as iLASH only
+            the <b>"mean IBD of iLASH reported,"</b> as iLASH only
             reports IBD that is present and that is greater than 3cM. This
             metric is the same as many other group IBD averages reported in the
             literature.

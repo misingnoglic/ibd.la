@@ -15,7 +15,7 @@ const BarPlot = (props) => {
       type: "log",
       automargin: true,
       title: {
-        text: "log IBD (cM)",
+        text: "mean IBD of all possible pairs (cM)",
         font: {
           size: 16,
           color: "#7f7f7f",
