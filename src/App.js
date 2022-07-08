@@ -1,12 +1,6 @@
 import React, { useState } from "react";
-import PhecodePage from "./components/PhecodePage";
-import DeptPage from "./components/DepartmentPage";
-import TimePage from "./components/TimePage";
-import IbdPage from "./components/IbdPage";
-import DeckGlMap from "./components/DeckGlMap";
-import About from "./components/About";
-import Home from "./components/Home";
-import Contact from "./components/Contact";
+import AppRouter from "./components/AppRouter";
+
 import AppBar from "@mui/material/AppBar";
 import Link from "@mui/material/Link";
 import Tabs from "@mui/material/Tabs";
@@ -17,41 +11,28 @@ import "./App.css";
 const App = () => {
   const [tabIndex, setTabIndex] = useState(0);
 
-  const handleChangeTabIndex = (event, newIndex) => {
-    setTabIndex(newIndex);
+  const changeRoute = (path) => {
+    const { CustomEvent } = window;
+    const event = new CustomEvent("changeroute", { detail: path });
+    window.dispatchEvent(event);
   };
 
-  const getTabComponent = (tabIndex) => {
-    switch (tabIndex) {
-      case 0: {
-        return <Home />;
-      }
-      case 1: {
-        return <PhecodePage />;
-      }
-      case 2: {
-        return <DeptPage />;
-      }
-      case 3: {
-        return <DeckGlMap />;
-      }
-      case 4: {
-        return <IbdPage />;
-      }
-      case 5: {
-        return <TimePage />;
-      }
-      case 6: {
-        return <About />;
-      }
-
-      default: {
-        return null;
-      }
-    }
+  const handleChangeTabIndex = (unusedEvent, newIndex) => {
+    changeRoute(getTabUrl(newIndex));
   };
 
-  const innerComponent = getTabComponent(tabIndex);
+  const getTabUrl = (tabIndex) => {
+    const tabUrls = [
+      "",
+      "phecodes",
+      "specialties",
+      "zipcodes",
+      "genetics",
+      "time",
+      "about",
+    ];
+    return tabUrls[tabIndex];
+  };
 
   return (
     <div className="App">
@@ -71,7 +52,9 @@ const App = () => {
             <Tab label="FAQ" />
           </Tabs>
         </AppBar>
-        <div className="tabContent">{innerComponent}</div>
+        <div className="tabContent">
+          <AppRouter />
+        </div>
       </header>
       <div className="footer">
         <p>
