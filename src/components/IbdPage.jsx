@@ -23,10 +23,8 @@ const IbdPage = () => {
   let graph;
   if (primaryGroup) {
     const groups = Object.keys(barData[primaryGroup]);
-    const y = groups.map((group) => barData[primaryGroup][group].no_zero);
-    const error = groups.map(
-      (group) => barData[primaryGroup][group].no_zero_se
-    );
+    const y = groups.map((group) => barData[primaryGroup][group].zero);
+    const error = groups.map((group) => barData[primaryGroup][group].zero_se);
     const x = groups.map((group) => groupNameMap[group]);
     graph = (
       <BarPlot
@@ -88,22 +86,30 @@ const IbdPage = () => {
             We calculated two types of IBD summary metrics. First, we calculated
             the average amount of total IBD shared between an individual of one
             cluster and an individual in a second cluster. We refer to this as
-            the "Mean IBD of all iLASH detected segments," as iLASH only reports
-            IBD that is present and that is greater than 3cM. This metric is the
-            same as many other group IBD averages reported in the literature.
+            the <b>"mean IBD of all iLASH detected segments,"</b> as iLASH only
+            reports IBD that is present and that is greater than 3cM. This
+            metric is the same as many other group IBD averages reported in the
+            literature.
           </p>
 
           <p>
-            We defined a second metric, which we call the "mean IBD of all
-            possible pairs." For every cluster, there might be many pairs of
-            people who do not share any IBD, and thus, would not be reported by
-            iLASH. This observation bias means that the first metric could be
-            biased upwards and not be an accurate representation of the actual
-            amount of relatedness between two clusters. Therefore, we find all
-            possible pairs of individuals between two clusters. We set their IBD
-            sharing to be the total IBD estimated by iLASH. If the pair had no
-            estimated sharing, we assign that pair a 0. We then take the average
-            of this vector for our second metric. 
+            We defined a second metric, which we call the{" "}
+            <b>"mean IBD of all possible pairs."</b> For every cluster, there
+            might be many pairs of people who do not share any IBD, and thus,
+            would not be reported by iLASH. This observation bias means that the
+            first metric could be biased upwards and not be an accurate
+            representation of the actual amount of relatedness between two
+            clusters. Therefore, we find all possible pairs of individuals
+            between two clusters. We set their IBD sharing to be the total IBD
+            estimated by iLASH. If the pair had no estimated sharing, we assign
+            that pair a 0. We then take the average of this vector for our
+            second metric.
+          </p>
+
+          <p>
+            <b>The "proportion of pairs sharing IBD"</b> refers to the
+            proportion of all possible pairs of individuals between two clusters
+            that share any IBD detected by iLASH (greater than 3cM).
           </p>
         </Typography>
       </div>
