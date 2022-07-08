@@ -752,7 +752,7 @@ const About = () => {
           {" "}
           <a name="section14">
             <Typography variant="h6">
-              Does a PheCode association in a genetic ancestry community mean
+              Does a PheCode association in a genetic ancestry cluster mean
               the disease is genetic?{" "}
             </Typography>
           </a>{" "}

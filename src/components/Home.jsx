@@ -42,10 +42,10 @@ const Home = () => {
             </p>  
 
             <p>
-              We then explore how each community interacts with the health
+              We then explore how each cluster interacts with the health
               system. For this analysis, we considered what diagnoses, in the
               form of PheCodes, were more likley to be recieved by a cluster,
-              and what medical specialties the community was more or less likely
+              and what medical specialties the cluster was more or less likely
               to visit. We also examined whether there were Los Angeles zipcodes
               where members of a cluster were more likely to visit a doctor's
               office. Lastly, we examined properties of genetic sharing within
