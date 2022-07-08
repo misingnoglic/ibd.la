@@ -18,10 +18,12 @@ const IbdTable = (props) => {
             <TableCell>Group Name</TableCell>
             <TableCell align="right">Mean IBD of all iLASH detected segments (cM)</TableCell>
             <TableCell align="right">Mean IBD of all possible pairs (cM)</TableCell>
+            <TableCell align="right">Proportion of pairs sharing IBD</TableCell>
+
           </TableRow>
         </TableHead>
         <TableBody>
-          {Object.entries(props.data).map(([groupName, { no_zero,  zero }]) => (
+          {Object.entries(props.data).map(([groupName, { no_zero,  zero, prop }]) => (
             <TableRow
               key={groupName}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -31,6 +33,8 @@ const IbdTable = (props) => {
               </TableCell>
               <TableCell align="right">{no_zero.toFixed(4)}</TableCell>
               <TableCell align="right">{zero.toFixed(4)}</TableCell>
+              <TableCell align="right">{prop.toFixed(4)}</TableCell>
+
             </TableRow>
           ))}
         </TableBody>

@@ -11,6 +11,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Skeleton from "@mui/material/Skeleton";
 import css from "./IbdPage.module.css";
+import Divider from "@mui/material/Divider";
 
 const IbdPage = () => {
   const [primaryGroup, setPrimaryGroup] = useState("group3");
@@ -22,8 +23,10 @@ const IbdPage = () => {
   let graph;
   if (primaryGroup) {
     const groups = Object.keys(barData[primaryGroup]);
-    const y = groups.map((group) => barData[primaryGroup][group].zero);
-    const error = groups.map((group) => barData[primaryGroup][group].zero_se);
+    const y = groups.map((group) => barData[primaryGroup][group].no_zero);
+    const error = groups.map(
+      (group) => barData[primaryGroup][group].no_zero_se
+    );
     const x = groups.map((group) => groupNameMap[group]);
     graph = (
       <BarPlot
@@ -58,9 +61,7 @@ const IbdPage = () => {
         <Typography variant="h2">Identity by Descent</Typography>
       </div>
       <div>
-        <Typography variant="h5">
-        {groupNameMap[primaryGroup]}
-        </Typography>
+        <Typography variant="h5">{groupNameMap[primaryGroup]}</Typography>
       </div>
       <div className={css.graph}>{graph}</div>
       <div className={css.selectionForm}>
@@ -77,6 +78,34 @@ const IbdPage = () => {
             </Select>
           </FormControl>
         </div>
+      </div>
+      <div className={css.bodyText}>
+        <Typography variant="body1" gutterBottom>
+          <div className={css.sectionHeader}>
+            <Divider textAlign="left">About</Divider>
+          </div>
+          <p>
+            We calculated two types of IBD summary metrics. First, we calculated
+            the average amount of total IBD shared between an individual of one
+            cluster and an individual in a second cluster. We refer to this as
+            the "Mean IBD of all iLASH detected segments," as iLASH only reports
+            IBD that is present and that is greater than 3cM. This metric is the
+            same as many other group IBD averages reported in the literature.
+          </p>
+
+          <p>
+            We defined a second metric, which we call the "mean IBD of all
+            possible pairs." For every cluster, there might be many pairs of
+            people who do not share any IBD, and thus, would not be reported by
+            iLASH. This observation bias means that the first metric could be
+            biased upwards and not be an accurate representation of the actual
+            amount of relatedness between two clusters. Therefore, we find all
+            possible pairs of individuals between two clusters. We set their IBD
+            sharing to be the total IBD estimated by iLASH. If the pair had no
+            estimated sharing, we assign that pair a 0. We then take the average
+            of this vector for our second metric. 
+          </p>
+        </Typography>
       </div>
       <IbdTable data={barData[primaryGroup]} />
     </div>
