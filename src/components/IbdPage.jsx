@@ -55,7 +55,7 @@ const IbdPage = () => {
   return (
     <div className={css.barplotBox}>
       <div>
-        <Typography variant="h2">Phecode Diagnoses</Typography>
+        <Typography variant="h2">Identity by Descent</Typography>
       </div>
       <div>
         <Typography variant="h5">
