@@ -192,15 +192,19 @@ const PhecodePage = () => {
           <p>
             This plot is the result of a statistical test for the association
             between being assigned a{" "}
-            <Link href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175508">
+            <Link
+              href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175508"
+              rel="noopener"
+              target="_blank"
+            >
               phecode{" "}
             </Link>
-            and being a part of cluster 1, relative to cluster 2. Results
-            are displayed for phecodes that are FDR significant at 5%. We test
+            and being a part of cluster 1, relative to cluster 2. Results are
+            displayed for phecodes that are FDR significant at 5%. We test
             phecodes with more than 30 individuals who recieved that phecodes.
-            For IBD cluster with more than 40 phecodes that meet this
-            criteria, we display the 40 phecodes with largest absolute log odds
-            ratio for this plot.{" "}
+            For IBD cluster with more than 40 phecodes that meet this criteria,
+            we display the 40 phecodes with largest absolute log odds ratio for
+            this plot.{" "}
           </p>
           <p>
             <b>Note</b> that this plot does not demonstrate that belonging to a
@@ -214,5 +218,5 @@ const PhecodePage = () => {
   );
 };
 
-PhecodePage.displayName = 'PhecodePage';
+PhecodePage.displayName = "PhecodePage";
 export default PhecodePage;
