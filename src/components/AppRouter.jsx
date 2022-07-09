@@ -5,6 +5,7 @@ import {
   Route,
   useNavigate,
 } from "react-router-dom";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const PhecodePage = lazy(() => import("./PhecodePage"));
 const DeptPage = lazy(() => import("./DepartmentPage"));
@@ -14,11 +15,19 @@ const DeckGlMap = lazy(() => import("./DeckGlMap"));
 const About = lazy(() => import("./About"));
 const Home = lazy(() => import("./Home"));
 
+import css from "./AppRouter.module.css";
+
 const AppRouter = (props) => {
   return (
     <Router>
       <AppRouterListener />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense
+        fallback={
+          <div className={css.loadingIndicator}>
+            <CircularProgress color="inherit" />
+          </div>
+        }
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
