@@ -23,49 +23,47 @@ const Home = () => {
         <div className={css.homeBodyText}>
           <Typography variant="body1" gutterBottom>
             <p>
-              This browser explores population health in Los Angeles within the
+              This browser explores health in Los Angeles within the
               UCLA health system. The data is apart of the{" "}
               <Link href="https://www.uclahealth.org/precision-health/atlas">
                 UCLA ATLAS Community Health Initiative.
               </Link>{" "}
               Here, we explore several aspects of health that may be of interest
-              to researchers and community members.{" "}
+              to researchers and community members, particularly those who have an 
+              interest in studying health disparities.{" "}
             </p>
 
             <p>
-              We first identify fine-scale populations using an unsupervised
-              machine learning approach over genotyping data that is a part of
-              the ATLAS intiative. This found hundreds of clusters of patients.
-              Here, we focus on the 21 largest clusters, representing 97% of our
-              sample. ATLAS data is connected to electronic health record (EHR)
-              data. We use the EHR data to learn about who might be making up
-              the clusters. This data involved demographic data, such as
-              self-reported race and ethnicity, preferred language, and
-              preferred religion.
-            </p>
+              We identified clusters of related individuals using an unsupervised
+              machine learning approach and genotyping data. This found hundreds 
+              of clusters of patients, representing many understudied groups in the 
+              context of Southern California. Here, we focus on the 21 largest clusters, 
+              representing 97% of our sample.
+            </p>  
 
             <p>
-              We then explore how each community interacts with the health
+              We then explore how each cluster interacts with the health
               system. For this analysis, we considered what diagnoses, in the
               form of PheCodes, were more likley to be recieved by a cluster,
-              and what medical specialties the community was more or less likely
+              and what medical specialties the cluster was more or less likely
               to visit. We also examined whether there were Los Angeles zipcodes
-              where members of a community were more likely to visit a doctor's
+              where members of a cluster were more likely to visit a doctor's
               office. Lastly, we examined properties of genetic sharing within
-              the community, something that might be useful to know about when
-              studying the population's genetic risk for disease.
+              the cluster, something that might be useful for researchers seeking to
+              learn about genetic risk for disease.
             </p>
 
             <p>
               <b>
-                Note: the results presented here are not evidence of genetic
-                cause for population-disease associations.{" "}
+                Note: These results are only <i>correlations</i>. They do not indicate that 
+                cluster membership or genetics is the cause of the results reported here.{" "}
               </b>
-              Health is a complex phenomenon that is strongly influenced by
-              environmental and sociocultural factors. The explicit goal of this
-              research is to advance the study of health disparities, especially
-              for groups understudied in biomedical research. Please see our FAQ
-              page for a full discussion of what these results do or do not
+              Health is a complex phenomenon that is strongly influenced by structural factors 
+              like the environment, socioeconomic status, race, sex, diasbility and other
+              and sociocultural factors. The explicit goal of this
+              research is to provide opportunities to identity differences in health 
+              outcomes within the UCLA Health System. Please see our FAQ page for a full discussion of what these 
+              results do or do not
               mean.
             </p>
 
