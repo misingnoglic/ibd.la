@@ -18,6 +18,7 @@ const App = () => {
   };
 
   const handleChangeTabIndex = (unusedEvent, newIndex) => {
+    setTabIndex(newIndex);
     changeRoute(getTabUrl(newIndex));
   };
 

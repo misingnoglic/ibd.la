@@ -5,7 +5,6 @@ import {
   Route,
   useNavigate,
 } from "react-router-dom";
-import { useHistory } from "react-router";
 
 const PhecodePage = lazy(() => import("./PhecodePage"));
 const DeptPage = lazy(() => import("./DepartmentPage"));
