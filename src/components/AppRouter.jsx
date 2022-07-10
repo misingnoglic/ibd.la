@@ -49,8 +49,13 @@ const AppRouterListener = (props) => {
   useEffect(() => {
     navigate(curRoute);
     document.title = `${pageTitlePrefix} - ${pageTitles[curRoute]}`;
-    window.ga("set", "page", location.pathname + location.search);
-    window.ga("send", "pageview");
+    try {
+      window.ga("set", "page", location.pathname + location.search);
+      window.ga("send", "pageview");
+    }
+    catch {
+      // Sometimes Google Analytics hasn't loaded yet, that's ok.
+    }
   }, [curRoute]);
 
   window.addEventListener(
