@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 
+import { pageTitlePrefix, pageTitles } from "../constants";
 const PhecodePage = lazy(() => import("./PhecodePage"));
 const DeptPage = lazy(() => import("./DepartmentPage"));
 const TimePage = lazy(() => import("./TimePage"));
@@ -47,6 +48,9 @@ const AppRouterListener = (props) => {
   const navigate = useNavigate();
   useEffect(() => {
     navigate(curRoute);
+    document.title = `${pageTitlePrefix} - ${pageTitles[curRoute]}`;
+    window.ga("set", "page", location.pathname + location.search);
+    window.ga("send", "pageview");
   }, [curRoute]);
 
   window.addEventListener(

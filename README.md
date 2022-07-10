@@ -1,7 +1,7 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/85b336c9-e4d1-4ae5-8346-20e9f5f455d9/deploy-status)](https://app.netlify.com/sites/ucla-atlas/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/85b336c9-e4d1-4ae5-8346-20e9f5f455d9/deploy-status)](https://app.netlify.com/sites/ibd-la/deploys)
 
 
-# Introducion
+# Introduction
 
 This is the repo for the source code backing [ibd.la](https://ibd.la). See the website for details about the purpose of the website.
 
@@ -24,7 +24,10 @@ There is currently no backend. This is due to the fact that the data is not expe
 
 ## First Time Setup
 
+TODO: Make a docker image to run this app. For now, here's the instructions to install: 
+
 - Clone the repo from GitHub.
+- Install npm on your device
 - Run `npm i` to install all the dependencies.
 
 ## Running the App

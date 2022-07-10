@@ -45,8 +45,7 @@ const About = () => {
         </Typography>
 
         <div className={css.titleText}>
-          {" "}
-          <Typography variant="h4">Table of Contents </Typography>{" "}
+          <Typography variant="h4">Table of Contents</Typography>
         </div>
         <Typography variant="body1" gutterBottom>
           <p>
@@ -77,7 +76,7 @@ const About = () => {
           </p>
           <p>
             <a href="#section9">
-              Why is identity-by-descent a useful thing to study?{" "}
+              Why is identity-by-descent a useful thing to study?
             </a>
           </p>
           <p>
@@ -96,7 +95,7 @@ const About = () => {
           <p>
             <a href="#section13">
               What does it mean for a PheCode to have a higher or lower odds
-              ratio in a community?{" "}
+              ratio in a community?
             </a>
           </p>
           <p>
@@ -146,10 +145,9 @@ const About = () => {
 
         <div className={css.titleText}>
           <a name="section2">
-            {" "}
             <Typography variant="h6">
-              What are limitations to this study?{" "}
-            </Typography>{" "}
+              What are limitations to this study?
+            </Typography>
           </a>
         </div>
         <Typography variant="body1" gutterBottom>
@@ -179,10 +177,9 @@ const About = () => {
 
         <div className={css.titleText}>
           <a name="section3">
-            {" "}
             <Typography variant="h6">
-              How is this study useful?{" "}
-            </Typography>{" "}
+              How is this study useful?
+            </Typography>
           </a>
         </div>
         <Typography variant="body1" gutterBottom>
@@ -205,15 +202,13 @@ const About = () => {
 
         <div className={css.titleText}>
           <a name="section4">
-            {" "}
             <Typography variant="h6">
-              What is a health disparity?{" "}
-            </Typography>{" "}
+              What is a health disparity?
+            </Typography>
           </a>
         </div>
         <Typography variant="body1" gutterBottom>
           <p>
-            {" "}
             <Link href="https://www.healthypeople.gov/2020/about/foundation-health-measures/Disparities">
               Health disparities are differences in the health outcomes
             </Link>{" "}
