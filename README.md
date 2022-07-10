@@ -22,22 +22,21 @@ There is currently no backend. This is due to the fact that the data is not expe
 
 # Running Locally
 
-`npm start`
+## First Time Setup
 
-Runs the app in the development mode.\
+- Clone the repo from GitHub.
+- Run `npm i` to install all the dependencies.
+
+## Running the App
+
+To run the app locally in development mode, run the following command:
+
+* `npm start`
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-## How to analyze the build 
-
-From [This page](https://create-react-app.dev/docs/analyzing-the-bundle-size/)
-
-If the build is getting slower, try analyzing the build to see what is causing it to bloat. Then run the following commands.
-
-- `npm run build`
-- `npm run analyze`
 
 # Deployment
 
@@ -47,9 +46,20 @@ The app is automatically deployed to ibd.la once a new version hits the main bra
 
 If you would like to take on fixing up something on the website, we are very open to suggestions. Please contact us via issue first with your proposal, and let's have a discussion before getting into the code.
 
-When writing the code, please use prettier to format your JS code. This is done by running `npx prettier --write path/to/Component.jsx`. There are currently no unit or snapshot tests, but if you add those to your code or our code we will be thankful for it.
+When writing the code, please use prettier to format your JS code. This is done by running `npx prettier --write path/to/Component.jsx`. There are currently no unit or snapshot tests, but if you add those to your code or our code we will be thankful for it. Additionally, run eslint and make sure there aren't any really bad lint errors.
 
 After that, just submit a pull request, include any appropriate screen recordings or screenshots, and we will merge it into production after testing.
+
+# Debugging 
+
+## How to analyze the build 
+
+From [This page](https://create-react-app.dev/docs/analyzing-the-bundle-size/)
+
+If the build is getting slower, try analyzing the build to see what is causing it to bloat. Then run the following commands.
+
+- `npm run build`
+- `npm run analyze`
 
 # Useful Links
 
