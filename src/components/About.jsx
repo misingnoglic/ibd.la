@@ -777,10 +777,9 @@ const About = () => {
         </Typography>
 
         <div className={css.titleText}>
-          {" "}
           <a name="section15">
             <Typography variant="h6">Further Reading </Typography>
-          </a>{" "}
+          </a>
         </div>
         <Typography variant="body1" gutterBottom>
           <p>
@@ -843,14 +842,14 @@ const About = () => {
           </p>
           <ul>
             <li>
-              Mathieson and Scally,
+              Mathieson and Scally,{" "}
               <Link href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7082057/">
                 What is Ancestry?
               </Link>{" "}
               , PLoS Genetics, 2020
             </li>
             <li>
-              Borell et al,
+              Borell et al,{" "}
               <Link href="https://www.nejm.org/doi/full/10.1056/NEJMms2029562#:~:text=Genetic%20ancestry%20is%20the%20genetic,ancestry%20is%20a%20better%20predictor">
                 Race and Genetic Ancestry in Medicine — A Time for Reckoning
                 with Racism
@@ -858,14 +857,14 @@ const About = () => {
               , NEJM, 2021
             </li>
             <li>
-              Lewis et al,
+              Lewis et al,{" "}
               <Link href="https://www.science.org/doi/10.1126/science.abm7530">
                 Getting genetic ancestry right for science and society
               </Link>{" "}
               , Science, 2022
             </li>
             <li>
-              Burchard et al,
+              Burchard et al,{" "}
               <Link href="https://doi.org/10.1056/NEJMsb025007">
                 The Importance of Race and Ethnic Background in Biomedical
                 Research and Clinical Practice
@@ -881,7 +880,7 @@ const About = () => {
               , ArXiv, 2021
             </li>
             <li>
-              Yaeger et al,
+              Yaeger et al,{" "}
               <Link href="http://cebp.aacrjournals.org/cgi/doi/10.1158/1055-9965.EPI-07-2505">
                 Comparing Genetic Ancestry and Self-Described Race in African
                 Americans Born in the United States and in Africa
@@ -889,7 +888,7 @@ const About = () => {
               , CEBP, 2008
             </li>
             <li>
-              Yudell et al,
+              Yudell et al,{" "}
               <Link href="https://www.science.org/doi/abs/10.1126/science.aac4951">
                 Taking race out of human genetics
               </Link>{" "}
