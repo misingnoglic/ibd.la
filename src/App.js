@@ -43,7 +43,9 @@ const App = () => {
             value={tabIndex}
             onChange={handleChangeTabIndex}
             style={{ backgroundColor: "#C7CEEA", color: "white" }}
-          >
+            variant="scrollable"
+            scrollButtons="auto"
+            >
             <Tab label="Home" />
             <Tab label="PheCodes" />
             <Tab label="Specialties" />
