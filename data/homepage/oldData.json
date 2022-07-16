@@ -1,0 +1,1541 @@
+{
+    "directed": false,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "id": "European Non-Jewish"
+      },
+      {
+        "id": "Mexican"
+      },
+      {
+        "id": "Ashkenazi Jewish"
+      },
+      {
+        "id": "Black/African American I"
+      },
+      {
+        "id": "Chinese"
+      },
+      {
+        "id": "Filipino"
+      },
+      {
+        "id": "Japanese"
+      },
+      {
+        "id": "Korean"
+      },
+      {
+        "id": "Armenian"
+      },
+      {
+        "id": "Iranian Muslim"
+      },
+      {
+        "id": "Punjabi/Bengali"
+      },
+      {
+        "id": "Puerto Rican"
+      },
+      {
+        "id": "Telugu"
+      },
+      {
+        "id": "Vietnamese"
+      },
+      {
+        "id": "Iranian Jewish"
+      },
+      {
+        "id": "Lebanese Christian"
+      },
+      {
+        "id": "Sindhi Muslim"
+      },
+      {
+        "id": "Egyptian Christian"
+      },
+      {
+        "id": "Pakistani"
+      },
+      {
+        "id": "Arab Muslim"
+      },
+      {
+        "id": "Pacific Islander"
+      },
+      {
+        "id": "Gujrati II"
+      },
+      {
+        "id": "Black/African American II"
+      },
+      {
+        "id": "Black/African American III"
+      }
+    ],
+    "links": [
+      {
+        "weight": 0.22869900094830986,
+        "source": "European Non-Jewish",
+        "target": "European Non-Jewish"
+      },
+      {
+        "weight": 0.037223822250274416,
+        "source": "European Non-Jewish",
+        "target": "Mexican"
+      },
+      {
+        "weight": 0.14714054467022591,
+        "source": "European Non-Jewish",
+        "target": "Ashkenazi Jewish"
+      },
+      {
+        "weight": 0.05853901357722796,
+        "source": "European Non-Jewish",
+        "target": "Black/African American I"
+      },
+      {
+        "weight": 0.00156323999739077,
+        "source": "European Non-Jewish",
+        "target": "Chinese"
+      },
+      {
+        "weight": 0.008718429383947417,
+        "source": "European Non-Jewish",
+        "target": "Filipino"
+      },
+      {
+        "weight": 0.0035179313116808237,
+        "source": "European Non-Jewish",
+        "target": "Japanese"
+      },
+      {
+        "weight": 0.00172585863177977,
+        "source": "European Non-Jewish",
+        "target": "Korean"
+      },
+      {
+        "weight": 0.0111101303823767,
+        "source": "European Non-Jewish",
+        "target": "Armenian"
+      },
+      {
+        "weight": 0.007719887445887452,
+        "source": "European Non-Jewish",
+        "target": "Iranian Muslim"
+      },
+      {
+        "weight": 0.005795277395560413,
+        "source": "European Non-Jewish",
+        "target": "Punjabi/Bengali"
+      },
+      {
+        "weight": 0.049491752367322235,
+        "source": "European Non-Jewish",
+        "target": "Puerto Rican"
+      },
+      {
+        "weight": 0.0034630649806289176,
+        "source": "European Non-Jewish",
+        "target": "Telugu"
+      },
+      {
+        "weight": 0.0008107279186196419,
+        "source": "European Non-Jewish",
+        "target": "Vietnamese"
+      },
+      {
+        "weight": 0.00937443344216667,
+        "source": "European Non-Jewish",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.04969193530616573,
+        "source": "European Non-Jewish",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.012834692072633241,
+        "source": "European Non-Jewish",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.005265414994212948,
+        "source": "European Non-Jewish",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.0076169312128819625,
+        "source": "European Non-Jewish",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.002657690779808428,
+        "source": "European Non-Jewish",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.12220881132236748,
+        "source": "European Non-Jewish",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.0031802155910484373,
+        "source": "European Non-Jewish",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.07647141091186341,
+        "source": "European Non-Jewish",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.00368803786542116,
+        "source": "European Non-Jewish",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 0.9207519185315236,
+        "source": "Mexican",
+        "target": "Mexican"
+      },
+      {
+        "weight": 0.2434501675139744,
+        "source": "Mexican",
+        "target": "Ashkenazi Jewish"
+      },
+      {
+        "weight": 0.0178801032669679,
+        "source": "Mexican",
+        "target": "Black/African American I"
+      },
+      {
+        "weight": 0.0015661955768641706,
+        "source": "Mexican",
+        "target": "Chinese"
+      },
+      {
+        "weight": 0.016738140345761727,
+        "source": "Mexican",
+        "target": "Filipino"
+      },
+      {
+        "weight": 0.002030219733753143,
+        "source": "Mexican",
+        "target": "Japanese"
+      },
+      {
+        "weight": 0.0008642224603928313,
+        "source": "Mexican",
+        "target": "Korean"
+      },
+      {
+        "weight": 0.003700383358058217,
+        "source": "Mexican",
+        "target": "Armenian"
+      },
+      {
+        "weight": 0.0024363931138545953,
+        "source": "Mexican",
+        "target": "Iranian Muslim"
+      },
+      {
+        "weight": 0.002324321458705385,
+        "source": "Mexican",
+        "target": "Punjabi/Bengali"
+      },
+      {
+        "weight": 0.2271615985310929,
+        "source": "Mexican",
+        "target": "Puerto Rican"
+      },
+      {
+        "weight": 0.001204024768891274,
+        "source": "Mexican",
+        "target": "Telugu"
+      },
+      {
+        "weight": 0.0007157962780873304,
+        "source": "Mexican",
+        "target": "Vietnamese"
+      },
+      {
+        "weight": 0.019858867468742623,
+        "source": "Mexican",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.019003542785200226,
+        "source": "Mexican",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.008231193818762072,
+        "source": "Mexican",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.004066896994095545,
+        "source": "Mexican",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.003026689533288673,
+        "source": "Mexican",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.005031662269253379,
+        "source": "Mexican",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.0456033885895997,
+        "source": "Mexican",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.0019004653872794687,
+        "source": "Mexican",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.049124341711512094,
+        "source": "Mexican",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.0055407067820687425,
+        "source": "Mexican",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 24.152527097960697,
+        "source": "Ashkenazi Jewish",
+        "target": "Ashkenazi Jewish"
+      },
+      {
+        "weight": 0.04061681198973244,
+        "source": "Ashkenazi Jewish",
+        "target": "Black/African American I"
+      },
+      {
+        "weight": 0.0011533965818561751,
+        "source": "Ashkenazi Jewish",
+        "target": "Chinese"
+      },
+      {
+        "weight": 0.01427685027842168,
+        "source": "Ashkenazi Jewish",
+        "target": "Filipino"
+      },
+      {
+        "weight": 0.0022202586939235767,
+        "source": "Ashkenazi Jewish",
+        "target": "Japanese"
+      },
+      {
+        "weight": 0.0010159573452227435,
+        "source": "Ashkenazi Jewish",
+        "target": "Korean"
+      },
+      {
+        "weight": 0.009821660393774705,
+        "source": "Ashkenazi Jewish",
+        "target": "Armenian"
+      },
+      {
+        "weight": 0.009455566603880205,
+        "source": "Ashkenazi Jewish",
+        "target": "Iranian Muslim"
+      },
+      {
+        "weight": 0.004723115926319494,
+        "source": "Ashkenazi Jewish",
+        "target": "Punjabi/Bengali"
+      },
+      {
+        "weight": 0.2127489849717984,
+        "source": "Ashkenazi Jewish",
+        "target": "Puerto Rican"
+      },
+      {
+        "weight": 0.0019411631124068788,
+        "source": "Ashkenazi Jewish",
+        "target": "Telugu"
+      },
+      {
+        "weight": 0.00015318567401823916,
+        "source": "Ashkenazi Jewish",
+        "target": "Vietnamese"
+      },
+      {
+        "weight": 0.41388062687684535,
+        "source": "Ashkenazi Jewish",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.029750312969017024,
+        "source": "Ashkenazi Jewish",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.012723814911913149,
+        "source": "Ashkenazi Jewish",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.013302720892332136,
+        "source": "Ashkenazi Jewish",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.0044775176422660965,
+        "source": "Ashkenazi Jewish",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.00972942222102629,
+        "source": "Ashkenazi Jewish",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.06475757769824828,
+        "source": "Ashkenazi Jewish",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.0009643251045767602,
+        "source": "Ashkenazi Jewish",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.07251823613505852,
+        "source": "Ashkenazi Jewish",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.0034775710285830327,
+        "source": "Ashkenazi Jewish",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 0.3016849711234533,
+        "source": "Black/African American I",
+        "target": "Black/African American I"
+      },
+      {
+        "weight": 0.0005889389871946731,
+        "source": "Black/African American I",
+        "target": "Chinese"
+      },
+      {
+        "weight": 0.005404336486642055,
+        "source": "Black/African American I",
+        "target": "Filipino"
+      },
+      {
+        "weight": 0.002118653856468089,
+        "source": "Black/African American I",
+        "target": "Japanese"
+      },
+      {
+        "weight": 0.0013385796542296276,
+        "source": "Black/African American I",
+        "target": "Korean"
+      },
+      {
+        "weight": 0.002288600271048289,
+        "source": "Black/African American I",
+        "target": "Armenian"
+      },
+      {
+        "weight": 0.0016711147931095722,
+        "source": "Black/African American I",
+        "target": "Iranian Muslim"
+      },
+      {
+        "weight": 0.0014741748508090324,
+        "source": "Black/African American I",
+        "target": "Punjabi/Bengali"
+      },
+      {
+        "weight": 0.03696692472473806,
+        "source": "Black/African American I",
+        "target": "Puerto Rican"
+      },
+      {
+        "weight": 0.001020561410823624,
+        "source": "Black/African American I",
+        "target": "Telugu"
+      },
+      {
+        "weight": 0.00025183002437517975,
+        "source": "Black/African American I",
+        "target": "Vietnamese"
+      },
+      {
+        "weight": 0.002331943540478267,
+        "source": "Black/African American I",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.01214546106071332,
+        "source": "Black/African American I",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.0035297857523403603,
+        "source": "Black/African American I",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.0013387414004771725,
+        "source": "Black/African American I",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.007035293702221506,
+        "source": "Black/African American I",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.003009611385950225,
+        "source": "Black/African American I",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.03712809669685669,
+        "source": "Black/African American I",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.0007747380220174392,
+        "source": "Black/African American I",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.1850768673415024,
+        "source": "Black/African American I",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.10709201914162256,
+        "source": "Black/African American I",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 0.2557546016151926,
+        "source": "Chinese",
+        "target": "Chinese"
+      },
+      {
+        "weight": 0.12665035617407427,
+        "source": "Chinese",
+        "target": "Filipino"
+      },
+      {
+        "weight": 0.021828644881735842,
+        "source": "Chinese",
+        "target": "Japanese"
+      },
+      {
+        "weight": 0.022666560913735662,
+        "source": "Chinese",
+        "target": "Korean"
+      },
+      {
+        "weight": 0.0004225469585220044,
+        "source": "Chinese",
+        "target": "Armenian"
+      },
+      {
+        "weight": 0.0010002300107874863,
+        "source": "Chinese",
+        "target": "Iranian Muslim"
+      },
+      {
+        "weight": 0.0017999522704606054,
+        "source": "Chinese",
+        "target": "Punjabi/Bengali"
+      },
+      {
+        "weight": 0.002007462243797195,
+        "source": "Chinese",
+        "target": "Puerto Rican"
+      },
+      {
+        "weight": 0.0007296195065897473,
+        "source": "Chinese",
+        "target": "Telugu"
+      },
+      {
+        "weight": 0.07487699011942607,
+        "source": "Chinese",
+        "target": "Vietnamese"
+      },
+      {
+        "weight": 0.0005569761507224868,
+        "source": "Chinese",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.0008208728997650401,
+        "source": "Chinese",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.00095963067168615,
+        "source": "Chinese",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.00030584838891233994,
+        "source": "Chinese",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.00035219547929053464,
+        "source": "Chinese",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.00024343652334720298,
+        "source": "Chinese",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.05557672947925861,
+        "source": "Chinese",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.0007996380531257009,
+        "source": "Chinese",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.00037345896606090777,
+        "source": "Chinese",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.00011679185525573251,
+        "source": "Chinese",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 2.1546090822683044,
+        "source": "Filipino",
+        "target": "Filipino"
+      },
+      {
+        "weight": 0.013133114734747568,
+        "source": "Filipino",
+        "target": "Japanese"
+      },
+      {
+        "weight": 0.010225307604874187,
+        "source": "Filipino",
+        "target": "Korean"
+      },
+      {
+        "weight": 0.00157219409163946,
+        "source": "Filipino",
+        "target": "Armenian"
+      },
+      {
+        "weight": 0.0008223928810720269,
+        "source": "Filipino",
+        "target": "Iranian Muslim"
+      },
+      {
+        "weight": 0.002123116447014949,
+        "source": "Filipino",
+        "target": "Punjabi/Bengali"
+      },
+      {
+        "weight": 0.033916046944793415,
+        "source": "Filipino",
+        "target": "Puerto Rican"
+      },
+      {
+        "weight": 0.0018117378104289567,
+        "source": "Filipino",
+        "target": "Telugu"
+      },
+      {
+        "weight": 0.028209835682838975,
+        "source": "Filipino",
+        "target": "Vietnamese"
+      },
+      {
+        "weight": 0.0015242667157443273,
+        "source": "Filipino",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.001309678013354443,
+        "source": "Filipino",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.02563921110655317,
+        "source": "Filipino",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.0008023943084990169,
+        "source": "Filipino",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.0009173552841728024,
+        "source": "Filipino",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.00026666941852117727,
+        "source": "Filipino",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.2280154251370489,
+        "source": "Filipino",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.0011726823473804664,
+        "source": "Filipino",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.012359477193660613,
+        "source": "Filipino",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.0004017511936908743,
+        "source": "Filipino",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 0.919133091857498,
+        "source": "Japanese",
+        "target": "Japanese"
+      },
+      {
+        "weight": 0.2698187440384,
+        "source": "Japanese",
+        "target": "Korean"
+      },
+      {
+        "weight": 0.0002516741617572684,
+        "source": "Japanese",
+        "target": "Armenian"
+      },
+      {
+        "weight": 0.0005743148210290828,
+        "source": "Japanese",
+        "target": "Iranian Muslim"
+      },
+      {
+        "weight": 0.0004467139420032925,
+        "source": "Japanese",
+        "target": "Punjabi/Bengali"
+      },
+      {
+        "weight": 0.003912449839205815,
+        "source": "Japanese",
+        "target": "Puerto Rican"
+      },
+      {
+        "weight": 0.00030502772103880937,
+        "source": "Japanese",
+        "target": "Telugu"
+      },
+      {
+        "weight": 0.007983899744610086,
+        "source": "Japanese",
+        "target": "Vietnamese"
+      },
+      {
+        "weight": 0.001237251207626213,
+        "source": "Japanese",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.00022285158285066347,
+        "source": "Japanese",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.0003459863374880154,
+        "source": "Japanese",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.0005508868908666472,
+        "source": "Japanese",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.00029284922740752307,
+        "source": "Japanese",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.03806933038438072,
+        "source": "Japanese",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.0005373843776995148,
+        "source": "Japanese",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.00019391369815866465,
+        "source": "Japanese",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.6112648936925353,
+        "source": "Korean",
+        "target": "Korean"
+      },
+      {
+        "weight": 0.00034444577486329004,
+        "source": "Korean",
+        "target": "Armenian"
+      },
+      {
+        "weight": 0.0012921042124542125,
+        "source": "Korean",
+        "target": "Iranian Muslim"
+      },
+      {
+        "weight": 0.0008460158499781139,
+        "source": "Korean",
+        "target": "Punjabi/Bengali"
+      },
+      {
+        "weight": 0.0009413780143467644,
+        "source": "Korean",
+        "target": "Puerto Rican"
+      },
+      {
+        "weight": 0.0002495443143812709,
+        "source": "Korean",
+        "target": "Telugu"
+      },
+      {
+        "weight": 0.010148718272877564,
+        "source": "Korean",
+        "target": "Vietnamese"
+      },
+      {
+        "weight": 0.0010884503977975316,
+        "source": "Korean",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.0001618446317761386,
+        "source": "Korean",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.0005679976825895193,
+        "source": "Korean",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.00012245918936136331,
+        "source": "Korean",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.0005086605900559389,
+        "source": "Korean",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.016629300283050284,
+        "source": "Korean",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.00016161679904254158,
+        "source": "Korean",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.0005086605900559389,
+        "source": "Korean",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 1.08865545568195,
+        "source": "Armenian",
+        "target": "Armenian"
+      },
+      {
+        "weight": 0.035197584453496265,
+        "source": "Armenian",
+        "target": "Iranian Muslim"
+      },
+      {
+        "weight": 0.0026578393472441045,
+        "source": "Armenian",
+        "target": "Punjabi/Bengali"
+      },
+      {
+        "weight": 0.003172686905974202,
+        "source": "Armenian",
+        "target": "Puerto Rican"
+      },
+      {
+        "weight": 0.0015806378582602792,
+        "source": "Armenian",
+        "target": "Telugu"
+      },
+      {
+        "weight": 0.00020443433123659498,
+        "source": "Armenian",
+        "target": "Vietnamese"
+      },
+      {
+        "weight": 0.015941906287700914,
+        "source": "Armenian",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.03344882106222507,
+        "source": "Armenian",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.005021165676046386,
+        "source": "Armenian",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.007633719782165944,
+        "source": "Armenian",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.009815550766510365,
+        "source": "Armenian",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.009167188245562992,
+        "source": "Armenian",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.005877355582299574,
+        "source": "Armenian",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.0016256768365227564,
+        "source": "Armenian",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.005471521750483054,
+        "source": "Armenian",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.00048814192837625303,
+        "source": "Armenian",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 1.4586899404208196,
+        "source": "Iranian Muslim",
+        "target": "Iranian Muslim"
+      },
+      {
+        "weight": 0.010392238155136268,
+        "source": "Iranian Muslim",
+        "target": "Punjabi/Bengali"
+      },
+      {
+        "weight": 0.003040045949074074,
+        "source": "Iranian Muslim",
+        "target": "Puerto Rican"
+      },
+      {
+        "weight": 0.005126694927536233,
+        "source": "Iranian Muslim",
+        "target": "Telugu"
+      },
+      {
+        "weight": 0.0006887324483775811,
+        "source": "Iranian Muslim",
+        "target": "Vietnamese"
+      },
+      {
+        "weight": 0.6019596797239914,
+        "source": "Iranian Muslim",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.007569885083713852,
+        "source": "Iranian Muslim",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.034933723809523816,
+        "source": "Iranian Muslim",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.002845121739130435,
+        "source": "Iranian Muslim",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.08864878992248061,
+        "source": "Iranian Muslim",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.03224954571428571,
+        "source": "Iranian Muslim",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.0034679575757575764,
+        "source": "Iranian Muslim",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.007129549834983499,
+        "source": "Iranian Muslim",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.003368197435897436,
+        "source": "Iranian Muslim",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.0009154437722419927,
+        "source": "Iranian Muslim",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 0.2932805256205517,
+        "source": "Punjabi/Bengali",
+        "target": "Punjabi/Bengali"
+      },
+      {
+        "weight": 0.003294092745457722,
+        "source": "Punjabi/Bengali",
+        "target": "Puerto Rican"
+      },
+      {
+        "weight": 0.02264957980129433,
+        "source": "Punjabi/Bengali",
+        "target": "Telugu"
+      },
+      {
+        "weight": 0.0021255217899482388,
+        "source": "Punjabi/Bengali",
+        "target": "Vietnamese"
+      },
+      {
+        "weight": 0.004156594660096944,
+        "source": "Punjabi/Bengali",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.0021143426380632376,
+        "source": "Punjabi/Bengali",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.0937547230779104,
+        "source": "Punjabi/Bengali",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.0007141287257314738,
+        "source": "Punjabi/Bengali",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.05905674101701526,
+        "source": "Punjabi/Bengali",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.0032588454627133874,
+        "source": "Punjabi/Bengali",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.004246566609491138,
+        "source": "Punjabi/Bengali",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.0524657372812753,
+        "source": "Punjabi/Bengali",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.0035189550072568937,
+        "source": "Punjabi/Bengali",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.0005035637547841269,
+        "source": "Punjabi/Bengali",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 17.713282806853137,
+        "source": "Puerto Rican",
+        "target": "Puerto Rican"
+      },
+      {
+        "weight": 0.0012548187147745572,
+        "source": "Puerto Rican",
+        "target": "Telugu"
+      },
+      {
+        "weight": 0.00028564343657817116,
+        "source": "Puerto Rican",
+        "target": "Vietnamese"
+      },
+      {
+        "weight": 0.013493134399327674,
+        "source": "Puerto Rican",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.025729375792744803,
+        "source": "Puerto Rican",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.0063693395691609995,
+        "source": "Puerto Rican",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.0029926441727053136,
+        "source": "Puerto Rican",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.0030934463824289398,
+        "source": "Puerto Rican",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.016796380952380955,
+        "source": "Puerto Rican",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.2412814409722222,
+        "source": "Puerto Rican",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.0008042849284928494,
+        "source": "Puerto Rican",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.22555479433760686,
+        "source": "Puerto Rican",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.017548133773230525,
+        "source": "Puerto Rican",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 0.4929146604405378,
+        "source": "Telugu",
+        "target": "Telugu"
+      },
+      {
+        "weight": 0.0005859308067205334,
+        "source": "Telugu",
+        "target": "Vietnamese"
+      },
+      {
+        "weight": 0.0012357536001107725,
+        "source": "Telugu",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.0017155848388591092,
+        "source": "Telugu",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.018154965246968358,
+        "source": "Telugu",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.0008570699432892249,
+        "source": "Telugu",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.02134720677451972,
+        "source": "Telugu",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.0017931552795031054,
+        "source": "Telugu",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.0016804652503293806,
+        "source": "Telugu",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.03478957526187401,
+        "source": "Telugu",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.0006756772575250836,
+        "source": "Telugu",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.0001627480788075713,
+        "source": "Telugu",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 4.485856520726595,
+        "source": "Vietnamese",
+        "target": "Vietnamese"
+      },
+      {
+        "weight": 0.00036430077222253534,
+        "source": "Vietnamese",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.0005920091324200912,
+        "source": "Vietnamese",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.0011202636806935163,
+        "source": "Vietnamese",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.0005832722782465528,
+        "source": "Vietnamese",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.01495041230893001,
+        "source": "Vietnamese",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.00026353807062122145,
+        "source": "Vietnamese",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 45.895555043372774,
+        "source": "Iranian Jewish",
+        "target": "Iranian Jewish"
+      },
+      {
+        "weight": 0.0171851596719309,
+        "source": "Iranian Jewish",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.008156509164175225,
+        "source": "Iranian Jewish",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.0022285648019939076,
+        "source": "Iranian Jewish",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.03491404137658618,
+        "source": "Iranian Jewish",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.014979059144676982,
+        "source": "Iranian Jewish",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.002861775477707007,
+        "source": "Iranian Jewish",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.0011510695591852179,
+        "source": "Iranian Jewish",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.009821195492405684,
+        "source": "Iranian Jewish",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.0008412795521000974,
+        "source": "Iranian Jewish",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 2.7281143806558736,
+        "source": "Lebanese Christian",
+        "target": "Lebanese Christian"
+      },
+      {
+        "weight": 0.004090156089833193,
+        "source": "Lebanese Christian",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.08578976920786183,
+        "source": "Lebanese Christian",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.004830301228275105,
+        "source": "Lebanese Christian",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.034379231572080886,
+        "source": "Lebanese Christian",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.025313753632212537,
+        "source": "Lebanese Christian",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.0013664302183643024,
+        "source": "Lebanese Christian",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.01852167896030909,
+        "source": "Lebanese Christian",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.004286378719186207,
+        "source": "Lebanese Christian",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 12.5242241991342,
+        "source": "Sindhi Muslim",
+        "target": "Sindhi Muslim"
+      },
+      {
+        "weight": 0.0020112034161490684,
+        "source": "Sindhi Muslim",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.19993832937826286,
+        "source": "Sindhi Muslim",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.007425297376093294,
+        "source": "Sindhi Muslim",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.009199107142857144,
+        "source": "Sindhi Muslim",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.06824495857749041,
+        "source": "Sindhi Muslim",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.005406726844583988,
+        "source": "Sindhi Muslim",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.00023574333648049967,
+        "source": "Sindhi Muslim",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 3.708017547919588,
+        "source": "Egyptian Christian",
+        "target": "Egyptian Christian"
+      },
+      {
+        "weight": 0.0013908038422649142,
+        "source": "Egyptian Christian",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.06806154658385094,
+        "source": "Egyptian Christian",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.02878728260869565,
+        "source": "Egyptian Christian",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.0005610008609556608,
+        "source": "Egyptian Christian",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.0053308779264214035,
+        "source": "Egyptian Christian",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.001108501856722884,
+        "source": "Egyptian Christian",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 5.739951259391772,
+        "source": "Pakistani",
+        "target": "Pakistani"
+      },
+      {
+        "weight": 0.05362176301218162,
+        "source": "Pakistani",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.003534619450317125,
+        "source": "Pakistani",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.029882611098319137,
+        "source": "Pakistani",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.004611478831246273,
+        "source": "Pakistani",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.002906770393666032,
+        "source": "Pakistani",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 4.152681571428572,
+        "source": "Arab Muslim",
+        "target": "Arab Muslim"
+      },
+      {
+        "weight": 0.002213584415584416,
+        "source": "Arab Muslim",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.003368152758132956,
+        "source": "Arab Muslim",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.003707575091575092,
+        "source": "Arab Muslim",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.008769899339095071,
+        "source": "Arab Muslim",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 19.47091663636364,
+        "source": "Pacific Islander",
+        "target": "Pacific Islander"
+      },
+      {
+        "weight": 0.002205672817281728,
+        "source": "Pacific Islander",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.043939860139860135,
+        "source": "Pacific Islander",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.0026077345519249433,
+        "source": "Pacific Islander",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 13.048391578334304,
+        "source": "Gujrati II",
+        "target": "Gujrati II"
+      },
+      {
+        "weight": 0.006352660573749683,
+        "source": "Gujrati II",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.00010729220252986152,
+        "source": "Gujrati II",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 6.950074192307693,
+        "source": "Black/African American II",
+        "target": "Black/African American II"
+      },
+      {
+        "weight": 0.06638753809654166,
+        "source": "Black/African American II",
+        "target": "Black/African American III"
+      },
+      {
+        "weight": 1.2225385835794151,
+        "source": "Black/African American III",
+        "target": "Black/African American III"
+      }
+    ]
+  }

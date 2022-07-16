@@ -2,9 +2,13 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
-import louvain_graph from "../data/images/louvain_graph.jpg";
+import Graphin, { Behaviors } from "@antv/graphin";
+
+import { homepageData } from "../data/homepageData";
 
 import css from "./Home.module.css";
+
+const { DragCanvas, ZoomCanvas, DragNode, ActivateRelations } = Behaviors;
 
 const Home = () => {
   return (
@@ -17,7 +21,10 @@ const Home = () => {
       </div>
       <div className={css.homePageContent}>
         <div className={css.graphImage}>
-          <img height="90%" width="90%" src={louvain_graph}></img>
+          <Graphin data={homepageData} layout={{ type: "concentric" }}>
+            <ZoomCanvas disabled />
+            <ActivateRelations />
+          </Graphin>
         </div>
         <div className={css.homeBodyText}>
           <Typography variant="body1" gutterBottom>
@@ -28,7 +35,7 @@ const Home = () => {
             </Link>{" "}
             Here, we explore several aspects of health that may be of interest
             to researchers and community members, particularly those who have an
-            interest in studying health disparities.{" "}
+            interest in studying health disparities.
           </Typography>
 
           <Typography variant="body1" gutterBottom>

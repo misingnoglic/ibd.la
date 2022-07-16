@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@antv/graphin": "^2.6.7",
+    "@antv/graphin-components": "^2.4.0",
+    "@antv/graphin-icons": "^1.0.0",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@fontsource/roboto": "^4.5.1",
@@ -13,6 +16,7 @@
     "@testing-library/user-event": "^13.5.0",
     "d3-scale": "^4.0.2",
     "deck.gl": "^8.6.5",
+    "inversify": "^6.0.1",
     "plotly.js": "^2.8.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -21,6 +25,7 @@
     "react-plotly.js": "^2.5.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
+    "reflect-metadata": "^0.1.13",
     "source-map-explorer": "^2.5.2",
     "web-vitals": "^2.1.3"
   },
