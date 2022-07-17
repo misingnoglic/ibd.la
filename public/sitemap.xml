@@ -3,43 +3,43 @@
    <url>
       <loc>https://ibd.la</loc>
       <lastmod>2022-07-16</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
    </url>
    <url>
       <loc>https://ibd.la/phecodes</loc>
       <lastmod>2022-07-16</lastmod>
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
       <loc>https://ibd.la/specialties</loc>
       <lastmod>2022-07-16</lastmod>
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
       <loc>https://ibd.la/zipcodes</loc>
       <lastmod>2022-07-16</lastmod>
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
       <loc>https://ibd.la/genetics</loc>
       <lastmod>2022-07-16</lastmod>
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
       <loc>https://ibd.la/time</loc>
       <lastmod>2022-07-16</lastmod>
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://ibd.la/about</loc>
+      <loc>https://ibd.la/faq</loc>
       <lastmod>2022-07-16</lastmod>
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
 </urlset> 
