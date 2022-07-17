@@ -22,16 +22,22 @@ const App = () => {
     changeRoute(getTabUrl(newIndex));
   };
 
+  // Runs in the beginning to set the tab based on the URL
+  const setInitialTabIndex = (initialTab) => {
+    setTabIndex(tabUrls.indexOf(initialTab));
+  };
+
+  const tabUrls = [
+    "/",
+    "/phecodes",
+    "/specialties",
+    "/zipcodes",
+    "/genetics",
+    "/time",
+    "/about",
+  ];
+
   const getTabUrl = (tabIndex) => {
-    const tabUrls = [
-      "",
-      "phecodes",
-      "specialties",
-      "zipcodes",
-      "genetics",
-      "time",
-      "about",
-    ];
     return tabUrls[tabIndex];
   };
 
@@ -45,7 +51,7 @@ const App = () => {
             style={{ backgroundColor: "#C7CEEA", color: "white" }}
             variant="scrollable"
             scrollButtons="auto"
-            >
+          >
             <Tab label="Home" />
             <Tab label="PheCodes" />
             <Tab label="Specialties" />
@@ -56,13 +62,13 @@ const App = () => {
           </Tabs>
         </AppBar>
         <div className="tabContent">
-          <AppRouter />
+          <AppRouter setInitialTabIndex={setInitialTabIndex} />
         </div>
       </header>
       <div className="footer">
         <p>
           © 2022 -{" "}
-          <Link href="https://github.com/misingnoglic/atlas-app">
+          <Link href="https://github.com/misingnoglic/ibd-la">
             Contribute on GitHub
           </Link>
         </p>

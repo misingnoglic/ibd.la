@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  useLocation,
   useNavigate,
 } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -21,7 +22,7 @@ import css from "./AppRouter.module.css";
 const AppRouter = (props) => {
   return (
     <Router>
-      <AppRouterListener />
+      <AppRouterListener setInitialTabIndex={props.setInitialTabIndex} />
       <Suspense
         fallback={
           <div className={css.loadingIndicator}>
@@ -44,16 +45,21 @@ const AppRouter = (props) => {
 };
 
 const AppRouterListener = (props) => {
-  const [curRoute, setCurRoute] = useState("");
+  const location = useLocation();
+  const [curRoute, setCurRoute] = useState(location.pathname);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    props.setInitialTabIndex(curRoute);
+  }, []);
+
   useEffect(() => {
     navigate(curRoute);
     document.title = `${pageTitlePrefix} - ${pageTitles[curRoute]}`;
     try {
       window.ga("set", "page", location.pathname + location.search);
       window.ga("send", "pageview");
-    }
-    catch {
+    } catch {
       // Sometimes Google Analytics hasn't loaded yet, that's ok.
     }
   }, [curRoute]);
