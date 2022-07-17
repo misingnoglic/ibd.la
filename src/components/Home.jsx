@@ -22,7 +22,7 @@ const Home = () => {
         <div className={css.homeBodyText}>
           <Typography variant="body1" gutterBottom>
             This browser explores health in Los Angeles within the UCLA health
-            system. The data is apart of the{" "}
+            system. The data is a part of the{" "}
             <Link href="https://www.uclahealth.org/precision-health/atlas">
               UCLA ATLAS Community Health Initiative.
             </Link>{" "}
