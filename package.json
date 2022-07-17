@@ -1,5 +1,6 @@
 {
-  "name": "atlas-app",
+  "name": "ibd-la",
+  "homepage": "https://www.popapp.be",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -67,7 +67,7 @@ const DeckGlMap = () => {
   const layers = [
     new GeoJsonLayer({
       id: "geojson",
-      data: `https://raw.githubusercontent.com/misingnoglic/atlas-app/main/data/geojson/${group}.json`,
+      data: `https://raw.githubusercontent.com/misingnoglic/ibd-la/main/data/geojson/${group}.json`,
       getFillColor: (f) => colorScale(f.properties.coefficient),
       getLineColor: [255, 255, 255],
       getLineWidth: 20,
