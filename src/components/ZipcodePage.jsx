@@ -15,7 +15,7 @@ import Divider from "@mui/material/Divider";
 import { groupNameMap } from "../data/groupInfo";
 import { heatmapColorScheme } from "../data/heatmapColorScheme";
 
-import css from "./DeckGlMap.module.css";
+import css from "./ZipcodePage.module.css";
 
 const getTooltip = ({ object }) => {
   const response = object && {
@@ -35,7 +35,7 @@ const getTooltip = ({ object }) => {
   return response;
 };
 
-const DeckGlMap = () => {
+const ZipcodePage = () => {
   const [group, setGroup] = useState("group1");
 
   const handleGroupChange = (event) => {
@@ -67,7 +67,7 @@ const DeckGlMap = () => {
   const layers = [
     new GeoJsonLayer({
       id: "geojson",
-      data: `https://raw.githubusercontent.com/misingnoglic/ibd-la/main/data/geojson/${group}.json`,
+      data: `https://raw.githubusercontent.com/misingnoglic/ibd.la/main/data/geojson/${group}.json`,
       getFillColor: (f) => colorScale(f.properties.coefficient),
       getLineColor: [255, 255, 255],
       getLineWidth: 20,
@@ -143,4 +143,4 @@ const DeckGlMap = () => {
   );
 };
 
-export default DeckGlMap;
+export default ZipcodePage;

@@ -1,6 +1,6 @@
 const pageTitles = {
   "": "Home",
-  about: "FAQ",
+  faq: "FAQ",
   phecodes: "Phecodes",
   specialties: "Specialties",
   zipcodes: "Zip Codes",

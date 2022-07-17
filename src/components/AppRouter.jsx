@@ -13,8 +13,8 @@ const PhecodePage = lazy(() => import("./PhecodePage"));
 const DeptPage = lazy(() => import("./DepartmentPage"));
 const TimePage = lazy(() => import("./TimePage"));
 const IbdPage = lazy(() => import("./IbdPage"));
-const DeckGlMap = lazy(() => import("./DeckGlMap"));
-const About = lazy(() => import("./About"));
+const ZipcodePage = lazy(() => import("./ZipcodePage"));
+const FaqPage = lazy(() => import("./FaqPage"));
 const Home = lazy(() => import("./Home"));
 
 import css from "./AppRouter.module.css";
@@ -32,10 +32,10 @@ const AppRouter = (props) => {
       >
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<FaqPage />} />
           <Route path="/phecodes" element={<PhecodePage />} />
           <Route path="/specialties" element={<DeptPage />} />
-          <Route path="/zipcodes" element={<DeckGlMap />} />
+          <Route path="/zipcodes" element={<ZipcodePage />} />
           <Route path="/genetics" element={<IbdPage />} />
           <Route path="/time" element={<TimePage />} />
         </Routes>
@@ -49,6 +49,7 @@ const AppRouterListener = (props) => {
   const [curRoute, setCurRoute] = useState(location.pathname);
   const navigate = useNavigate();
 
+  // Bubble up the initial page to the App.js
   useEffect(() => {
     props.setInitialTabIndex(curRoute);
   }, []);

@@ -34,7 +34,7 @@ const App = () => {
     "/zipcodes",
     "/genetics",
     "/time",
-    "/about",
+    "/faq",
   ];
 
   const getTabUrl = (tabIndex) => {

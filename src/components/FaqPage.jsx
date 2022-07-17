@@ -1,9 +1,9 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
-import css from "./About.module.css";
+import css from "./FaqPage.module.css";
 import Link from "@mui/material/Link";
 
-const About = () => {
+const FaqPage = () => {
   return (
     <div className={css.titleText}>
       <Typography variant="h2">FAQ</Typography>
@@ -915,4 +915,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default FaqPage;
