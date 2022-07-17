@@ -2,7 +2,7 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
-import louvain_graph from "../data/images/louvain_graph.jpg";
+import LouvainGraph from "./LouvainGraph";
 
 import css from "./Home.module.css";
 
@@ -17,7 +17,7 @@ const Home = () => {
       </div>
       <div className={css.homePageContent}>
         <div className={css.graphImage}>
-          <img height="90%" width="90%" src={louvain_graph}></img>
+          <LouvainGraph />
         </div>
         <div className={css.homeBodyText}>
           <Typography variant="body1" gutterBottom>
