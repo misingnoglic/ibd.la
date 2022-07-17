@@ -23,3 +23,6 @@
     width: 50%;
 }
 
+.homeBodyText p {
+    padding-bottom: 8px;
+}
