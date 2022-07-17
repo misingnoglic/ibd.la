@@ -8,18 +8,37 @@ import {
 } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 
+function lazyPreload(importFn) {
+  const Component = lazy(importFn);
+  Component.preload = importFn;
+  return Component;
+}
+
+const TIME_UNTIL_PRELOAD_MS = 3000;
+
 import { pageTitlePrefix, pageTitles } from "../constants";
-const PhecodePage = lazy(() => import("./PhecodePage"));
-const DeptPage = lazy(() => import("./DepartmentPage"));
-const TimePage = lazy(() => import("./TimePage"));
-const IbdPage = lazy(() => import("./IbdPage"));
-const ZipcodePage = lazy(() => import("./ZipcodePage"));
-const FaqPage = lazy(() => import("./FaqPage"));
-const Home = lazy(() => import("./Home"));
+const PhecodePage = lazyPreload(() => import("./PhecodePage"));
+const DeptPage = lazyPreload(() => import("./DepartmentPage"));
+const TimePage = lazyPreload(() => import("./TimePage"));
+const IbdPage = lazyPreload(() => import("./IbdPage"));
+const ZipcodePage = lazyPreload(() => import("./ZipcodePage"));
+const FaqPage = lazyPreload(() => import("./FaqPage"));
+const Home = lazyPreload(() => import("./Home"));
 
 import css from "./AppRouter.module.css";
 
 const AppRouter = (props) => {
+  useEffect(() => {
+    setTimeout(() => {
+      PhecodePage.preload();
+      DeptPage.preload();
+      TimePage.preload();
+      IbdPage.preload();
+      ZipcodePage.preload();
+      FaqPage.preload();
+      Home.preload();
+    }, TIME_UNTIL_PRELOAD_MS);
+  }, []);
   return (
     <Router>
       <AppRouterListener setInitialTabIndex={props.setInitialTabIndex} />
