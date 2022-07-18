@@ -90,8 +90,9 @@ const AppRouterListener = (props) => {
     const path = location.pathname + location.search;
     try {
       trackPageInGoogleAnalytics(path);
-    } catch {
+    } catch (exc) {
       // Google Analytics hasn't loaded yet, give it a second...
+      console.error(exc);
       setTimeout(() => {
         trackPageInGoogleAnalytics(path);
       }, 3000);
