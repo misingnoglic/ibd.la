@@ -16,7 +16,6 @@ function lazyPreload(importFn) {
 
 const TIME_UNTIL_PRELOAD_MS = 3000;
 
-import { pageTitlePrefix, pageTitles } from "../constants";
 const PhecodePage = lazyPreload(() => import("./PhecodePage"));
 const DeptPage = lazyPreload(() => import("./DepartmentPage"));
 const TimePage = lazyPreload(() => import("./TimePage"));
@@ -26,6 +25,18 @@ const FaqPage = lazyPreload(() => import("./FaqPage"));
 const Home = lazyPreload(() => import("./Home"));
 
 import css from "./AppRouter.module.css";
+
+const pageTitles = {
+  "/": "Home",
+  "/faq": "FAQ",
+  "/phecodes": "Phecodes",
+  "/specialties": "Specialties",
+  "/zipcodes": "Zip Codes",
+  "/genetics": "Genetics",
+  "/time": "Time",
+};
+
+const pageTitleSuffix = "Los Angeles IBD Group Utilization";
 
 const AppRouter = (props) => {
   useEffect(() => {
@@ -80,12 +91,12 @@ const AppRouterListener = (props) => {
 
   useEffect(() => {
     navigate(curRoute);
-    const cleanRoute = curRoute.replace("/", "");
-    if (cleanRoute in pageTitles) {
-      document.title = `${pageTitlePrefix} - ${pageTitles[cleanRoute]}`;
+    if (curRoute in pageTitles) {
+      document.title = `${pageTitles[curRoute]} - ${pageTitleSuffix}`;
     } else {
       // Not sure why this happens when Google indexes us, but w/e
-      document.title = pageTitlePrefix;
+      console.error(`Route with no prefix... ${curRoute}`);
+      document.title = pageTitleSuffix;
     }
     const path = location.pathname + location.search;
     try {
