@@ -13,7 +13,13 @@ const Home = () => {
         <Typography variant="h2">
           Fine-scale population health in Los Angeles
         </Typography>
-        <Typography variant="h4">*Not peer reviewed*</Typography>
+        <Typography variant="h4" component="h2">
+          Read preprint{" "}
+          <Link href="https://www.medrxiv.org/content/10.1101/2022.07.12.22277520v1">
+            here
+          </Link>{" "}
+          - Not peer reviewed
+        </Typography>
       </div>
       <div className={css.homePageContent}>
         <div className={css.graphImage}>
