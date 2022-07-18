@@ -63,6 +63,13 @@ const AppRouter = (props) => {
   );
 };
 
+const trackPageInGoogleAnalytics = (path) => {
+  if ("ga" in window) {
+    window.ga("set", "page", path);
+    window.ga("send", "pageview");
+  }
+};
+
 const AppRouterListener = (props) => {
   const location = useLocation();
   const [curRoute, setCurRoute] = useState(location.pathname);
@@ -75,12 +82,21 @@ const AppRouterListener = (props) => {
 
   useEffect(() => {
     navigate(curRoute);
-    document.title = `${pageTitlePrefix} - ${pageTitles[curRoute]}`;
-    try {
-      window.ga("set", "page", location.pathname + location.search);
-      window.ga("send", "pageview");
-    } catch {
-      // Sometimes Google Analytics hasn't loaded yet, that's ok.
+    const cleanRoute = curRoute.replace("/", "");
+    if (cleanRoute in pageTitles) {
+      document.title = `${pageTitlePrefix} - ${pageTitles[cleanRoute]}`;
+    } else {
+      // Not sure why this happens when Google indexes us, but w/e
+      document.title = pageTitlePrefix;
+    }
+    const path = location.pathname + location.search;
+    if ("ga" in window) {
+      trackPageInGoogleAnalytics(path);
+    } else {
+      // Google Analytics hasn't loaded yet, give it a second...
+      setTimeout(() => {
+        trackPageInGoogleAnalytics(path);
+      }, 3000);
     }
   }, [curRoute]);
 
