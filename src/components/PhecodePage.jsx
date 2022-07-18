@@ -18,63 +18,121 @@ import Link from "@mui/material/Link";
 import Divider from "@mui/material/Divider";
 import css from "./PhecodePage.module.css";
 
+const DataCategoryEnum = {
+  Outpatient: "Outpatient",
+  ER: "Emergency Room",
+};
+
+const dataByCategory = {
+  [DataCategoryEnum.Outpatient]: outpatientGraphData,
+  [DataCategoryEnum.ER]: erGraphData,
+};
+
+const optionsByCategory = {
+  [DataCategoryEnum.Outpatient]: outpatientOptions,
+  [DataCategoryEnum.ER]: erOptions,
+};
+
+const graphColorsByCategory = {
+  [DataCategoryEnum.Outpatient]: "#C7CEEA",
+  [DataCategoryEnum.ER]: "#FFB7B2",
+};
+
 const PhecodePage = () => {
   const [primaryGroupLabel, setPrimaryGroupLabel] = useState("group1");
   const [secondGroupLabel, setSecondGroupLabel] = useState("group20");
-  // For now outpatient or emergencyRoom
-  const [dataCategory, setDataCategory] = useState("Outpatient");
+  const [dataCategory, setDataCategory] = useState(DataCategoryEnum.Outpatient);
 
   const handleFirstGroupChange = (event) => {
-    setSecondGroupLabel(null);
+    if (!pairExists(event.target.value, secondGroupLabel, dataCategory)) {
+      setSecondGroupLabel(null);
+    }
     setPrimaryGroupLabel(event.target.value);
   };
 
   const handleSecondGroupChange = (event) => {
-    setSecondGroupLabel(event.target.value);
+    if (pairExists(primaryGroupLabel, event.target.value, dataCategory)) {
+      setSecondGroupLabel(event.target.value);
+    } else {
+      console.error(
+        `Invalid group pair ${primaryGroupLabel} and ${event.target.value}`
+      );
+    }
   };
 
   const handleDataCategoryChange = (event) => {
-    setPrimaryGroupLabel(null);
-    setSecondGroupLabel(null);
+    if (!pairExists(primaryGroupLabel, secondGroupLabel, event.target.value)) {
+      // primary, secondary not in group, set to null
+      setPrimaryGroupLabel(null);
+      setSecondGroupLabel(null);
+    }
     setDataCategory(event.target.value);
+  };
+
+  const pairExists = (primaryGroupLabel, secondGroupLabel, category) => {
+    return (
+      primaryGroupLabel &&
+      secondGroupLabel &&
+      primaryGroupLabel !== secondGroupLabel &&
+      getDataDirection(primaryGroupLabel, secondGroupLabel, category) !==
+        dataDirections.none
+    );
+  };
+
+  const dataDirections = {
+    normal: "normal", // label1, label2 is in object
+    reverse: "reverse", // label2, label1 is in object
+    none: "none", // neither order is in object
+  };
+
+  const getDataDirection = (primaryGroupLabel, secondGroupLabel, category) => {
+    const fullData = dataByCategory[category];
+    if (
+      fullData.hasOwnProperty(primaryGroupLabel) &&
+      fullData[primaryGroupLabel].hasOwnProperty(secondGroupLabel) &&
+      fullData[primaryGroupLabel][secondGroupLabel].length > 0
+    ) {
+      return dataDirections.normal;
+    } else if (
+      fullData.hasOwnProperty(secondGroupLabel) &&
+      fullData[secondGroupLabel].hasOwnProperty(primaryGroupLabel) &&
+      fullData[secondGroupLabel][primaryGroupLabel].length > 0
+    ) {
+      return dataDirections.reverse;
+    } else {
+      return dataDirections.none;
+    }
   };
 
   let graph;
   let graphData;
+  let graphTitle;
   let negate = false;
-  let fullData;
-  let fullDataOptions;
-  switch (dataCategory) {
-    case "Outpatient":
-      fullData = outpatientGraphData;
-      fullDataOptions = outpatientOptions;
-      break;
-    case "Emergency Room":
-      fullData = erGraphData;
-      fullDataOptions = erOptions;
-      break;
-  }
-  const graphColorOptions = {
-    Outpatient: "#C7CEEA",
-    "Emergency Room": "#FFB7B2",
-  };
-  if (
-    primaryGroupLabel &&
-    secondGroupLabel &&
-    primaryGroupLabel !== secondGroupLabel
-  ) {
+  const fullData = dataByCategory[dataCategory];
+  const fullDataOptions = optionsByCategory[dataCategory];
+
+  if (pairExists(primaryGroupLabel, secondGroupLabel, dataCategory)) {
+    graphTitle = `
+        ${groupNameMap[primaryGroupLabel]} (n=${groupSizeMap[primaryGroupLabel]}) vs ${groupNameMap[secondGroupLabel]} (n=${groupSizeMap[secondGroupLabel]})`;
+
     if (
-      fullData.hasOwnProperty(primaryGroupLabel) &&
-      fullData[primaryGroupLabel].hasOwnProperty(secondGroupLabel)
+      getDataDirection(primaryGroupLabel, secondGroupLabel, dataCategory) ===
+      dataDirections.normal
     ) {
       graphData = fullData[primaryGroupLabel][secondGroupLabel];
     } else if (
-      fullData.hasOwnProperty(secondGroupLabel) &&
-      fullData[secondGroupLabel].hasOwnProperty(primaryGroupLabel)
+      getDataDirection(primaryGroupLabel, secondGroupLabel, dataCategory) ===
+      dataDirections.reverse
     ) {
       graphData = fullData[secondGroupLabel][primaryGroupLabel];
       negate = true;
+    } else {
+      console.error(
+        `Invalid categories ${primaryGroupLabel} ${secondGroupLabel}`
+      );
     }
+  } else {
+    graphTitle = "Select valid groups and category to generate graph";
   }
   if (graphData) {
     graph = (
@@ -82,7 +140,7 @@ const PhecodePage = () => {
         firstGroupLabel={`${groupNameMap[primaryGroupLabel]} (n=${groupSizeMap[primaryGroupLabel]})`}
         secondGroupLabel={`${groupNameMap[secondGroupLabel]} (n=${groupSizeMap[secondGroupLabel]})`}
         listOfComparisons={graphData}
-        plotColor={graphColorOptions[dataCategory]}
+        plotColor={graphColorsByCategory[dataCategory]}
         negate={negate}
         width={866}
         height={900}
@@ -102,15 +160,12 @@ const PhecodePage = () => {
 
   let filteredGroupOptions = [];
   if (!!primaryGroupLabel && fullData.hasOwnProperty(primaryGroupLabel)) {
-    // Filter out any options that don't have data for the other group
+    // Filter out any options for group2 that don't have data for primary group
     filteredGroupOptions = groupOptions.filter((option) => {
       const group = option.props.value;
       return (
-        (fullData[primaryGroupLabel].hasOwnProperty(group) &&
-          fullData[primaryGroupLabel][group].length !== 0) ||
-        (fullData.hasOwnProperty(group) &&
-          fullData[group].hasOwnProperty(primaryGroupLabel) &&
-          fullData[group][primaryGroupLabel].length !== 0)
+        pairExists(primaryGroupLabel, group, dataCategory) ||
+        pairExists(group, primaryGroupLabel, dataCategory)
       );
     });
   }
@@ -120,7 +175,7 @@ const PhecodePage = () => {
     (option) => option.props.value !== "group20"
   );
 
-  const dataCategoryOptions = ["Emergency Room", "Outpatient"].map((option) => (
+  const dataCategoryOptions = Object.values(DataCategoryEnum).map((option) => (
     <MenuItem value={option} key={option}>
       {option}
     </MenuItem>
@@ -128,13 +183,13 @@ const PhecodePage = () => {
   return (
     <div className={css.scatterplotBox}>
       <div>
-        <Typography variant="h2">Phecode Diagnoses</Typography>
+        <Typography variant="h2" component="h1">
+          Phecode Diagnoses
+        </Typography>
       </div>
       <div>
-        <Typography variant="h5">
-          {groupNameMap[primaryGroupLabel]} (n={groupSizeMap[primaryGroupLabel]}
-          ) vs {groupNameMap[secondGroupLabel]} (n=
-          {groupSizeMap[secondGroupLabel]})
+        <Typography variant="h5" component="h2">
+          {graphTitle}
         </Typography>
       </div>
       <div className={css.scatterGraph}>{graph}</div>
@@ -199,8 +254,8 @@ const PhecodePage = () => {
             target="_blank"
           >
             phecode
-          </Link>
-          {" "}and being a part of cluster 1, relative to cluster 2. Results are
+          </Link>{" "}
+          and being a part of cluster 1, relative to cluster 2. Results are
           displayed for phecodes that are FDR significant at 5%. We test
           phecodes with more than 30 individuals who recieved that phecodes. For
           IBD cluster with more than 40 phecodes that meet this criteria, we
