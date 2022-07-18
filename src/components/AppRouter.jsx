@@ -64,10 +64,8 @@ const AppRouter = (props) => {
 };
 
 const trackPageInGoogleAnalytics = (path) => {
-  if ("ga" in window) {
-    window.ga("set", "page", path);
-    window.ga("send", "pageview");
-  }
+  window.ga("set", "page", path);
+  window.ga("send", "pageview");
 };
 
 const AppRouterListener = (props) => {
@@ -90,9 +88,9 @@ const AppRouterListener = (props) => {
       document.title = pageTitlePrefix;
     }
     const path = location.pathname + location.search;
-    if ("ga" in window) {
+    try {
       trackPageInGoogleAnalytics(path);
-    } else {
+    } catch {
       // Google Analytics hasn't loaded yet, give it a second...
       setTimeout(() => {
         trackPageInGoogleAnalytics(path);
