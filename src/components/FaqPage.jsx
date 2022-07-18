@@ -49,66 +49,66 @@ const FaqPage = () => {
         </div>
         <Typography variant="body1" gutterBottom>
           <p>
-            <a href="#section1">What were the main results of this study? </a>
+            <Link href="#section1">What were the main results of this study? </Link>
           </p>
           <p>
-            <a href="#section2">What are limitations to this study? </a>
+            <Link href="#section2">What are limitations to this study? </Link>
           </p>
           <p>
-            <a href="#section3">How is this study useful?</a>
+            <Link href="#section3">How is this study useful?</Link>
           </p>
           <p>
-            <a href="#section4">What is a health disparity?</a>
+            <Link href="#section4">What is a health disparity?</Link>
           </p>
           <p>
-            <a href="#section5">Are humans genetically different?</a>
+            <Link href="#section5">Are humans genetically different?</Link>
           </p>
           <p>
-            <a href="#section6">What is genetic ancestry?</a>
+            <Link href="#section6">What is genetic ancestry?</Link>
           </p>
           <p>
-            <a href="#section7">
+            <Link href="#section7">
               How are race and ethnicity different from genetic ancestry?
-            </a>
+            </Link>
           </p>
           <p>
-            <a href="#section8">How was genetic ancestry studied here?</a>
+            <Link href="#section8">How was genetic ancestry studied here?</Link>
           </p>
           <p>
-            <a href="#section9">
+            <Link href="#section9">
               Why is identity-by-descent a useful thing to study?
-            </a>
+            </Link>
           </p>
           <p>
-            <a href="#section10">
+            <Link href="#section10">
               How do companies like 23andMe assess genetic ancestry?
-            </a>
+            </Link>
           </p>
           <p>
-            <a href="#section11">
+            <Link href="#section11">
               What does genetic ancestry mean for identity?
-            </a>
+            </Link>
           </p>
           <p>
-            <a href="#section12">What is a PheCode?</a>
+            <Link href="#section12">What is a PheCode?</Link>
           </p>
           <p>
-            <a href="#section13">
+            <Link href="#section13">
               What does it mean for a PheCode to have a higher or lower odds
               ratio in a community?
-            </a>
+            </Link>
           </p>
           <p>
-            <a href="#section14">
+            <Link href="#section14">
               Does a PheCode association in a genetic ancestry community mean
               the disease is genetic?
-            </a>
+            </Link>
           </p>
           <p>
-            <a href="#section15">Further Reading</a>
+            <Link href="#section15">Further Reading</Link>
           </p>
           <p>
-            <a href="#section16">Acknowledgements</a>
+            <Link href="#section16">Acknowledgements</Link>
           </p>
         </Typography>
 
