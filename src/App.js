@@ -68,7 +68,7 @@ const App = () => {
       <div className="footer">
         <p>
           © 2022 -{" "}
-          <Link href="https://github.com/misingnoglic/ibd-la">
+          <Link href="https://github.com/misingnoglic/ibd.la">
             Contribute on GitHub
           </Link>
         </p>
