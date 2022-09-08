@@ -11,7 +11,7 @@ const Home = () => {
     <div>
       <div className={css.titleText}>
         <Typography variant="h2">
-          Fine-scale population health in Los Angeles
+          Fine-scale health utilization in the UCLA Biobank
         </Typography>
         <Typography variant="h4">*Not peer reviewed*</Typography>
       </div>

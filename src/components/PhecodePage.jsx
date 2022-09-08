@@ -141,7 +141,7 @@ const PhecodePage = () => {
       <div className={css.selectionForm}>
         <div className={css.selectionBox}>
           <FormControl style={{ minWidth: 150 }}>
-            <InputLabel id="group1-selection">Community 1</InputLabel>
+            <InputLabel id="group1-selection">Cluster 1</InputLabel>
             <Select
               labelId="group1-selection"
               value={primaryGroupLabel}
@@ -154,7 +154,7 @@ const PhecodePage = () => {
         </div>
         <div className={css.selectionBox}>
           <FormControl style={{ minWidth: 150 }}>
-            <InputLabel id="group2-selection">Community 2</InputLabel>
+            <InputLabel id="group2-selection">Cluster 2</InputLabel>
             <Select
               disabled={!primaryGroupLabel}
               labelId="group2-selection"
