@@ -27,14 +27,18 @@ const Home = () => {
         </div>
         <div className={css.homeBodyText}>
           <Typography variant="body1" gutterBottom>
-              This browser explores health in Los Angeles within a biobank collected at
-              the UCLA Health System. The data is apart of the{" "}
-              <Link href="https://www.uclahealth.org/precision-health/atlas">
-                UCLA ATLAS Community Health Initiative
-              </Link>{" "} and the UCLA Clinical Neurogenomics Research Center.
-              Here, we explore several aspects of health that may be of interest
-              to researchers and community members, particularly those who have an 
-              interest in studying health disparities.{" "}
+            This browser explores health in Los Angeles within a biobank
+            collected at the UCLA Health System. The data is apart of the{" "}
+            <Link href="https://www.uclahealth.org/precision-health/atlas">
+              UCLA ATLAS Community Health Initiative
+            </Link>{" "}
+            and the{" "}
+            <Link href="https://www.uclahealth.org/precision-health/atlas">
+              UCLA Clinical Neurogenomics Research Center.
+            </Link>{" "}
+            Here, we explore several aspects of health that may be of interest
+            to researchers and community members, particularly those who have an
+            interest in studying health disparities.
           </Typography>
           <Typography variant="body1" gutterBottom>
             We identified clusters of related individuals using an unsupervised
