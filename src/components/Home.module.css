@@ -10,16 +10,24 @@
 
 .homePageContent {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .graphImage {
-    width: 35%;
-    height: 70vh;
+    width: 45%
+}
+
+.graphImage svg {
+    width: 100%;
+    height: auto;
 }
 
 .homeBodyText {
     text-align: justify;
-    width: 50%;
+    width: 45%;
+    margin-right: 16px;
 }
 
+.homeBodyText p {
+    padding-bottom: 8px;
+}

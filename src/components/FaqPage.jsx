@@ -1,9 +1,9 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
-import css from "./About.module.css";
+import css from "./FaqPage.module.css";
 import Link from "@mui/material/Link";
 
-const About = () => {
+const FaqPage = () => {
   return (
     <div className={css.titleText}>
       <Typography variant="h2">FAQ</Typography>
@@ -45,71 +45,70 @@ const About = () => {
         </Typography>
 
         <div className={css.titleText}>
-          {" "}
-          <Typography variant="h4">Table of Contents </Typography>{" "}
+          <Typography variant="h4">Table of Contents</Typography>
         </div>
         <Typography variant="body1" gutterBottom>
           <p>
-            <a href="#section1">What were the main results of this study? </a>
+            <Link href="#section1">What were the main results of this study? </Link>
           </p>
           <p>
-            <a href="#section2">What are limitations to this study? </a>
+            <Link href="#section2">What are limitations to this study? </Link>
           </p>
           <p>
-            <a href="#section3">How is this study useful?</a>
+            <Link href="#section3">How is this study useful?</Link>
           </p>
           <p>
-            <a href="#section4">What is a health disparity?</a>
+            <Link href="#section4">What is a health disparity?</Link>
           </p>
           <p>
-            <a href="#section5">Are humans genetically different?</a>
+            <Link href="#section5">Are humans genetically different?</Link>
           </p>
           <p>
-            <a href="#section6">What is genetic ancestry?</a>
+            <Link href="#section6">What is genetic ancestry?</Link>
           </p>
           <p>
-            <a href="#section7">
+            <Link href="#section7">
               How are race and ethnicity different from genetic ancestry?
-            </a>
+            </Link>
           </p>
           <p>
-            <a href="#section8">How was genetic ancestry studied here?</a>
+            <Link href="#section8">How was genetic ancestry studied here?</Link>
           </p>
           <p>
-            <a href="#section9">
-              Why is identity-by-descent a useful thing to study?{" "}
-            </a>
+            <Link href="#section9">
+              Why is identity-by-descent a useful thing to study?
+            </Link>
           </p>
           <p>
-            <a href="#section10">
+            <Link href="#section10">
               How do companies like 23andMe assess genetic ancestry?
-            </a>
+            </Link>
           </p>
           <p>
-            <a href="#section11">
+            <Link href="#section11">
               What does genetic ancestry mean for identity?
-            </a>
+            </Link>
           </p>
           <p>
-            <a href="#section12">What is a PheCode?</a>
+            <Link href="#section12">What is a PheCode?</Link>
           </p>
           <p>
-            <a href="#section13">
+            <Link href="#section13">
               What does it mean for a PheCode to have a higher or lower odds
-              ratio in a cluster?{" "}
-            </a>
+              ratio in a community?
+            </Link>
           </p>
           <p>
-            <a href="#section14">
-              Does a PheCode association in a genetic ancestry cluster mean
+            <Link href="#section14">
+              Does a PheCode association in a genetic ancestry community mean
               the disease is genetic?
-            </a>
+            </Link>
           </p>
           <p>
-            <a href="#section15">Further Reading</a>
+            <Link href="#section15">Further Reading</Link>
           </p>
           <p>
-            <a href="#section16">Acknowledgements</a>
+            <Link href="#section16">Acknowledgements</Link>
           </p>
         </Typography>
 
@@ -146,10 +145,9 @@ const About = () => {
 
         <div className={css.titleText}>
           <a name="section2">
-            {" "}
             <Typography variant="h6">
-              What are limitations to this study?{" "}
-            </Typography>{" "}
+              What are limitations to this study?
+            </Typography>
           </a>
         </div>
         <Typography variant="body1" gutterBottom>
@@ -179,10 +177,9 @@ const About = () => {
 
         <div className={css.titleText}>
           <a name="section3">
-            {" "}
             <Typography variant="h6">
-              How is this study useful?{" "}
-            </Typography>{" "}
+              How is this study useful?
+            </Typography>
           </a>
         </div>
         <Typography variant="body1" gutterBottom>
@@ -205,15 +202,13 @@ const About = () => {
 
         <div className={css.titleText}>
           <a name="section4">
-            {" "}
             <Typography variant="h6">
-              What is a health disparity?{" "}
-            </Typography>{" "}
+              What is a health disparity?
+            </Typography>
           </a>
         </div>
         <Typography variant="body1" gutterBottom>
           <p>
-            {" "}
             <Link href="https://www.healthypeople.gov/2020/about/foundation-health-measures/Disparities">
               Health disparities are differences in the health outcomes
             </Link>{" "}
@@ -678,7 +673,7 @@ const About = () => {
           <a name="section13">
             <Typography variant="h6">
               What does it mean for a PheCode to have a higher or lower odds
-              ratio in a cluster?{" "}
+              ratio in a community?{" "}
             </Typography>
           </a>{" "}
         </div>
@@ -782,10 +777,9 @@ const About = () => {
         </Typography>
 
         <div className={css.titleText}>
-          {" "}
           <a name="section15">
             <Typography variant="h6">Further Reading </Typography>
-          </a>{" "}
+          </a>
         </div>
         <Typography variant="body1" gutterBottom>
           <p>
@@ -848,14 +842,14 @@ const About = () => {
           </p>
           <ul>
             <li>
-              Mathieson and Scally,
+              Mathieson and Scally,{" "}
               <Link href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7082057/">
                 What is Ancestry?
               </Link>{" "}
               , PLoS Genetics, 2020
             </li>
             <li>
-              Borell et al,
+              Borell et al,{" "}
               <Link href="https://www.nejm.org/doi/full/10.1056/NEJMms2029562#:~:text=Genetic%20ancestry%20is%20the%20genetic,ancestry%20is%20a%20better%20predictor">
                 Race and Genetic Ancestry in Medicine — A Time for Reckoning
                 with Racism
@@ -863,14 +857,14 @@ const About = () => {
               , NEJM, 2021
             </li>
             <li>
-              Lewis et al,
+              Lewis et al,{" "}
               <Link href="https://www.science.org/doi/10.1126/science.abm7530">
                 Getting genetic ancestry right for science and society
               </Link>{" "}
               , Science, 2022
             </li>
             <li>
-              Burchard et al,
+              Burchard et al,{" "}
               <Link href="https://doi.org/10.1056/NEJMsb025007">
                 The Importance of Race and Ethnic Background in Biomedical
                 Research and Clinical Practice
@@ -886,7 +880,7 @@ const About = () => {
               , ArXiv, 2021
             </li>
             <li>
-              Yaeger et al,
+              Yaeger et al,{" "}
               <Link href="http://cebp.aacrjournals.org/cgi/doi/10.1158/1055-9965.EPI-07-2505">
                 Comparing Genetic Ancestry and Self-Described Race in African
                 Americans Born in the United States and in Africa
@@ -894,7 +888,7 @@ const About = () => {
               , CEBP, 2008
             </li>
             <li>
-              Yudell et al,
+              Yudell et al,{" "}
               <Link href="https://www.science.org/doi/abs/10.1126/science.aac4951">
                 Taking race out of human genetics
               </Link>{" "}
@@ -921,4 +915,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default FaqPage;

@@ -3,6 +3,17 @@
     background-color: #fff;
     padding: 0 80px;
 
+    margin-top: 8px;
+    margin-bottom: 4px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;  
+}
+
+.controls {
+    align-items: center;
 }
 
 .deckGlContainer {

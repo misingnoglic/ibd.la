@@ -111,26 +111,27 @@ const DeptPage = () => {
         </div>
       </div>
       <div className={css.bodyText2}>
+        <div className={css.sectionHeader}>
+          <Divider textAlign="left">Model</Divider>
+        </div>
         <Typography variant="body1" gutterBottom>
-          <div className={css.sectionHeader}>
-            <Divider textAlign="left">Model</Divider>
-          </div>
           Logistic regression test: Specialty ~ Cluster Status + Age + Sex + BMI
-          <div className={css.sectionHeader}>
-            <Divider textAlign="left">About</Divider>
-          </div>
-          <p>
-            This plot is the result of a statistical test for the association
-            between visitng a physician with a particular specialty
-            and being a part of cluster 1, relative to cluster 2. Results
-            are displayed for specialities that are FDR significant at 5%. We test
-            specialities with more than 30 individuals who recieved visited a practitioner
-            with that specialty.
-          </p>
-          <p>
-            <b>Note</b> that this plot does not demonstrate that belonging to an
-            IBD cluster is causal for seeing a medical provider with a particular specialty.
-          </p>
+        </Typography>
+        <div className={css.sectionHeader}>
+          <Divider textAlign="left">About</Divider>
+        </div>
+        <Typography variant="body1" gutterBottom>
+          This plot is the result of a statistical test for the association
+          between visitng a physician with a particular specialty and being a
+          part of cluster 1, relative to cluster 2. Results are displayed for
+          specialities that are FDR significant at 5%. We test specialities with
+          more than 30 individuals who recieved visited a practitioner with that
+          specialty.
+        </Typography>
+        <Typography variant="body1" gutterBottom>
+          <b>Note</b> that this plot does not demonstrate that belonging to an
+          IBD cluster is causal for seeing a medical provider with a particular
+          specialty.
         </Typography>
       </div>
     </div>

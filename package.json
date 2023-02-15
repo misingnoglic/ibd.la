@@ -1,5 +1,6 @@
 {
-  "name": "atlas-app",
+  "name": "ibd-la",
+  "homepage": "https://www.popapp.be",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,13 +14,10 @@
     "@testing-library/user-event": "^13.5.0",
     "d3-scale": "^4.0.2",
     "deck.gl": "^8.6.5",
-    "leaflet": "^1.7.1",
-    "leaflet-defaulticon-compatibility": "^0.1.1",
     "plotly.js": "^2.8.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-ga": "^3.3.1",
-    "react-leaflet": "^3.2.5",
     "react-map-gl": "^6.1.18",
     "react-plotly.js": "^2.5.1",
     "react-router-dom": "^6.3.0",
@@ -34,7 +32,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "analyze": "source-map-explorer 'build/static/js/*.js'"
+    "analyze": "source-map-explorer 'build/static/js/*.js' --only-mapped --html sme_result.html"
   },
   "browserslist": {
     "production": [

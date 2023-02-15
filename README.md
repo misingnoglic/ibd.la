@@ -1,79 +1,73 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/85b336c9-e4d1-4ae5-8346-20e9f5f455d9/deploy-status)](https://app.netlify.com/sites/ucla-atlas/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/85b336c9-e4d1-4ae5-8346-20e9f5f455d9/deploy-status)](https://app.netlify.com/sites/ibd-la/deploys)
 
 
-# Getting Started with Create React App
+# Introduction
+
+This is the repo for the source code backing [ibd.la](https://ibd.la). See the website for details about the purpose of the website.
+
+# About the tech and libraries
+
+The website is developed with [React](https://reactjs.org/), a front-end JavaScript library for building interactive user interfaces on the web. The components are build on top of the component library [MUI](https://mui.com/). Routing is done with [React Router](https://reactrouter.com/). All of the charts are built with [plotly](https://plotly.com/). The map overlay is built with [Mapbox](https://www.mapbox.com/) and [deck gl](https://deck.gl/). The website is hosted with [Netlify](https://www.netlify.com/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# App Structure
 
-In the project directory, you can run:
+Note this is not what I would call the optimal app structure, just what I have came up with during development. If you have any opinions, we take pull requests :)
 
-### `npm start`
+- src/App.js houses the main component, which contains the tabs at the top, the footer, and a space for the different page components, which is determined by src/AppRouter.jsx. When the tabs are clicked, an event is dispatched for the AppRouter component to change the URL. 
+- src/AppRouter.jsx has all the React Router logic to decide which inner component to render, depending on the URL. When App.js sends a tab click event, a component listens for this event and will change the URL. This is done for [code splitting](https://create-react-app.dev/docs/code-splitting/) purposes.
 
-Runs the app in the development mode.\
+There is currently no backend. This is due to the fact that the data is not expected to change often, and is fairly small. The map data lives in the `data` folder. Some other data lives in the `src/data` folder, I am working on moving that out of the build to reduce its size.
+
+# Running Locally
+
+## First Time Setup
+
+TODO: Make a docker image to run this app. For now, here's the instructions to install: 
+
+- Clone the repo from GitHub.
+- Install npm on your device
+- Run `npm i` to install all the dependencies.
+
+## Running the App
+
+To run the app locally in development mode, run the following command:
+
+* `npm start`
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+# Deployment
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app is automatically deployed to ibd.la once a new version hits the main branch on Github. You don't have to do anything.
 
-### `npm run build`
+# Contributing Guide
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you would like to take on fixing up something on the website, we are very open to suggestions. Please contact us via issue first with your proposal, and let's have a discussion before getting into the code.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When writing the code, please use prettier to format your JS code. This is done by running `npx prettier --write path/to/Component.jsx`. There are currently no unit or snapshot tests, but if you add those to your code or our code we will be thankful for it. Additionally, run eslint and make sure there aren't any really bad lint errors.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After that, just submit a pull request, include any appropriate screen recordings or screenshots, and we will merge it into production after testing.
 
-### `npm run eject`
+# Debugging 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## How to analyze the build 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+From [This page](https://create-react-app.dev/docs/analyzing-the-bundle-size/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+If the build is getting slower, try analyzing the build to see what is causing it to bloat. Then run the following commands.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
+- `npm run build`
+- `npm run analyze`
 
 # Useful Links
+
+Here is a list of links I used during development.
+
 - https://mui.com
 - https://plotly.com/javascript/react
 - https://github.com/christacaggiano/phecode-assoc
@@ -84,3 +78,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - OpenLayers 
 - https://github.com/visgl/deck.gl
 - https://github.com/visgl/deck.gl/blob/8.6-release/examples/website/geojson/app.js
+
+# Various React Links
+
+## Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+## Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+

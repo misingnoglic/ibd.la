@@ -15,7 +15,7 @@ import Divider from "@mui/material/Divider";
 import { groupNameMap } from "../data/groupInfo";
 import { heatmapColorScheme } from "../data/heatmapColorScheme";
 
-import css from "./DeckGlMap.module.css";
+import css from "./ZipcodePage.module.css";
 
 const getTooltip = ({ object }) => {
   const response = object && {
@@ -35,7 +35,7 @@ const getTooltip = ({ object }) => {
   return response;
 };
 
-const DeckGlMap = () => {
+const ZipcodePage = () => {
   const [group, setGroup] = useState("group1");
 
   const handleGroupChange = (event) => {
@@ -67,7 +67,7 @@ const DeckGlMap = () => {
   const layers = [
     new GeoJsonLayer({
       id: "geojson",
-      data: `https://raw.githubusercontent.com/misingnoglic/atlas-app/main/data/geojson/${group}.json`,
+      data: `https://raw.githubusercontent.com/misingnoglic/ibd.la/main/data/geojson/${group}.json`,
       getFillColor: (f) => colorScale(f.properties.coefficient),
       getLineColor: [255, 255, 255],
       getLineWidth: 20,
@@ -89,11 +89,11 @@ const DeckGlMap = () => {
   }
 
   return (
-  
     <div className={css.mapPageContainer}>
-      <div className={css.mapTitleText}><Typography variant="h2">Office Visits by Zip Code</Typography></div>
+      <div className={css.mapTitleText}>
+        <Typography variant="h2">Office Visits by Zip Code</Typography>
+      </div>
       <div className={css.deckGlContainer}>
-        
         <DeckGL
           layers={layers}
           initialViewState={initialViewState}
@@ -103,41 +103,44 @@ const DeckGlMap = () => {
           <StaticMap reuseMaps mapboxApiAccessToken={mapboxAccessToken} />
         </DeckGL>
       </div>
-      <div className={css.selectionForm2}>
-        <div className={css.selectionBox2}>
-          <FormControl style={{ minWidth: 150 }}>
-            <InputLabel id="dataCategory-selection">Group</InputLabel>
-            <Select
-              labelId="dataCategory-selection"
-              value={group}
-              label="Data Category"
-              onChange={handleGroupChange}
-            >
-              {groupOptions}
-            </Select>
-          </FormControl> 
-          
+      <div className={css.controls}>
+        <div className={css.selectionForm2}>
+          <div className={css.selectionBox2}>
+            <FormControl style={{ minWidth: 150 }}>
+              <InputLabel id="dataCategory-selection">Group</InputLabel>
+              <Select
+                labelId="dataCategory-selection"
+                value={group}
+                label="Data Category"
+                onChange={handleGroupChange}
+              >
+                {groupOptions}
+              </Select>
+            </FormControl>
+          </div>
         </div>
-      </div>
-      <div className={css.bodyText}>
-        
-        <Typography variant="body1" gutterBottom>
-        <div className={css.sectionHeader}>
+        <div className={css.bodyText}>
+          <div className={css.sectionHeader}>
             <Divider textAlign="left">Model</Divider>
           </div>
-          Logistic regression test: Zip Code ~ Cluster Status + Age + Sex + BMI
-        <div className={css.sectionHeader}>
+          <Typography variant="body1" gutterBottom>
+            Logistic regression test: Zip Code ~ Cluster Status + Age + Sex +
+            BMI
+          </Typography>
+          <div className={css.sectionHeader}>
             <Divider textAlign="left">About</Divider>
           </div>
-          <p>
-            This plot shows the association between cluster membership and ever visiting a UCLA medical office 
-            in a particular zip code. The darker red the shading over the zip code, the more likely the cluster 
-            is to visit an office in that location. We only test zip codes that have seen more than 30 patients. 
-          </p>
-        </Typography>
+          <Typography variant="body1" gutterBottom>
+            This plot shows the association between cluster membership and ever
+            visiting a UCLA medical office in a particular zip code. The darker
+            red the shading over the zip code, the more likely the cluster is to
+            visit an office in that location. We only test zip codes that have
+            seen more than 30 patients.
+          </Typography>
+        </div>
       </div>
     </div>
   );
 };
 
-export default DeckGlMap;
+export default ZipcodePage;
