@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOMServer from "react-dom/server";
-import { StaticMap } from "!react-map-gl";
+import { Map } from "!react-map-gl";
 import DeckGL from "!@deck.gl/react";
 import { GeoJsonLayer } from "!@deck.gl/layers";
 import { scaleThreshold } from "d3-scale";
@@ -100,7 +100,11 @@ const ZipcodePage = () => {
           controller={true}
           getTooltip={getTooltip}
         >
-          <StaticMap reuseMaps mapboxApiAccessToken={mapboxAccessToken} />
+          <Map
+            mapboxAccessToken={mapboxAccessToken}
+            mapStyle="mapbox://styles/mapbox/light-v9"
+            reuseMaps
+          />
         </DeckGL>
       </div>
       <div className={css.controls}>

@@ -95,12 +95,12 @@ const FaqPage = () => {
           <p>
             <Link href="#section13">
               What does it mean for a PheCode to have a higher or lower odds
-              ratio in a community?
+              ratio in a cluster?
             </Link>
           </p>
           <p>
             <Link href="#section14">
-              Does a PheCode association in a genetic ancestry community mean
+              Does a PheCode association in a genetic ancestry cluster mean
               the disease is genetic?
             </Link>
           </p>
@@ -673,7 +673,7 @@ const FaqPage = () => {
           <a name="section13">
             <Typography variant="h6">
               What does it mean for a PheCode to have a higher or lower odds
-              ratio in a community?{" "}
+              ratio in a cluster?{" "}
             </Typography>
           </a>{" "}
         </div>

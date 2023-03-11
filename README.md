@@ -27,7 +27,7 @@ There is currently no backend. This is due to the fact that the data is not expe
 TODO: Make a docker image to run this app. For now, here's the instructions to install: 
 
 - Clone the repo from GitHub.
-- Install npm on your device
+- Install npm on your device (see https://changelog.com/posts/install-node-js-with-homebrew-on-os-x for example)
 - Run `npm i` to install all the dependencies.
 
 ## Running the App
@@ -43,7 +43,8 @@ You may also see any lint errors in the console.
 
 # Deployment
 
-The app is automatically deployed to ibd.la once a new version hits the main branch on Github. You don't have to do anything.
+The app is automatically deployed to ibd.la once a new version hits the main branch on Github. You don't have to do anything. 
+Note that we're on a free plan that only has a limited amount of build time, as such please limit the number of times you push to the main branch. If needed, you can make a separate branch. 
 
 # Contributing Guide
 

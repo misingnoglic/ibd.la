@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <header
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-hip9hq-MuiPaper-root-MuiAppBar-root"
+    >
+      <div
+        className="MuiTabs-root css-1ujnqem-MuiTabs-root"
+        style={
+          Object {
+            "backgroundColor": "#C7CEEA",
+            "color": "white",
+          }
+        }
+      >
+        <div
+          className="MuiTabs-scrollableX MuiTabs-hideScrollbar css-agdkjh-MuiTabs-scrollbarSize"
+          style={
+            Object {
+              "height": 99,
+              "overflow": "scroll",
+              "position": "absolute",
+              "top": -9999,
+              "width": 99,
+            }
+          }
+        />
+        <div
+          className="MuiTabs-scroller MuiTabs-hideScrollbar MuiTabs-scrollableX css-69z67c-MuiTabs-scroller"
+          onScroll={[Function]}
+          style={
+            Object {
+              "marginBottom": -0,
+              "overflow": "hidden",
+            }
+          }
+        >
+          <div
+            aria-orientation={null}
+            className="MuiTabs-flexContainer css-heg063-MuiTabs-flexContainer"
+            onKeyDown={[Function]}
+            role="tablist"
+          >
+            <button
+              aria-selected={true}
+              className="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-1h9z7r5-MuiButtonBase-root-MuiTab-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="tab"
+              tabIndex={0}
+              type="button"
+            >
+              Home
+              <span
+                className="MuiTabs-indicator css-1aquho2-MuiTabs-indicator"
+                style={Object {}}
+              />
+            </button>
+            <button
+              aria-selected={false}
+              className="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-1h9z7r5-MuiButtonBase-root-MuiTab-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="tab"
+              tabIndex={-1}
+              type="button"
+            >
+              PheCodes
+            </button>
+            <button
+              aria-selected={false}
+              className="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-1h9z7r5-MuiButtonBase-root-MuiTab-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="tab"
+              tabIndex={-1}
+              type="button"
+            >
+              Specialties
+            </button>
+            <button
+              aria-selected={false}
+              className="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-1h9z7r5-MuiButtonBase-root-MuiTab-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="tab"
+              tabIndex={-1}
+              type="button"
+            >
+              Zip Codes
+            </button>
+            <button
+              aria-selected={false}
+              className="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-1h9z7r5-MuiButtonBase-root-MuiTab-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="tab"
+              tabIndex={-1}
+              type="button"
+            >
+              Genetics
+            </button>
+            <button
+              aria-selected={false}
+              className="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-1h9z7r5-MuiButtonBase-root-MuiTab-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="tab"
+              tabIndex={-1}
+              type="button"
+            >
+              Time
+            </button>
+            <button
+              aria-selected={false}
+              className="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-1h9z7r5-MuiButtonBase-root-MuiTab-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="tab"
+              tabIndex={-1}
+              type="button"
+            >
+              FAQ
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div
+      className="tabContent"
+    >
+      <div
+        className="loadingIndicator"
+      >
+        <span
+          className="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorInherit css-62e83j-MuiCircularProgress-root"
+          role="progressbar"
+          style={
+            Object {
+              "height": 40,
+              "width": 40,
+            }
+          }
+        >
+          <svg
+            className="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              cx={44}
+              cy={44}
+              fill="none"
+              r={20.2}
+              strokeWidth={3.6}
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </header>
+  <div
+    className="footer"
+  >
+    <p>
+      © 2022 -
+       
+      <a
+        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+        href="https://github.com/misingnoglic/ibd.la"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        Contribute on GitHub
+      </a>
+    </p>
+  </div>
+</div>
+`;
