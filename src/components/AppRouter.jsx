@@ -21,7 +21,7 @@ const DeptPage = lazyPreload(() => import("./DepartmentPage"));
 const TimePage = lazyPreload(() => import("./TimePage"));
 const IbdPage = lazyPreload(() => import("./IbdPage"));
 const ZipcodePage = lazyPreload(() => import("./ZipcodePage"));
-const FaqPage = lazyPreload(() => import("./FaqPage"));
+const FaqPage = lazyPreload(() => import("./FaqPage/FaqPage"));
 const Home = lazyPreload(() => import("./Home"));
 
 import css from "./AppRouter.module.css";

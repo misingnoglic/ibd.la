@@ -79,6 +79,7 @@ Here is a list of links I used during development.
 - OpenLayers 
 - https://github.com/visgl/deck.gl
 - https://github.com/visgl/deck.gl/blob/8.6-release/examples/website/geojson/app.js
+- https://github.com/probablyup/markdown-to-jsx
 
 # Various React Links
 
