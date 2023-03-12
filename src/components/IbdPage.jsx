@@ -79,7 +79,7 @@ const IbdPage = () => {
       </div>
       <div className={css.bodyText}>
         <div className={css.sectionHeader}>
-          <Divider textAlign="left">About</Divider>
+          <Divider textAlign="left"><Typography variant="h4">About</Typography></Divider>
         </div>
         <Typography variant="body1" gutterBottom>
           We calculated two types of IBD summary metrics. First, we calculated

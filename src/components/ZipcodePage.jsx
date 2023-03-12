@@ -125,14 +125,14 @@ const ZipcodePage = () => {
         </div>
         <div className={css.bodyText}>
           <div className={css.sectionHeader}>
-            <Divider textAlign="left">Model</Divider>
+            <Divider textAlign="left"><Typography variant="h4">Model</Typography></Divider>
           </div>
           <Typography variant="body1" gutterBottom>
             Logistic regression test: Zip Code ~ Cluster Status + Age + Sex +
             BMI
           </Typography>
           <div className={css.sectionHeader}>
-            <Divider textAlign="left">About</Divider>
+            <Divider textAlign="left"><Typography variant="h4">About</Typography></Divider>
           </div>
           <Typography variant="body1" gutterBottom>
             This plot shows the association between cluster membership and ever

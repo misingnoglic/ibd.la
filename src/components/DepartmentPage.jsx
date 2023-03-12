@@ -112,13 +112,13 @@ const DeptPage = () => {
       </div>
       <div className={css.bodyText2}>
         <div className={css.sectionHeader}>
-          <Divider textAlign="left">Model</Divider>
+          <Divider textAlign="left"><Typography variant="h4">Model</Typography></Divider>
         </div>
         <Typography variant="body1" gutterBottom>
           Logistic regression test: Specialty ~ Cluster Status + Age + Sex + BMI
         </Typography>
         <div className={css.sectionHeader}>
-          <Divider textAlign="left">About</Divider>
+          <Divider textAlign="left"><Typography variant="h4">About</Typography></Divider>
         </div>
         <Typography variant="body1" gutterBottom>
           This plot is the result of a statistical test for the association

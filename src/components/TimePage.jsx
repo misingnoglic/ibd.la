@@ -95,7 +95,7 @@ const PhecodePage = () => {
       </div>
       <div className={css.bodyText2}>
         <div className={css.sectionHeader}>
-          <Divider textAlign="left">About</Divider>
+            <Divider textAlign="left"><Typography variant="h4">About</Typography></Divider>
         </div>
         <Typography variant="body1" gutterBottom>
           This plot is the proportion of the selected IBD cluster that received
