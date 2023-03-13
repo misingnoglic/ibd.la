@@ -75,7 +75,7 @@ const DeptPage = () => {
       <Typography variant="h2">Medical Specialities</Typography>
       <Typography variant="h5">
         {groupNameMap[firstGroupLabel]} (n={groupSizeMap[firstGroupLabel]}) vs{" "}
-        {groupNameMap[secondGroupLabel]} (n={groupSizeMap[secondGroupLabel]}){" "}
+        {groupNameMap[secondGroupLabel]} (n={groupSizeMap[secondGroupLabel]})
       </Typography>
       <div className={css.scatterGraph}>{graph}</div>
       <div className={css.selectionForm}>
@@ -102,9 +102,6 @@ const DeptPage = () => {
               onChange={handleSecondGroupChange}
             >
               {options}
-              {/* <MenuItem value="All" key="All">
-                All
-              </MenuItem> */}
             </Select>
           </FormControl>
         </div>
