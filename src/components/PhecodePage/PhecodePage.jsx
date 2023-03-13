@@ -7,6 +7,13 @@ import {
 import { erGraphData, erOptions } from "../../data/phecodeData/er";
 import { groupNameMap, groupSizeMap } from "../../data/groupInfo";
 
+import {
+  dataDirections,
+  anyHasPrimary,
+  pairExists,
+  getDataDirection,
+} from "../../utils/groupSelectionUtils";
+
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -41,16 +48,18 @@ const PhecodePage = () => {
   const [primaryGroupLabel, setPrimaryGroupLabel] = useState("group1");
   const [secondGroupLabel, setSecondGroupLabel] = useState("group20");
   const [dataCategory, setDataCategory] = useState(DataCategoryEnum.Outpatient);
+  const fullData = dataByCategory[dataCategory];
+  const fullDataOptions = optionsByCategory[dataCategory];
 
   const handleFirstGroupChange = (event) => {
-    if (!pairExists(event.target.value, secondGroupLabel, dataCategory)) {
+    if (!pairExists(fullData, event.target.value, secondGroupLabel)) {
       setSecondGroupLabel("");
     }
     setPrimaryGroupLabel(event.target.value);
   };
 
   const handleSecondGroupChange = (event) => {
-    if (pairExists(primaryGroupLabel, event.target.value, dataCategory)) {
+    if (pairExists(fullData, primaryGroupLabel, event.target.value)) {
       setSecondGroupLabel(event.target.value);
     } else {
       console.error(
@@ -60,7 +69,13 @@ const PhecodePage = () => {
   };
 
   const handleDataCategoryChange = (event) => {
-    if (!pairExists(primaryGroupLabel, secondGroupLabel, event.target.value)) {
+    if (
+      !pairExists(
+        dataByCategory[event.target.value],
+        primaryGroupLabel,
+        secondGroupLabel
+      )
+    ) {
       // primary, secondary not in group, set to null
       setPrimaryGroupLabel("");
       setSecondGroupLabel("");
@@ -68,62 +83,19 @@ const PhecodePage = () => {
     setDataCategory(event.target.value);
   };
 
-  const anyHasPrimary = (primaryGroupLabel, category) => {
-    return Object.keys(fullData).some((s) => {
-      return pairExists(primaryGroupLabel, s, category);
-    });
-  };
-
-  const pairExists = (primaryGroupLabel, secondGroupLabel, category) => {
-    return (
-      primaryGroupLabel &&
-      secondGroupLabel &&
-      primaryGroupLabel !== secondGroupLabel &&
-      getDataDirection(primaryGroupLabel, secondGroupLabel, category) !==
-        dataDirections.none
-    );
-  };
-
-  const dataDirections = {
-    normal: "normal", // label1, label2 is in object
-    reverse: "reverse", // label2, label1 is in object
-    none: "none", // neither order is in object
-  };
-
-  const getDataDirection = (primaryGroupLabel, secondGroupLabel, category) => {
-    const fullData = dataByCategory[category];
-    if (
-      fullData.hasOwnProperty(primaryGroupLabel) &&
-      fullData[primaryGroupLabel].hasOwnProperty(secondGroupLabel) &&
-      fullData[primaryGroupLabel][secondGroupLabel].length > 0
-    ) {
-      return dataDirections.normal;
-    } else if (
-      fullData.hasOwnProperty(secondGroupLabel) &&
-      fullData[secondGroupLabel].hasOwnProperty(primaryGroupLabel) &&
-      fullData[secondGroupLabel][primaryGroupLabel].length > 0
-    ) {
-      return dataDirections.reverse;
-    } else {
-      return dataDirections.none;
-    }
-  };
-
   let graph;
   let graphData = null;
   let graphTitle;
   let negate = false;
-  const fullData = dataByCategory[dataCategory];
-  const fullDataOptions = optionsByCategory[dataCategory];
 
-  if (pairExists(primaryGroupLabel, secondGroupLabel, dataCategory)) {
+  if (pairExists(fullData, primaryGroupLabel, secondGroupLabel)) {
     graphTitle = `
         ${groupNameMap[primaryGroupLabel]} (n=${groupSizeMap[primaryGroupLabel]}) vs ${groupNameMap[secondGroupLabel]} (n=${groupSizeMap[secondGroupLabel]})`;
 
     const dataDirection = getDataDirection(
+      fullData,
       primaryGroupLabel,
-      secondGroupLabel,
-      dataCategory
+      secondGroupLabel
     );
 
     if (dataDirection === dataDirections.normal) {
@@ -137,7 +109,7 @@ const PhecodePage = () => {
   }
   if (graphData) {
     // The graph looks bad if it's long with few data points
-    const graphHeight = graphData.length > 8 ? 900 : 500
+    const graphHeight = graphData.length > 8 ? 900 : 500;
     graph = (
       <ScatterPlot
         firstGroupLabel={`${groupNameMap[primaryGroupLabel]} (n=${groupSizeMap[primaryGroupLabel]})`}
@@ -165,15 +137,12 @@ const PhecodePage = () => {
   if (
     !!primaryGroupLabel &&
     (fullData.hasOwnProperty(primaryGroupLabel) ||
-      anyHasPrimary(primaryGroupLabel, dataCategory))
+      anyHasPrimary(fullData, primaryGroupLabel))
   ) {
     // Filter out any options for group2 that don't have data for primary group
     filteredGroupOptions = groupOptions.filter((option) => {
       const group = option.props.value;
-      return (
-        pairExists(primaryGroupLabel, group, dataCategory) ||
-        pairExists(group, primaryGroupLabel, dataCategory)
-      );
+      return pairExists(fullData, primaryGroupLabel, group);
     });
   }
 

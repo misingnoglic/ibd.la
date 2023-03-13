@@ -5,7 +5,6 @@ import { realData, realDataOptions } from "../data/deptScatterData";
 import { groupNameMap, groupSizeMap } from "../data/groupInfo";
 
 import Divider from "@mui/material/Divider";
-import Link from "@mui/material/Link";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -64,7 +63,7 @@ const DeptPage = () => {
   }
 
   const options = realDataOptions
-    .sort((a, b) => (groupNameMap[a] > groupNameMap[b] ? 1 : -1))
+    .sort((a, b) => (groupNameMap[a].localeCompare(groupNameMap[b])))
     .map((option) => (
       <MenuItem value={option} key={option}>
         {groupNameMap[option]}
@@ -122,10 +121,10 @@ const DeptPage = () => {
         </div>
         <Typography variant="body1" gutterBottom>
           This plot is the result of a statistical test for the association
-          between visitng a physician with a particular specialty and being a
+          between visiting a physician with a particular specialty and being a
           part of cluster 1, relative to cluster 2. Results are displayed for
           specialities that are FDR significant at 5%. We test specialities with
-          more than 30 individuals who recieved visited a practitioner with that
+          more than 30 individuals who received visited a practitioner with that
           specialty.
         </Typography>
         <Typography variant="body1" gutterBottom>
