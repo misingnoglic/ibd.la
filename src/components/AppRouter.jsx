@@ -16,7 +16,7 @@ function lazyPreload(importFn) {
 
 const TIME_UNTIL_PRELOAD_MS = 3000;
 
-const PhecodePage = lazyPreload(() => import("./PhecodePage"));
+const PhecodePage = lazyPreload(() => import("./PhecodePage/PhecodePage"));
 const DeptPage = lazyPreload(() => import("./DepartmentPage"));
 const TimePage = lazyPreload(() => import("./TimePage"));
 const IbdPage = lazyPreload(() => import("./IbdPage"));

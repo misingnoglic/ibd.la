@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import ScatterPlot from "./ScatterPlot";
+import ScatterPlot from "../ScatterPlot";
 import {
   outpatientGraphData,
   outpatientOptions,
-} from "../data/phecodeData/outpatient";
-import { erGraphData, erOptions } from "../data/phecodeData/er";
-
-import { groupNameMap, groupSizeMap } from "../data/groupInfo";
+} from "../../data/phecodeData/outpatient";
+import { erGraphData, erOptions } from "../../data/phecodeData/er";
+import { groupNameMap, groupSizeMap } from "../../data/groupInfo";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -45,7 +44,7 @@ const PhecodePage = () => {
 
   const handleFirstGroupChange = (event) => {
     if (!pairExists(event.target.value, secondGroupLabel, dataCategory)) {
-      setSecondGroupLabel(null);
+      setSecondGroupLabel("");
     }
     setPrimaryGroupLabel(event.target.value);
   };
@@ -63,10 +62,16 @@ const PhecodePage = () => {
   const handleDataCategoryChange = (event) => {
     if (!pairExists(primaryGroupLabel, secondGroupLabel, event.target.value)) {
       // primary, secondary not in group, set to null
-      setPrimaryGroupLabel(null);
-      setSecondGroupLabel(null);
+      setPrimaryGroupLabel("");
+      setSecondGroupLabel("");
     }
     setDataCategory(event.target.value);
+  };
+
+  const anyHasPrimary = (primaryGroupLabel, category) => {
+    return Object.keys(fullData).some((s) => {
+      return pairExists(primaryGroupLabel, s, category);
+    });
   };
 
   const pairExists = (primaryGroupLabel, secondGroupLabel, category) => {
@@ -105,7 +110,7 @@ const PhecodePage = () => {
   };
 
   let graph;
-  let graphData;
+  let graphData = null;
   let graphTitle;
   let negate = false;
   const fullData = dataByCategory[dataCategory];
@@ -115,26 +120,24 @@ const PhecodePage = () => {
     graphTitle = `
         ${groupNameMap[primaryGroupLabel]} (n=${groupSizeMap[primaryGroupLabel]}) vs ${groupNameMap[secondGroupLabel]} (n=${groupSizeMap[secondGroupLabel]})`;
 
-    if (
-      getDataDirection(primaryGroupLabel, secondGroupLabel, dataCategory) ===
-      dataDirections.normal
-    ) {
+    const dataDirection = getDataDirection(
+      primaryGroupLabel,
+      secondGroupLabel,
+      dataCategory
+    );
+
+    if (dataDirection === dataDirections.normal) {
       graphData = fullData[primaryGroupLabel][secondGroupLabel];
-    } else if (
-      getDataDirection(primaryGroupLabel, secondGroupLabel, dataCategory) ===
-      dataDirections.reverse
-    ) {
+    } else {
       graphData = fullData[secondGroupLabel][primaryGroupLabel];
       negate = true;
-    } else {
-      console.error(
-        `Invalid categories ${primaryGroupLabel} ${secondGroupLabel}`
-      );
     }
   } else {
     graphTitle = "Select valid groups and category to generate graph";
   }
   if (graphData) {
+    // The graph looks bad if it's long with few data points
+    const graphHeight = graphData.length > 8 ? 900 : 500
     graph = (
       <ScatterPlot
         firstGroupLabel={`${groupNameMap[primaryGroupLabel]} (n=${groupSizeMap[primaryGroupLabel]})`}
@@ -143,7 +146,7 @@ const PhecodePage = () => {
         plotColor={graphColorsByCategory[dataCategory]}
         negate={negate}
         width={866}
-        height={900}
+        height={graphHeight}
       />
     );
   } else {
@@ -159,7 +162,11 @@ const PhecodePage = () => {
     ));
 
   let filteredGroupOptions = [];
-  if (!!primaryGroupLabel && fullData.hasOwnProperty(primaryGroupLabel)) {
+  if (
+    !!primaryGroupLabel &&
+    (fullData.hasOwnProperty(primaryGroupLabel) ||
+      anyHasPrimary(primaryGroupLabel, dataCategory))
+  ) {
     // Filter out any options for group2 that don't have data for primary group
     filteredGroupOptions = groupOptions.filter((option) => {
       const group = option.props.value;
@@ -237,13 +244,17 @@ const PhecodePage = () => {
       </div>
       <div className={css.bodyText2}>
         <div className={css.sectionHeader}>
-          <Divider textAlign="left"><Typography variant="h4">Model</Typography></Divider>
+          <Divider textAlign="left">
+            <Typography variant="h4">Model</Typography>
+          </Divider>
         </div>
         <Typography variant="body1" gutterBottom>
           Logistic regression test: Phecode ~ Cluster Status + Age + Sex + BMI
         </Typography>
         <div className={css.sectionHeader}>
-          <Divider textAlign="left"><Typography variant="h4">About</Typography></Divider>
+          <Divider textAlign="left">
+            <Typography variant="h4">About</Typography>
+          </Divider>
         </div>
         <Typography variant="body1" gutterBottom>
           This plot is the result of a statistical test for the association
@@ -257,7 +268,7 @@ const PhecodePage = () => {
           </Link>{" "}
           and being a part of cluster 1, relative to cluster 2. Results are
           displayed for phecodes that are FDR significant at 5%. We test
-          phecodes with more than 30 individuals who recieved that phecodes. For
+          phecodes with more than 30 individuals who received that phecodes. For
           IBD cluster with more than 40 phecodes that meet this criteria, we
           display the 40 phecodes with largest absolute log odds ratio for this
           plot.{" "}
