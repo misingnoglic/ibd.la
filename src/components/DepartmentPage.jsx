@@ -18,12 +18,16 @@ import {
   pairExists,
   getDataDirection,
   generateOptions,
+  getFirstPairThatExists,
 } from "../utils/groupSelectionUtils";
 
 const DeptPage = () => {
-  const [primaryGroupLabel, setPrimaryGroupLabel] = useState("group1");
-  const [secondGroupLabel, setSecondGroupLabel] = useState("group20");
   const realDataOptions = generateOptions(realData);
+
+  const [primaryGroupLabel, setPrimaryGroupLabel] = useState("group1");
+  const [secondGroupLabel, setSecondGroupLabel] = useState(
+    getFirstPairThatExists(realData, primaryGroupLabel)
+  );
 
   const handleFirstGroupChange = (event) => {
     if (!pairExists(realData, event.target.value, secondGroupLabel)) {
@@ -34,7 +38,7 @@ const DeptPage = () => {
 
   const handleSecondGroupChange = (event) => {
     if (pairExists(realData, primaryGroupLabel, event.target.value)) {
-      setSecondGroupLabel(event.target.value);
+      setSecondGroupLabel(getFirstPairThatExists(realData, event.target.value));
     } else {
       console.error(
         `Invalid group pair ${primaryGroupLabel} and ${event.target.value}`
@@ -75,7 +79,7 @@ const DeptPage = () => {
     graph = <Skeleton variant="rectangular" width={"100%"} height={"100%"} />;
   }
 
-  const options = realDataOptions.map((option) => (
+  let options = realDataOptions.map((option) => (
     <MenuItem value={option} key={option}>
       {groupNameMap[option]}
     </MenuItem>
@@ -93,6 +97,8 @@ const DeptPage = () => {
       return pairExists(realData, primaryGroupLabel, group);
     });
   }
+
+  options = options.filter((option) => option.props.value !== "group20");
 
   return (
     <div className={css.scatterplotBox}>

@@ -22,12 +22,16 @@ export const pairExists = (data, primaryGroupLabel, secondGroupLabel) => {
   );
 };
 
-const getFirstPairThatExists = (data, primaryGroupLabel, allGroupLabels) => {
-  allGroupLabels.forEach((secondGroupLabel) => {
+export const getFirstPairThatExists = (data, primaryGroupLabel) => {
+  const generatedOptions = generateOptions(data);
+  let secondGroupLabel;
+  // TODO: Get this loop out of here...
+  for (let i = 0; i < generatedOptions.length; i++) {
+    secondGroupLabel = generatedOptions[i];
     if (pairExists(data, primaryGroupLabel, secondGroupLabel)) {
       return secondGroupLabel;
     }
-  });
+  }
   return "";
 };
 
@@ -60,6 +64,5 @@ export const generateOptions = (data) => {
   options = options.sort((a, b) =>
     groupNameMap[a].localeCompare(groupNameMap[b])
   );
-  options = options.filter((item) => item !== "All");
   return options;
 };

@@ -7,13 +7,11 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
 import css from "./TimePage.module.css";
 import Divider from "@mui/material/Divider";
 
-const PhecodePage = () => {
+const TimePage = () => {
   const [groupLabel, setGroupLabel] = useState("group1");
   const [disease, setDisease] = useState("GERD");
 
@@ -95,7 +93,9 @@ const PhecodePage = () => {
       </div>
       <div className={css.bodyText2}>
         <div className={css.sectionHeader}>
-            <Divider textAlign="left"><Typography variant="h4">About</Typography></Divider>
+          <Divider textAlign="left">
+            <Typography variant="h4">About</Typography>
+          </Divider>
         </div>
         <Typography variant="body1" gutterBottom>
           This plot is the proportion of the selected IBD cluster that received
@@ -109,4 +109,4 @@ const PhecodePage = () => {
   );
 };
 
-export default PhecodePage;
+export default TimePage;

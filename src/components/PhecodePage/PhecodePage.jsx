@@ -10,6 +10,7 @@ import {
   pairExists,
   getDataDirection,
   generateOptions,
+  getFirstPairThatExists,
 } from "../../utils/groupSelectionUtils";
 
 import InputLabel from "@mui/material/InputLabel";
@@ -38,15 +39,18 @@ const graphColorsByCategory = {
 };
 
 const PhecodePage = () => {
-  const [primaryGroupLabel, setPrimaryGroupLabel] = useState("group1");
-  const [secondGroupLabel, setSecondGroupLabel] = useState("group20");
   const [dataCategory, setDataCategory] = useState(DataCategoryEnum.Outpatient);
   const fullData = dataByCategory[dataCategory];
   const fullDataOptions = generateOptions(fullData);
 
+  const [primaryGroupLabel, setPrimaryGroupLabel] = useState("group1");
+  const [secondGroupLabel, setSecondGroupLabel] = useState(
+    getFirstPairThatExists(fullData, primaryGroupLabel)
+  );
+
   const handleFirstGroupChange = (event) => {
     if (!pairExists(fullData, event.target.value, secondGroupLabel)) {
-      setSecondGroupLabel("");
+      setSecondGroupLabel(getFirstPairThatExists(fullData, event.target.value));
     }
     setPrimaryGroupLabel(event.target.value);
   };
