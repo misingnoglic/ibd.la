@@ -10700,19 +10700,4 @@ const graphData = {
   },
 };
 
-const generateOptions = (data) => {
-  const keys = Object.keys(data);
-  let options = [];
-  options = options.concat(keys);
-  keys.forEach((k) => {
-    options = options.concat(Object.keys(data[k]));
-  });
-  options = [...new Set(options)];
-  options = options.sort();
-  options = options.filter((item) => item !== "All");
-  return options;
-};
-
-const options = generateOptions(graphData);
-
-export { graphData as outpatientGraphData, options as outpatientOptions };
+export { graphData as outpatientGraphData };

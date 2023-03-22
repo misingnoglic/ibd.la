@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import ScatterPlot from "../ScatterPlot";
-import {
-  outpatientGraphData,
-  outpatientOptions,
-} from "../../data/phecodeData/outpatient";
-import { erGraphData, erOptions } from "../../data/phecodeData/er";
+import { outpatientGraphData } from "../../data/phecodeData/outpatient";
+import { erGraphData } from "../../data/phecodeData/er";
 import { groupNameMap, groupSizeMap } from "../../data/groupInfo";
 
 import {
@@ -12,6 +9,7 @@ import {
   anyHasPrimary,
   pairExists,
   getDataDirection,
+  generateOptions,
 } from "../../utils/groupSelectionUtils";
 
 import InputLabel from "@mui/material/InputLabel";
@@ -34,11 +32,6 @@ const dataByCategory = {
   [DataCategoryEnum.ER]: erGraphData,
 };
 
-const optionsByCategory = {
-  [DataCategoryEnum.Outpatient]: outpatientOptions,
-  [DataCategoryEnum.ER]: erOptions,
-};
-
 const graphColorsByCategory = {
   [DataCategoryEnum.Outpatient]: "#C7CEEA",
   [DataCategoryEnum.ER]: "#FFB7B2",
@@ -49,7 +42,7 @@ const PhecodePage = () => {
   const [secondGroupLabel, setSecondGroupLabel] = useState("group20");
   const [dataCategory, setDataCategory] = useState(DataCategoryEnum.Outpatient);
   const fullData = dataByCategory[dataCategory];
-  const fullDataOptions = optionsByCategory[dataCategory];
+  const fullDataOptions = generateOptions(fullData);
 
   const handleFirstGroupChange = (event) => {
     if (!pairExists(fullData, event.target.value, secondGroupLabel)) {
@@ -126,7 +119,7 @@ const PhecodePage = () => {
   }
 
   let groupOptions = fullDataOptions
-    .sort((a, b) => (groupNameMap[a] > groupNameMap[b] ? 1 : -1))
+    .sort((a, b) => groupNameMap[a].localeCompare(groupNameMap[b]))
     .map((option) => (
       <MenuItem value={option} key={option}>
         {groupNameMap[option]}

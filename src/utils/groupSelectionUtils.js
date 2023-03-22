@@ -1,3 +1,5 @@
+import { groupNameMap } from "../data/groupInfo";
+
 export const dataDirections = {
   normal: "normal", // label1, label2 is in object
   reverse: "reverse", // label2, label1 is in object
@@ -20,6 +22,15 @@ export const pairExists = (data, primaryGroupLabel, secondGroupLabel) => {
   );
 };
 
+const getFirstPairThatExists = (data, primaryGroupLabel, allGroupLabels) => {
+  allGroupLabels.forEach((secondGroupLabel) => {
+    if (pairExists(data, primaryGroupLabel, secondGroupLabel)) {
+      return secondGroupLabel;
+    }
+  });
+  return "";
+};
+
 export const getDataDirection = (data, primaryGroupLabel, secondGroupLabel) => {
   if (
     data.hasOwnProperty(primaryGroupLabel) &&
@@ -36,4 +47,19 @@ export const getDataDirection = (data, primaryGroupLabel, secondGroupLabel) => {
   } else {
     return dataDirections.none;
   }
+};
+
+export const generateOptions = (data) => {
+  const keys = Object.keys(data);
+  let options = [];
+  options = options.concat(keys);
+  keys.forEach((k) => {
+    options = options.concat(Object.keys(data[k]));
+  });
+  options = [...new Set(options)];
+  options = options.sort((a, b) =>
+    groupNameMap[a].localeCompare(groupNameMap[b])
+  );
+  options = options.filter((item) => item !== "All");
+  return options;
 };

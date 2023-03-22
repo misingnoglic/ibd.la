@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ScatterPlot from "./ScatterPlot";
-import { realData, realDataOptions } from "../data/deptScatterData";
+import { realData } from "../data/deptScatterData";
 
 import { groupNameMap, groupSizeMap } from "../data/groupInfo";
 
@@ -12,44 +12,57 @@ import Select from "@mui/material/Select";
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
 import css from "./DepartmentPage.module.css";
+import {
+  dataDirections,
+  anyHasPrimary,
+  pairExists,
+  getDataDirection,
+  generateOptions,
+} from "../utils/groupSelectionUtils";
 
 const DeptPage = () => {
-  const [firstGroupLabel, setFirstGroupLabel] = useState("group1");
+  const [primaryGroupLabel, setPrimaryGroupLabel] = useState("group1");
   const [secondGroupLabel, setSecondGroupLabel] = useState("group20");
+  const realDataOptions = generateOptions(realData);
 
   const handleFirstGroupChange = (event) => {
-    setFirstGroupLabel(event.target.value);
+    if (!pairExists(realData, event.target.value, secondGroupLabel)) {
+      setSecondGroupLabel("");
+    }
+    setPrimaryGroupLabel(event.target.value);
   };
 
   const handleSecondGroupChange = (event) => {
-    setSecondGroupLabel(event.target.value);
+    if (pairExists(realData, primaryGroupLabel, event.target.value)) {
+      setSecondGroupLabel(event.target.value);
+    } else {
+      console.error(
+        `Invalid group pair ${primaryGroupLabel} and ${event.target.value}`
+      );
+    }
   };
 
   let graph;
   let graphData;
   let negate = false;
-  if (
-    firstGroupLabel &&
-    secondGroupLabel &&
-    firstGroupLabel !== secondGroupLabel
-  ) {
-    if (
-      realData.hasOwnProperty(firstGroupLabel) &&
-      realData[firstGroupLabel].hasOwnProperty(secondGroupLabel)
-    ) {
-      graphData = realData[firstGroupLabel][secondGroupLabel];
-    } else if (
-      realData.hasOwnProperty(secondGroupLabel) &&
-      realData[secondGroupLabel].hasOwnProperty(firstGroupLabel)
-    ) {
-      graphData = realData[secondGroupLabel][firstGroupLabel];
+  if (pairExists(realData, primaryGroupLabel, secondGroupLabel)) {
+    const dataDirection = getDataDirection(
+      realData,
+      primaryGroupLabel,
+      secondGroupLabel
+    );
+
+    if (dataDirection === dataDirections.normal) {
+      graphData = realData[primaryGroupLabel][secondGroupLabel];
+    } else {
+      graphData = realData[secondGroupLabel][primaryGroupLabel];
       negate = true;
     }
   }
   if (graphData) {
     graph = (
       <ScatterPlot
-        firstGroupLabel={groupNameMap[firstGroupLabel]}
+        firstGroupLabel={groupNameMap[primaryGroupLabel]}
         secondGroupLabel={groupNameMap[secondGroupLabel]}
         listOfComparisons={graphData}
         plotColor="#B5EAD7"
@@ -62,20 +75,31 @@ const DeptPage = () => {
     graph = <Skeleton variant="rectangular" width={"100%"} height={"100%"} />;
   }
 
-  const options = realDataOptions
-    .sort((a, b) => (groupNameMap[a].localeCompare(groupNameMap[b])))
-    .map((option) => (
-      <MenuItem value={option} key={option}>
-        {groupNameMap[option]}
-      </MenuItem>
-    ));
+  const options = realDataOptions.map((option) => (
+    <MenuItem value={option} key={option}>
+      {groupNameMap[option]}
+    </MenuItem>
+  ));
+
+  let filteredGroupOptions = [];
+  if (
+    !!primaryGroupLabel &&
+    (realData.hasOwnProperty(primaryGroupLabel) ||
+      anyHasPrimary(realData, primaryGroupLabel))
+  ) {
+    // Filter out any options for group2 that don't have data for primary group
+    filteredGroupOptions = options.filter((option) => {
+      const group = option.props.value;
+      return pairExists(realData, primaryGroupLabel, group);
+    });
+  }
 
   return (
     <div className={css.scatterplotBox}>
       <Typography variant="h2">Medical Specialities</Typography>
       <Typography variant="h5">
-        {groupNameMap[firstGroupLabel]} (n={groupSizeMap[firstGroupLabel]}) vs{" "}
-        {groupNameMap[secondGroupLabel]} (n={groupSizeMap[secondGroupLabel]})
+        {groupNameMap[primaryGroupLabel]} (n={groupSizeMap[primaryGroupLabel]})
+        vs {groupNameMap[secondGroupLabel]} (n={groupSizeMap[secondGroupLabel]})
       </Typography>
       <div className={css.scatterGraph}>{graph}</div>
       <div className={css.selectionForm}>
@@ -84,7 +108,7 @@ const DeptPage = () => {
             <InputLabel id="group1-selection">Cluster 1</InputLabel>
             <Select
               labelId="group1-selection"
-              value={firstGroupLabel}
+              value={primaryGroupLabel}
               label="First Group"
               onChange={handleFirstGroupChange}
             >
@@ -101,20 +125,24 @@ const DeptPage = () => {
               label="Second Group"
               onChange={handleSecondGroupChange}
             >
-              {options}
+              {filteredGroupOptions}
             </Select>
           </FormControl>
         </div>
       </div>
       <div className={css.bodyText2}>
         <div className={css.sectionHeader}>
-          <Divider textAlign="left"><Typography variant="h4">Model</Typography></Divider>
+          <Divider textAlign="left">
+            <Typography variant="h4">Model</Typography>
+          </Divider>
         </div>
         <Typography variant="body1" gutterBottom>
           Logistic regression test: Specialty ~ Cluster Status + Age + Sex + BMI
         </Typography>
         <div className={css.sectionHeader}>
-          <Divider textAlign="left"><Typography variant="h4">About</Typography></Divider>
+          <Divider textAlign="left">
+            <Typography variant="h4">About</Typography>
+          </Divider>
         </div>
         <Typography variant="body1" gutterBottom>
           This plot is the result of a statistical test for the association
