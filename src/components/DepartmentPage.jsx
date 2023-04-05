@@ -38,7 +38,7 @@ const DeptPage = () => {
 
   const handleSecondGroupChange = (event) => {
     if (pairExists(realData, primaryGroupLabel, event.target.value)) {
-      setSecondGroupLabel(getFirstPairThatExists(realData, event.target.value));
+      setSecondGroupLabel(event.target.value);
     } else {
       console.error(
         `Invalid group pair ${primaryGroupLabel} and ${event.target.value}`
