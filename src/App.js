@@ -3,13 +3,26 @@ import AppRouter from "./components/AppRouter";
 
 import AppBar from "@mui/material/AppBar";
 import Link from "@mui/material/Link";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
+import SwipeableDrawer from "@mui/material/SwipeableDrawer";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Toolbar from "@mui/material/Toolbar";
+import Divider from "@mui/material/Divider";
+import MenuIcon from "@mui/icons-material/Menu";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import BiotechIcon from "@mui/icons-material/Biotech";
 
 import "./App.css";
 
 const App = () => {
   const [tabIndex, setTabIndex] = useState(0);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const changeRoute = (path) => {
     const { CustomEvent } = window;
@@ -17,9 +30,10 @@ const App = () => {
     window.dispatchEvent(event);
   };
 
-  const handleChangeTabIndex = (unusedEvent, newIndex) => {
+  const handleChangeTabIndex = (newIndex) => {
     setTabIndex(newIndex);
     changeRoute(getTabUrl(newIndex));
+    setMobileOpen(false);
   };
 
   // Runs in the beginning to set the tab based on the URL
@@ -41,33 +55,90 @@ const App = () => {
     return tabUrls[tabIndex];
   };
 
+  const drawerWidth = 200;
+
+  const drawer = (
+    <div>
+      <Toolbar />
+      <Divider />
+      <List>
+        {[
+          "Home",
+          "PheCodes",
+          "Specialties",
+          "Zip Codes",
+          "Genetics",
+          "Time",
+          "FAQ",
+        ].map((text, idx) => (
+          <ListItem
+            component={Link}
+            onClick={() => handleChangeTabIndex(idx)}
+            to={getTabUrl(idx)}
+            key={text}
+            disablePadding
+          >
+            <ListItemButton>
+              <ListItemIcon>
+                <BiotechIcon />
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <AppBar position="static">
-          <Tabs
-            value={tabIndex}
-            onChange={handleChangeTabIndex}
-            style={{ backgroundColor: "#C7CEEA", color: "white" }}
-            variant="scrollable"
-            scrollButtons="auto"
-          >
-            <Tab label="Home" />
-            <Tab label="PheCodes" />
-            <Tab label="Specialties" />
-            <Tab label="Zip Codes" />
-            <Tab label="Genetics" />
-            <Tab label="Time" />
-            <Tab label="FAQ" />
-          </Tabs>
+      <Box sx={{ display: "flex" }}>
+        <CssBaseline />
+        <AppBar position="fixed" sx={{ width: "100%" }}>
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              sx={{ mr: 2 }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" noWrap component="div">
+              ibd.la
+            </Typography>
+          </Toolbar>
         </AppBar>
-        <div className="tabContent">
-          <AppRouter setInitialTabIndex={setInitialTabIndex} />
-        </div>
-      </header>
+        <Box component="nav" aria-label="mailbox folders">
+          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+          <SwipeableDrawer
+            variant="temporary"
+            open={mobileOpen}
+            onOpen={() => setMobileOpen(true)}
+            onClose={() => setMobileOpen(false)}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: drawerWidth,
+              },
+            }}
+          >
+            {drawer}
+          </SwipeableDrawer>
+        </Box>
+        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+          <Box className="tabContent" sx={{ paddingTop: "20px" }}>
+            <AppRouter setInitialTabIndex={setInitialTabIndex} />
+          </Box>
+        </Box>
+      </Box>
       <div className="footer">
         <p>
-          © 2022 -{" "}
+          © {new Date().getFullYear()} -{" "}
           <Link href="https://github.com/misingnoglic/ibd.la">
             Contribute on GitHub
           </Link>
