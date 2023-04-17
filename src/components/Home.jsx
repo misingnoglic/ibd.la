@@ -10,15 +10,8 @@ const Home = () => {
   return (
     <div>
       <div className={css.titleText}>
-        <Typography variant="h2">
-          Fine-scale health utilization in the UCLA Biobank
-        </Typography>
-        <Typography variant="h4" component="h2">
-          Read preprint{" "}
-          <Link href="https://www.medrxiv.org/content/10.1101/2022.07.12.22277520v1">
-            here
-          </Link>{" "}
-          - Not peer reviewed
+        <Typography variant="h3">
+          Fine-Scale Healthcare Utilization in a Los Angeles Biobank
         </Typography>
       </div>
       <div className={css.homePageContent}>
@@ -66,6 +59,9 @@ const Home = () => {
               indicate that cluster membership or genetics is the cause of the
               results reported here.{" "}
             </b>
+          </Typography>
+
+          <Typography variant="body1" gutterBottom>
             Health is a complex phenomenon that is strongly influenced by
             structural factors like the environment, socioeconomic status, race,
             sex, diasbility and other and sociocultural factors. The explicit

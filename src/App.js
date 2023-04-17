@@ -94,7 +94,7 @@ const App = () => {
     <div className="App">
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-        <AppBar position="fixed" sx={{ width: "100%" }}>
+        <AppBar position="fixed" sx={{ backgroundColor: "#C7CEEA", color: "black", width: "100%" }}>
           <Toolbar>
             <IconButton
               color="inherit"
