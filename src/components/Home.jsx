@@ -1,8 +1,9 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
+import Box from "@mui/material/Box";
 
-import LouvainGraph from "./LouvainGraph";
+import homeImage from "../data/images/website_art.png";
 
 import css from "./Home.module.css";
 
@@ -16,8 +17,14 @@ const Home = () => {
       </div>
       <div className={css.homePageContent}>
         <div className={css.graphImage}>
-          <LouvainGraph />
+          <Box
+            component="img"
+            sx={{ width: "900px", height: "500px", paddingBottom: "50px" }}
+            src={homeImage}
+          ></Box>
         </div>
+      </div>
+      <div className={css.homePageContent}>
         <div className={css.homeBodyText}>
           <Typography variant="body1" gutterBottom>
             This browser explores health in Los Angeles within a biobank
@@ -69,19 +76,6 @@ const Home = () => {
             differences in health outcomes within the UCLA Health System. Please
             see our FAQ page for a full discussion of what these results do or
             do not mean.
-          </Typography>
-
-          <Typography variant="body1" gutterBottom>
-            Website developed by:{" "}
-            <Link href="http://www.christa.science/about/">
-              Christa Caggiano,
-            </Link>
-            <Link href="https://aryaboudaie.com/"> Arya Boudaie,</Link>
-            and{" "}
-            <Link href="https://bioscience.ucla.edu/people/noah-zaitlen/">
-              {" "}
-              Noah Zaitlen.
-            </Link>
           </Typography>
         </div>
       </div>

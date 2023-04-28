@@ -14,18 +14,15 @@
 }
 
 .graphImage {
-    width: 45%
-}
-
-.graphImage svg {
-    width: 100%;
-    height: auto;
+    width: 100%
 }
 
 .homeBodyText {
     text-align: justify;
-    width: 45%;
-    margin-right: 16px;
+    width: 75%;
+    margin-right: 250px;
+    margin-left: 250px;
+
 }
 
 .homeBodyText p {

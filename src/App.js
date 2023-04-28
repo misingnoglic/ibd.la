@@ -18,6 +18,8 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import BiotechIcon from "@mui/icons-material/Biotech";
 
+import logoImage from "./data/images/logo.png";
+
 import "./App.css";
 
 const App = () => {
@@ -94,7 +96,11 @@ const App = () => {
     <div className="App">
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-        <AppBar position="fixed" sx={{ backgroundColor: "#C7CEEA", color: "black", width: "100%" }}>
+        <AppBar
+          elevation={0}
+          position="fixed"
+          sx={{ backgroundColor: "#C7CEEA", color: "black", width: "100%" }}
+        >
           <Toolbar>
             <IconButton
               color="inherit"
@@ -105,6 +111,15 @@ const App = () => {
             >
               <MenuIcon />
             </IconButton>
+            <Box
+              component="img"
+              sx={{
+                height: 25,
+                paddingRight: "15px",
+              }}
+              alt="Your logo."
+              src={logoImage}
+            />
             <Typography variant="h6" noWrap component="div">
               ibd.la
             </Typography>
