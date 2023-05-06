@@ -14,6 +14,7 @@ const BarPlot = (props) => {
     xaxis: {
       type: "log",
       automargin: true,
+      fixedrange: true,
       title: {
         text: "mean IBD of all possible pairs (cM)",
         font: {
@@ -24,6 +25,7 @@ const BarPlot = (props) => {
     },
     yaxis: {
       automargin: true,
+      fixedrange: true,
       title: {
         // text: "Group",
         font: {
