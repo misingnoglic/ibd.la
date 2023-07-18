@@ -62,6 +62,7 @@ const ZipcodePage = () => {
     zoom: 9,
     pitch: 0,
     bearing: 0,
+    minZoom: 8,
   };
 
   const layers = [

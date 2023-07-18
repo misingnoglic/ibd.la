@@ -12,6 +12,7 @@ const ScatterPlot = (props) => {
   },
     yaxis: {
       automargin: true,
+      fixedrange: true,
       dtick: 1,
       title: {
         font: {
@@ -22,6 +23,7 @@ const ScatterPlot = (props) => {
     },
     xaxis: {
       automargin: true,
+      fixedrange: true,
       title: {
         font: {
           color: "#7f7f7f",

@@ -75,6 +75,7 @@ const App = () => {
         ].map((text, idx) => (
           <ListItem
             component={Link}
+            sx={{color: '#555e84'}}
             onClick={() => handleChangeTabIndex(idx)}
             to={getTabUrl(idx)}
             key={text}
@@ -91,6 +92,8 @@ const App = () => {
       </List>
     </div>
   );
+
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth < 768;
 
   return (
     <div className="App">
@@ -128,8 +131,8 @@ const App = () => {
         <Box component="nav" aria-label="mailbox folders">
           {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
           <SwipeableDrawer
-            variant="temporary"
-            open={mobileOpen}
+            variant={isMobile ? "temporary" : 'permanent'}
+            open={mobileOpen || !isMobile}
             onOpen={() => setMobileOpen(true)}
             onClose={() => setMobileOpen(false)}
             ModalProps={{
