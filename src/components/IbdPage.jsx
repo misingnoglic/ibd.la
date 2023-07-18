@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import BarPlot from "./BarPlot";
 import IbdTable from "./IbdTable";
 import { barData } from "../data/barData";
-import { groupNameMap } from "../data/groupInfo";
+import { alleleFrequencies, groupNameMap } from "../data/groupInfo";
 
+import Button from "@mui/material/Button";
 import InputLabel from "@mui/material/InputLabel";
 import Typography from "@mui/material/Typography";
 import MenuItem from "@mui/material/MenuItem";
@@ -76,10 +77,20 @@ const IbdPage = () => {
             </Select>
           </FormControl>
         </div>
+        <Button
+          href={alleleFrequencies[primaryGroup]}
+          style={{ textTransform: "none" }}
+          target="_blank"
+          variant="outlined"
+        >
+          Download Allele Frequencies
+        </Button>
       </div>
       <div className={css.bodyText}>
         <div className={css.sectionHeader}>
-          <Divider textAlign="left"><Typography variant="h4">About</Typography></Divider>
+          <Divider textAlign="left">
+            <Typography variant="h4">About</Typography>
+          </Divider>
         </div>
         <Typography variant="body1" gutterBottom>
           We calculated two types of IBD summary metrics. First, we calculated
