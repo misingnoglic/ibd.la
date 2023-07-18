@@ -101,11 +101,39 @@ const App = () => {
     <div className="App">
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
+        <AppBar
+            elevation={0}
+            position="fixed"
+            sx={{ backgroundColor: "#C7CEEA", color: "black", width: "100%" }}
+        >
+          <Toolbar>
+            <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={() => setMobileOpen(!mobileOpen)}
+                sx={{ mr: 2 }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Box
+                component="img"
+                sx={{
+                  height: 25,
+                  paddingRight: "15px",
+                }}
+                alt="Your logo."
+                src={logoImage}
+            />
+            <Typography variant="h6" noWrap component="div">
+              ibd.la
+            </Typography>
+          </Toolbar>
+        </AppBar>
 
         <Box component="nav" aria-label="mailbox folders">
           {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
           <SwipeableDrawer
-            disableGutters={false}
             variant={isMobile ? "temporary" : "permanent"}
             open={mobileOpen || !isMobile}
             onOpen={() => setMobileOpen(true)}
