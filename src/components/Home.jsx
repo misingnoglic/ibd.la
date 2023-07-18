@@ -36,9 +36,12 @@ const Home = () => {
             <Link href="https://www.uclahealth.org/precision-health/atlas">
               UCLA Clinical Neurogenomics Research Center.
             </Link>{" "}
-            Here, we explore several aspects of health that may be of interest
+            We explore several aspects of health that may be of interest
             to researchers and community members, particularly those who have an
-            interest in studying health disparities.
+            interest in studying health disparities. This research is published in
+            <Link href="https://www.nature.com/articles/s41591-023-02425-1">
+            Caggiano et al., 2023, Nature Medicine.
+            </Link> 
           </Typography>
           <Typography variant="body1" gutterBottom>
             We identified clusters of related individuals using an unsupervised
