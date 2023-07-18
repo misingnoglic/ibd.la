@@ -1,6 +1,6 @@
 const groupNameMap = {
     group1: "European",
-    group2: "Central/South American",
+    group2: "Mexican + Central American",
     group3: "Ashkenazi Jewish",
     group4: "African American",
     group5: "Chinese",
@@ -44,4 +44,26 @@ const groupNameMap = {
     group20: "35577"
   };
 
-  export {groupNameMap, groupSizeMap};
+  const alleleFrequencies = {
+      group1: "https://drive.google.com/file/d/1Wv5b1LeLWm-xOSsOhTeE3zg5G5o9Gw-1/view?usp=drive_link",
+      group2: "https://drive.google.com/file/d/1gibaF0aiYGHg_WuPC5XKu-UtpL-OA2em/view?usp=drive_link",
+      group3: "https://drive.google.com/file/d/1XwsfqUEqJV7vgWsXDJqaImwi0E2nIQXa/view?usp=drive_link",
+      group4: "https://drive.google.com/file/d/1MaIFfceYky7PVlri_hsRDXpwASQxgnU8/view?usp=drive_link",
+      group5: "https://drive.google.com/file/d/1KvCM2f62HmgMfV7Dw-1-2bTTU_ztbjJ3/view?usp=drive_link",
+      group6: "https://drive.google.com/file/d/1vPUudlKB0QeNOd_rT92PxaP9EHM6IrnO/view?usp=drive_link",
+      group7: "https://drive.google.com/file/d/1gbnRlawFm0J7WOhyvJz_6iMYGzwEn-Ht/view?usp=drive_link",
+      group8: "https://drive.google.com/file/d/1qBxHliAXZz_DrOkwES1ULT-X7Z1491gw/view?usp=drive_link",
+      group9: "https://drive.google.com/file/d/1g-UFSGa7dE6w541eQ2EmMo75XOZsmsro/view?usp=drive_link",
+      group10: "https://drive.google.com/file/d/1TZC9OeRae-EH770T3mM8V0r8aptkjmAz/view?usp=drive_link",
+      group11: "https://drive.google.com/file/d/186MQh9M1Ufub5vYqxVRVAvBQew4EEGw3/view?usp=drive_link",
+      group12: "https://drive.google.com/file/d/1uTeXoCqNyaDuc8rpQ1wvq1i5AJ4im-nf/view?usp=drive_link",
+      group13: "https://drive.google.com/file/d/1UVGV7MnQkKT_pr6ojQDdtWiOpu_c4j4s/view?usp=drive_link",
+      group14: "https://drive.google.com/file/d/1h8nJHbMHCZVwgO2D4vErkw1kmwWEVuyp/view?usp=drive_link",
+      group15: "https://drive.google.com/file/d/16l4QfGQR4jV6KIRgkmRD80xt2YOGullm/view?usp=drive_link",
+      group16: "https://drive.google.com/file/d/1qdI8Q-QeJz4PCy7lsC8Kgn7BDsINFlYJ/view?usp=drive_link",
+      group17: "https://drive.google.com/file/d/1iKvP3N5PxrTvbVTDfWu68nW0yGvpG8am/view?usp=drive_link",
+      group18: "https://drive.google.com/file/d/1cd5qBqUtZTXkR-NUR72BP6pigyEb26O3/view?usp=drive_link",
+      group19: "https://drive.google.com/file/d/1s_giqhlkCvl3cprSRcojYL37W77NZpJP/view?usp=drive_link",
+    };
+
+  export {groupNameMap, groupSizeMap, alleleFrequencies};
