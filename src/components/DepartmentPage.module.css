@@ -6,7 +6,7 @@
 .scatterplotBox {
   margin-top: 8px;
   margin-bottom: 4px;
-  max-width: 650px;
+  max-width: 800px;
   padding: 0 80px;
   display: flex;
   flex-direction: column;
