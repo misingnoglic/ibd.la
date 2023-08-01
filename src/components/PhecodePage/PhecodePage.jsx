@@ -107,15 +107,24 @@ const PhecodePage = () => {
   if (graphData) {
     // The graph looks bad if it's long with few data points
     const graphHeight = graphData.length > 8 ? 900 : 500;
+    console.log(graphData);
     graph = (
       <ScatterPlot
         firstGroupLabel={`${groupNameMap[primaryGroupLabel]} (n=${groupSizeMap[primaryGroupLabel]})`}
         secondGroupLabel={`${groupNameMap[secondGroupLabel]} (n=${groupSizeMap[secondGroupLabel]})`}
-        listOfComparisons={graphData}
+        listOfComparisons={graphData.map((d) => {
+          return {
+            value: d.coeff,
+            stdev: d.cint,
+            label: d.phenotype,
+            pval: d.pval,
+          };
+        })}
         plotColor={graphColorsByCategory[dataCategory]}
         negate={negate}
         width={866}
         height={graphHeight}
+        xLabel="Log Odds Ratio"
       />
     );
   } else {

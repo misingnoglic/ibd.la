@@ -23,6 +23,7 @@ const IbdPage = lazyPreload(() => import("./IbdPage"));
 const ZipcodePage = lazyPreload(() => import("./ZipcodePage"));
 const FaqPage = lazyPreload(() => import("./FaqPage/FaqPage"));
 const Home = lazyPreload(() => import("./Home"));
+const PrsPage = lazyPreload(() => import("./PrsPage"));
 
 import css from "./AppRouter.module.css";
 
@@ -34,6 +35,7 @@ const pageTitles = {
   "/zipcodes": "Zip Codes",
   "/genetics": "Genetics",
   "/time": "Time",
+  "/beta-prs": "PRS",
 };
 
 const pageTitleSuffix = "Los Angeles IBD Group Utilization";
@@ -68,6 +70,7 @@ const AppRouter = (props) => {
           <Route path="/zipcodes" element={<ZipcodePage />} />
           <Route path="/genetics" element={<IbdPage />} />
           <Route path="/time" element={<TimePage />} />
+          <Route path="/beta-prs" element={<PrsPage />} />
         </Routes>
       </Suspense>
     </Router>

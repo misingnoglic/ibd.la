@@ -5,11 +5,11 @@ const ScatterPlot = (props) => {
   const layout = {
     autosize: false,
     width: props.width,
-    height: props.height,  
+    height: props.height,
     margin: {
       b: 20,
       t: 20,
-  },
+    },
     yaxis: {
       automargin: true,
       fixedrange: true,
@@ -29,20 +29,27 @@ const ScatterPlot = (props) => {
           color: "#7f7f7f",
           size: 16,
         },
-        text: "Log Odds Ratio",
+        text: props.xLabel,
       },
     },
   };
 
   const modifier = props.negate ? -1 : 1;
+  const labelAxis = props.flip ? "x" : "y";
+  const valueAxis = props.flip ? "y" : "x";
+  const errorAxis = props.flip ? "error_y" : "error_x";
 
   const graphData = {
-    y: props.listOfComparisons.map((c) => c.phenotype),
-    x: props.listOfComparisons.map((c) => c.coeff.toFixed(2) * modifier),
-    text: props.listOfComparisons.map((c) => `p=${c.pval.toExponential(2)}`),
-    error_x: {
+    [labelAxis]: props.listOfComparisons.map((c) => c.label),
+    [valueAxis]: props.listOfComparisons.map(
+      (c) => c.value.toFixed(2) * modifier
+    ),
+    text: props.listOfComparisons.map((c) =>
+      c.pval ? `p=${c.pval.toExponential(2)}` : ""
+    ),
+    [errorAxis]: {
       type: "data",
-      array: props.listOfComparisons.map((c) => c.cint.toFixed(2)),
+      array: props.listOfComparisons.map((c) => c.stdev.toFixed(2)),
       visible: true,
     },
     mode: "markers",

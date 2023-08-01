@@ -11,7 +11,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
-import css from "./DepartmentPage.module.css";
+import css from "./PrsPage.module.css";
 import {
   dataDirections,
   anyHasPrimary,
@@ -68,11 +68,19 @@ const DeptPage = () => {
       <ScatterPlot
         firstGroupLabel={groupNameMap[primaryGroupLabel]}
         secondGroupLabel={groupNameMap[secondGroupLabel]}
-        listOfComparisons={graphData}
+        listOfComparisons={graphData.map((d) => {
+          return {
+            value: d.coeff,
+            stdev: d.cint,
+            label: d.phenotype,
+            pval: d.pval,
+          };
+        })}
         plotColor="#B5EAD7"
         negate={negate}
         width={650}
         height={500}
+        xLabel="Log Odds Ratio"
       />
     );
   } else {
