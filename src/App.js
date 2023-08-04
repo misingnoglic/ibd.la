@@ -104,7 +104,7 @@ const App = () => {
         <AppBar
             elevation={0}
             position="fixed"
-            sx={{ backgroundColor: "#C7CEEA", color: "black", width: "100%" }}
+            sx={{ backgroundColor: "#C7CEEA", color: "black", width: "100%", paddingLeft: isMobile ? '0px' : '200px'}}
         >
           <Toolbar>
             <IconButton
@@ -112,34 +112,33 @@ const App = () => {
                 aria-label="open drawer"
                 edge="start"
                 onClick={() => setMobileOpen(!mobileOpen)}
-                sx={{ mr: 2 }}
+                sx={{ mr: 2, display: isMobile ? null : 'none' }}
             >
               <MenuIcon />
             </IconButton>
-            <Box
-                component="img"
-                sx={{
-                  height: 25,
-                  paddingRight: "15px",
-                }}
-                alt="Your logo."
-                src={logoImage}
-            />
-            <Typography variant="h6" noWrap component="div">
-              ibd.la
-            </Typography>
+              <Box
+                  component="img"
+                  sx={{
+                    height: 25,
+                    paddingRight: "15px",
+                  }}
+                  alt="Logo image"
+                  src={logoImage}
+              />
+              <Typography variant="h6" noWrap component="div">
+                ibd.la
+              </Typography>
           </Toolbar>
         </AppBar>
 
-        <Box component="nav" aria-label="mailbox folders">
-          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+        <Box component="nav" aria-label="navigation tabs">
           <SwipeableDrawer
             variant={isMobile ? "temporary" : "permanent"}
             open={mobileOpen || !isMobile}
             onOpen={() => setMobileOpen(true)}
             onClose={() => setMobileOpen(false)}
             ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
+              keepMounted: isMobile, // Better open performance on mobile.
             }}
             sx={{
               "& .MuiDrawer-paper": {
