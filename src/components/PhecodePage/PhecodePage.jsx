@@ -3,6 +3,7 @@ import ScatterPlot from "../ScatterPlot";
 import { outpatientGraphData } from "../../data/phecodeData/outpatient";
 import { erGraphData } from "../../data/phecodeData/er";
 import { groupNameMap, groupSizeMap } from "../../data/groupInfo";
+import GraphPage from "../GraphPage/GraphPage";
 
 import {
   dataDirections,
@@ -20,8 +21,6 @@ import Select from "@mui/material/Select";
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import Divider from "@mui/material/Divider";
-import css from "./PhecodePage.module.css";
 
 const DataCategoryEnum = {
   Outpatient: "Outpatient",
@@ -107,7 +106,6 @@ const PhecodePage = () => {
   if (graphData) {
     // The graph looks bad if it's long with few data points
     const graphHeight = graphData.length > 8 ? 900 : 500;
-    console.log(graphData);
     graph = (
       <ScatterPlot
         firstGroupLabel={`${groupNameMap[primaryGroupLabel]} (n=${groupSizeMap[primaryGroupLabel]})`}
@@ -162,100 +160,90 @@ const PhecodePage = () => {
       {option}
     </MenuItem>
   ));
+
+  const formControls = [
+    <FormControl style={{ minWidth: 150 }}>
+      <InputLabel id="group1-selection">Cluster 1</InputLabel>
+      <Select
+        labelId="group1-selection"
+        value={primaryGroupLabel}
+        label="First Group"
+        onChange={handleFirstGroupChange}
+      >
+        {groupOptions}
+      </Select>
+    </FormControl>,
+    <FormControl style={{ minWidth: 150 }}>
+      <InputLabel id="group2-selection">Cluster 2</InputLabel>
+      <Select
+        disabled={!primaryGroupLabel}
+        labelId="group2-selection"
+        value={secondGroupLabel}
+        label="Second Group"
+        onChange={handleSecondGroupChange}
+      >
+        {filteredGroupOptions}
+      </Select>
+    </FormControl>,
+    <FormControl style={{ minWidth: 150 }}>
+      <InputLabel id="dataCategory-selection">Data Category</InputLabel>
+      <Select
+        labelId="dataCategory-selection"
+        value={dataCategory}
+        label="Data Category"
+        onChange={handleDataCategoryChange}
+      >
+        {dataCategoryOptions}
+      </Select>
+    </FormControl>,
+  ];
+
+  const textSections = [
+    {
+      title: "Model",
+      content:
+        "Logistic regression test: Phecode ~ Cluster Status + Age + Sex + BMI",
+    },
+    {
+      title: "About",
+      content: (
+        <div>
+          <Typography variant="body1" gutterBottom>
+            This plot is the result of a statistical test for the association
+            between being assigned a{" "}
+            <Link
+              href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175508"
+              rel="noopener"
+              target="_blank"
+            >
+              phecode
+            </Link>{" "}
+            and being a part of cluster 1, relative to cluster 2. Results are
+            displayed for phecodes that are FDR significant at 5%. We test
+            phecodes with more than 30 individuals who received that phecodes.
+            For IBD cluster with more than 40 phecodes that meet this criteria,
+            we display the 40 phecodes with largest absolute log odds ratio for
+            this plot.{" "}
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            <b>Note</b> that this plot does not demonstrate that belonging to a
+            IBD cluster is causal for the disease, as there are many factors
+            that could influence an individual receiving a diagnosis in a
+            medical setting. For further discussion of this, see the FAQ page.
+          </Typography>
+        </div>
+      ),
+    },
+  ];
+
   return (
-    <div className={css.scatterplotBox}>
-      <div>
-        <Typography variant="h2" component="h1">
-          Phecode Diagnoses
-        </Typography>
-      </div>
-      <div>
-        <Typography variant="h5" component="h2">
-          {graphTitle}
-        </Typography>
-      </div>
-      <div className={css.scatterGraph}>{graph}</div>
-      <div className={css.selectionForm}>
-        <div className={css.selectionBox}>
-          <FormControl style={{ minWidth: 150 }}>
-            <InputLabel id="group1-selection">Cluster 1</InputLabel>
-            <Select
-              labelId="group1-selection"
-              value={primaryGroupLabel}
-              label="First Group"
-              onChange={handleFirstGroupChange}
-            >
-              {groupOptions}
-            </Select>
-          </FormControl>
-        </div>
-        <div className={css.selectionBox}>
-          <FormControl style={{ minWidth: 150 }}>
-            <InputLabel id="group2-selection">Cluster 2</InputLabel>
-            <Select
-              disabled={!primaryGroupLabel}
-              labelId="group2-selection"
-              value={secondGroupLabel}
-              label="Second Group"
-              onChange={handleSecondGroupChange}
-            >
-              {filteredGroupOptions}
-            </Select>
-          </FormControl>
-        </div>
-        <div className={css.selectionBox}>
-          <FormControl style={{ minWidth: 150 }}>
-            <InputLabel id="dataCategory-selection">Data Category</InputLabel>
-            <Select
-              labelId="dataCategory-selection"
-              value={dataCategory}
-              label="Data Category"
-              onChange={handleDataCategoryChange}
-            >
-              {dataCategoryOptions}
-            </Select>
-          </FormControl>
-        </div>
-      </div>
-      <div className={css.bodyText2}>
-        <div className={css.sectionHeader}>
-          <Divider textAlign="left">
-            <Typography variant="h4">Model</Typography>
-          </Divider>
-        </div>
-        <Typography variant="body1" gutterBottom>
-          Logistic regression test: Phecode ~ Cluster Status + Age + Sex + BMI
-        </Typography>
-        <div className={css.sectionHeader}>
-          <Divider textAlign="left">
-            <Typography variant="h4">About</Typography>
-          </Divider>
-        </div>
-        <Typography variant="body1" gutterBottom>
-          This plot is the result of a statistical test for the association
-          between being assigned a{" "}
-          <Link
-            href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175508"
-            rel="noopener"
-            target="_blank"
-          >
-            phecode
-          </Link>{" "}
-          and being a part of cluster 1, relative to cluster 2. Results are
-          displayed for phecodes that are FDR significant at 5%. We test
-          phecodes with more than 30 individuals who received that phecodes. For
-          IBD cluster with more than 40 phecodes that meet this criteria, we
-          display the 40 phecodes with largest absolute log odds ratio for this
-          plot.{" "}
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          <b>Note</b> that this plot does not demonstrate that belonging to a
-          IBD cluster is causal for the disease, as there are many factors that
-          could influence an individual receiving a diagnosis in a medical
-          setting. For further discussion of this, see the FAQ page.
-        </Typography>
-      </div>
-    </div>
+    <GraphPage
+      title="Phecode Diagnoses"
+      subtitle={graphTitle}
+      graph={graph}
+      graphControls={formControls}
+      textSections={textSections}
+    />
   );
 };
 

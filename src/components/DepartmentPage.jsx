@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import ScatterPlot from "./ScatterPlot";
 import { realData } from "../data/deptScatterData";
+import GraphPage from "./GraphPage/GraphPage";
 
 import { groupNameMap, groupSizeMap } from "../data/groupInfo";
 
-import Divider from "@mui/material/Divider";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
-import css from "./PrsPage.module.css";
 import {
   dataDirections,
   anyHasPrimary,
@@ -107,72 +106,66 @@ const DeptPage = () => {
   }
 
   options = options.filter((option) => option.props.value !== "group20");
+  const graphTitle = `${groupNameMap[primaryGroupLabel]} (n=${groupSizeMap[primaryGroupLabel]}) vs ${groupNameMap[secondGroupLabel]} (n=${groupSizeMap[secondGroupLabel]})`;
 
+  const graphControls = [
+    <FormControl>
+      <InputLabel id="group1-selection">Cluster 1</InputLabel>
+      <Select
+        labelId="group1-selection"
+        value={primaryGroupLabel}
+        label="First Group"
+        onChange={handleFirstGroupChange}
+      >
+        {options}
+      </Select>
+    </FormControl>,
+    <FormControl>
+      <InputLabel id="group2-selection">Cluster 2</InputLabel>
+      <Select
+        labelId="group2-selection"
+        value={secondGroupLabel}
+        label="Second Group"
+        onChange={handleSecondGroupChange}
+      >
+        {filteredGroupOptions}
+      </Select>
+    </FormControl>,
+  ];
   return (
-    <div className={css.scatterplotBox}>
-      <Typography variant="h2">Medical Specialities</Typography>
-      <Typography variant="h5">
-        {groupNameMap[primaryGroupLabel]} (n={groupSizeMap[primaryGroupLabel]})
-        vs {groupNameMap[secondGroupLabel]} (n={groupSizeMap[secondGroupLabel]})
-      </Typography>
-      <div className={css.scatterGraph}>{graph}</div>
-      <div className={css.selectionForm}>
-        <div className={css.selectionBox}>
-          <FormControl>
-            <InputLabel id="group1-selection">Cluster 1</InputLabel>
-            <Select
-              labelId="group1-selection"
-              value={primaryGroupLabel}
-              label="First Group"
-              onChange={handleFirstGroupChange}
-            >
-              {options}
-            </Select>
-          </FormControl>
-        </div>
-        <div className={css.selectionBox}>
-          <FormControl>
-            <InputLabel id="group2-selection">Cluster 2</InputLabel>
-            <Select
-              labelId="group2-selection"
-              value={secondGroupLabel}
-              label="Second Group"
-              onChange={handleSecondGroupChange}
-            >
-              {filteredGroupOptions}
-            </Select>
-          </FormControl>
-        </div>
-      </div>
-      <div className={css.bodyText2}>
-        <div className={css.sectionHeader}>
-          <Divider textAlign="left">
-            <Typography variant="h4">Model</Typography>
-          </Divider>
-        </div>
-        <Typography variant="body1" gutterBottom>
-          Logistic regression test: Specialty ~ Cluster Status + Age + Sex + BMI
-        </Typography>
-        <div className={css.sectionHeader}>
-          <Divider textAlign="left">
-            <Typography variant="h4">About</Typography>
-          </Divider>
-        </div>
-        <Typography variant="body1" gutterBottom>
-          This plot is the result of a statistical test for the association
-          between visiting a physician with a particular specialty and being a
-          part of cluster 1, relative to cluster 2. Results are displayed for
-          specialities that are FDR significant at 5%. We test specialities with
-          more than 30 individuals who received visited a practitioner with that
-          specialty.
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          <b>Note</b> that this plot does not demonstrate that belonging to an
-          IBD cluster is causal for seeing a medical provider with a particular
-          specialty.
-        </Typography>
-      </div>
-    </div>
+    <GraphPage
+      title="Medical Specialities"
+      subtitle={graphTitle}
+      graph={graph}
+      graphControls={graphControls}
+      textSections={[
+        {
+          title: "Model",
+          content:
+            "Logistic regression test: Specialty ~ Cluster Status + Age + Sex + BMI",
+        },
+        {
+          title: "About",
+          content: (
+            <>
+              <Typography variant="body1" gutterBottom>
+                This plot is the result of a statistical test for the
+                association between visiting a physician with a particular
+                specialty and being a part of cluster 1, relative to cluster 2.
+                Results are displayed for specialities that are FDR significant
+                at 5%. We test specialities with more than 30 individuals who
+                received visited a practitioner with that specialty.
+              </Typography>
+              <Typography variant="body1" gutterBottom>
+                <b>Note</b> that this plot does not demonstrate that belonging
+                to an IBD cluster is causal for seeing a medical provider with a
+                particular specialty.
+              </Typography>
+            </>
+          ),
+        },
+      ]}
+    />
   );
 };
 
