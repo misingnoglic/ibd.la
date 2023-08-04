@@ -120,7 +120,7 @@ const PhecodePage = () => {
         })}
         plotColor={graphColorsByCategory[dataCategory]}
         negate={negate}
-        width={866}
+        width={650}
         height={graphHeight}
         xLabel="Log Odds Ratio"
       />
