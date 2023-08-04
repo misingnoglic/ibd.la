@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import LinePlot from "./LinePlot";
 import { lineData } from "../data/timeLinePlotData";
 import { groupNameMap } from "../data/groupInfo";
+import GraphPage from "./GraphPage/GraphPage";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Typography from "@mui/material/Typography";
-import css from "./TimePage.module.css";
-import Divider from "@mui/material/Divider";
 
 const TimePage = () => {
   const [groupLabel, setGroupLabel] = useState("group1");
@@ -47,66 +46,49 @@ const TimePage = () => {
   const yAxis = lineData[groupLabel][disease].map((i) => i.prop);
 
   return (
-    <div className={css.scatterplotBox}>
-      <div className={css.titleText}>
-        <Typography variant="h2">Diagnosis Proportion Over Time</Typography>
-      </div>
-      <div className={css.subTitleText}>
-        <Typography variant="h5">Group: {groupNameMap[groupLabel]}</Typography>
-      </div>
-      <div className={css.subTitleText}>
-        <Typography variant="h5" gutterBottom>
-          PheCode: {disease}
-        </Typography>
-      </div>
-
-      <div className={css.scatterGraph}>
-        <LinePlot x={xAxis} y={yAxis} />
-      </div>
-      <div className={css.selectionForm}>
-        <div className={css.selectionBox}>
-          <FormControl style={{ minWidth: 150 }}>
-            <InputLabel id="group-selection">Community</InputLabel>
-            <Select
-              labelId="group-selection"
-              value={groupLabel}
-              label="Group"
-              onChange={handleGroupChange}
-            >
-              {groups}
-            </Select>
-          </FormControl>
-        </div>
-        <div className={css.selectionBox}>
-          <FormControl style={{ minWidth: 150 }}>
-            <InputLabel id="disease-selection">Phecode</InputLabel>
-            <Select
-              labelId="group-selection"
-              value={disease}
-              label="Disease"
-              onChange={handleDiseaseChange}
-            >
-              {diseases}
-            </Select>
-          </FormControl>
-        </div>
-      </div>
-      <div className={css.bodyText2}>
-        <div className={css.sectionHeader}>
-          <Divider textAlign="left">
-            <Typography variant="h4">About</Typography>
-          </Divider>
-        </div>
-        <Typography variant="body1" gutterBottom>
-          This plot is the proportion of the selected IBD cluster that received
-          a phecode in a given year. For each year, the total number of unique
-          individuals with a diagnosis in that year is divided by the total
-          cluster size for that year. Phecodes with at least 30 diagnoses per
-          IBD cluster are shown.
-        </Typography>
-      </div>
-    </div>
+    <GraphPage
+      title="Diagnosis Proportion Over Time"
+      subtitle={`Group: ${groupNameMap[groupLabel]} | PheCode: ${disease}`}
+      graph={<LinePlot x={xAxis} y={yAxis} />}
+      graphControls={[
+        <FormControl style={{ minWidth: 150 }}>
+          <InputLabel id="group-selection">Community</InputLabel>
+          <Select
+            labelId="group-selection"
+            value={groupLabel}
+            label="Group"
+            onChange={handleGroupChange}
+          >
+            {groups}
+          </Select>
+        </FormControl>,
+        <FormControl style={{ minWidth: 150 }}>
+          <InputLabel id="disease-selection">Phecode</InputLabel>
+          <Select
+            labelId="group-selection"
+            value={disease}
+            label="Disease"
+            onChange={handleDiseaseChange}
+          >
+            {diseases}
+          </Select>
+        </FormControl>,
+      ]}
+      textSections={[
+        {
+          title: "About",
+          content: (
+            <Typography variant="body1" gutterBottom>
+              This plot is the proportion of the selected IBD cluster that
+              received a phecode in a given year. For each year, the total
+              number of unique individuals with a diagnosis in that year is
+              divided by the total cluster size for that year. Phecodes with at
+              least 30 diagnoses per IBD cluster are shown.
+            </Typography>
+          ),
+        },
+      ]}
+    />
   );
 };
-
 export default TimePage;
