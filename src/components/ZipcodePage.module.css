@@ -43,9 +43,13 @@
 
 .bodyText {
     padding-top: 30px ;
-    padding-bottom: 0px;
+    padding-bottom: 20px;
     padding-right: 0px;
     padding-left: 0px;
-    width: 80%;
     text-align: justify
-  }
+}
+
+.sectionHeader {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}

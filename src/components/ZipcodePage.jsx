@@ -89,6 +89,27 @@ const ZipcodePage = () => {
     );
   }
 
+  const textSections = [
+    {
+      title: "Model",
+      content: "Logistic regression test: Zip Code ~ Cluster Status + Age + Sex + BMI",
+    },
+    {
+      title: "About",
+      content: (
+          <>
+            <Typography variant="body1" gutterBottom>
+              This plot shows the association between cluster membership and ever
+              visiting a UCLA medical office in a particular zip code. The darker
+              red the shading over the zip code, the more likely the cluster is to
+              visit an office in that location. We only test zip codes that have
+              seen more than 30 patients.
+            </Typography>
+          </>
+      ),
+    },
+  ];
+
   return (
     <div className={css.mapPageContainer}>
       <div className={css.mapTitleText}>
@@ -125,23 +146,22 @@ const ZipcodePage = () => {
           </div>
         </div>
         <div className={css.bodyText}>
-          <div className={css.sectionHeader}>
-            <Divider textAlign="left"><Typography variant="h4">Model</Typography></Divider>
-          </div>
-          <Typography variant="body1" gutterBottom>
-            Logistic regression test: Zip Code ~ Cluster Status + Age + Sex +
-            BMI
-          </Typography>
-          <div className={css.sectionHeader}>
-            <Divider textAlign="left"><Typography variant="h4">About</Typography></Divider>
-          </div>
-          <Typography variant="body1" gutterBottom>
-            This plot shows the association between cluster membership and ever
-            visiting a UCLA medical office in a particular zip code. The darker
-            red the shading over the zip code, the more likely the cluster is to
-            visit an office in that location. We only test zip codes that have
-            seen more than 30 patients.
-          </Typography>
+          {textSections.map((section) => (
+              <React.Fragment key={section.title}>
+                <div className={css.sectionHeader}>
+                  <Divider textAlign="left">
+                    <Typography variant="h4">{section.title}</Typography>
+                  </Divider>
+                </div>
+                {typeof section.content === "string" ? (
+                    <Typography variant="body1" gutterBottom>
+                      {section.content}
+                    </Typography>
+                ) : (
+                    section.content
+                )}
+              </React.Fragment>
+          ))}
         </div>
       </div>
     </div>
