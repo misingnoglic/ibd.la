@@ -150,7 +150,7 @@ const App = () => {
             {drawer}
           </SwipeableDrawer>
         </Box>
-        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+        <Box component="main" sx={{ flexGrow: 1, p: 3, marginLeft: isMobile ? 0 : `${drawerWidth}px` }}>
           <Box className="tabContent" sx={{ paddingTop: "20px" }}>
             <AppRouter setInitialTabIndex={setInitialTabIndex} />
           </Box>
